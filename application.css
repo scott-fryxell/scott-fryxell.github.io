@@ -104,10 +104,6 @@ html.work main > section h1 {
   color:green
 }
 
-figure#fourth_planet > img {
-  height:100vh;
-}
-
 /* set font sizes */
 h1 {
   font-size:11vw;
