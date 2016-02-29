@@ -134,6 +134,9 @@ menu > a {
 
 main > menu > a {
   font-size: 4vw;
+  font-size: 5vw;
+  margin-bottom: 4vw;
+  display: block;
 }
 
 
@@ -166,7 +169,8 @@ main > menu > a {
   }
 
   main > menu > a {
-    font-size: 4vh;
+    font-size: 5vh;
+    margin-bottom: 4vh;
   }
   a.selected {
     font-size:8vh;
