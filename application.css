@@ -10,14 +10,11 @@ html {
   padding:0;
   margin:0;
 }
-
-
 body {
   margin:2vh 2vw
 }
 menu {
   -webkit-padding-start:0;
-  /*font-size:2rem;*/
 }
 main > section {
   padding:2vh 0;
@@ -49,7 +46,6 @@ menu {
   margin:1vh 1vw 1vh 0
 }
 menu > a {
-  font-size: 7vw;
   margin-right:2vw;
   opacity:0.5;
 }
@@ -64,7 +60,6 @@ main > menu {
   height:100vh;
 }
 main > menu > a {
-  font-size: 4vw;
   margin:1vh 2vw 1vh 0;
   opacity:0.8;
   display:inline-block;
@@ -137,9 +132,16 @@ a.selected {
   font-size:8vw;
 }
 
+menu > a {
+  font-size: 7vw;
+}
+
+main > menu > a {
+  font-size: 4vw;
+}
 
 
-@media screen and (orientation: landscape) {
+@media (orientation: landscape) {
   body > header,
   body > main {
     margin: 0 auto;
@@ -162,6 +164,13 @@ a.selected {
   }
   figcaption > p {
     font-size:3vh;
+  }
+  menu > a {
+    font-size: 7vh;
+  }
+
+  main > menu > a {
+    font-size: 4vh;
   }
   a.selected {
     font-size:8vh;
