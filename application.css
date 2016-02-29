@@ -132,10 +132,13 @@ menu > a {
   font-size: 7vw;
 }
 
+main > menu {
+  margin-top:4vw
+}
+
 main > menu > a {
-  font-size: 4vw;
-  font-size: 5vw;
-  margin-bottom: 4vw;
+  font-size: 7vw;
+  margin-bottom: 7vw;
   display: block;
 }
 
@@ -172,6 +175,9 @@ main > menu > a {
     font-size: 5vh;
     margin-bottom: 4vh;
   }
+  main > menu > a:visited {
+    }
+
   a.selected {
     font-size:8vh;
   }
