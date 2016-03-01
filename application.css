@@ -104,7 +104,14 @@ html.work main > section h1 {
   color:green
 }
 
+
 /* set font sizes */
+
+html {
+  font-size:3vw;
+}
+
+
 h1 {
   font-size:11vw;
 }
@@ -113,9 +120,6 @@ h2 {
 }
 h3 {
   font-size:5vw;
-}
-html {
-  font-size:4vw;
 }
 main > a {
   font-size:5vw;
@@ -144,11 +148,17 @@ main > menu > a {
 
 
 @media (orientation: landscape) {
+
+  html {
+    font-size:3vh;
+  }
+
   body > header,
   body > main {
     margin: 0 auto;
     max-width: 100vh;
   }
+
   h1 {
     font-size:11vh;
   }
@@ -158,9 +168,7 @@ main > menu > a {
   h3 {
     font-size:5vh;
   }
-  html {
-    font-size:4vh;
-  }
+
   main > a {
     font-size:5vh;
   }
@@ -175,8 +183,6 @@ main > menu > a {
     font-size: 5vh;
     margin-bottom: 4vh;
   }
-  main > menu > a:visited {
-    }
 
   a.selected {
     font-size:8vh;
