@@ -1,0 +1,49 @@
+primary   = hsla(26deg, 74%, 49%, 1)
+secondary = hsla(187deg, 100%, 35%, 1)
+tertiary  = hsla(187deg, 100%, 50%, 0.75)
+
+title     = 9vmin
+header    = 6vmin
+body      = 3vmin
+gutter    = 3vmin
+
+@require elements
+@require permission
+
+html
+  height:100%
+  font-family: 'Lato', sans-serif
+  color: tertiary
+  padding:0
+  margin:0
+  background-color: primary
+
+body
+  margin:0 gutter
+
+main
+  & > section
+    padding:0
+    min-height:100vh
+
+  & > article
+    padding:0
+    min-height:100vh
+
+h1, h2, h3
+  vertical-align: middle
+  margin:gutter
+
+*
+  outline: 1px dotted hsla(14, 100%, 50%, 0.5)
+
+/* set font sizes */
+html
+p
+  font-size:body
+
+h1
+  font-size:title
+h2
+h3
+  font-size:header

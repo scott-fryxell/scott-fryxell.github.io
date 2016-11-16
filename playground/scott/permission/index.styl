@@ -1,0 +1,57 @@
+.player
+  display:flex
+  flex-direction: column
+  justify-content:space-around
+  margin:0
+  padding:0
+  header
+    display:block
+    h1
+      text-align: center
+      vertical-align: middle
+      line-height: 1
+
+
+  button
+    display:block
+    margin: 0 auto
+
+    background-color: secondary
+    border:none
+    width: 36vmin
+    height:36vmin
+    border-radius: 30vmin
+
+  input
+    display:block
+    height:15vmin
+    background-color:secondary
+
+
+  nav
+    a
+      text-align: center
+      display:block
+      margin: auto
+      font-size: 5.5vmin
+      vertical-align: middle
+      width: 7vmin
+      height:7vmin
+      border-radius:7vmin
+      background-color:secondary
+
+
+
+  state: view-feed
+
+  item:
+    itemtype:person
+    itemref:
+
+
+  state()
+    // the app is only in one state at a time.
+
+
+    html.arguments
+      {block}
