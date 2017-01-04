@@ -10,8 +10,9 @@ gutter    = 3vmin
 
 
 @require color
-@require elements
-@require permission
+// @require elements
+// @require permission
+// @require debug
 
 html
   padding:0
@@ -27,11 +28,8 @@ body
   & > header
   & > main
     margin: 0 auto
-    @media (orientation: landscape) and (min-device-width: 1200px)
-      max-width: 100vmin
-
-// *
-  // outline: 1px dotted hsla(14, 100%, 50%, 0.5)
+    @media (orientation: landscape) and (min-device-width: 65rem)
+      max-width: 90vmin
 
 /* set font sizes */
 html
