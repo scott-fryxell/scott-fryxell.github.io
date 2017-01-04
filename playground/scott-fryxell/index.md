@@ -25,7 +25,7 @@ I hired another senior engineer to guarantee consistency and a junior developer 
 Code coverage was at 100% on my last day.
 
 ## Salesperson at Vacation
-**April 2014 - March 2015 (1 year)**
+**April 2014 - present (2 years 9 months)**
 
 I took a break from engineering to reconnect with my community. Vacation is a vintage clothing store located in the Tenderloin. I helped with all aspects of operation: from selling clothing and supporting bands, to helping  revitalize the business by working with the owner to increase profits and bring in a business partner. Everything about this store makes me happy; I still help with shows and occasionally work at the store.
 
