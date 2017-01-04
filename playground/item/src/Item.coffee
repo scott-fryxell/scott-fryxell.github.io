@@ -1,7 +1,7 @@
 class @Item
 
   constructor: (document) ->
-    alert "what the fuck dude"
+    
     $(document).page_init(@)
 
     # @role       = new Roles(@)

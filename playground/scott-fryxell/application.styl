@@ -1,0 +1,42 @@
+title     = 8vmin
+header    = 5vmin
+body      = 3vmin
+gutter    = 3vmin
+
+@require color
+@require elements
+@require permission
+
+html
+  padding:0
+  margin:0
+  font-family: 'Lato', sans-serif
+  line-height: 1.22
+  background-color: primary
+  color: secondary
+
+
+body
+  margin:0 gutter
+  & > header
+  & > main
+    margin: 0 auto
+    max-width: 90vh
+
+// *
+  // outline: 1px dotted hsla(14, 100%, 50%, 0.5)
+
+/* set font sizes */
+html
+  font-size:body
+
+h1
+  font-size:title
+  margin:gutter 0
+
+h2, h3, h4, h5, h6
+  font-size:header
+  margin:gutter 0
+
+a
+  color:tertiary
