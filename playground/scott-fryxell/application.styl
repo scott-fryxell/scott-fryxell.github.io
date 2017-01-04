@@ -2,12 +2,7 @@ title     = 8vmax
 header    = 5vmax
 body      = 3vmax
 gutter    = 2vmax
-
-title     = 8vmin
-header    = 5vmin
-body      = 3vmin
-gutter    = 3vmin
-
+laptop    = 65rem
 
 @require color
 // @require elements
@@ -17,10 +12,13 @@ gutter    = 3vmin
 html
   padding:0
   margin:0
-  font-family: 'Lato', sans-serif
   line-height: 1.22
   background-color: primary
   color: secondary
+  font-family: 'Lato', sans-serif
+  font-size: body
+  @media (min-device-width: laptop)
+    font-size:gutter
 
 
 body
@@ -28,20 +26,31 @@ body
   & > header
   & > main
     margin: 0 auto
-    @media (orientation: landscape) and (min-device-width: 65rem)
+    @media (orientation: landscape)
+      max-width: 80vmax
+    @media (min-device-width: laptop)
       max-width: 90vmin
 
-/* set font sizes */
 html
   font-size:body
+  @media (min-device-width: laptop)
+    font-size:gutter
 
 h1
-  font-size:title
   margin:gutter 0
+  font-size:title
+  @media (min-device-width: laptop)
+    font-size:header
+
+
 
 h2, h3, h4, h5, h6
-  font-size:header
   margin:gutter 0
+  font-size:header
+  @media (min-device-width: laptop)
+    font-size:body
+
+
 
 
 a
