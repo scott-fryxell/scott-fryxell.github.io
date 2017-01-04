@@ -1,13 +1,12 @@
 title     = 8vmax
 header    = 5vmax
 body      = 3vmax
-gutter    = 3vmax
+gutter    = 2vmax
 
-@media (orientation: landscape)
-  title     = 8vmin
-  header    = 5vmin
-  body      = 3vmin
-  gutter    = 3vmin
+title     = 8vmin
+header    = 5vmin
+body      = 3vmin
+gutter    = 3vmin
 
 
 @require color
@@ -28,7 +27,8 @@ body
   & > header
   & > main
     margin: 0 auto
-    max-width: 90vh
+    @media (orientation: landscape) and (min-device-width: 1200px)
+      max-width: 100vmin
 
 // *
   // outline: 1px dotted hsla(14, 100%, 50%, 0.5)
@@ -44,6 +44,7 @@ h1
 h2, h3, h4, h5, h6
   font-size:header
   margin:gutter 0
+
 
 a
   color:tertiary
