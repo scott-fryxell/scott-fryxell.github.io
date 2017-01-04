@@ -1,0 +1,1 @@
+header > menu > a{margin:0 2vw 2vh 0}main > menu{margin-left:2vw;height:100vh}main > menu > a{margin:1vh 2vw 1vh 0;display:inline-block}menu{-webkit-padding-start:0}menu > a{margin-right:2vw}nav > a{color:tertiary;font-size:header;margin:gutter;display:block;text-decoration:none}nav > a:hover{-webkit-transition:opacity 2s;transition:opacity 2s;opacity:1}
