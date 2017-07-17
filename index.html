@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="user-scalable=no, width=device-width">
     <script type="text/javascript" src=application.js></script>
-    <title>Little Man</title>
+    <title>Scott Fryxell</title>
   </head>
   <body class='developer'>
     <header>
@@ -32,7 +32,7 @@
     <header>
       <h1 itemprop="name">Scott Fryxell</h1>
     </header>
-    <p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+    <p id="address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
       <span itemprop="streetAddress">637 Haight Street</span><br>
       <span itemprop="addressLocality">San Francisco</span>
       <span itemprop="addressRegion">Ca</span>,
@@ -40,8 +40,8 @@
     </p>
     <footer>
       <menu>
-        <a href="tel:+6282281824">(628) 228-1824</a>
-        <a itemprop="email" href="mailto:sfryxell@me.com">sfryxell@me.com</a>
+        <a temref="address" itemprop="" href="tel:+6282281824">(628) 228-1824</a>
+        <a itemref="address" itemprop="email" href="mailto:sfryxell@me.com">sfryxell@me.com</a>
       </menu>
     </footer>
   </section>
@@ -49,11 +49,11 @@
     <header>
       <h2>Skills</h2>
     </header>
-    <p itemprop="skills">
-      JavaScript, CSS, HTML5, Ruby on Rails, Node, Stylus,
-      SASS, jQuery, Software Development, Software Engineering, Web Development,
-      Agile Methodologies, SaaS, Git, Entrepreneurship, Product Development,
-      User Interface, Scalability, Web Applications, Mobile Applications
+      <p itemprop="description">Web application design and development</p>
+      <p itemprop="skills">JavaScript, CSS, HTML5, Ruby on Rails, Node, Stylus,
+      jQuery, Software Development, Software Engineering, Web Development,
+      Agile Methodologies, Git, Entrepreneurship, Product Development,
+      User Interface, Scalability,
     </p>
   </section>
   <section class="experience">
@@ -118,7 +118,7 @@
     <article itemprop="worksfor" itemscope itemtype="http://schema.org/Organization">
       <header>
         <h3>
-          <span itemprop="jobTitle">Lead engineer, Founder and CEO</span>, at
+          <span itemprop="jobTitle">Lead engineer, Founder, and CEO</span> at
           <span itemprop="name">Copper</span>
         </h3>
         <h6 itemprop="duration" itemscoped itemtype="http://schema.org/Event">
@@ -128,7 +128,7 @@
       <p itemprop="description">Founded, architected, and lead the development
         of an online tipping and appreciation service from concept to fully
         functional product. Hired a team of developers,  brought in investment,
-        and worked with the incubator Hattery Labs to develop brand.</p>
+        and worked with the incubator Hattery Labs to develop brand.</p>4
     </article>
     <article itemprop="worksfor" itemscope itemtype="http://schema.org/Organization">
       <header>
