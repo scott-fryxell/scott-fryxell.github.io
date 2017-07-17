@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <link rel="stylesheet" href="/application.css">
     <meta charset="utf-8">
     <meta name="viewport" content="user-scalable=no, width=device-width">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="/application.css">
     <script type="text/javascript" src=application.js></script>
-    <title>Scott Fryxell - Resume</title>
+    <title>Scott Fryxell</title>
   </head>
   <body class='developer'>
     <header>
@@ -71,7 +71,7 @@
        <p itemprop="description">
          I've spent a lot of this time helping a vintage clothing store called
          <a itemprop="url" href="https://www.instagram.com/vacationsf4sale/">Vacation</a>
-         I help with all aspects of the businee: from selling clothing and
+         I help with all aspects of the busine, from selling clothing and
          supporting bands, to working with the owner to increase profits and
          bring in a business partner.</p>
     </article>
@@ -79,7 +79,7 @@
       <header>
         <h3>
           <span itemprop="jobTitle">Lead Engineer</span> at
-          <a itemprop="url" href="https://www.savvy.is/"><span itemprop="name">Savvy</span></a>
+          <a itemprop="url" target="_blank" href="https://www.savvy.is/"><span itemprop="name">Savvy</span></a>
         </h3>
         <h6 itemprop="duration" itemscoped itemtype="http://schema.org/Event">
           <time itemprop="startdate">March 2015</time> - <time itemprop="enddate">August 2015</time>
@@ -103,7 +103,7 @@
     <article itemprop="worksfor" itemscope itemtype="http://schema.org/Organization">
       <header>
         <h3><span itemprop="jobTitle">Software Engineer</span> at
-          <a href="http://corp.tout.com/"><span itemprop="name">Tout</span></a>
+          <a itemprop="url" target="_blank" href="http://corp.tout.com/"><span itemprop="name">Tout</span></a>
         </h3>
         <h6 itemprop="duration" itemscoped itemtype="http://schema.org/Event">
           <time itemprop="startdate">August 2013</time> - <time itemprop="enddate">May 2014</time>
@@ -128,7 +128,7 @@
       <p itemprop="description">Founded, architected, and lead the development
         of an online tipping and appreciation service from concept to fully
         functional product. Hired a team of developers,  brought in investment,
-        and worked with the incubator Hattery Labs to develop brand.</p>4
+        and worked with the incubator Hattery Labs to develop brand.</p>
     </article>
     <article itemprop="worksfor" itemscope itemtype="http://schema.org/Organization">
       <header>
@@ -147,7 +147,7 @@
     <article itemprop="worksfor" itemscope itemtype="http://schema.org/Organization">
       <header>
         <h3><span itemprop="jobTitle">Software Engineer</span> at
-          <a href="https://www.flixster.com/"><span itemprop="name">Flixster Inc</span></a>
+          <a itemprop="url" target="_blank" href="https://www.flixster.com/"><span itemprop="name">Flixster Inc</span></a>
         </h3>
         <h6 itemprop="duration" itemscoped itemtype="http://schema.org/Event">
           <time itemprop="startdate">November 2007</time> - <time itemprop="enddate">May 2008</time>
@@ -162,7 +162,7 @@
       <header>
         <h3>
           <span itemprop="jobTitle">Software Engineer</span> at
-          <a href="https://www.realnetworks.com/"><span itemprop="name">Real Networks</span></a>
+          <a itemprop="url" target="_blank" href="https://www.realnetworks.com/"><span itemprop="name">Real Networks</span></a>
         </h3>
         <h6 itemprop="duration" itemscoped itemtype="http://schema.org/Event">
           <time itemprop="startdate">June 2006</time> - <time itemprop="enddate">July 2007</time>
@@ -180,7 +180,7 @@
       <header>
         <h3>
           <span itemprop="jobTitle">Software Engineer</span> at
-          <a href="http://lrn.com/"><span itemprop="name">LRN</span></a>
+          <a itemprop="url" target="_blank" href="http://lrn.com/"><span itemprop="name">LRN</span></a>
         </h3>
         <h6 itemprop="duration" itemscoped itemtype="http://schema.org/Event">
           <time itemprop="startdate">June 2005</time> - <time itemprop="enddate">June 2006</time>
@@ -298,7 +298,7 @@
       <header>
         <h3>
           <span itemprop="jobTitle">Software Engineer</span> at
-          <a href="https://www.orrick.com/"><span itemprop="name">Orrick, Herrington Sutcliffe LLP</span></a>
+          <a itemprop="url" target="_blank" href="https://www.orrick.com/"><span itemprop="name">Orrick, Herrington Sutcliffe LLP</span></a>
         </h3>
         <h6 itemprop="duration" itemscoped itemtype="http://schema.org/Event">
           <time itemprop="startdate">March 1998</time> - <time itemprop="enddate">March 2000</time>
@@ -327,6 +327,15 @@
       <p itemprop="description"></p>
     </article>
   </template>
+
+  <script type="text/javascript">
+    var event = new CustomEvent('item.load', {
+      detail: elem.dataset.time
+    });
+  </script>
+
+  
+
 </section>
     </main>
     <footer>
