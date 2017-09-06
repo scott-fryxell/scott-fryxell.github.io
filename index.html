@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script type="text/javascript" src=application.js></script>
+    <script type="text/javascript" src="https://unpkg.com/vue"></script>
     <link rel="stylesheet" href="/application.css">
     <meta charset="utf-8">
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
@@ -18,7 +18,7 @@
   <style media="screen">
     #scott-fryxell menu > a {
       display:block;
-      max-width:8rem;
+      max-width:10rem;
     }
     p[itemprop="address"]{
       margin-bottom:0;
@@ -55,9 +55,9 @@
     <header>
       <h2>Skills</h2>
     </header>
-    <p itemprop="description">Web application design and development</p>
+    <p itemprop="description">Web application architecture and development</p>
     <p itemprop="skills" itemtype="http://schema.org/skills">
-      JavaScript, Coffeescript, Babel, Webpa, Gulp, React, CSS, HTML5,
+      JavaScript, CoffeeScript, Babel, Webpack, Gulp, React, CSS, HTML5,
       Ruby on Rails, Node, Stylus, Sass,Git, Product Development,
       User Interface Design, Scalability
     </p>
@@ -69,7 +69,7 @@
     <article>
       <header>
         <h3 itemprop="jobTitle">Software Developer</h3>
-        <h6><time>April 2014</time> - Present</h6>
+        <h6><time datetime="2014-04-01 00:00">April 2014</time> - Present</h6>
       </header>
       <p itemprop="description">focused on working on short term, high impact
        web projects. Most recently I served as the release engineer for
@@ -93,7 +93,8 @@
           </span>
         </h3>
         <h6>
-          <time itemprop="startdate">March 2015</time> - <time itemprop="enddate">August 2015</time>
+          <time itemprop="startdate" datetime="2015-03-01 00:00">March 2015</time> -
+          <time itemprop="enddate" datetime="2015-09-01 00:00">September 2015</time>
         </h6>
       </header>
       <p itemprop="description">Savvy, a WebRTC based video streaming service
@@ -122,7 +123,8 @@
           </span>
         </h3>
         <h6>
-          <time itemprop="startdate">August 2013</time> - <time itemprop="enddate">May 2014</time>
+          <time itemprop="startdate" datetime="2013-08-01 00:00">August 2013</time> -
+          <time itemprop="enddate" datetime="2014-05-01 00:00">May 2014</time>
         </h6>
       </header>
       <p itemprop="description">Built the administrative console our partners
@@ -140,7 +142,8 @@
           </span>
         </h3>
         <h6>
-          <time itemprop="startdate">January 2010</time> - <time itemprop="enddate">January 2014</time>
+          <time itemprop="startdate" datetime="2010-01-01 00:00">January 2010</time> -
+          <time itemprop="enddate" datetime="2014-03-01 00:00">January 2014</time>
         </h6>
       </header>
       <p itemprop="description">Founded, architected, and lead the development
@@ -157,7 +160,8 @@
           </span>
         </h3>
         <h6>
-          <time itemprop="startdate">June 2008</time> - <time itemprop="enddate">January 2009</time>
+          <time itemprop="startdate" datetime="2008-06-01 00:00">June 2008</time> -
+          <time itemprop="enddate" datetime="2009-01-01 00:00">January 2009</time>
         </h6>
       </header>
       <p itemprop="description">Took over an internal AdWords purchasing
@@ -175,7 +179,8 @@
           </span>
         </h3>
         <h6 itemprop="duration" itemscoped itemtype="http://schema.org/Event">
-          <time itemprop="startdate">November 2007</time> - <time itemprop="enddate">May 2008</time>
+          <time itemprop="startdate" datetime="2007-11-01 00:00">November 2007</time> -
+          <time itemprop="enddate" datetime="2008-05-01 00:00">May 2008</time>
         </h6>
       </header>
       <p itemprop="description">Implemented new functionality for homepage and
@@ -194,7 +199,8 @@
           </span>
         </h3>
         <h6>
-          <time itemprop="startdate">June 2006</time> - <time itemprop="enddate">July 2007</time>
+          <time itemprop="startdate" datetime="2006-06-01 00:00">June 2006</time> -
+          <time itemprop="enddate" datetime="2007-07-01 00:00">July 2007</time>
         </h6>
       </header>
       <p itemprop="description">Architected and implemented a publishing rights
@@ -216,7 +222,8 @@
           </span>
         </h3>
         <h6>
-          <time itemprop="startdate">June 2005</time> - <time itemprop="enddate">June 2006</time>
+          <time itemprop="startdate" datetime="2005-06-01 00:00">June 2005</time> -
+          <time itemprop="enddate" datetime="2006-06-01 00:00">June 2006</time>
         </h6>
       </header>
       <p itemprop="description">Developed cross browser backward and forward
@@ -235,7 +242,8 @@
           </span>
         </h3>
         <h6>
-          <time itemprop="startdate">May 2004</time> - <time itemprop="enddate">June 2005</time>
+          <time itemprop="startdate" datetime="2004-05-01 00:00">May 2004</time> -
+          <time itemprop="enddate" datetime="2005-06-01 00:00">June 2005</time>
         </h6>
       </header>
       <p itemprop="description">Worked with offshore developers on best practices
@@ -261,7 +269,8 @@
           </span>
         </h3>
         <h6>
-          <time itemprop="startdate">September 2002</time> - <time itemprop="enddate">May 2004</time>
+          <time itemprop="startdate" datetime="2002-09-01 00:00">September 2002</time> -
+          <time itemprop="enddate" datetime="2002-05-01 00:00">May 2004</time>
         </h6>
       </header>
       <p itemprop="description">Managed a team of 5 developers from design through
@@ -279,7 +288,8 @@
           </span>
         </h3>
         <h6>
-          <time itemprop="startdate">June 2001</time> - <time itemprop="enddate">September 2002</time>
+          <time itemprop="startdate" datetime="2001-06-01 00:00">June 2001</time> -
+          <time itemprop="enddate" datetime="2002-09-01 00:00">September 2002</time>
         </h6>
       </header>
       <p itemprop="description">Facilitated the migration of a knowledge
@@ -307,7 +317,8 @@
           </span>
         </h3>
         <h6>
-          <time itemprop="startdate">June 2000</time> - <time itemprop="enddate">June 2001</time>
+          <time itemprop="startdate" datetime="2000-06-01 00:00">June 2000</time> -
+          <time itemprop="enddate" datetime="2001-06-01 00:00">June 2001</time>
         </h6>
       </header>
       <p itemprop="description">Ported the beta of the product from a rigid,
@@ -327,7 +338,8 @@
           </span>
         </h3>
         <h6>
-          <time itemprop="startdate">January 2000</time> - <time itemprop="enddate">July 2000</time>
+          <time itemprop="startdate" datetime="2000-01-01 00:00">January 2000</time> -
+          <time itemprop="enddate" datetime="2000-07-01 00:00">July 2000</time>
         </h6>
       </header>
       <p itemprop="description">Designed and implemented a personalization and
@@ -348,7 +360,8 @@
           </span>
         </h3>
         <h6>
-          <time itemprop="startdate">March 1998</time> - <time itemprop="enddate">March 2000</time>
+          <time itemprop="startdate" datetime="1998-03-01 00:00">March 1998</time> -
+          <time itemprop="enddate" datetime="2000-03-01 00:00">March 2000</time>
         </h6>
       </header>
       <p itemprop="description">Developed and maintained Visual Basic applications
@@ -378,14 +391,6 @@
       <p itemprop="description"></p>
     </article>
   </template>
-
-  <script type="text/javascript">
-
-    // application can update existing Items on page with current template
-  </script>
-
-  
-
 </section>
     </main>
     <footer>
