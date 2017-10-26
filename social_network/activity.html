@@ -23,41 +23,15 @@
       </nav>
     </header>
     <main>
-      <section id="posts" itemscope itemtype="http://schema.org/blog">
-  <header>
-    <textarea placeholder="Wat?" v-model="newPost" autofocus v-on:focusout="addPost"></textarea>
-  </header>
- </section>
+      <section id="activity">
 
-<template id="post">
-  <article itemscope itemid="{{me.id}}/posts/{{guid}}" itemtype="http://schema.org/SocialMediaPosting">
-    <header>
-      <time itemprop="created_at" datetime="{{post.created_at}}">Just Now</time>
-    </header>
-    <p itemprop="articleBody">{{post.body}}</p>
-  </article>
+</section>
+
+<template id="like">
+  <a itemprop="like" href="/katie/photos/1.jpg">
+    <time itemprop="" datetime="{{Date.now()}}">Just now</time>
+  </a>
 </template>
-
-<template id="assertions">
-  As a user I can update my profle with a new post
-</template>
-
-<script id="app">
-  var app = new Vue({
-    el:   'section#posts',
-    // data: document.getItems("http://schema.org/SocialMediaPosting")
-    data: {
-
-      newPost: ''
-    },
-    methods: {
-      addPost: function() {
-        console.log('adding a post time');
-        this.newPost = ''
-      }
-    }
-  })
-</script>
     </main>
     <footer>
       <details class="style">
