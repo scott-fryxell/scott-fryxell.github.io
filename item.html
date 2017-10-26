@@ -23,41 +23,25 @@
       </nav>
     </header>
     <main>
-      <section id="posts" itemscope itemtype="http://schema.org/blog">
-  <header>
-    <textarea placeholder="Wat?" v-model="newPost" autofocus v-on:focusout="addPost"></textarea>
-  </header>
- </section>
-
-<template id="post">
-  <article itemscope itemid="{{me.id}}/posts/{{guid}}" itemtype="http://schema.org/SocialMediaPosting">
-    <header>
-      <time itemprop="created_at" datetime="{{post.created_at}}">Just Now</time>
-    </header>
-    <p itemprop="articleBody">{{post.body}}</p>
+      <section id="item-test">
+  <article id="story" itemscope itemtype="schema.org/person" itemid="http://scott-fryxell.github.io">
+    <span itemprop="firstName">Scott</span>
+    <link itemprop="url" href="http://scott-fryxell.github.io">
   </article>
-</template>
-
-<template id="assertions">
-  As a user I can update my profle with a new post
-</template>
-
-<script id="app">
-  var app = new Vue({
-    el:   'section#posts',
-    // data: document.getItems("http://schema.org/SocialMediaPosting")
-    data: {
-
-      newPost: ''
-    },
-    methods: {
-      addPost: function() {
-        console.log('adding a post time');
-        this.newPost = ''
+  <aside itemref="story">
+    <span itemprop="lastName">Fryxell</span>
+  </aside>
+  <script id="assert">
+    function can(condition, message) {
+      if (!condition) {
+        throw new Error(message || 'Assertion failed');
       }
     }
-  })
-</script>
+  </script>
+  <script id="test">
+    console.assert(document.getItems(), 'getItems() is broken');
+  </script>
+</section>
     </main>
     <footer>
       <details class="style">

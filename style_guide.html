@@ -23,41 +23,45 @@
       </nav>
     </header>
     <main>
-      <section id="posts" itemscope itemtype="http://schema.org/blog">
-  <header>
-    <textarea placeholder="Wat?" v-model="newPost" autofocus v-on:focusout="addPost"></textarea>
-  </header>
- </section>
-
-<template id="post">
-  <article itemscope itemid="{{me.id}}/posts/{{guid}}" itemtype="http://schema.org/SocialMediaPosting">
-    <header>
-      <time itemprop="created_at" datetime="{{post.created_at}}">Just Now</time>
-    </header>
-    <p itemprop="articleBody">{{post.body}}</p>
+      <section>
+  <article class="example headers">
+    <h1>Lorem ipsum dolor</h1>
+    <h2>Lorem ipsum dolor</h2>
+    <h3>Lorem ipsum dolor</h3>
+    <h4>Lorem ipsum dolor</h4>
+    <h5>Lorem ipsum dolor</h5>
+    <h6>Lorem ipsum dolor</h6>
   </article>
-</template>
 
-<template id="assertions">
-  As a user I can update my profle with a new post
-</template>
+  <article>
+    <header>
+      <h2>Typography</h2>
+    </header>
+    <section class="typography">
+      <p>
+        This design invests in the certainty of infinite device sizes over time.
+        if take a look at the <a target="_blank" href="https://github.com/scott-fryxell/littleman">source code</a>
+        you will see that I am using stylus to help create a layout that is flexible
+        simple yet will scall to any display sized at any aspect ratio.
+      </p>
+      <ul>
+        <li>Font-size scales to an infinitye number of device widths</li>
+        <li>Line length is optimised for readability</li>
+        <li>Heading size is infinitely relative to device width as well</li>
+        <li>Vertical rhytym via a common baseline.</li>
+        <li>easily add new elements into the design</li>
+      </ul>
+    </section>
+  </article>
 
-<script id="app">
-  var app = new Vue({
-    el:   'section#posts',
-    // data: document.getItems("http://schema.org/SocialMediaPosting")
-    data: {
+  <article>
+    <figure class="profile">
+      <img src="/graphics/logo.svg" alt="Scott fryxell's profile pic">
+      <figcaption>Scott Fryxell</figcaption>
+    </figure>
+  </article>
 
-      newPost: ''
-    },
-    methods: {
-      addPost: function() {
-        console.log('adding a post time');
-        this.newPost = ''
-      }
-    }
-  })
-</script>
+</section>
     </main>
     <footer>
       <details class="style">
