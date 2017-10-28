@@ -1,16 +1,26 @@
 class Item {
-  static get_items() {
-    let items_as_data = {}
-    let items = Array.from(this.querySelectorAll("[itemscope]"))
+  static get_items(type) {
+    let items_as_data = []
+    let query = "[itemscope]"
+    if ( type ){
+      query += `[itemtype="${type}"]`
+    }
+
+    let items = Array.from(this.querySelectorAll(query))
 
     items.forEach(item => {
-      let meta = {
-        type: item.getAttribute('itemtype'),
-        id:   item.getAttribute('itemid'),
-        element_id: item.getAttribute('id')
-      }
+      // let meta = {
+      //   type: item.getAttribute('itemtype'),
+      //   id:   item.getAttribute('itemid'),
+      //   element_id: item.getAttribute('id')
+      // }
+      // let properties = Item.get_item_properties(item)
+      //
+      // items_as_data.push( { ...meta, ...properties } )
+
       let properties = Item.get_item_properties(item)
-      items_as_data[meta.id] = { ...meta, ...properties }
+      properties['type'] = item.getAttribute('itemtype')
+      items_as_data.push(properties)
     })
     return items_as_data
   }
