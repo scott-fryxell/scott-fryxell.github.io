@@ -1,0 +1,10 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMinYMin meet">
+  <g id="http" stroke="black">
+    <rect rx="8" height="100%" width="3rem" x="50%" y="0" fill="transparent" stroke="black" />
+    <text font-size="1rem" textLength="2rem" fill="black" x="50%" y="48">http</text>
+  </g>
+
+  <g id="phone">
+    <rect width="3rem" height="4rem" rx="0.25rem" x="1rem" y="2rem" />
+  </g>
+</svg>
