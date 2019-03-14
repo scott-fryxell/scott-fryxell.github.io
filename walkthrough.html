@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Scott Fryxell</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes, viewport-fit=cover"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="/application.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="canonical"  href="https://scott-fryxell.github.io/">
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="manifest" href="/icons/site.webmanifest">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#d0cd9033">
+    <link rel="shortcut icon" href="/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#d0cd9033">
+    <meta name="msapplication-config" content="/icons/browserconfig.xml">
+    <meta name="theme-color" content="#d0cd9033">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/index.html">
+          <svg>
+            <use xlink:href="/avatar.svg#avatar"></use>
+          </svg>
+        </a>
+        <a href="/resume.html">
+          <h3 itemprop="name" itemref="scott-fryxell">Scott Fryxell</h3>
+        </a>
+      </nav>
+    </header>
+    <main>
+      <p><a href="https://youtu.be/2-FrXdxInYg">Here&#39;s a video of realness in action</a></p>
+<p><a href="https://github.com/scott-fryxell/realness/blob/master/src/style/typography.styl">typography.styl</a> Is the UI foundation for realness. It sets up a baseline that allows me to add UI elements that flow and line up by in a modern typographically natural way.  Text is readable and flows well. the font sized its mapped to the display size. I could go on...</p>
+<p><a href="https://github.com/scott-fryxell/realness/blob/master/src/modules/Item.js">Item.js</a> is how data is modeled in realness with html. I use the micro data format to describe my models and Item.js to populate VUE objects in the UI. Item uses HTML as the schema to build objects for view to render. Using HTML for persistence Is a natural answer for my requirement for realness to be transparent. data to be stored in human readable format on the client first.</p>
+<p><a href="https://github.com/scott-fryxell/realness/blob/master/src/modules/Storage.js">Storage.js</a> is how I store information both to local storage and on a storage bucket with firebase.</p>
+<p>Item lets me model in html so Storage.js can handle all object storage abstractly.</p>
+<p><a href="https://github.com/scott-fryxell/realness/blob/master/src/views/Feed.vue">Feed.js</a> realness doesn&#39;t store relationship information on the server so I need to build a person&#39;s feed on the client. Feed.js makes heavy use of http2; trusting the stream to be able to pull potentially hundreds of files into the client as one query. It&#39;s an interesting algorithm that loads up to date profile and post information all from a simple list of phone numbes.</p>
+<p>Feed.js, Storage.js and Item.js are all unit tested which you can find the test directory.</p>
+<p>I also wanted to point your team to the code for</p>
+<p><a href="https://github.com/scott-fryxell/copper.is">copper.is</a> which was one of the 5 rails app that I have worked on professionally. I did go pretty deep and hard with rails and still love the idea of working with it. so this code should give your team some confidence that I&#39;ll be able to contribute quickly to your stack</p>
+    </main>
+  </body>
+</html>
