@@ -1,0 +1,19 @@
+details > summary {
+  cursor: pointer;
+}
+details > summary:focus {
+  outline: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details > *:not(summary) {
+  animation-name: slideOutLeft;
+}
+details[open] {
+  border: none;
+  border-color: transparent;
+}
+details[open] > *:not(summary) {
+  animation-name: slideInLeft;
+}
