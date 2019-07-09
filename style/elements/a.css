@@ -1,0 +1,28 @@
+a {
+  outline: none;
+  color: rgba(82,160,209,0.69);
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0,115,187,0.68);
+}
+p > a {
+  -webkit-tap-highlight-color: rgba(0,115,187,0.68);
+  transition-property: all;
+  transition-duration: 0.8s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0.1s;
+  border-bottom: 0.18vmin solid rgba(82,160,209,0.69);
+  border-bottom-right-radius: 0.5vmin;
+  border-bottom-left-radius: 0.5vmin;
+}
+p > a:link {
+  color: rgba(82,160,209,0.69);
+}
+p > a:visited {
+  border-color: rgba(186,185,166,0.9);
+}
+p > a:hover {
+  color: rgba(236,54,76,0.73);
+}
+p > a:active {
+  color: rgba(79,191,109,0.8);
+}

@@ -1,0 +1,145 @@
+html {
+  font-family: 'Lato';
+  font-size: 1.125rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  color: #5a585a;
+  background-color: rgba(208,205,144,0.2);
+}
+@media screen and (min-width: 34.658rem) {
+  html {
+    font-size: calc( 1.125rem + (1.33 - 1.125) * (100vw - 34.658rem) / (79.98 - 34.658) );
+  }
+}
+@media screen and (min-width: 79.98rem) {
+  html {
+    font-size: 1.33rem;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  html {
+    background-color: #17181c;
+    color: rgba(186,185,166,0.9);
+  }
+}
+p,
+textarea:focus,
+input,
+blockquote,
+form {
+  max-width: 29.33rem;
+}
+h1 {
+  font-size: 2.441rem;
+}
+@media screen and (min-width: 34.658rem) {
+  h1 {
+    font-size: calc( 2.441rem + (3.998 - 2.441) * (100vw - 34.658rem) / (79.98 - 34.658) );
+  }
+}
+@media screen and (min-width: 79.98rem) {
+  h1 {
+    font-size: 3.998rem;
+  }
+}
+h2 {
+  font-size: 1.953rem;
+}
+@media screen and (min-width: 34.658rem) {
+  h2 {
+    font-size: calc( 1.953rem + (2.827 - 1.953) * (100vw - 34.658rem) / (79.98 - 34.658) );
+  }
+}
+@media screen and (min-width: 79.98rem) {
+  h2 {
+    font-size: 2.827rem;
+  }
+}
+h3 {
+  font-size: 1.563rem;
+}
+@media screen and (min-width: 34.658rem) {
+  h3 {
+    font-size: calc( 1.563rem + (1.999 - 1.563) * (100vw - 34.658rem) / (79.98 - 34.658) );
+  }
+}
+@media screen and (min-width: 79.98rem) {
+  h3 {
+    font-size: 1.999rem;
+  }
+}
+h4 {
+  font-size: 1.25rem;
+}
+@media screen and (min-width: 34.658rem) {
+  h4 {
+    font-size: calc( 1.25rem + (1.414 - 1.25) * (100vw - 34.658rem) / (79.98 - 34.658) );
+  }
+}
+@media screen and (min-width: 79.98rem) {
+  h4 {
+    font-size: 1.414rem;
+  }
+}
+h5 {
+  font-size: 1rem;
+}
+@media screen and (min-width: 34.658rem) {
+  h5 {
+    font-size: calc( 1rem + (1 - 1) * (100vw - 34.658rem) / (79.98 - 34.658) );
+  }
+}
+@media screen and (min-width: 79.98rem) {
+  h5 {
+    font-size: 1rem;
+  }
+}
+h6 {
+  font-size: 0.8rem;
+}
+@media screen and (min-width: 34.658rem) {
+  h6 {
+    font-size: calc( 0.8rem + (0.707 - 0.8) * (100vw - 34.658rem) / (79.98 - 34.658) );
+  }
+}
+@media screen and (min-width: 79.98rem) {
+  h6 {
+    font-size: 0.707rem;
+  }
+}
+p {
+  line-height: 1.333rem;
+  margin-bottom: 1.333rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  max-width: 29.33rem;
+  letter-spacing: -0.04em;
+  font-weight: 300;
+  margin-bottom: 1.333rem;
+  line-height: 1.33;
+  text-transform: capitalize;
+}
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: -0.01em;
+}
+h1,
+h2,
+h3,
+h4 {
+  margin-top: calc( (1.333rem - 1em) + 1.333rem * 2);
+}
+h5 {
+  margin-top: calc( (1.333rem - 1em) + 1.333rem * 1);
+}
+h6 {
+  margin-top: calc( (1.333rem - 1em) );
+}

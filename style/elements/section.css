@@ -1,0 +1,35 @@
+section.page {
+  overflow: hidden;
+  width: 100%;
+}
+section.page > hgroup {
+  text-align: center;
+}
+section.page > hgroup h1 {
+  color: rgba(82,160,209,0.69);
+  margin: 0;
+  margin-bottom: 2.666rem;
+}
+section.page > header {
+  padding: 1.333rem;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+}
+section.page > header h1 {
+  color: rgba(82,160,209,0.69);
+  vertical-align: top;
+  margin: 0;
+  line-height: 1.33;
+}
+@media (min-width: 79.98rem) {
+  section.page > header h1 {
+    line-height: 0.66;
+  }
+}
+section.page > header details[open] {
+  margin-right: inherit;
+}
+section.page > header details[open] > summary {
+  margin-bottom: 1.333rem;
+}

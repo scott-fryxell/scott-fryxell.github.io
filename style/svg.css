@@ -1,0 +1,30 @@
+svg {
+  pointer-events: visible;
+  height: 3.999rem;
+  width: 3.999rem;
+  overflow: auto;
+  outline: none;
+  display: block;
+  fill: #5a585a;
+  stroke-width: 0;
+}
+svg:active {
+  animation-name: button_click;
+}
+@media (prefers-color-scheme: dark) {
+  svg {
+    fill: rgba(82,160,209,0.69);
+    stroke: rgba(79,191,109,0.8);
+    stroke-width: 1;
+  }
+}
+svg.working {
+  width: 4.398899999999999rem;
+  height: 1.333rem;
+  margin: auto;
+  animation-name: working;
+  animation-timing-function: linear;
+  animation-duration: 3.33s;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+}
