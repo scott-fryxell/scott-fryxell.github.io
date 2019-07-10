@@ -6,7 +6,7 @@ section.page > hgroup {
   text-align: center;
 }
 section.page > hgroup h1 {
-  color: rgba(82,160,209,0.69);
+  color: #3691c9;
   margin: 0;
   margin-bottom: 2.666rem;
 }
@@ -17,7 +17,7 @@ section.page > header {
   z-index: 2;
 }
 section.page > header h1 {
-  color: rgba(82,160,209,0.69);
+  color: #3691c9;
   vertical-align: top;
   margin: 0;
   line-height: 1.33;

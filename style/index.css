@@ -824,19 +824,19 @@ h2 {
   }
 }
 .blue {
-  background-color: rgba(82,160,209,0.69);
-  border-color: rgba(82,160,209,0.69);
-  color: rgba(246,250,253,0.69);
-  -webkit-tap-highlight-color: rgba(82,160,209,0.69);
+  background-color: #3691c9;
+  border-color: #3691c9;
+  color: #f5f9fc;
+  -webkit-tap-highlight-color: #3691c9;
 }
 .blue::placeholder {
-  color: rgba(246,250,253,0.69);
+  color: #f5f9fc;
 }
 @media (prefers-color-scheme: dark) {
   .blue {
-    background-color: rgba(41,111,154,0.69);
+    background-color: #246187;
     color: rgba(246,250,253,0.69);
-    border-color: rgba(46,124,172,0.69);
+    border-color: #286d97;
   }
 }
 .black {
@@ -871,22 +871,22 @@ html * {
 }
 a {
   outline: none;
-  color: rgba(82,160,209,0.69);
+  color: #3691c9;
   text-decoration: none;
-  -webkit-tap-highlight-color: rgba(0,115,187,0.68);
+  -webkit-tap-highlight-color: rgba(0,115,186,0.79);
 }
 p > a {
-  -webkit-tap-highlight-color: rgba(0,115,187,0.68);
+  -webkit-tap-highlight-color: rgba(0,115,186,0.79);
   transition-property: all;
   transition-duration: 0.8s;
   transition-timing-function: ease-in-out;
   transition-delay: 0.1s;
-  border-bottom: 0.18vmin solid rgba(82,160,209,0.69);
+  border-bottom: 0.18vmin solid #3691c9;
   border-bottom-right-radius: 0.5vmin;
   border-bottom-left-radius: 0.5vmin;
 }
 p > a:link {
-  color: rgba(82,160,209,0.69);
+  color: #3691c9;
 }
 p > a:visited {
   border-color: rgba(186,185,166,0.9);
@@ -1048,7 +1048,7 @@ section.page > hgroup {
   text-align: center;
 }
 section.page > hgroup h1 {
-  color: rgba(82,160,209,0.69);
+  color: #3691c9;
   margin: 0;
   margin-bottom: 2.666rem;
 }
@@ -1059,7 +1059,7 @@ section.page > header {
   z-index: 2;
 }
 section.page > header h1 {
-  color: rgba(82,160,209,0.69);
+  color: #3691c9;
   vertical-align: top;
   margin: 0;
   line-height: 1.33;
@@ -1098,7 +1098,7 @@ svg:active {
 }
 @media (prefers-color-scheme: dark) {
   svg {
-    fill: rgba(82,160,209,0.69);
+    fill: #3691c9;
     stroke: rgba(79,191,109,0.8);
     stroke-width: 1;
   }
@@ -1114,7 +1114,7 @@ svg.working {
   animation-iteration-count: infinite;
 }
 [outline] [outline] * {
-  outline: 0.25vmin solid rgba(82,160,209,0.69);
+  outline: 0.25vmin solid #3691c9;
 }
 body {
   display: flex;

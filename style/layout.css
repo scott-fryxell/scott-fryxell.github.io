@@ -1,5 +1,5 @@
 [outline] [outline] * {
-  outline: 0.25vmin solid rgba(82,160,209,0.69);
+  outline: 0.25vmin solid #3691c9;
 }
 body {
   display: flex;
