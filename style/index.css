@@ -1120,10 +1120,9 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 2.666rem;
+  margin: 1.333rem;
 }
 body header {
-  margin-top: 1.333rem;
   width: 100%;
   max-width: 29.33rem;
 }
