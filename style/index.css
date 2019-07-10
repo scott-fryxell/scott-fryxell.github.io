@@ -576,26 +576,26 @@
 }
 @-moz-keyframes working {
   50% {
-    fill: rgba(208,205,144,0.2);
-    stroke: rgba(208,205,144,0.2);
+    fill: rgba(206,211,177,0.2);
+    stroke: rgba(206,211,177,0.2);
   }
 }
 @-webkit-keyframes working {
   50% {
-    fill: rgba(208,205,144,0.2);
-    stroke: rgba(208,205,144,0.2);
+    fill: rgba(206,211,177,0.2);
+    stroke: rgba(206,211,177,0.2);
   }
 }
 @-o-keyframes working {
   50% {
-    fill: rgba(208,205,144,0.2);
-    stroke: rgba(208,205,144,0.2);
+    fill: rgba(206,211,177,0.2);
+    stroke: rgba(206,211,177,0.2);
   }
 }
 @keyframes working {
   50% {
-    fill: rgba(208,205,144,0.2);
-    stroke: rgba(208,205,144,0.2);
+    fill: rgba(206,211,177,0.2);
+    stroke: rgba(206,211,177,0.2);
   }
 }
 @-moz-keyframes button_click {
@@ -629,7 +629,7 @@ html {
   -moz-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   color: #5a585a;
-  background-color: rgba(208,205,144,0.2);
+  background-color: rgba(206,211,177,0.2);
 }
 @media screen and (min-width: 34.658rem) {
   html {
