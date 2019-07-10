@@ -13,7 +13,7 @@ svg:active {
 }
 @media (prefers-color-scheme: dark) {
   svg {
-    fill: rgba(82,160,209,0.69);
+    fill: #3691c9;
     stroke: rgba(79,191,109,0.8);
     stroke-width: 1;
   }

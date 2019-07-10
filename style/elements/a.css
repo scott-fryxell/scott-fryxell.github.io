@@ -1,21 +1,21 @@
 a {
   outline: none;
-  color: rgba(82,160,209,0.69);
+  color: #3691c9;
   text-decoration: none;
-  -webkit-tap-highlight-color: rgba(0,115,187,0.68);
+  -webkit-tap-highlight-color: rgba(0,115,186,0.79);
 }
 p > a {
-  -webkit-tap-highlight-color: rgba(0,115,187,0.68);
+  -webkit-tap-highlight-color: rgba(0,115,186,0.79);
   transition-property: all;
   transition-duration: 0.8s;
   transition-timing-function: ease-in-out;
   transition-delay: 0.1s;
-  border-bottom: 0.18vmin solid rgba(82,160,209,0.69);
+  border-bottom: 0.18vmin solid #3691c9;
   border-bottom-right-radius: 0.5vmin;
   border-bottom-left-radius: 0.5vmin;
 }
 p > a:link {
-  color: rgba(82,160,209,0.69);
+  color: #3691c9;
 }
 p > a:visited {
   border-color: rgba(186,185,166,0.9);
