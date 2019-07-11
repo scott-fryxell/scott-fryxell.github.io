@@ -82,7 +82,7 @@ ul {
 time {
   margin-bottom: 1.333rem;
   margin-top: -1.333rem;
-  color: #3691c9;
+  opacity: 0.77;
   cursor: default;
   transition: opacity 0.25s;
 }
