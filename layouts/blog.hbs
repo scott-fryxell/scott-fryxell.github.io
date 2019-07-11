@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  {{> head }}
+  <body>
+    {{> header}}
+    <main>
+      {{#each collections.posts}}
+      <article>
+        <header>
+          <h2>{{this.title}}</h2>
+          <time datetime="{{this.date}}"></time>
+        </header>
+        {{{this.contents}}}
+      </article>
+      {{/each}}
+    </main>
+  </body>
+</html>
