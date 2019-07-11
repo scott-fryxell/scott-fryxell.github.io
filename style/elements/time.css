@@ -1,4 +1,7 @@
 time {
+  margin-bottom: 1.333rem;
+  margin-top: -1.333rem;
+  color: #3691c9;
   cursor: default;
   transition: opacity 0.25s;
 }
