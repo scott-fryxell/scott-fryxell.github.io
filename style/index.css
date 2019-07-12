@@ -469,8 +469,6 @@ ul {
   margin-bottom: 1.333rem;
 }
 time {
-  margin-bottom: 1.333rem;
-  margin-top: -1.333rem;
   opacity: 0.77;
   cursor: default;
   transition: opacity 0.25s;
@@ -669,4 +667,69 @@ body header > nav > a:first-child {
 }
 body header > nav > a > h1 {
   line-height: 1;
+}
+section#feed {
+  position: relative;
+  max-width: 29.33rem;
+  display: flex;
+  flex-direction: column;
+}
+section#feed > header > svg {
+  fill: transparent;
+}
+section#feed > nav {
+  display: none;
+}
+section#feed > hgroup > h1 {
+  margin-bottom: 0;
+}
+section#feed > svg.working {
+  order: 1;
+  margin: 1.333rem auto;
+}
+section#feed > section > header > h4 {
+  font-weight: 200;
+}
+section#feed > section:first-of-type > header > h4 {
+  margin-top: 1.333rem;
+}
+section#feed > section > article {
+  overflow: hidden;
+  margin-bottom: 1.333rem;
+}
+section#feed > section > article:last-of-type {
+  margin-bottom: 0;
+}
+section#feed > section > article > hgroup {
+  font-weight: 200;
+}
+section#feed > section > article > hgroup > span,
+section#feed > section > article > hgroup > time {
+  display: inline-block;
+  vertical-align: center;
+}
+section#feed > section > article > hgroup > span {
+  color: #5a585a;
+}
+section#feed > section > article > hgroup > time {
+  color: #5a585a;
+  margin-left: 0.222166666666667rem;
+}
+section#feed > section > article > blockquote {
+  margin-bottom: 1.333rem;
+}
+section#feed > section > article > blockquote:last-of-type {
+  margin-bottom: 0;
+}
+section#feed > section > article > a > svg {
+  height: 2.666rem;
+  width: 2.666rem;
+  float: left;
+  margin-right: 1.333rem;
+  shape-outside: circle();
+  -webkit-clip-path: circle(44%);
+  clip-path: circle(44%);
+  fill: #3691c9;
+  stroke: #78b5db;
+  stroke-width: 2px;
 }
