@@ -53,7 +53,8 @@
           <h2>Realness, a technical overview</h2>
           <time datetime="4-01-2019">4-01-2019</time>
         </header>
-        <p>Realness.online, is a local events-based social network. Realness lets you socialize without having to worry about the software manipulating your vanity. User information is stored on the device, saving only posts and a simple profile on the network. Secure by design, It is also serverless, responsive, and progressive. Realness is designed to be launched from the home screen and runs as fast as a native application. Realness has no revenue share obligations, also by design.</p>
+        <p>I publish my My <a href="/feed.html">feed</a> here so you can see what It&#39;s like and also keep track of what each release is. With this post I want to give a technical overview of how I&#39;m building realness.</p>
+<p>Realness.online, is a local events-based social network. Realness lets you socialize without having to worry about the software manipulating your vanity. User information is stored on the device, saving only posts and a simple profile on the network. Secure by design, It is also serverless, responsive, and progressive. Realness is designed to be launched from the home screen and runs as fast as a native application. Realness has no revenue share obligations, also by design.</p>
 <p>Data is described in semantic HTML and objects are brought into javascript via <a href="https://github.com/scott-fryxell/realness/blob/master/src/modules/Item.js">Item.js</a>. It is based on the <a href="https://www.w3.org/TR/microdata/">microdata</a> format.</p>
 <p>I use Item.js to populate VUE objects in the UI and <a href="https://github.com/scott-fryxell/realness/blob/master/src/modules/Storage.js">Storage.js</a> to save them to local storage. Item.js and Storage.js together are my answer to flux and Vuex. Javascript functions as a controller preserving MVC pattern. All Models are described in HTML.</p>
 <p>Activity, Posts, Profile, Avatar, Relationships, Events, Posters have all been successfully modeled using Storage.js and Item.js and I haven&#39;t been experiencing the pain that most Single Page Apps experience as their applications grow more complex.</p>
@@ -78,13 +79,6 @@
 <p><a href="https://realness.online">https://realness.online</a></p>
 <p><a href="https://patreon.com/scottfryxell">https://patreon.com/scottfryxell</a></p>
 
-      </article>
-      <article>
-        <header>
-          <h2></h2>
-          <time datetime=""></time>
-        </header>
-        
       </article>
     </main>
   </body>
