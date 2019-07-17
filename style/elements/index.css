@@ -72,6 +72,10 @@ details[open] {
 details[open] > *:not(summary) {
   animation-name: slideInLeft;
 }
+main > header > svg {
+  width: 100vw;
+  height: 100vh;
+}
 ol {
   list-style: none;
 }

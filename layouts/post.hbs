@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  {{> head }}
+  <body>
+    {{> header }}
+    <main>
+      <header>
+        {{#if graphic}}
+        <svg><use xlink:href="{{graphic}}"></use></svg>
+        {{/if}}
+        <h2>{{title}}</h2>
+        <time>{{date}}</time>
+      </header>
+      {{{ contents }}}
+    </main>
+  </body>
+</html>
