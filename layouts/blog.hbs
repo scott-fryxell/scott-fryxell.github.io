@@ -7,7 +7,7 @@
       {{#each collections.posts}}
       <article>
         <header>
-          <h2>{{this.title}}</h2>
+          <h2><a href="{{this.path}}">{{this.title}}</a></h2>
           <time datetime="{{this.date}}">{{this.date}}</time>
         </header>
         {{{this.contents}}}
