@@ -84,6 +84,7 @@ ul {
   margin-bottom: 1.333rem;
 }
 time {
+  margin-bottom: 1.333rem;
   opacity: 0.77;
   cursor: default;
   transition: opacity 0.25s;
