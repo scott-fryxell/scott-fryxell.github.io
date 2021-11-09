@@ -1,7 +1,7 @@
 <template>
   <article class="post">
     <header>
-      <meta name="description" :content="article.body.children[0].children[0].value">
+      <meta v-if="article.description" name="description" :content="article.description">
       <img :src="article.img" :alt="article.alt" />
       <h1>
         <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">{{ format_title(article.slug) }}</NuxtLink>
