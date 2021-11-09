@@ -8,8 +8,6 @@ draft: true
 
 I can't spell accessibility. I can't spell lot's of words. It's even harder for me to read `um. I am dyslexic. And I am learning as Software development matures into the twenty first century that most development teams have at least a few dyslexics, I wasn't diagnosed until I was in my thirties which is pretty normal.
 
-PascalCase is like 4x longer for me to read than snake_case.
-
 As I'm reading through someone's code I first use the shape of the word to try and understand it. PascalCase robs me of this as I first have to grok the letter and then I can make out the shape.
 
 I don't know, We can talk about Accessibility, or we can practice it.
