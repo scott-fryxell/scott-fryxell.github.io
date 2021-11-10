@@ -44,7 +44,7 @@
           development lifecycle. I am daily in the trenches architecting, building
           and shipping web applications.</p>
         <p>
-          Self-motivated and fun to work with, I tend to facilitate a work
+          Self-motivated and fun to work with, I tend to facilitate an
           environment where we enjoy bringing our best selves to the table. I
           am driven by a desire to write quality code using best practices,
           and to help build a useful Internet.</p>
