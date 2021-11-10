@@ -2,8 +2,8 @@
 date: 2021-11-9
 img: /bart-in-july.svg
 alt: '16th Street Bart station. At the far end with a train in the station'
-draft: true
 ---
+
 *Tuesday, November 9th 2021*
 
 I can't spell accessibility. I can't spell lot's of words. It's even harder for me to read `um. I am dyslexic. I am learning as Software development matures into the twenty first century that most development teams have at least a few dyslexics, I wasn't diagnosed until I was in my thirties which is pretty normal.

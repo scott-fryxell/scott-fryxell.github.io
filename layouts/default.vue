@@ -9,9 +9,7 @@
       </nav>
     </header>
     <Nuxt/>
-    <footer>
-      <a href="https://nuxtjs.org/tutorials/creating-blog-with-nuxt-content/">Buiding from</a>
-    </footer>
+    <footer/>
   </main>
 </template>
 <style lang="stylus">
@@ -33,4 +31,6 @@
         align-self: center
         & > a
           margin-right: 1rem
+    & > footer
+      padding:1em
 </style>
