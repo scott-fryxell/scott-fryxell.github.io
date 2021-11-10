@@ -1,12 +1,8 @@
 ---
 img: /abstract-flower.svg
 alt: The outline of a flower; framed by green and pale red patterns.
-draft:
+draft: true
 ---
-
-*Monday, November 8th 2021*
-
-{{TOC}}
 
 Consultants have a bad reputation. It's common for development teams to view them with suspicion. They come in, make some sweeping statements, wow your management team and leave as useless as they are dramatic. But at VueSchool we think an engineering consultant is a different breed of consultant. Born in the trenches. A daily coder and a resource for you to lean on when having an external perspective can help your project ship.
 
