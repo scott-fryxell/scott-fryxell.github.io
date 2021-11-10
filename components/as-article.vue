@@ -1,8 +1,7 @@
 <template>
   <article class="post">
     <header>
-      <meta v-if="article.description" name="description" :content="article.description">
-      <img :src="article.img" :alt="article.alt" />
+      <img v-if="article.img" :src="article.img" :alt="article.alt" />
       <h1>
         <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">{{ format_title(article.slug) }}</NuxtLink>
       </h1>
@@ -14,9 +13,7 @@
       </nav>
     </details>
     <nuxt-content :document="article" />
-    <footer>
-      <!-- <pre> {{ article }} </pre> -->
-    </footer>
+    <footer><!-- <pre> {{ article }} </pre> --></footer>
   </article>
 </template>
 <script>
@@ -56,7 +53,10 @@
         line-height: 2
         margin-left: 1rem
         display: block
-    .nuxt-content
+    & > footer
+      padding: 1em
+    .nuxt-content,
+    .nuxt-content-editor
       margin: auto
       max-width: 33rem
 </style>

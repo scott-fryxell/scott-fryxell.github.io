@@ -12,10 +12,11 @@
     async asyncData({ $content, params }) {
       await $content('articles').fetch()
       const articles = await $content('articles')
+        .where({ draft: { $ne: true } })
         .sortBy('createdAt', 'asc')
         .fetch()
       return {
-        articles
+        articles: articles.filter(article => !article.draft)
       }
     }
   }

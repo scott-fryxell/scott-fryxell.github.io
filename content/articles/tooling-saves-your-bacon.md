@@ -1,23 +1,25 @@
 ---
-createdAt: 2021-04-01
 img: /abstract-flower.svg
-alt: 'The outline of a flower; framed by green and pale red patterns.'
+alt: The outline of a flower; framed by green and pale red patterns.
+draft:
 ---
 
 *Monday, November 8th 2021*
+
+{{TOC}}
 
 Consultants have a bad reputation. It's common for development teams to view them with suspicion. They come in, make some sweeping statements, wow your management team and leave as useless as they are dramatic. But at VueSchool we think an engineering consultant is a different breed of consultant. Born in the trenches. A daily coder and a resource for you to lean on when having an external perspective can help your project ship.
 
 Recently we helped a client with a consumer application sort through some performance problems as they bring their application out into the world. Stability and performance are their priority. Their business goal is to prove the app in the market place, secure a round of funding, take the beta off and go like hell.
 
-Their CTO has been on the job for a month. He is comfortable with the product and can speak it's goals. He is not sure of the code quality. What state is this app in? How does it perform? He wants to know what he is working with.
+The CTO has been on the job for a month. He is comfortable with the product and can speak its goals. He is not sure of the code quality. What state is this app in? How does it perform? He wants to know what he is working with.
 
 
 ## State of the application
 
 There is a history of crashes while a user is broadcasting, there have been extensive efforts made by the development team to address stability. We need to concretely prove that broadcasting works. Broadcasting is not as performant as other services. We need to understand why? Is there something in Vue or the Firebase stack that is bottlenecking performance?
 
-The feed has a few problems. It is slow to load on mobile with initial paint time above six seconds. Any aggressive scrolling locks the feed up and it's UI is regularly below 60 frames per second. There are reports of the application locking up when browsing back and forth between the feed and a video stream.
+The feed has a few problems. It is slow to load on mobile with initial paint time above six seconds. Any aggressive scrolling locks the feed up and its UI is regularly below 60 frames per second. There are reports of the application locking up when browsing back and forth between the feed and a video stream.
 
 ## State of the nerds
 
@@ -29,11 +31,11 @@ The lead engineer has been working night and day on this app for the past eighte
 
 He knows the app is working for him, but he's not confident about its stability for others. He's likes his application architecture and design choices and isn't looking to make dramatic changes this far into the project.
 
-I have found that development teams with high standards also value external validation and are motivated by a practical humility to have people review their work.
+I have found that development teams with high standards value external validation and are motivated by a practical humility to have people review their work.
 
-## Schedule for work
+## The work
 
-The client proposes we have Daily, 15 minute meetings with CTO and lead engineer where we do a quick review and clarify the marching orders. Once a week we get all the interested parties together for 45 minutes to go over progress and strategize next steps. We use Slack for regular focused conversations with the lead engineer. There are four weeks of work and I maintain a shared Google doc for each as a notebook of the facts.
+The client proposes we have Daily, 15 minute meetings with CTO and lead engineer where we do a quick review and clarify the marching orders. Once a week we get the interested parties together for 45 minutes to go over progress and strategize next steps. We use Slack for regular focused conversations with the lead engineer. There are four weeks of work and I maintain a shared Google doc for each as a notebook of the facts.
 
 ## Broadcasting a program
 
