@@ -13,9 +13,13 @@ The CTO has been on the job for a month. He is comfortable with the product and 
 
 ## State of the application
 
-There is a history of crashes while a user is broadcasting, there have been extensive efforts made by the development team to address stability. We need to concretely prove that broadcasting works. Broadcasting is not as performant as other services. We need to understand why? Is there something in Vue or the Firebase stack that is bottlenecking performance?
+There is a history of crashes while a user is broadcasting. Extensive efforts by the development team to address stability need to be verified. We need to concretely prove that broadcasting works. Broadcasting is not as performant as other services. We need to understand why? Is there something in Vue or the Firebase stack that is bottlenecking performance?
 
-The feed has a few problems. It is slow to load on mobile with initial paint time above six seconds. Any aggressive scrolling locks the feed up and its UI is regularly below 60 frames per second. There are reports of the application locking up when browsing back and forth between the feed and a video stream.
+The feed is slow to load on mobile with an initial paint time above six seconds. Any aggressive scrolling locks the feed up and its UI is regularly below 60 frames per second. On mobile there are reports of the application locking up when browsing back and forth between the feed and a video stream.
+
+- Verify broadcasting is reliable
+- Make the feed fast
+- What's the deal with mobile?
 
 ## State of the nerds
 
@@ -27,23 +31,37 @@ The lead engineer has been working night and day on this app for the past eighte
 
 He knows the app is working for him, but he's not confident about its stability for others. He's likes his application architecture and design choices and isn't looking to make dramatic changes this far into the project.
 
+My role is to man the lab book. It's tracking memory usage, 
+Tracking CPU utilization. Logging every possible performance change you can make. I want to show up to our daily meetings. With a document of our progress and a story about how the day went and what I am seeing. In order to do this, I have to get right in their code. All the applications secrets will be revealed.
+
 I have found that development teams with high standards value external validation and are motivated by a practical humility to have people review their work.
 
 ## The work
 
-The client proposes we have Daily, 15 minute meetings with CTO and lead engineer where we do a quick review and clarify the marching orders. Once a week we get the interested parties together for 45 minutes to go over progress and strategize next steps. We use Slack for regular focused conversations with the lead engineer. There are four weeks of work and I maintain a shared Google doc for each as a notebook of the facts.
+The three of us get together Daily, for 15 minute meetings where we do a quick review and clarify the marching orders for the day. Once a week we get all interested parties together for 45 minutes to go over progress and strategize next steps. We use Slack for regular focused conversations with the lead engineer. There are four weeks of work. I maintain a Google doc for each weeks work as a notebook of the facts.
 
 ## Broadcasting a program
 
-Tooling is the hero of this story. I had a localhost versions of the app running within 20 minutes of getting access to the code. On my dev machine I could create a profile, view profile interact with the full application. They had even gone so far as to apply a dev stylesheet so that the background made clear that you were working on development data.
+The customer support team make regular and extensive product walk throughs, so I was a power user by the end of the first day.
 
-I could broadcast immediately, I could as deep as I wanted into the code base.  go deep and play with a fully functional app. Right from the jump. Since I was connected to shared dev server I had a functioning feed with recent content that I could post too immediately available to me.
+I had a localhost version of the app running within 20 minutes of getting access to the code. Any videos I created are stored on a publicly available 'dev' version of the site. I was immediately sharing videos of what I was doing with the team. I could go to the dev site from any machine and use it. This cleared the way for me to give useful and regular feedback to the team.
 
-Any videos I created are stored in a dev site which is publicly available. I was immediately sharing videos of what I was doing with the team. I could go to the dev site from any machine and use it. This cleared the way for me to give clear and regular feedback to the team.
+### How broadcasting performance budget is being spent?
 
-The customer support team make regular and extensive product walk throughs. I was a power user by the end of the first day.
+Broadcasting involves WEB-RTC (Real Time Communication).   I was careful to track every connection. 
 
-We ran an initial twelve hour broadcast with the goal of identifying any memory leaks and performance problems. I used the dev site directly from an older machine (2013 MacBook Air) to see how the application performs under stress and to verify that the application will work reliably for the widest possible pool of broadcasters.
+It's the tedious work that matters the most. It's the primary value VueSchool is providing this first week of work.  This makes the 'lab-book, our shared doc 📓 The most important artifact. I was able to document where the performance budget was being spent. It's important to get the client to business decisions. 
+	- Its our role to do the hard work of investigating. And an investigation is useless without providing facts. 
+	- Your done when you've arrived at the business decisions. 
+
+On the first day I was able to set up broadcast document and highlight for the team where they were spending their performance budget.  I was able to share my desktop and show the team what features were consuming resources. 
+
+
+
+- 
+
+
+We ran a twelve hour broadcast with the goal of identifying any memory leaks and performance problems. I used the dev site directly from an older machine (2013 MacBook Air) to see how the application performs under stress and to verify that the application will work reliably for the widest possible pool of broadcasters.
 
 We broadcast program from one machine, added a second stream to the program from another laptop and then a third stream from a phone broadcaster to the stream. We ran three broadcasters on one stream for hours, We played pre-recorded videos on loop, exercised the chat function. Ran an ever-changing audio signal through the broadcast.
 
@@ -62,8 +80,8 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-## Why it worked
-
+## Tooling is a hero
+- It's available by default with firebase a benefit that is greater than you initially think.
 - Tooling is flexible and was invested in
 - CTO is available and willing to commit resources to remove roadblocks. He has clear priorities for me and though is new cares for his team
 - Development team responds quickly to questions, are current and have an established culture of move fast and best practices.
