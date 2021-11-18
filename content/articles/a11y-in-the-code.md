@@ -10,7 +10,7 @@ I can't spell accessibility. I can't spell lot's of words. It's even harder for 
 
 It's important to take time and think about variable naming. How can we include and optimize for the widest array of readers?
 
-As I'm reading through someone's code I first use the shape of the word to try and understand it. And so I use snake_case and kabab-case for my names. PascalCase is becoming all the rage as it improves editors ability to autocomplete and make inferences about code. VueJs is going hard in the paint for it. With 3.2 and the new `<script setup>` synctactic sugar. You have to PascalCase to get components auto included in your template.
+As I'm reading through someone's code I first use the shape of the word to try and understand it. And so I use snake_case and kabab-case for my names. camelCase is becoming all the rage as it improves editors ability to autocomplete and make inferences about code. VueJs is going hard in the paint for it. With 3.2 and the new `<script setup>` synctactic sugar. You have to PascalCase to get components auto included in your template.
 
 Forced into this type of casing slows me down. I am robbed of my reading shape-first strategy.
 
