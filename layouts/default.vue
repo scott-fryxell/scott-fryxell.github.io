@@ -1,7 +1,7 @@
 <template lang="html">
   <main>
     <header>
-      <link rel="stylesheet" href="https://realness.online/css/app~d0ae3f07.d9c9600f.css">
+      <link rel="stylesheet" href="https://realness.online/css/app~d0ae3f07.f59223d8.css" preload="true">
       <h1><a href="/">Scott Fryxell</a></h1>
       <nav>
         <a href="/resume">Work</a>
