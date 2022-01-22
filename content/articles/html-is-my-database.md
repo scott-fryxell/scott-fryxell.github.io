@@ -1,10 +1,8 @@
 ---
-draft: true
+description: How your data is stored is what your freedom looks like. Using HTML is a better solution then SQL
 ---
 
-Html is my database
-
-Because it's so forgiving
+Html is my database, it's so forgiving.
 
 Because it isn't judging what you know about it.
 
