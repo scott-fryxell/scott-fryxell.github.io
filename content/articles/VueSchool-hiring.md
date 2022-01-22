@@ -1,6 +1,3 @@
----
-draft: true
----
 
 # Week 1 (20th to 26th)
 - App navigation
