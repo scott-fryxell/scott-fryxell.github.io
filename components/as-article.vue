@@ -6,14 +6,14 @@
         <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">{{ format_title(article.slug) }}</NuxtLink>
       </h1>
     </header>
-    <details>
-      <summary>Last updated: {{ format_date(article.updatedAt) }}</summary>
+    <details v-if="article.toc.length">
+      <summary>Created: {{ format_date(article.date) }}</summary>
       <nav>
         <NuxtLink v-for="link of article.toc" :key="link.id" :to="`#${link.id}`">{{ link.text }}</NuxtLink>
       </nav>
     </details>
     <nuxt-content :document="article" />
-    <footer><!-- <pre> {{ article }} </pre> --></footer>
+    <footer><!--<pre> {{ article }} </pre>--></footer>
   </article>
 </template>
 <script>
