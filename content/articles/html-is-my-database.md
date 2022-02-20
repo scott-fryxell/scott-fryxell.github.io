@@ -1,4 +1,5 @@
 ---
+date: 2021-12-23
 description: How your data is stored is what your freedom looks like. Using HTML is a better solution then SQL
 ---
 

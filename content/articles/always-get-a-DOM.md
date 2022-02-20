@@ -1,3 +1,7 @@
+---
+date: 2022-1-22
+---
+
 Always get a DOM
 
 I can feel sql slowing me down. I spent 4 hours yesterday massaging 465 entries to get them to import into SQL. It's like 1983.

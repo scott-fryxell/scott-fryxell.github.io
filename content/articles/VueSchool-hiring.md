@@ -1,3 +1,6 @@
+---
+date: 2021-12-23
+---
 
 # Week 1 (20th to 26th)
 - App navigation

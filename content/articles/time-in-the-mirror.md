@@ -1,3 +1,7 @@
+---
+date: 2022-2-17
+---
+
 Elitist systems go sour. America has a special responsibility to continually renew to protect from a rotting elitism.
 
 Too much looking in the mirror. We fuck up constantly because how you look saving the world is why you are trying to save the world.
