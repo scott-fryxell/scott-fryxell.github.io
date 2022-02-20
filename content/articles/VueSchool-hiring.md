@@ -2,7 +2,7 @@
 date: 2021-12-23
 ---
 
-# Week 1 (20th to 26th)
+## Week 1 (20th to 26th)
 - App navigation
 - Search designed
 - Data model figured out
@@ -10,7 +10,7 @@ date: 2021-12-23
 	- What is the api I can call
 	- Mock it out for now
 
-# Week 2 (27th to 2nd)
+## Week 2 (27th to 2nd)
 - Search
 	- algolia integration?
 - Skills tagger
@@ -18,20 +18,19 @@ date: 2021-12-23
 - Connect
 - Connected view
 
-# Week 3 (3rd to 9th)
+## Week 3 (3rd to 9th)
 - Subscription
 - credits
 - connections
 
-# Week 4 (10th to 16th)
+## Week 4 (10th to 16th)
 - Chat
 - Company onboarding
 - Developer onboarding
 - Comments
 
-# Week 5 (17th to 23rd)
+### Week 5 (17th to 23rd)
 Application testing
-
 
 
 I want the developer list to be using live data by the end of the weekend. I want to have the search and filter feature filtering the list of developers. That way Alex can start tweaking the UI with me until we get it right. That means merging the data I have into one CSV file that I import on app start and use while we work out the user experience.
