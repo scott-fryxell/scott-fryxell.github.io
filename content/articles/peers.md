@@ -1,6 +1,7 @@
 ---
 date: 2022-2-12
 ---
+
 At its heart peer dynamics are about being curious with one another's work.  I want to know what you did, and why. I am curious about you. I struggle with this. I get emotional. I am prickly when peers make value judgments about my code.
 
 I want to work with someone who is curious about why I did what I did. Why are you statically coding in the layout?

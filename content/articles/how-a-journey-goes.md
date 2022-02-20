@@ -1,7 +1,6 @@
 ---
 date: 2022-2-11
 ---
-how-a-journey-goes
 
 Katie said recently that YouTube will always be more exciting than what she wants to do. That it's impossible to walk away from for that reason.
 
