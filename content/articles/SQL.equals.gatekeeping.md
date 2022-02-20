@@ -1,3 +1,7 @@
+---
+date: 2022-2-6
+---
+
 I'm stoked for this project. I would work with this team on anything. They are smart and diligent and know the job. But SQL forced a dynamic that doesn't exist with firebase. somethimg that feels akin to getting a faster processor, firebase frees developer from gatekeeping bottlenecks.
 
 SQL does not play well with 'as written' text. It forces normalization which means rules and conversations and since it's not document based every change can potentially crash the server and so experts are required. Then as a new senior guy you have to ask to get what you need to make progress. This feels like molasis to work through.

@@ -1,3 +1,7 @@
+---
+date: 2022-2-6
+---
+
 I'm beginning my 3rd month on a project, we are at the end of the MVP period. We used tailwind to get us here. It looked great from the beginning. But now I've come back to the UI for some tightening things up and tailwind's true colors are coming through.
 
 I am lost in this html. There is duplication everywhere. I can't look at it and understand intuitively what is happening. The transition tag is a nightmare. All of this design mixed into all of this application makes it clumsy and ham-fisted to reason about when your re-reading it. It's like I'm stuck with a comic book when I'm trying to read the story.

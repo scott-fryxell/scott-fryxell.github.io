@@ -1,4 +1,5 @@
 ---
+date: 2021-11-17
 description: How a single change opens the DOM up to be our persistence hero
 ---
 

@@ -1,6 +1,5 @@
 ---
-img: /bart-in-july.svg
-alt: '16th Street Bart station. At the far end with a train in the station'
+date: 2021-12-1
 ---
 
 #realness #idea
