@@ -8,7 +8,7 @@
         <p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
           <span itemprop="addressLocality">San Francisco</span>
         </p>
-        <a href="mailto:scott@vueschool.io">scott@vueschool.io</a>
+        <a href="mailto:scott.fryxell@hey.com">scott.fryxell@hey.com</a>
       </address>
     </header>
     <section id="skills">
