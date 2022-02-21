@@ -7,8 +7,3 @@ It's a plague upon science. Where you start from has a large effect on where you
 A culture of royalty has a fear and a paranoia about initial conditions. They define everything.
 
 Initial conditions decide our perspective. We are responsible for the effects of our opinions. Leaning on our initial conditions as a source of truth is a cognitive bias.
-
-
-# Wednesday, December 1st
-
-A [Reference](http://www.powermobydick.com/Moby002.html) for my reading of "Moby Dick".
