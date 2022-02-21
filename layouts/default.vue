@@ -1,9 +1,9 @@
 <template lang="html">
   <main>
     <header>
-      <h1><a href="/">Scott Fryxell</a></h1>
+      <h1><NuxtLink to="/">Scott Fryxell</NuxtLink></h1>
       <nav>
-        <a href="/resume">Work</a>
+        <NuxtLink to="/resume">Work</NuxtLink>
         <a href="https://cash.app/$ScottFryxell">$</a>
       </nav>
     </header>
