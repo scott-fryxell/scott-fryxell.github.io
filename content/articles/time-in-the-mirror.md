@@ -1,5 +1,6 @@
 ---
 date: 2022-2-17
+img: /posters/Scott_Fryxell_posters_Friday, May 21, 3_27 PM.svg
 ---
 
 America has a special responsibility to continually renew itself, to mix together and look to the oportunities in the swirl. We are the world's experiment in regular folks getting along.

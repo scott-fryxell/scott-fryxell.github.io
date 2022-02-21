@@ -1,6 +1,7 @@
 ---
 date: 2021-11-17
 description: How a single change opens the DOM up to be our persistence hero
+img: /posters/Scott_Fryxell_posters_Friday, May 21, 2_41 PM.svg
 ---
 
 I am not above using a hack.
