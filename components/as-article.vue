@@ -40,10 +40,10 @@
       & > img
         width: 75vw
       & > h2
+        padding: 0 1rem
         text-transform: capitalize
         & > a
           // color: inherit
-
     & > details
       display: inline-block
       margin-left: 1rem
