@@ -1,5 +1,6 @@
 ---
 date: 2022-2-6
+img: /posters/Scott_Fryxell_posters_Wednesday, February 9, 9_55 AM.svg
 ---
 
 I'm beginning my 3rd month on a project, we are at the end of the MVP period. We used tailwind to get us here. It looked great from the beginning. But now I've come back to the UI for some tightening things up and tailwind's true colors are coming through.

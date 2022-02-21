@@ -1,6 +1,6 @@
 ---
 date: 2021-11-9
-img: /bart-in-july.svg
+img: /posters/Scott_Fryxell_posters_Thursday, July 8, 1_38 PM.svg
 alt: '16th Street Bart station. At the far end with a train in the station'
 ---
 

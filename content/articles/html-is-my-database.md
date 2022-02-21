@@ -1,5 +1,6 @@
 ---
 date: 2021-12-23
+img: /posters/Scott_Fryxell_posters_Friday, July 16, 1_10 PM.svg
 description: How your data is stored is what your freedom looks like. Using HTML is a better solution then SQL
 ---
 
