@@ -37,7 +37,6 @@
     justify-content: center
     align-items: center;
     & > header
-      margin-bottom: 2rem
       & > img
         width: 75vw
       & > h2
