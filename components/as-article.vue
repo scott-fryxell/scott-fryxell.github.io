@@ -6,12 +6,7 @@
         <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">{{ format_title(article.slug) }}</NuxtLink>
       </h2>
     </header>
-    <details v-if="article.toc.length">
-      <summary>Created: {{ format_date(article.date) }}</summary>
-      <nav>
-        <NuxtLink v-for="link of article.toc" :key="link.id" :to="`#${link.id}`">{{ link.text }}</NuxtLink>
-      </nav>
-    </details>
+    <h5>{{ format_date(article.date) }}</h5>
     <nuxt-content :document="article" />
     <footer><!--<pre> {{ article }} </pre>--></footer>
   </article>
@@ -42,9 +37,13 @@
     justify-content: center
     align-items: center;
     & > header
-      margin-bottom: var(--base-line)
+      margin-bottom: 2rem
       & > img
         width: 75vw
+      & > h2
+        text-transform: capitalize
+        & > a
+          // color: inherit
 
     & > details
       display: inline-block

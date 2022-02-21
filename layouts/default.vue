@@ -12,16 +12,12 @@
   </main>
 </template>
 <style lang="stylus">
+  [outline],
+  [outline] *
+    outline: 0.15vmin dashed grey
   main
     margin: auto
     flex-direction: column
-    h2
-      padding: 1rem
-      text-transform: capitalize
-      & > a
-        // color: inherit
-        @media (prefers-color-scheme: dark)
-          color: rgba(208, 208, 201, 0.9)
     & > header
       display: flex
       & > h1
@@ -31,5 +27,6 @@
         & > a
           margin-right: 1rem
     & > footer
-      padding:1em
+      padding: 1em
+
 </style>
