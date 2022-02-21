@@ -1,5 +1,5 @@
 ---
-date: 2022-1-22
+date: 2022-01-22
 img: /posters/Scott_Fryxell_posters_Friday, February 11, 8_45 AM.svg
 ---
 
