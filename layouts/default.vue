@@ -15,11 +15,11 @@
   main
     margin: auto
     flex-direction: column
-    h1
+    h2
       padding: 1rem
       text-transform: capitalize
       & > a
-        color: inherit
+        // color: inherit
         @media (prefers-color-scheme: dark)
           color: rgba(208, 208, 201, 0.9)
     & > header

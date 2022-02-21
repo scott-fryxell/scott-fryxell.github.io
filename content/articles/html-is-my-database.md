@@ -3,18 +3,11 @@ date: 2021-12-23
 description: How your data is stored is what your freedom looks like. Using HTML is a better solution then SQL
 ---
 
-Html is my database, it's so forgiving.
+HTML is so forgiving. it isn't judging what you know about it. You just write. HTML loves you with open arms — "Just give me what you write" I'll make something out of it. HTML's permissive by nature. Just like your grandparents.
 
-Because it isn't judging what you know about it.
+HTML is my database because you can take that raw piece of clay and mold it into sculpture. You can make expressive, human experiences that invite you back and set up creative journeys.
 
-Because it's permissive
-
-"Just give me what you write" I'll make something out of it.
-
-
-HTML is my database because you can take that clay and mold it into sculpture. You can make expressive, human experiences, that invite repetition and creative journeys.
-
-HTML is my database because parsing it is fast. And you have access to an entire DOM's worth of API's that millions of people have been considering and improving for over 25 years.
+HTML is my database because parsing it is fast. And you have access to an entire DOM's worth of API's that millions of people have been considering and improving for over 25 years. HTML can be so permissive because it has all this experience.
 
 HTML is my database because it is the beating heart of the free and open internet. It's text it's open. anyone can read what you are doing to them. It's right their they but need the curiosity.
 
