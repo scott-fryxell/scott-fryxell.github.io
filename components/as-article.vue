@@ -2,9 +2,9 @@
   <article class="post">
     <header>
       <img v-if="article.img" :src="article.img" :alt="article.alt" />
-      <h1>
+      <h2>
         <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">{{ format_title(article.slug) }}</NuxtLink>
-      </h1>
+      </h2>
     </header>
     <details v-if="article.toc.length">
       <summary>Created: {{ format_date(article.date) }}</summary>
@@ -37,11 +37,15 @@
 </script>
 <style lang="stylus">
   article.post
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center;
     & > header
+      margin-bottom: var(--base-line)
       & > img
         width: 75vw
-      & > h1
-        padding: 0 1rem
+
     & > details
       display: inline-block
       margin-left: 1rem
@@ -57,6 +61,6 @@
       padding: 1em
     .nuxt-content,
     .nuxt-content-editor
-      margin: auto
+      // margin: auto
       max-width: 33rem
 </style>

@@ -57,7 +57,8 @@ A secondary
 How am I going to animate these vector graphics in a way that I can make downloadable? I have landed on using CSS's animation tools first but haven't yet figured out how to incorporate the named animation into the downloaded vector.
 
 
----
+
+
 You can make and attach your own custom comoponents to and attach then manipulate them as types during your runtime.
 
 This is better typing than Even if you need to extract your data to a database I would argue that this is a more natural way to write webapps. It's a natureal friend of serverless edge and data sanctity.

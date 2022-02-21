@@ -1,6 +1,5 @@
 ---
 date: 2022-2-17
-draft: true
 ---
 
 Elitist systems go sour. America has a special responsibility to continually renew to protect from a rotting elitism.
