@@ -13,7 +13,7 @@
       await $content('articles').fetch()
       const articles = await $content('articles')
         .where({ draft: { $ne: true } })
-        .sortBy('createdAt', 'desc')
+        .sortBy('date', 'desc')
         .fetch()
       return {
         articles: articles.filter(article => !article.draft)
