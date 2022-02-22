@@ -69,23 +69,24 @@
           </h6>
         </header>
         <p itemprop="description">
-          <a href="https://vueschool.io/articles/vuejs-tutorials/tooling-saves-your-bacon/">You can read about</a>
-          how I helped a startup diagnose performance problems.
+          I have been able to deeply explore the vue marketplace
+          to understand the current best practices in vue 3. <a href="https://vueschool.io/articles/vuejs-tutorials/tooling-saves-your-bacon/">
+          You can read about</a> how I helped a startup diagnose
+          performance problems.
         </p>
         <p itemprop="description">
           I helped an insurance startup negotiate their transition
           from vue 2 to 3. By focusing on adoption and code review.
-          I have been able to deeply explore the vue marketplace
-          to understand the current best practices in vue 3.
         </p>
         <p itemprop="description">
           I helped an NFT startup interview candidates I wrote a
           test problems and worked with the VueSchool team to
           interview and recommend qualified from all over the world.
-          I built the <a href="https://vueschool.io/hiring">hiring app</a>
-          for VueSchool. We were able to execute from idea to release in
-          less that two and a half months. helping VueSchool enter a
-          new business vertical
+        </p>
+        <p itemprop="description"> I built the <a href="https://vueschool.io/hiring">
+          hiring app</a> for VueSchool. We were able to execute from
+          idea to release in less that two and a half months. helping
+          VueSchool enter a new business vertical.
         </p>
       </article>
       <article itemscope itemtype="http://schema.org/Event/Job">
