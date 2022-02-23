@@ -4,7 +4,7 @@
       <h1><NuxtLink to="/">Scott Fryxell</NuxtLink></h1>
       <nav>
         <NuxtLink to="/resume">Work</NuxtLink>
-        <a href="https://cash.app/$ScottFryxell">$</a>
+        <a hidden href="https://cash.app/$ScottFryxell">$</a>
       </nav>
     </header>
     <Nuxt/>
