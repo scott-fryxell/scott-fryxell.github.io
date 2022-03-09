@@ -14,5 +14,4 @@ HTML is my database because it is the beating heart of the free and open interne
 
 HTML is my database because it's on the edge. It's easy to store and leave on the phone. HTML free's you to leave the data warehouses. You can pick what data lives on the server — You treat your customer like they are your equal. HTML creates a shared space for you to decide where your data lives.
 
-
 HTML is my Database.
