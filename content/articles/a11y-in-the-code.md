@@ -1,5 +1,5 @@
 ---
-date: 2021-11-09
+date: 2022-11-09
 img: /posters/Scott_Fryxell_posters_Thursday, July 8, 1_38 PM.svg
 alt: '16th Street Bart station. At the far end with a train in the station'
 ---
@@ -7,7 +7,7 @@ I can't spell the word accessibility. I can’t spell a lot of words. As a dysle
 
 We can talk about accessibility, or we can practice accessibility. How do we include and optimize for the widest array of readers? Take a moment to consider variable naming.
 
-As I read through a line of code, my brain only processes the shape of the whole word to begin to understand it. It is a spacial understanding, rather than linear. camelCase is becoming all the rage as it improves editors’ ability to autocomplete and make inferences about code. VueJs is going all in on PascelCase  and the new `<script setup>` syntactic sugar. You have to use PascalCase to get components auto-included in your template. But for my own purposes and for the accessibility of others like me, I use snake_case and kabab-case for my naming.
+As I read through a line of code, my brain only processes the shape of the whole word to begin to understand it. It is a spacial understanding, rather than linear. PascalCase is becoming all the rage as it improves editors’ ability to autocomplete and make inferences about code. VueJs is going all in on PascelCase  and the new `<script setup>` syntactic sugar. You have to use PascalCase to get components auto-included in your template. But for my own purposes and for the accessibility of others like me, I use snake_case and kabab-case for my naming.
 
 Forced into other types of casing slows me down. I am robbed of my shape-first reading strategy.
 
