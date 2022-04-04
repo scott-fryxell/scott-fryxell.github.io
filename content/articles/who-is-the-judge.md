@@ -10,11 +10,6 @@ Using contractors and frelancers. lets you 'hire' for the job you need done and 
 
 This is the Netflix's view. Hire a team, and hire for position.  If the work is done, let the person go with the warmest reagards — mindful to build a world that is fair for them long term.
 
-
-
-
-
-
 [related to using sql kills your data](https://stackoverflow.blog/2022/03/03/stop-aggregating-away-the-signal-in-your-data/). I like the signal metaphhore. keep their writing as much as possible. every true or false is a signal degradation. That's why i have version control on. I can see my data through time on realness. how people come in and go.
 
 I'm going to prume everyone but tomo odessa and katie. they are the only people who visit.
