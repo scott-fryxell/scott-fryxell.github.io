@@ -4,7 +4,9 @@ draft: true
 img: /posters/Scott_Fryxell_posters_Friday, February 11, 8_45 AM.svg
 ---
 
-Regular ass people are the most important people. This is a big difference between facebook and realness.online. You go to facebook for the best app the most elite people can build — You come to realness to discuss reality with regular ass people. You know there no ads, and the forum is run by your buddies, and you know their lives a culture you can trust and understand.
+Regular ass people are the most important people.
+
+You go to facebook for the best app the most elite people can build — You come to realness to discuss reality with regular ass people. At least that the hope — and what the architecture is built around. You know, there no ads, and the forum is run by your buddies, and you know their lives a culture you can trust and understand.
 
 Regular ass people need to feel safe and want to share some form of the public square. Regular ass people want to take responsibility for what is theirs. We realize that a democracy requires that we do this part ourselves.
 
