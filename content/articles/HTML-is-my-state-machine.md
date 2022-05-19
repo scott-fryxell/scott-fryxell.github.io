@@ -6,15 +6,11 @@ Edge poses weird quandries when you start taking advantage of how close your cod
 
 It's been my vuex/pinia for years. If I wanna know the state I'll load the object from the database and get it. It's instant because the database is on the client with the client code.
 
-Pinia has feelt like an extra layer. Mutations I've already got mutations, the data is right there. But I have a problem do like composables for
+Pinia has feelt like an extra layer. Mutations I've already got mutations, the data is right there. But I have a problem I do like composables for
 
-I'm working with Relations right now and they are loaded in like 15 modules. each instance knows about itself. Changes don't apply to other instances.
+I'm working with Relations (who you are following) right now and they are loaded in like 15 modules. each instance knows about itself. I have to pass events to for everything to cordinate.
 
-This has created some spaghetti code for updates to statements that I spent yesterday cleaning up with module level reference variables inside a composable module. this way the state can be known accross all my modules. If I save the data where I get it this isn't a propblem.
-
-What's got me feeling so uncomfortable here?
-
-I realized I need to move all the loading via database into a single composable. I want to make sure I know what I've got what purposes I'm using `load()` and `list()` for.
+This has created some spaghetti code that I spent yesterday cleaning up with [module level reference](https://vueschool.io/articles/vuejs-tutorials/home-rolled-store-with-the-vue-js-composition-api/) variables defined inside composable files — `@/use/people`. State can be known accross all my modules. This brings my app into feature parity with pinia.
 
 I think this is an elegant upgrade to how I'm mangaging state in the app. module scope removes the spaghetti of having to pass changes via events.
 
