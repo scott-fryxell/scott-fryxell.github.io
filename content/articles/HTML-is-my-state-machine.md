@@ -4,7 +4,7 @@ date: 2022-05-18
 
 Edge poses weird quandries when you start taking advantage of how close your code is to your data.
 
-It's been my vuex/pinia for years. If I wanna know the state I'll load the object from the database and get it. It's instant because the database is on the client with the client code.
+HTML has been my vuex/pinia for years. If I wanna know the state I'll load the object from the database and get it. It's instant because the database is on the client with the client code.
 
 Pinia has feelt like an extra layer. Mutations I've already got mutations, the data is right there. But I have a problem I do like composables for
 
