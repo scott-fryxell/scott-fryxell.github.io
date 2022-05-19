@@ -1,6 +1,5 @@
 ---
 date: 2022-04-10
-img: /posters/Scott_Fryxell_posters_Friday, February 11, 8_45 AM.svg
 ---
 
 I've built out the posters that realness generate. It's what I envisage a poster to look like. It's created from a source image but has characteristics that take advantage of svg,
