@@ -6,19 +6,19 @@
           transform: rotate(0.33deg);
         }
       }
-      svg:focus-within path[itemprop="light"] {
+      svg path[id$="light"] {
         animation-name: subtle-rotate;
         animation-timing-function: linear;
-        animation-duration: 2s;
+        animation-duration: 5s;
         animation-direction: alternate;
         animation-iteration-count: infinite;
       }
-      svg:focus-within path[itemprop="bold"] {
+      svg path[id$="bold"] {
         animation-name: subtle-rotate;
         animation-timing-function: linear;
         animation-direction: alternate;
         animation-iteration-count: infinite;
-        animation-duration: 3s;
+        animation-duration: 8s;
       }
     </style>
     <linearGradient id="16282281824-posters-1652916426252-vertical" x1="0" x2="0" y1="0" y2="100%">
