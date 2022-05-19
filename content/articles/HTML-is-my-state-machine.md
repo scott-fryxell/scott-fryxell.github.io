@@ -1,5 +1,6 @@
 ---
 date: 2022-05-18
+img: /posters/Scott_Fryxell_Wednesday, May 18, 4_27 PM.svg
 ---
 
 Edge poses weird quandries when you start taking advantage of how close your code is to your data.
