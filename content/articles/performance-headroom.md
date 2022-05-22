@@ -11,4 +11,4 @@ A tool is fast.
 
 Firebase is generous; In the three years I've used the service realness hasn't cost me a dime. They give developers the space to create. I already have a compression worker built to do the gziping on the edge, and convert to `${created_at}.html.gz`.
 
-If realness starts creeping toward costing money, I have this in my pocket ready to go. I got too much to build to do it now, but it's headroom. something I can throw in their if the shit gets real. Performance is about knowing your headroom.
+If realness starts creeping toward costing money, I have this in my pocket ready to go; it's headroom, something I can throw in their if the shit gets real. Performance is about knowing your headroom.
