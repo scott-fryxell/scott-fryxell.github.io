@@ -1,5 +1,6 @@
 ---
 date: 2022-04-27
+img: /posters/Scott_Fryxell_Sunday, May 22, 10_18 AM.svg
 ---
 
 My problem with hiring is one of hubris. You are not qualified to know who is the right hire for a job is. Almost no one has the skill to spend an hour in a sterile office with a random person and know if they are gonna be a great fit. SQL people can't tell you if a front end developer is a serious talent. They can only tell you if a front end person knows SQL.
@@ -15,5 +16,3 @@ This is the Netflix's view. Hire a team, and hire for position. If the work is d
 I'm going to prune everyone but Tomo Odessa and Katie. they are the only people who visit.
 
 Womp.
-
-I
