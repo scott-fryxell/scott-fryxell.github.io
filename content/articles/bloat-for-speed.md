@@ -1,5 +1,6 @@
 ---
 date: 2022-04-12
+img: /posters/Scott_Fryxell_posters_Wednesday, September 22, 4_24 PM.svg
 ---
 
 Code is the mental model of your application. I write code so that you can load it into your brain. Concise statements written to be understood. A critical part of this [for me](/blog/a11y-in-the-code) is writing a little code as possible. Less code thats more legible so that you have an easy time loading it into your brain.
