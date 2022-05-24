@@ -38,7 +38,7 @@
     align-items: center;
     & > header
       & > img
-        width: 75vw
+        width: 70vw
         max-height: 100vh
       & > h2
         padding: 0 1rem
