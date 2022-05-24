@@ -3,7 +3,9 @@
     <header>
       <img v-if="article.img" :src="article.img" :alt="article.alt" />
       <h2>
-        <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">{{ format_title(article.slug) }}</NuxtLink>
+        <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">{{
+          format_title(article.slug)
+        }}</NuxtLink>
       </h2>
     </header>
     <h5>{{ format_date(article.date) }}</h5>
@@ -16,8 +18,8 @@
     props: {
       article: {
         type: Object,
-        required: true
-      }
+        required: true,
+      },
     },
     methods: {
       format_date(date) {
@@ -26,8 +28,8 @@
       },
       format_title(slug) {
         return slug.replace(/-/g, ' ')
-      }
-    }
+      },
+    },
   }
 </script>
 <style lang="stylus">
