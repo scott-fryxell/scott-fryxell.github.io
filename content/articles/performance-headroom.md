@@ -1,6 +1,6 @@
 ---
 date: 2022-05-22
-img: /posters/Scott_Fryxell_Sunday, May 22, 10_05 AM.svg
+img: Scott_Fryxell_Wednesday, June 1, 9_50 AM.svg
 ---
 
 Firebase storage files are not stored or sent gzip'd. I'll need [to do it myself](https://cloud.google.com/storage/docs/transcoding). When done I reduce my file sizes by 60%. a 30k vector file will become 10k.
