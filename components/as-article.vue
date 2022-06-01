@@ -3,7 +3,7 @@
     <header>
       <img
         v-if="article.img"
-        :src="article.img"
+        :src="`/posters/${article.img}`"
         :alt="article.alt"
         loading="lazy"
       />
