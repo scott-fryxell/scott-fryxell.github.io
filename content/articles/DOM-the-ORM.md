@@ -1,7 +1,7 @@
 ---
 date: 2021-11-17
 description: How a single change opens the DOM up to be our persistence hero
-img: /posters/Scott_Fryxell_posters_Friday, May 21, 2_41 PM.svg
+img: Scott_Fryxell_posters_Friday, May 21, 2_41 PM.svg
 ---
 
 I am not above using a hack.
@@ -24,7 +24,6 @@ I think of HTML as a first class citizen. I can describe any data type in HTML. 
 
 But SVG poses a unique problem. I want all of the attributes, validations, rulesets and privelages of a path element. I need to know everything about it. And I don't want to reproduce it myself.
 
-
 ```
 
 // from
@@ -34,7 +33,6 @@ case 'path':return element.outerHTML
 case 'path':return element
 
 ```
-
 
 Microdata lets me set SVGPathElement directly. I was never constrained to string values. Item supports complex HTML types intuitively.
 
@@ -52,13 +50,9 @@ What I love about this is I have easy access to all of CSS's animation effects. 
 
 - [event setting d via style](https://developer.mozilla.org/en-US/docs/Web/CSS/path) which is crazy and amazing to me
 
-
 A secondary
 
 How am I going to animate these vector graphics in a way that I can make downloadable? I have landed on using CSS's animation tools first but haven't yet figured out how to incorporate the named animation into the downloaded vector.
-
-
-
 
 You can make and attach your own custom comoponents to and attach then manipulate them as types during your runtime.
 
