@@ -1,6 +1,6 @@
 ---
 date: 2022-04-12
-img: /posters/Scott_Fryxell_Sunday, May 22, 10_03 AM.svg
+img: Scott_Fryxell_Monday, May 23, 6_30 AM.svg
 ---
 
 Regular ass people are the most important people.
