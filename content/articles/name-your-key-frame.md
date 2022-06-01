@@ -1,6 +1,6 @@
 ---
 date: 2021-12-01
-img: /posters/Scott_Fryxell_posters_Saturday, April 17, 10_47 AM.svg
+img: Scott_Fryxell_posters_Saturday, April 17, 10_47 AM.svg
 ---
 
 Let's say you are building an animation and you can describe the objects inside each keyframe. Your focused on a landscape. Those hills would come to life with a pattern.

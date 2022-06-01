@@ -1,6 +1,6 @@
 ---
 date: 2022-02-06
-img: /posters/Scott_Fryxell_posters_Sunday, August 29, 8_22 AM.svg
+img: Scott_Fryxell_posters_Sunday, August 29, 8_22 AM.svg
 ---
 
 I'm stoked for this project. I would work with this team on anything. They are smart and diligent and know the job. But SQL forced a dynamic that doesn't exist with firebase. somethimg that feels akin to getting a faster processor, firebase frees developer from gatekeeping bottlenecks.
