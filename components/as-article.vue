@@ -43,6 +43,7 @@
         width: 70vw
         max-height: 100vh
       & > h2
+        width: 30vw
         padding: 0 1rem
         text-transform: capitalize
         & > a
