@@ -23,8 +23,6 @@ main
     background-clip: text
     -webkit-background-clip: text
     -webkit-text-fill-color: hsl(0deg 0% 0% / 0%)
-
-
   & > header
     display: flex
     & > h1
