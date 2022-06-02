@@ -199,13 +199,11 @@
             <span
               itemprop="location"
               itemscope
-              itemtype="http://schema.org/Place"
-            >
+              itemtype="http://schema.org/Place">
               <a
                 itemprop="url"
                 target="_blank"
-                href="https://www.crunchbase.com/organization/tout"
-              >
+                href="https://www.crunchbase.com/organization/tout">
                 <span itemprop="name">Tout</span>
               </a>
             </span>
