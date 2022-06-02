@@ -7,4 +7,4 @@ Katie said recently that YouTube will always be more exciting than what she want
 
 CC was explaining what was so hard about git for a linguist "IT's so tedious', while we're on the 14 riding out to the excelsior. He's got a masters and a family in El Paso, Latin, but his family's college is like mine.
 
-It's all so tedious. At first if feel like torture, you have to settle into it. Will yourself to attention. And then slowly, like an observer, You bring your focus on your goals. You bring your silence onto your intellectual self. The part of you You know a modern human needs. Over and over again. Your whole life. I'm just a reminder to CC of something he's already had to conquer. On this bus together we are one.
+It's all so tedious. At first it feels like torture, you have to settle into it; Will yourself to attention. And then slowly, like an observer, You bring your focus on your goals. You bring your silence onto your intellectual self. The part of you You know a modern human needs. Over and over again. Your whole life. I'm just a reminder to CC of something he's already had to conquer. On this bus together we are one.
