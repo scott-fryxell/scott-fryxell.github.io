@@ -18,11 +18,12 @@
 main
   margin: auto
   flex-direction: column
-  h1, h2, h3
-    background: -webkit-linear-gradient(315deg,red 25%,blue)
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: hsl(0deg 0% 0% / 0%);
+  h1, h2, h3, a
+    background: -webkit-linear-gradient(60deg, blue , red)
+    background-clip: text
+    -webkit-background-clip: text
+    -webkit-text-fill-color: hsl(0deg 0% 0% / 0%)
+
 
   & > header
     display: flex
