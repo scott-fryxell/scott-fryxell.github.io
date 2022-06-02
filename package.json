@@ -35,5 +35,68 @@
     "prettier": "^2.3.2",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "none",
+    "bracketSameLine": true,
+    "arrowParens": "avoid",
+    "vueIndentScriptAndStyle": true
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "browser": true,
+      "es2021": true,
+      "jest": true,
+      "serviceworker": true,
+      "worker": true
+    },
+    "globals": {
+      "defineProps": "readonly",
+      "defineEmits": "readonly",
+      "defineExpose": "readonly",
+      "withDefaults": "readonly"
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:vue/vue3-recommended",
+      "prettier"
+    ],
+    "rules": {
+      "no-import-assign": "off",
+      "camelcase": 0,
+      "indent": "off",
+      "lines-between-class-members": 0,
+      "space-before-function-paren": [
+        "error",
+        {
+          "anonymous": "never",
+          "named": "never",
+          "asyncArrow": "always"
+        }
+      ],
+      "vue/multi-word-component-names": "off",
+      "vue/require-default-prop": "off",
+      "vue/prop-name-casing": [
+        "error",
+        "snake_case"
+      ],
+      "vue/singleline-html-element-content-newline": "off",
+      "vue/html-closing-bracket-spacing": [
+        "error",
+        {
+          "selfClosingTag": "always"
+        }
+      ],
+      "vue/html-closing-bracket-newline": [
+        "error",
+        {
+          "singleline": "never",
+          "multiline": "never"
+        }
+      ]
+    }
   }
 }
