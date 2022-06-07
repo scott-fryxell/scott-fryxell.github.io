@@ -7,7 +7,7 @@
     <header>
       <img
         src="/posters/Scott_Fryxell_posters_Saturday, January 23, 11_01 AM.svg"
-        alt="An italian countryside in 1807. Tall trees casting long shadows."/>
+        alt="An italian countryside in 1807. Tall trees casting long shadows." />
       <address>
         <p
           itemprop="address"
@@ -24,12 +24,8 @@
         JavaScript, CSS, HTML, Vue, Nuxt, TypeScript, Vite, Webpack, Test Drivin
         Development, Product Development, User Experience, Single Page
         Applications, Scalability, Serverless, NoSQL databases, Git, Node,
-        Stylus, Firebase, Jest, JamStack
-      </p>
-      <h4>Legacy Skills</h4>
-      <p itemprop="skills" itemtype="http://schema.org/skills">
-        Java, Ruby, SQL, J2EE, Struts, Ruby on Rails, Heroku, Postgres, Maven,
-        Lucene, ColdFusion, etc...
+        Stylus, Firebase, Jest, JamStack, Java, Ruby, SQL, J2EE, Struts, Ruby on Rails,
+        Heroku, Postgres, Maven, Lucene, ColdFusion
       </p>
     </section>
     <section id="experience">
@@ -37,12 +33,10 @@
         <h2>Experience</h2>
         <p>
           From idea to complex web application, I provide perspective, guidance,
-          and software development services.
-        </p>
-        <p>
-          I offer authenticity and a creative environment for the people that I
-          work with to explore problems and make decisions. I like to focus on
-          elegant solutions executed to the highest possible standards.
+          and software development services. I offer authenticity and a creative
+          environment for the people that I work with to explore problems and
+          make decisions. I like to focus on elegant solutions executed to the
+          highest possible standards.
         </p>
         <p>
           I have mentored, hired and maintained long lasting teams with minimal
@@ -50,67 +44,12 @@
           closely with diverse purpose driven organizations.
         </p>
         <p>
-          I have a deep understanding of the software and product development
-          lifecycle. I am daily in the trenches architecting, building and
-          shipping web applications.
-        </p>
-        <p>
           Self-motivated and fun to work with, I tend to facilitate an
           environment where we enjoy bringing our best selves to the table. I am
           driven by a desire to write quality code using best practices, and to
           help build a useful Internet.
         </p>
-        <p>
-          When you need help or just want some perspective, I have done the hard
-          work and have the experience to get you up and running quickly and can
-          keep you current and productive for years into the future.
-        </p>
       </header>
-      <article itemscope itemtype="http://schema.org/Event/Job">
-        <header>
-          <h3>
-            <span itemprop="name">Consultant</span> at
-            <span
-              itemprop="location"
-              itemscope
-              itemtype="http://schema.org/Place">
-              <a itemprop="url" target="_blank" href="https://vueschool.io/">
-                <span itemprop="name">VueSchool</span>
-              </a>
-            </span>
-          </h3>
-          <h6>
-            <time itemprop="startdate" datetime="2021-06-01">2021</time>
-            —
-            <time itemprop="startdate" datetime="2022-03-01">2022</time>
-          </h6>
-        </header>
-        <p itemprop="description">
-          I have been able to deeply explore the vue marketplace to understand
-          the current best practices in vue 3.
-          <a
-            href="https://vueschool.io/articles/vuejs-tutorials/tooling-saves-your-bacon/"
-          >
-            You can read about</a
-          >
-          how I helped a startup diagnose performance problems.
-        </p>
-        <p itemprop="description">
-          I helped an insurance startup negotiate their transition from vue 2 to
-          3. By focusing on adoption and code review.
-        </p>
-        <p itemprop="description">
-          I helped an NFT startup interview candidates I wrote a test problems
-          and worked with the VueSchool team to interview and recommend
-          qualified from all over the world.
-        </p>
-        <p itemprop="description">
-          I built the <a href="https://vueschool.io/hiring"> hiring app</a> for
-          VueSchool. We were able to execute from idea to release in less that
-          two and a half months. helping VueSchool enter a new business
-          vertical.
-        </p>
-      </article>
       <article itemscope itemtype="http://schema.org/Event/Job">
         <header>
           <h3>
@@ -143,14 +82,42 @@
           proof, responsive, progressive, fast with offline capabilities.
         </p>
         <p itemprop="description">
-          You can check out the code on
-          <a href="https://github.com/realness/web">GitHub</a>.
-        </p>
-        <p itemprop="description">
           I designed my own UI framework and chose Vue as my primary development
           tool. I used Jest for Test Driven development and followed best
           practices throughout, I was able to switch between design, test, and
           build fluidly for an ideal development workflow.
+        </p>
+      </article>
+      <article itemscope itemtype="http://schema.org/Event/Job">
+        <header>
+          <h3>
+            <span itemprop="name">Consultant</span> at
+            <span
+              itemprop="location"
+              itemscope
+              itemtype="http://schema.org/Place">
+              <a itemprop="url" target="_blank" href="https://vueschool.io/">
+                <span itemprop="name">VueSchool</span>
+              </a>
+            </span>
+          </h3>
+          <h6>
+            <time itemprop="startdate" datetime="2021-06-01">2021</time>
+            —
+            <time itemprop="startdate" datetime="2022-03-01">2022</time>
+          </h6>
+        </header>
+        <p itemprop="description">
+          <a href="https://vueschool.io/articles/vuejs-tutorials/tooling-saves-your-bacon/">I helped</a>
+          Happs.tv diagnose and fix performance problems. I helped an insurance broker negotiate their transition from vue 2 to
+          3 by focusing on developer adoption through code review. I worked with the VueSchool team to interview and recommend
+          qualified candidated from all over the world for an NFT startup
+        </p>
+        <p itemprop="description">
+          I built the <a href="https://vueschool.io/hiring"> hiring app</a> for
+          VueSchool. We were able to execute from idea to release in less that
+          two and a half months. helping VueSchool enter a new business
+          vertical.
         </p>
       </article>
       <article itemscope itemtype="http://schema.org/Event/Job">
@@ -190,11 +157,10 @@
           mutually supportive team atmosphere while also setting the highest
           possible standards for development.
         </p>
-        <p itemprop="description">Code coverage was at 100% on my last day.</p>
       </article>
       <article itemscope itemtype="http://schema.org/Event/Job">
         <header>
-
+          <h3>
             <span itemprop="name">Software Engineer</span> at
             <span
               itemprop="location"
@@ -209,7 +175,7 @@
             </span>
           </h3>
           <h6>
-            <time itemprop="startdate" datetime="2013-08-01">2013</time> -
+            <time itemprop="startdate" datetime="2013-08-01">2013</time>
           </h6>
         </header>
         <p itemprop="description">
@@ -220,7 +186,7 @@
           performance for a very high volume system.
         </p>
       </article>
-      <article itemscope itemtype="http://schema.org/Event/Job">
+      <article id="copper" class="pagebreak" itemscope itemtype="http://schema.org/Event/Job">
         <header>
           <h3>
             <span itemprop="name">CEO, Founder, Engineer</span> at
@@ -238,31 +204,31 @@
           </h6>
         </header>
         <p itemprop="description">
-          I created Copper.is as a service that you used to tip the
-          creators of the content you experienced online. I wrote
-          extensions for Chrome, Firefox and Safari. You click a button
-          on your browser and Copper would find the person you tipped
-          sign them up and pay them for the content you enjoyed.
+          I created Copper.is as a service that you used to tip the creators of
+          the content you experienced online. I wrote extensions for Chrome,
+          Firefox and Safari. You click a button on your browser and Copper
+          would find the person you tipped sign them up and pay them for the
+          content you enjoyed.
         </p>
         <p itemprop="description">
-          This double sided marketplace was built as a
-          finite-state machine with Ruby on Rails sitting on top of
-          Postgres and was hosted on Heroku. I used stripe as an escrow
-          and payments endpoint.
+          This double sided marketplace was built as a finite-state machine with
+          Ruby on Rails sitting on top of Postgres and was hosted on Heroku. I
+          used stripe as an escrow and payments endpoint.
         </p>
         <p itemprop="description">
-          How to automate finding, authorizing, and paying the
-          creators was the tricky bit. We solved it by scraping the
-          content people paid for social embeds (which were everywhere at the time)
-          contacting the creators through those services and then providing
-          oAuth authorizations that we would use as proof they created the
-          content. We had an 80% hit rate.
+          How to automate finding, authorizing, and paying the creators was the
+          tricky bit. We solved it by scraping the content people paid for
+          social embeds (which were everywhere at the time) contacting the
+          creators through those services and then providing oAuth
+          authorizations that we would use as proof they created the content. We
+          had an 80% hit rate.
         </p>
         <p itemprop="description">
-          I Founded, architected, and led the development team, similar to Patreon.
-          Built the service from concept to fully functional product. I gathered
-          developers, brought in legal, and investment resources and worked
-          with the incubator Hattery Labs to develop the brand and product.
+          I Founded, architected, and led the development team, similar to
+          Patreon. Built the service from concept to fully functional product. I
+          gathered developers, brought in legal, and investment resources and
+          worked with the incubator Hattery Labs to develop the brand and
+          product.
         </p>
       </article>
       <article itemscope itemtype="http://schema.org/Event/Job">
@@ -294,13 +260,11 @@
             <span
               itemprop="location"
               itemscope
-              itemtype="http://schema.org/Place"
-            >
+              itemtype="http://schema.org/Place">
               <a
                 itemprop="url"
                 target="_blank"
-                href="https://www.flixster.com/"
-              >
+                href="https://www.flixster.com/">
                 <span itemprop="name">Flixster Inc </span>
               </a>
             </span>
@@ -406,14 +370,8 @@
           standards, decreasing page size sixty percent, while increasing
           cross-platform browser support, both forward and backward
           compatibility, application skinning, global print capabilities, as
-          well as
-          <a target="_blank" href="https://www.britannica.com/technology/WAP"
-            >WAP</a
-          >
-          and palm support.
-        </p>
-        <p itemprop="description">
-          Implemented a templating mechanism to increase code reuse and
+          well as <a target="_blank" href="https://www.britannica.com/technology/WAP" >WAP</a>
+          and palm support. Implemented a templating mechanism to increase code reuse and
           simplified development workflow.
         </p>
       </article>
@@ -429,7 +387,9 @@
             </span>
           </h3>
           <h6>
-            <time itemprop="startdate" datetime="2002-09-01">September 2002</time>
+            <time itemprop="startdate" datetime="2002-09-01"
+              >September 2002</time
+            >
             -
             <time itemprop="enddate" datetime="2004-05-01">May 2004</time>
           </h6>
@@ -449,8 +409,7 @@
             <span
               itemprop="location"
               itemscope
-              itemtype="http://schema.org/Place"
-            >
+              itemtype="http://schema.org/Place">
               <span itemprop="name">SVTechnology</span>
             </span>
           </h3>
@@ -563,27 +522,63 @@
   </section>
 </template>
 <style lang="stylus">
-section#scott-fryxell
-  & > header
-    display: flex
-    & > address
-      padding: 1rem
-      width: 22vw
-      display: inline-block
-      font-style: normal
-    & > img
-      width:77vw
-      height:100vh
-  & > section
-    display: flex;
-    flex-direction: column;
-    align-items: center
-    &#skills
-      margin-top: 1rem
-    & > article
-      width: inherit
-      header
-        display:block
-      h6 > time
+  @page
+    margin: 2rem
+  @media print
+    html
+      color: var(--black-background) !important
+    a
+      color: var(--black-background) !important
+      text-decoration: none !important
+      border: 0 !important
+      font-weight: 300 !important
+      font-style: normal !important
+    p
+      line-height: 1.66
+      max-width: inherit
+    main > header
+      & > h1
+        margin: 0
+        padding: 0
+      & > nav
+        display:none
+  section#scott-fryxell
+    & > header
+      display: flex
+      & > address
+        padding: 1rem
+        width: 22vw
         display: inline-block
+        font-style: normal
+        font-weight: 300
+        @media print
+          padding:0
+          margin:0
+          & > p
+            margin:0
+      & > img
+        width:77vw
+        height:100vh
+        @media print
+          display: none
+    & > section
+      display: flex
+      flex-direction: column
+      align-items: center
+      &#skills
+        margin-top: 1rem
+      & > article
+        width: inherit
+        header
+          page-break-after: avoid
+          display:block
+          h3
+            margin-bottom:0
+            @media print
+              margin-top: 1rem
+          h6
+            margin-top: 0
+            & > time
+              display: inline-block
+
 </style>
