@@ -64,7 +64,7 @@
             </span>
           </h3>
           <h6>
-            <time itemprop="startdate" datetime="2018-03-01">March 2018</time>
+            <time itemprop="startdate" datetime="2018-03-01">2018</time>
             <span>- Present</span>
           </h6>
         </header>
@@ -75,7 +75,7 @@
           homescreen as fast as native applications. Data is saved on the phone,
           storing on the server only what is essential for the service.
         </p>
-        <p>
+        <p itemprop="description">
           I designed and built my own NoSQL backend based on the microdata
           format. This has made supporting client first development natural and
           offered the choice to leave some data on device. Realness is future
@@ -134,8 +134,8 @@
             </span>
           </h3>
           <h6>
-            <time itemprop="startdate" datetime="2015-03-01">March 2015</time> -
-            <time itemprop="enddate" datetime="2015-09-01">September 2015</time>
+            <time itemprop="startdate" datetime="2015-03-01">2015</time>
+            <time itemprop="enddate" datetime="2015-09-01"></time>
           </h6>
         </header>
         <p itemprop="description">
@@ -175,7 +175,7 @@
             </span>
           </h3>
           <h6>
-            <time itemprop="startdate" datetime="2013-08-01">2013</time>
+            <time itemprop="startdate" datetime="2013-08-01">2014</time>
           </h6>
         </header>
         <p itemprop="description">
@@ -186,7 +186,7 @@
           performance for a very high volume system.
         </p>
       </article>
-      <article id="copper" class="pagebreak" itemscope itemtype="http://schema.org/Event/Job">
+      <article itemscope itemtype="http://schema.org/Event/Job">
         <header>
           <h3>
             <span itemprop="name">CEO, Founder, Engineer</span> at
@@ -198,9 +198,9 @@
             </span>
           </h3>
           <h6>
-            <time itemprop="startdate" datetime="2010-01-01">January 2010</time>
+            <time itemprop="startdate" datetime="2010-01-01">2010</time>
             -
-            <time itemprop="enddate" datetime="2014-03-01">January 2014</time>
+            <time itemprop="enddate" datetime="2014-03-01">2014</time>
           </h6>
         </header>
         <p itemprop="description">
@@ -243,8 +243,8 @@
             </span>
           </h3>
           <h6>
-            <time itemprop="startdate" datetime="2008-06-01">June 2008</time> -
-            <time itemprop="enddate" datetime="2009-01-01">January 2009</time>
+            <time itemprop="startdate" datetime="2008-06-01">2008</time> -
+            <time itemprop="enddate" datetime="2009-01-01">2009</time>
           </h6>
         </header>
         <p itemprop="description">
@@ -270,11 +270,9 @@
             </span>
           </h3>
           <h6 itemprop="duration" itemscoped itemtype="http://schema.org/Event">
-            <time itemprop="startdate" datetime="2007-11-01"
-              >November 2007</time
-            >
+            <time itemprop="startdate" datetime="2007-11-01">2007</time>
             -
-            <time itemprop="enddate" datetime="2008-05-01">May 2008</time>
+            <time itemprop="enddate" datetime="2008-05-01">2008</time>
           </h6>
         </header>
         <p itemprop="description">
@@ -287,7 +285,7 @@
       <article itemscope itemtype="http://schema.org/Event/Job">
         <header>
           <h3>
-            <span itemprop="name">Software Engineer</span> at
+            <span itemprop="name">Developer</span> at
             <span
               itemprop="location"
               itemscope
@@ -301,8 +299,8 @@
             </span>
           </h3>
           <h6>
-            <time itemprop="startdate" datetime="2006-06-01">June 2006</time> -
-            <time itemprop="enddate" datetime="2007-07-01">July 2007</time>
+            <time itemprop="startdate" datetime="2006-06-01">2006</time> -
+            <time itemprop="enddate" datetime="2007-07-01">2007</time>
           </h6>
         </header>
         <p itemprop="description">
@@ -329,8 +327,8 @@
             </span>
           </h3>
           <h6>
-            <time itemprop="startdate" datetime="2005-06-01">June 2005</time> -
-            <time itemprop="enddate" datetime="2006-06-01">June 2006</time>
+            <time itemprop="startdate" datetime="2005-06-01">2005</time> -
+            <time itemprop="enddate" datetime="2006-06-01">2006</time>
           </h6>
         </header>
         <p itemprop="description">
@@ -354,8 +352,8 @@
             </span>
           </h3>
           <h6>
-            <time itemprop="startdate" datetime="2004-05-01">May 2004</time> -
-            <time itemprop="enddate" datetime="2005-06-01">June 2005</time>
+            <time itemprop="startdate" datetime="2004-05-01">2004</time> -
+            <time itemprop="enddate" datetime="2005-06-01">2005</time>
           </h6>
         </header>
         <p itemprop="description">
@@ -388,10 +386,10 @@
           </h3>
           <h6>
             <time itemprop="startdate" datetime="2002-09-01"
-              >September 2002</time
+              >2002</time
             >
             -
-            <time itemprop="enddate" datetime="2004-05-01">May 2004</time>
+            <time itemprop="enddate" datetime="2004-05-01">2004</time>
           </h6>
         </header>
         <p itemprop="description">
@@ -414,8 +412,8 @@
             </span>
           </h3>
           <h6>
-            <time itemprop="startdate" datetime="2001-06-01">June 2001</time> -
-            <time itemprop="enddate" datetime="2002-09-01">September 2002</time>
+            <time itemprop="startdate" datetime="2001-06-01">2001</time> -
+            <time itemprop="enddate" datetime="2002-09-01">2002</time>
           </h6>
         </header>
         <p itemprop="description">
@@ -450,8 +448,8 @@
             </span>
           </h3>
           <h6>
-            <time itemprop="startdate" datetime="2000-06-01">June 2000</time> -
-            <time itemprop="enddate" datetime="2001-06-01">June 2001</time>
+            <time itemprop="startdate" datetime="2000-06-01">2000</time> -
+            <time itemprop="enddate" datetime="2001-06-01">2001</time>
           </h6>
         </header>
         <p itemprop="description">
@@ -476,9 +474,8 @@
             </span>
           </h3>
           <h6>
-            <time itemprop="startdate" datetime="2000-01-01">January 2000</time>
-            -
-            <time itemprop="enddate" datetime="2000-07-01">July 2000</time>
+            <time itemprop="startdate" datetime="2000-01-01">2000</time>
+            <time itemprop="enddate" datetime="2000-07-01"></time>
           </h6>
         </header>
         <p itemprop="description">
@@ -504,8 +501,8 @@
             </span>
           </h3>
           <h6>
-            <time itemprop="startdate" datetime="1998-03-01">March 1998</time> -
-            <time itemprop="enddate" datetime="2000-03-01">March 2000</time>
+            <time itemprop="startdate" datetime="1998-03-01">1998</time> -
+            <time itemprop="enddate" datetime="2000-03-01">2000</time>
           </h6>
         </header>
         <p itemprop="description">
@@ -523,7 +520,7 @@
 </template>
 <style lang="stylus">
   @page
-    margin: 2rem
+    margin: 2.5rem
   @media print
     html
       color: var(--black-background) !important
@@ -534,15 +531,17 @@
       font-weight: 300 !important
       font-style: normal !important
     p
-      line-height: 1.66
+      line-height: 1.5
       max-width: inherit
     main > header
       & > h1
         margin: 0
-        padding: 0
+        padding-left: 2rem
       & > nav
         display:none
   section#scott-fryxell
+    @media print
+      padding: 2rem
     & > header
       display: flex
       & > address
@@ -570,7 +569,6 @@
       & > article
         width: inherit
         header
-          page-break-after: avoid
           display:block
           h3
             margin-bottom:0
