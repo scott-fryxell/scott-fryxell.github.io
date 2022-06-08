@@ -111,7 +111,7 @@
           <a href="https://vueschool.io/articles/vuejs-tutorials/tooling-saves-your-bacon/">I helped</a>
           Happs.tv diagnose and fix performance problems. I helped an insurance broker negotiate their transition from vue 2 to
           3 by focusing on developer adoption through code review. I worked with the VueSchool team to interview and recommend
-          qualified candidated from all over the world for an NFT startup
+          qualified candidates from all over the world for an NFT startup
         </p>
         <p itemprop="description">
           I built the <a href="https://vueschool.io/hiring"> hiring app</a> for
@@ -150,12 +150,6 @@
           Stripe. I integrated Savvy's calendar features into Google Calendar. I
           built out a front end framework optimized for writing CSS and
           event-driven javascript.
-        </p>
-        <p itemprop="description">
-          I hired another senior engineer to guarantee consistency and a junior
-          developer to bring us energy and innovation. I focused on creating a
-          mutually supportive team atmosphere while also setting the highest
-          possible standards for development.
         </p>
       </article>
       <article itemscope itemtype="http://schema.org/Event/Job">
@@ -515,30 +509,16 @@
           addressing users support issues.
         </p>
       </article>
+      <footer>
+        <p>Visit
+          <a href="https://scott-fryxell.github.io/resume">scott-fryxell.github.io</a>
+          for the full resume
+        </p>
+      </footer>
     </section>
   </section>
 </template>
 <style lang="stylus">
-  @page
-    margin: 2.5rem
-  @media print
-    html
-      color: var(--black-background) !important
-    a
-      color: var(--black-background) !important
-      text-decoration: none !important
-      border: 0 !important
-      font-weight: 300 !important
-      font-style: normal !important
-    p
-      line-height: 1.5
-      max-width: inherit
-    main > header
-      & > h1
-        margin: 0
-        padding-left: 2rem
-      & > nav
-        display:none
   section#scott-fryxell
     @media print
       padding: 2rem
@@ -568,6 +548,9 @@
         margin-top: 1rem
       & > article
         width: inherit
+        @media print
+          &:nth-of-type(n+6)
+            display: none !important
         header
           display:block
           h3
@@ -578,5 +561,8 @@
             margin-top: 0
             & > time
               display: inline-block
-
+      & > footer
+        display: none
+        @media print
+          display: block
 </style>
