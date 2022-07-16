@@ -11,10 +11,6 @@ We can't be that disciplined in all things — too many epics reduce your accura
 
 It's humbling.
 
-An epic is a machine learning thing where they run the same data through repeatedly, improving the accuracy of the machine.
-
-I learned from my new machine learning guy on Thursday that too many runs through and the epics accuracy starts to drop.
-
-Thats true for real shit too.
+An epic is a machine learning thing where they run the same data through repeatedly, improving the accuracy of the machine guess, until it doesn't and your guessing goes haywire.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/P1ww1IXRfTA?clip=UgkxGHztPOo6vEeIz__v-lEXlWdd12J_RyWD&amp;clipt=EIDnGBiUuRo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
