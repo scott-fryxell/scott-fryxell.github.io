@@ -12,5 +12,3 @@ We can't be that disciplined in all things — too many epics reduce your accura
 It's humbling.
 
 An epic is each run of data through the machine while you are training it to make acurate guesses — eventually your accuracy starts drobbing. too much time in the club.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/P1ww1IXRfTA?clip=UgkxGHztPOo6vEeIz__v-lEXlWdd12J_RyWD&amp;clipt=EIDnGBiUuRo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
