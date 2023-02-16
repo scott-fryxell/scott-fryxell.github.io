@@ -7,3 +7,5 @@ description: The devil is in the details when it comes to remedies from monopoly
 The apple monopoly is that all web apps launched from the home screen have to execute within a webkit context.
 
 For developers trying to exist outside walled gardens the monopoly is remedied by allowing other rendering engines to launch the web app. Otherwise we're still locked in the app store pipeline.
+
+I've read about how the EU is forcing this change on apple and android. My hope is that we can hold the line and secure an independent web app universe.
