@@ -1,7 +1,7 @@
 ---
 date: 2023-02-16
 img: Scott_Fryxell_Wednesday, January 25 at 1_35 PM.svg
-description: For developers trying to exist outside walled gardens the home screen is the fulcrum that enforces apple's monopoly.
+description: For developers trying to exist outside walled gardens the home screen is the fulcrum that enforces Apple's monopoly.
 ---
 
 On iOS, all web apps launched from the home screen have to execute within a webkit rendering context.
