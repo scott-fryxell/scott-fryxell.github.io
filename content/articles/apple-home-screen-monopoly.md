@@ -12,4 +12,4 @@ I've read about how the EU is forcing apple to allow rendering engines other the
 
 For me, this is the only sure path to a fair marketplace.
 
-##### [comments]()
+##### [comments](https://news.ycombinator.com/item?id=34824520)
