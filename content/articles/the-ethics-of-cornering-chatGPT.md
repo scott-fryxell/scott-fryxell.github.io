@@ -13,3 +13,5 @@ It's trained to guess the next words within your constraints.
 The constraints are your ethics. This is why you are failing the [mirror test](https://www.theverge.com/23604075/ai-chatbots-bing-chatgpt-intelligent-sentient-mirror-test)
 
 What is a soul mother fucker. You can't devine a test to prove that it exists. you can define the ethics within which you are the witness.
+
+[comments](https://news.ycombinator.com/item?id=34872802)
