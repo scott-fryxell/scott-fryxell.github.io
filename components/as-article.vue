@@ -38,22 +38,29 @@
 </script>
 <style lang="stylus">
   article.post
-    display: flex
-    flex-direction: column
-    justify-content: center
-    align-items: center
+    overflow:hidden
+    @media (min-width: 33rem)
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
     @media print
       min-height: 100vh
     & > header
       & > img
-        width: 70vw
+        width: 100vw
         max-height: 100vh
+        min-height: 66vh
+        @media (min-width: 33rem)
+          width: 70vw
       & > h2
         min-width: 30vw
         padding: 0 1rem
         text-transform: capitalize
         & > a
           // color: inherit
+    & > h5
+      padding: 0 1rem
     & > details
       display: inline-block
       margin-left: 1rem
@@ -73,4 +80,7 @@
     .nuxt-content-editor
       // margin: auto
       max-width: 33rem
+      padding: 0 1rem
+
+
 </style>
