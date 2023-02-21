@@ -39,14 +39,16 @@
 <style lang="stylus">
   article.post
     overflow:hidden
-    @media (min-width: 33rem)
-      display: flex
-      flex-direction: column
-      justify-content: center
-      align-items: center
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
     @media print
       min-height: 100vh
     & > header
+      @media (max-width: 33rem)
+        display: block
+
       & > img
         width: 100vw
         max-height: 100vh
