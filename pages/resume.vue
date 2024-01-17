@@ -15,7 +15,7 @@
           itemtype="http://schema.org/PostalAddress">
           <span itemprop="addressLocality">San Francisco</span>
         </p>
-        <a href="mailto:scott.fryxell@hey.com">scott.fryxell@hey.com</a>
+        <a href="mailto:sfryxell@me.com">sfryxell@me.com</a>
       </address>
     </header>
     <section id="skills">
@@ -24,8 +24,8 @@
         JavaScript, CSS, HTML, Vue, Nuxt, TypeScript, Vite, Webpack, Test Drivin
         Development, Product Development, User Experience, Single Page
         Applications, Scalability, Serverless, NoSQL databases, Git, Node,
-        Stylus, Firebase, Jest, JamStack, Java, Ruby, SQL, J2EE, Struts, Ruby on Rails,
-        Heroku, Postgres, Maven, Lucene, ColdFusion
+        Stylus, Firebase, Jest, JamStack, Java, Ruby, SQL, J2EE, Struts, Ruby on
+        Rails, Heroku, Postgres, Maven, Lucene, ColdFusion
       </p>
     </section>
     <section id="experience">
@@ -108,10 +108,15 @@
           </h6>
         </header>
         <p itemprop="description">
-          <a href="https://vueschool.io/articles/vuejs-tutorials/tooling-saves-your-bacon/">I helped</a>
-          Happs.tv diagnose and fix performance problems. I helped an insurance broker negotiate their transition from vue 2 to
-          3 by focusing on developer adoption through code review. I worked with the VueSchool team to interview and recommend
-          qualified candidates from all over the world for an NFT startup
+          <a
+            href="https://vueschool.io/articles/vuejs-tutorials/tooling-saves-your-bacon/"
+            >I helped</a
+          >
+          Happs.tv diagnose and fix performance problems. I helped an insurance
+          broker negotiate their transition from vue 2 to 3 by focusing on
+          developer adoption through code review. I worked with the VueSchool
+          team to interview and recommend qualified candidates from all over the
+          world for an NFT startup
         </p>
         <p itemprop="description">
           I built the <a href="https://vueschool.io/hiring"> hiring app</a> for
@@ -362,9 +367,12 @@
           standards, decreasing page size sixty percent, while increasing
           cross-platform browser support, both forward and backward
           compatibility, application skinning, global print capabilities, as
-          well as <a target="_blank" href="https://www.britannica.com/technology/WAP" >WAP</a>
-          and palm support. Implemented a templating mechanism to increase code reuse and
-          simplified development workflow.
+          well as
+          <a target="_blank" href="https://www.britannica.com/technology/WAP"
+            >WAP</a
+          >
+          and palm support. Implemented a templating mechanism to increase code
+          reuse and simplified development workflow.
         </p>
       </article>
       <article itemscope itemtype="http://schema.org/Event/Job">
@@ -379,9 +387,7 @@
             </span>
           </h3>
           <h6>
-            <time itemprop="startdate" datetime="2002-09-01"
-              >2002</time
-            >
+            <time itemprop="startdate" datetime="2002-09-01">2002</time>
             -
             <time itemprop="enddate" datetime="2004-05-01">2004</time>
           </h6>
@@ -510,8 +516,11 @@
         </p>
       </article>
       <footer>
-        <p>Visit
-          <a href="https://scott-fryxell.github.io/resume">scott-fryxell.github.io</a>
+        <p>
+          Visit
+          <a href="https://scott-fryxell.github.io/resume"
+            >scott-fryxell.github.io</a
+          >
           for the full resume
         </p>
       </footer>
