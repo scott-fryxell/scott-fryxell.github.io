@@ -2,6 +2,7 @@
   "name": "scott-fryxell-blog",
   "version": "1.0.0",
   "private": true,
+  "author": "Scott Fryxell <sfryxell@gmail.com>",
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
