@@ -15,7 +15,7 @@
           itemtype="http://schema.org/PostalAddress">
           <span itemprop="addressLocality">San Francisco</span>
         </p>
-        <a href="mailto:sfryxell@me.com">sfryxell@me.com</a>
+        <a href="mailto:sfryxell@gmail.com">sfryxell@gmail.com</a>
       </address>
     </header>
     <section id="skills">
