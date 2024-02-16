@@ -1,5 +1,5 @@
 ---
-date: 2024-02-18
+date: 2024-02-16
 img: Scott_Fryxell_Monday, December 25 at 4_53 PM.svg
 ---
 I don't use the nytimes app, though I pay for a subscription I do not accept advertising into my life. I think its wrong to let wealthy have a shot at manipulating me. I trust the nytimes journalistic standards but not their advertising.
