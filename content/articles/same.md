@@ -2,6 +2,9 @@
 date: 2024-02-16
 img: Scott_Fryxell_Monday, December 25 at 4_53 PM.svg
 ---
+
+I made a (r)[] eply on hacker news that I want to plant a little firmer in the ground.
+
 I don't use the nytimes app, though I pay for a subscription I do not accept advertising into my life. I think its wrong to let wealthy have a shot at manipulating me. I trust the nytimes journalistic standards but not their advertising.
 
 I don't push this shit on my kid. but I did make a social media app for us to share so she knows what I mean. It's the best way I knew how to guarantee she'd understand. That's it. I don't preach. Okay, I try. So there politics over.
@@ -20,6 +23,8 @@ I have been loyal to Apple since my first purchase, a classic II, to use with op
 
 The choice is stark but clear – No more apple hardware, no more wealthy paternalism telling me they are here to keep me safe. I accept that apple has only made me safe for others to manipulate. I left instagram, facebook, twitter, never even considered tiktok or snapshot. I will not be your victim.
 
-I get to pick what I goes into my eyes. PWA is the only guarantee I could find that can cut the mustard. You don't get to point and be scared about it.
+I get to pick what goes into my eyes. PWA is the only guarantee I could find that can cut the mustard for the standards I want to live by. You don't get to point and be scared about it. You don't support me mother fucker I don't support you.
 
-You don't support me mother fucker I don't support you.
+Who I do support is Europe. They are the noble warrior in this fight. They should go hard here. They should force apple to suppot PWA and make a third party the arbiter of what spec shit apple has to implement. They are turning an EU mandate into an excuse to grab more control.
+
+No mercy.
