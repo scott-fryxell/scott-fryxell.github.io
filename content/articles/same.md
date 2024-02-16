@@ -3,7 +3,7 @@ date: 2024-02-16
 img: Scott_Fryxell_Monday, December 25 at 4_53 PM.svg
 ---
 
-I made a [reply]( ) on hacker news that I want to plant a little firmer in the ground.
+I made a [reply](https://news.ycombinator.com/item?id=39299007#39377420) on hacker news that I want to plant a little firmer in the ground.
 
 I don't use the NYtimes app; though I pay for a subscription. I do not accept advertising into my life. I think its wrong to let wealthy people have a shot at manipulating me. I trust the nytimes journalistic standards but not their advertising.
 
@@ -32,3 +32,6 @@ I get to pick what goes into my eyes. PWA is the only guarantee I could find tha
 Who I do support is Europe. They are the noble warrior in this fight. They should go hard here. They should force Apple to suppot PWA cause it's PWA support or make a third party the arbiter of what spec shit Apple has to implement. Apple is turning an EU mandate into an excuse to grab more control.
 
 No mercy.
+
+[comments](https://news.ycombinator.com/item?id=39404458)
+
