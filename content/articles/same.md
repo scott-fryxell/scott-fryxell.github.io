@@ -7,7 +7,7 @@ I made a [reply]( ) on hacker news that I want to plant a little firmer in the g
 
 I don't use the nytimes app, though I pay for a subscription. I do not accept advertising into my life. I think its wrong to let wealthy people have a shot at manipulating me. I trust the nytimes journalistic standards but not their advertising.
 
-I don't push this shit on my kid. but I did make a social media app for us to share so she knows what I mean. It's the best way I knew how to guarantee she'd understand. That's it. I don't preach. Okay, I try.
+I don't push this shit on my kid. but I did make a social media app for us to share so she knows what I mean. It's the best way I knew how to guarantee she'd understand. That's it.
 
 The only way I can enforce my beliefs on the nytimes (and Washington post, WSJ, youtube, and amazon prime) is to use the web. I know this is a minority position. And I know I have no recourse against Applications that are compiled into native apps and hosted by Apple.
 
@@ -29,6 +29,6 @@ The choice is stark but clear – No more apple hardware, no more wealthy patern
 
 I get to pick what goes into my eyes. PWA is the only guarantee I could find that can cut the mustard for the standards I want to live by. You don't get to point and be scared about it. You don't support me mother fucker I don't support you.
 
-Who I do support is Europe. They are the noble warrior in this fight. They should go hard here. They should force Apple to suppot PWA and make a third party the arbiter of what spec shit Apple has to implement. They are turning an EU mandate into an excuse to grab more control.
+Who I do support is Europe. They are the noble warrior in this fight. They should go hard here. They should force Apple to suppot PWA cause it's PWA support or make a third party the arbiter of what spec shit Apple has to implement. Apple is turning an EU mandate into an excuse to grab more control.
 
 No mercy.
