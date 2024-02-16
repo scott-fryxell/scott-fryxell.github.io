@@ -20,6 +20,5 @@ I have been loyal to Apple since my first purchase, a classic II, to use with op
 
 The choice is stark but clear – No more apple hardware, no more wealthy paternalism telling me they are here to keep me safe. I accept that apple has only made me safe for others to manipulate. I left instagram, facebook, twitter, never even considered tiktok or snapshot. I will not be your victim.
 
-I get to pick what I goes into my eyes. PWA is the only guarantee I could find that can cut the fucking mustard. You don't get to point and be scared about it.
+I get to pick what I goes into my eyes. PWA is the only guarantee I could find that can cut the mustard. You don't get to point and be scared about it.
 
-You don't support me mother fucker I don't support you.
