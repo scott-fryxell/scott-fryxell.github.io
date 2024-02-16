@@ -22,3 +22,4 @@ The choice is stark but clear – No more apple hardware, no more wealthy patern
 
 I get to pick what I goes into my eyes. PWA is the only guarantee I could find that can cut the mustard. You don't get to point and be scared about it.
 
+You don't support me mother fucker I don't support you.
