@@ -48,19 +48,15 @@
     & > header
       @media (max-width: 33rem)
         display: block
-
       & > img
         width: 100vw
         max-height: 100vh
-        min-height: 66vh
         @media (min-width: 33rem)
           width: 70vw
       & > h2
         min-width: 30vw
         padding: 0 1rem
         text-transform: capitalize
-        & > a
-          // color: inherit
     & > h5
       padding: 0 1rem
     & > details
