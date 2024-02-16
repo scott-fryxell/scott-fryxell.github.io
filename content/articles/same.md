@@ -3,11 +3,11 @@ date: 2024-02-16
 img: Scott_Fryxell_Monday, December 25 at 4_53 PM.svg
 ---
 
-I made a (r)[] eply on hacker news that I want to plant a little firmer in the ground.
+I made a [reply]( ) on hacker news that I want to plant a little firmer in the ground.
 
-I don't use the nytimes app, though I pay for a subscription I do not accept advertising into my life. I think its wrong to let wealthy have a shot at manipulating me. I trust the nytimes journalistic standards but not their advertising.
+I don't use the nytimes app, though I pay for a subscription. I do not accept advertising into my life. I think its wrong to let wealthy people have a shot at manipulating me. I trust the nytimes journalistic standards but not their advertising.
 
-I don't push this shit on my kid. but I did make a social media app for us to share so she knows what I mean. It's the best way I knew how to guarantee she'd understand. That's it. I don't preach. Okay, I try. So there politics over.
+I don't push this shit on my kid. but I did make a social media app for us to share so she knows what I mean. It's the best way I knew how to guarantee she'd understand. That's it. I don't preach. Okay, I try.
 
 The only way I can enforce my beliefs on the nytimes (and Washington post, WSJ, youtube, and amazon prime) is to use the web. I know this is a minority position. And I know I have no recourse against Applications that are compiled into native apps and hosted by Apple.
 
@@ -15,16 +15,20 @@ I will pay extra to maintain my dominance over companies that think advertising 
 
 The web protects me and because it's text out in the open I can live my personal morality directly. I don't have to ask permission — I can enforce.
 
-This change apple has made to PWAs in Europe has laid clear that my personal beliefs are not a priority. I'll need to compile and submit, to live in their ecosystem; where apps are free to manipulate me. advertise at me.
+This change Apple has made to PWAs in Europe has laid clear that my personal beliefs are not a priority. I'll need to compile and submit, to live in their ecosystem; where apps are free to manipulate me. advertise at me.
 
 You're not the only Unix in town buddy.
 
-I have been loyal to Apple since my first purchase, a classic II, to use with opcode studio vision, it was a requirement for the music class about computer music I was taking at Diablo Valley College in Pleasant Hill. I've been buying and using apple products since. This change means I am no longer welcome in their ecosystem. And you shouldn't feel welcome either.
+I have been loyal to Apple since my first purchase, a classic II, to use with Opcodes Studio Vision, it was a requirement for the music class about computer music I was taking at Diablo Valley College in Pleasant Hill. I fell in love with Opcode. It was heaven with my Korg M1.
+
+When OSX came out I was heavy into emacs; working at Covalent and surrounded by Unix masters. I had a mac running Unix within a week of it's release. Damn the torpedos. Its that the input boxes worked with emacs key bindings, that I could navigate natively just like I do when I code, that assured me I in reliable company. That the Unix nerds at apple were on my side professionally too.
+
+Droping PWA support in Europe means I am no longer welcome in Apple's ecosystem. That the web is a privelage. And you and I had better be good boys or we're next.
 
 The choice is stark but clear – No more apple hardware, no more wealthy paternalism telling me they are here to keep me safe. I accept that apple has only made me safe for others to manipulate. I left instagram, facebook, twitter, never even considered tiktok or snapshot. I will not be your victim.
 
 I get to pick what goes into my eyes. PWA is the only guarantee I could find that can cut the mustard for the standards I want to live by. You don't get to point and be scared about it. You don't support me mother fucker I don't support you.
 
-Who I do support is Europe. They are the noble warrior in this fight. They should go hard here. They should force apple to suppot PWA and make a third party the arbiter of what spec shit apple has to implement. They are turning an EU mandate into an excuse to grab more control.
+Who I do support is Europe. They are the noble warrior in this fight. They should go hard here. They should force Apple to suppot PWA and make a third party the arbiter of what spec shit Apple has to implement. They are turning an EU mandate into an excuse to grab more control.
 
 No mercy.
