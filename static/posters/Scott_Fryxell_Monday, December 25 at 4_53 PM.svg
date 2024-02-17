@@ -151,26 +151,6 @@
       <stop stop-color="hsla(264, 5%, 13%, 1)" offset="90%"></stop>
     </linearGradient>
   </g>
-  <g itemprop="animation">
-    <animate href="#16282281824-posters-1703551981459-light" attributeName="stroke-opacity" repeatCount="indefinite"
-      dur="5s" values="0.9;0.0;0.9"></animate>
-    <animate href="#16282281824-posters-1703551981459-regular" attributeName="stroke-opacity" repeatCount="indefinite"
-      dur="2s" values="0.9;0.6;0.9"></animate>
-    <animate href="#16282281824-posters-1703551981459-bold" attributeName="stroke-opacity" repeatCount="indefinite"
-      dur="3s" values="0.9;0.0;0.9"></animate>
-    <animate href="#16282281824-posters-1703551981459-radial-background" attributeName="cx" repeatCount="indefinite"
-      dur="34s" values="0%;33%;100%;0%;100%;0%;"></animate>
-    <animate href="#16282281824-posters-1703551981459-radial-background" attributeName="cy" repeatCount="indefinite"
-      dur="55s" values="0%;100%;33%;100%;66%;0%"></animate>
-    <animate href="#16282281824-posters-1703551981459-vertical-light" attributeName="x1" repeatCount="indefinite"
-      dur="55s" values="0%;33%;100%;0%;133%;0%;"></animate>
-    <animate href="#16282281824-posters-1703551981459-vertical-light" attributeName="y1" repeatCount="indefinite"
-      dur="86s" values="0%;100%;33%;100%;66%;0%"></animate>
-    <animate href="#16282281824-posters-1703551981459-horizontal-regular" attributeName="x1" repeatCount="indefinite"
-      dur="34s" values="0%;100%;66%;0%;33%;133%;0%"></animate>
-    <animate href="#16282281824-posters-1703551981459-horizontal-regular" attributeName="y1" repeatCount="indefinite"
-      dur="55s" values="0%;66%;100%;33%;100%;66%;0%"></animate>
-  </g>
   <rect itemprop="background" width="683" height="512" tabindex="-1" id="16282281824-posters-1703551981459-background"
     fill-opacity="1" fill="url(#16282281824-posters-1703551981459-radial-background)"></rect>
   <path id="16282281824-posters-1703551981459-light"
@@ -188,33 +168,4 @@
     itemprop="bold" fill-opacity="0.9" stroke-opacity=".90" stroke-width="0.25px" fill-rule="evenodd" tabindex="-1"
     fill="url(#16282281824-posters-1703551981459-vertical-bold)"
     stroke="url(#16282281824-posters-1703551981459-radial-light)"></path>
-  <defs>
-    <symbol id="16282281824-posters-1703551981459-emboss-light">
-      <use href="#16282281824-posters-1703551981459-light" filter="url(#emboss)"></use>
-    </symbol>
-    <symbol id="16282281824-posters-1703551981459-emboss-regular">
-      <use href="#16282281824-posters-1703551981459-regular" filter="url(#emboss-straight)"></use>
-    </symbol>
-    <symbol id="16282281824-posters-1703551981459-emboss-bold">
-      <use href="#16282281824-posters-1703551981459-bold" filter="url(#emboss-opposite)"></use>
-    </symbol>
-    <filter id="emboss">
-      <feConvolveMatrix kernelMatrix="1.5 0 0
-                      0 0 0
-                      0 0 -1.5"></feConvolveMatrix>
-    </filter>
-    <filter id="emboss-opposite">
-      <feConvolveMatrix kernelMatrix="0 0 2.5
-                      0 0 0
-                     -2.5 0 0"></feConvolveMatrix>
-    </filter>
-    <filter id="emboss-straight">
-      <feConvolveMatrix kernelMatrix="0 0  0
-                      2.5 0 -2.5
-                      0 0  0"></feConvolveMatrix>
-    </filter>
-  </defs>
-  <use tabindex="-1" class="emboss" opacity="0.66" href="#16282281824-posters-1703551981459-emboss-light"></use>
-  <use tabindex="-1" class="emboss" opacity="0.66" href="#16282281824-posters-1703551981459-emboss-regular"></use>
-  <use tabindex="-1" class="emboss" opacity="0.66" href="#16282281824-posters-1703551981459-emboss-bold"></use>
 </svg>
