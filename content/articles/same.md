@@ -21,7 +21,7 @@ You're not the only Unix in town buddy.
 
 I have been loyal to Apple since my first purchase, a classic II, to use with Opcode's Studio Vision, it was a requirement for the class about computer music I was taking at Diablo Valley College in Pleasant Hill. I fell in love with Opcode. It was heaven with my Korg M1. A personal universe opened up before me. A place all my own. I could make something here; all broken on my own.
 
-When OSX came out I was heavy into emacs; working at Covalent and surrounded by Unix masters. I had a mac running Apple's Unix within a week of it's release. Damn the torpedos. Its that the input boxes worked with emacs key bindings, that I could navigate natively just like I do when I code, a subtle attention to detail; an artistic promise to do excellence. I was in reliable hands; Apple was gonna do Unix right.
+When OSX came out I was heavy into Emacs; working at Covalent and surrounded by Unix masters. I had a mac running Apple's Unix within a week of it's release. Damn the torpedos. Its that the input boxes worked with Emacs key bindings, that I could navigate natively just like I do when I code, a subtle attention to detail; an artistic promise to do excellence. I was in reliable hands; Apple was gonna do Unix right.
 
 Droping PWA support in Europe means I am no longer welcome in Apple's ecosystem. That the web is a privelage. And you and I over here in 'merica had better be good boys or we're next.
 
