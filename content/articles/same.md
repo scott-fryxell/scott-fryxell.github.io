@@ -15,7 +15,7 @@ I will pay extra to maintain my dominance over companies that think advertising 
 
 The web protects me and because it's text out in the open I can live my personal morality directly. I don't have to ask permission — I can enforce.
 
-This change Apple has made to PWAs in Europe has laid clear that my personal beliefs are not a priority. I'll need to compile and submit, to live in their ecosystem; where apps are free to manipulate me. advertise at me.
+This change Apple has made to PWAs in Europe has laid clear that my personal beliefs are not a priority. I'll need to compile and submit to live in their ecosystem; where apps are free to manipulate me; advertise at me.
 
 You're not the only Unix in town buddy.
 
