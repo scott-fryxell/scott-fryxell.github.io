@@ -59,7 +59,7 @@
               itemscope
               itemtype="http://schema.org/Place">
               <a itemprop="url" target="_blank" href="https://sharemorestories.com/seeq-app-overview/">
-                <span itemprop="name">SEEQ app for Share More Stories</span>
+                <span itemprop="name">Share More Stories</span>
               </a>
             </span>
           </h3>
@@ -69,6 +69,12 @@
           </h6>
         </header>
         <p itemprop="description">
+          I took a proof of concept app through to production Using Vue Google Cloud and Replicate.
+          We use a que capable of processing an infinite number of stories at scale. We are hosting
+          over fifty models on replicate. jobs are triggered and permsions state are synced with
+          firebase functions.
+        </p>
+        <p itemprop="description">
           The SEEQ app collects stories and uses machine learning for testing your
           hypotheses and validating assumptions. Without the right tools, that process
           can be time consuming, expensive, and frustrating -- leaving you with lots
@@ -76,11 +82,7 @@
           insights, how are you going to identify and address large unmet needs in order
           to drive new brands, products and business growth?
         </p>
-        <p itemprop="description">
-          I took a proof of concept app built with vue and utilizing Google Cloud and replicate
-          built a que capable of processing an infinite number of stories at scale. We are hosting
-          over fifty models with replicate.
-        </p>
+
       </article>
 
       <article itemscope itemtype="http://schema.org/Event/Job">
