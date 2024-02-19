@@ -11,7 +11,7 @@ I don't push this shit on my kid. but I did make a social media app for us to sh
 
 The only way I can enforce my beliefs on the nytimes (and Washington post, WSJ, youtube, and amazon prime) is to use the web. I know this is a minority position. And I know I have no recourse against Applications that are compiled into native apps and hosted by Apple. In Apples world they can get at me all they want.
 
-I will pay extra to maintain my dominance over companies that think advertising is a legitimate revenue stream. Fuck you guys. Rich people telling poor people to ignore what benefits them is gross to me.
+I will pay extra to maintain my dominance over companies that think advertising is a legitimate revenue stream. Fuck you guys. Rich people telling poor people to ignore what benefits them is [gross](/blog/burning-through-our-daughters) to me.
 
 The web protects me and because it's text out in the open I can live my personal morality directly. I don't have to ask permission — I can enforce.
 
