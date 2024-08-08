@@ -25,7 +25,8 @@
         Development, Product Development, User Experience, Single Page
         Applications, Scalability, Serverless, NoSQL databases, Git, Node,
         Stylus, Firebase, Jest, JamStack, Java, Ruby, SQL, J2EE, Struts, Ruby on
-        Rails, Heroku, Postgres, Maven, Lucene, ColdFusion, Replicate
+        Rails, Heroku, Postgres, Maven, Lucene, ColdFusion, Replicate, Role
+        Based Access Control
       </p>
     </section>
     <section id="experience">
@@ -53,36 +54,40 @@
       <article itemscope itemtype="http://schema.org/Event/Job">
         <header>
           <h3>
-            <span itemprop="name">Founder, Engineer</span> at
+            <span itemprop="name">Engineer</span> at
             <span
               itemprop="location"
               itemscope
               itemtype="http://schema.org/Place">
-              <a itemprop="url" target="_blank" href="https://sharemorestories.com/seeq-app-overview/">
+              <a
+                itemprop="url"
+                target="_blank"
+                href="https://sharemorestories.com/seeq-app-overview/">
                 <span itemprop="name">Share More Stories</span>
               </a>
             </span>
           </h3>
           <h6>
-            <time itemprop="startdate" datetime="2022-08-01">2018</time>
+            <time itemprop="startdate" datetime="2022-08-01">2022</time>
             <span>- Present</span>
           </h6>
         </header>
         <p itemprop="description">
-          I took a proof of concept app through to production Using Vue Google Cloud and Replicate.
-          We use a que capable of processing an infinite number of stories at scale. We are hosting
-          over fifty models on replicate. jobs are triggered and permsions state are synced with
+          I took a proof of concept app through to production Using Vue Google
+          Cloud and Replicate. We use a que capable of processing an infinite
+          number of stories at scale. We are hosting over fifty models on
+          replicate. jobs are triggered and permsions state are synced with
           firebase functions.
         </p>
         <p itemprop="description">
-          The SEEQ app collects stories and uses machine learning for testing your
-          hypotheses and validating assumptions. Without the right tools, that process
-          can be time consuming, expensive, and frustrating -- leaving you with lots
-          of information but little in the way of actionable insights. Without the right
-          insights, how are you going to identify and address large unmet needs in order
-          to drive new brands, products and business growth?
+          The SEEQ app collects stories and uses machine learning for testing
+          your hypotheses and validating assumptions. Without the right tools,
+          that process can be time consuming, expensive, and frustrating --
+          leaving you with lots of information but little in the way of
+          actionable insights. Without the right insights, how are you going to
+          identify and address large unmet needs in order to drive new brands,
+          products and business growth?
         </p>
-
       </article>
 
       <article itemscope itemtype="http://schema.org/Event/Job">
