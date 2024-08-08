@@ -74,10 +74,10 @@
         </header>
         <p itemprop="description">
           I took a proof of concept app through to production Using Vue Google
-          Cloud and Replicate. We use a que capable of processing an infinite
-          number of stories at scale. We are hosting over fifty models on
-          replicate. jobs are triggered and permsions state are synced with
-          firebase functions.
+          Cloud, Firebase, and Replicate. We use a queue capable of processing
+          an infinite number of stories at scale. We are hosting over fifty
+          models on replicate. jobs are triggered and permsions state are synced
+          with firebase functions.
         </p>
         <p itemprop="description">
           The SEEQ app collects stories and uses machine learning for testing
