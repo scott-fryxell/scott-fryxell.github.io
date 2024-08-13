@@ -571,9 +571,10 @@
   section#scott-fryxell
     @media print
       padding: 2rem
-      a
+      main a
         outline: none !important
         border: none !important
+        background: none !important
         color: black
         text-decoration: none !important
     & > header
