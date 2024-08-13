@@ -6,8 +6,8 @@
     itemid="http://scott-fryxell.github.io/resume">
     <header>
       <img
-        src="/posters/Scott_Fryxell_posters_Saturday, January 23, 11_01 AM.svg"
-        alt="An italian countryside in 1807. Tall trees casting long shadows." />
+        src="/posters/Scott_Fryxell_Thursday, May 30 at 3_22 PM.svg"
+        alt="The skyline of San Francisco" />
       <address>
         <p
           itemprop="address"
@@ -561,7 +561,7 @@
           <a href="https://scott-fryxell.github.io/resume"
             >scott-fryxell.github.io</a
           >
-          for the full resume
+          for my technical work reaching back to 1998.
         </p>
       </footer>
     </section>
@@ -598,7 +598,7 @@
       & > article
         width: inherit
         @media print
-          &:nth-of-type(n+6)
+          &:nth-of-type(n+8)
             display: none !important
         header
           display:block
