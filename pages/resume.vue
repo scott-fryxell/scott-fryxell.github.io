@@ -591,7 +591,6 @@
             margin:0
       & > img
         width:77vw
-        height:100vh
         @media print
           display: none
     & > section
