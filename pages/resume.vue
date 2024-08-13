@@ -6,7 +6,7 @@
     itemid="http://scott-fryxell.github.io/resume">
     <header>
       <img
-        src="/static/Scott_Fryxell_Thursday, May 30 at 3_22 PM.svg"
+        src="/posters/Scott_Fryxell_Thursday, May 30 at 3_22 PM.svg"
         alt="The skyline of San Francisco" />
       <address>
         <p
@@ -572,10 +572,10 @@
     @media print
       padding: 2rem
       a
-        outline: none
-        border: none
+        outline: none !important
+        border: none !important
         color: black
-        text-decoration: none
+        text-decoration: none !important
     & > header
       display: flex
       & > address
@@ -603,7 +603,7 @@
       & > article
         width: inherit
         @media print
-          &:nth-of-type(n+8)
+          &:nth-of-type(n+9)
             display: none !important
         header
           display:block
