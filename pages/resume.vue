@@ -20,35 +20,18 @@
     </header>
     <section id="skills">
       <h2 itemprop="description">Software Developer</h2>
-      <p itemprop="skills" itemtype="http://schema.org/skills">
-        JavaScript, CSS, HTML, Vue, Nuxt, TypeScript, Vite, Webpack, Test Drivin
-        Development, Product Development, User Experience, Single Page
-        Applications, Scalability, Serverless, NoSQL databases, Git, Node,
-        Stylus, Firebase, Jest, JamStack, Java, Ruby, SQL, J2EE, Struts, Ruby on
-        Rails, Heroku, Postgres, Maven, Lucene, ColdFusion, Replicate, Role
-        Based Access Control
-      </p>
     </section>
     <section id="experience">
       <header>
         <h2>Experience</h2>
         <p>
-          From idea to complex web application, I provide perspective, guidance,
-          and software development services. I offer authenticity and a creative
-          environment for the people that I work with to explore problems and
-          make decisions. I like to focus on elegant solutions executed to the
-          highest possible standards.
+          From concept to fully-fledged web applications, I offer perspective, guidance, and software development services. I foster an authentic and creative environment, enabling collaboration, problem-solving, and effective decision-making. My focus is on delivering elegant solutions executed to the highest standards.
         </p>
         <p>
-          I have mentored, hired and maintained long lasting teams with minimal
-          resources. My soft skills are highly developed and I can connect
-          closely with diverse purpose driven organizations.
+          I have successfully mentored, hired, and maintained long-lasting teams, even with minimal resources. My well-developed soft skills allow me to connect closely with diverse, purpose-driven organizations.
         </p>
         <p>
-          Self-motivated and fun to work with, I tend to facilitate an
-          environment where we enjoy bringing our best selves to the table. I am
-          driven by a desire to write quality code using best practices, and to
-          help build a useful Internet.
+          Self-motivated and enjoyable to work with, I create an atmosphere where we bring our best selves to the table. I am driven by a commitment to writing quality code using best practices and contributing to a more useful and robust internet.
         </p>
       </header>
       <article itemscope itemtype="http://schema.org/Event/Job">
@@ -73,20 +56,10 @@
           </h6>
         </header>
         <p itemprop="description">
-          I took a proof of concept app through to production Using Vue Google
-          Cloud, Firebase, and Replicate. We use a queue capable of processing
-          an infinite number of stories at scale. We are hosting over fifty
-          models on replicate. jobs are triggered and permsions state are synced
-          with firebase functions.
+          I have taken a proof-of-concept app from inception to production using Vue, Google Cloud, Firebase, and Replicate. We implemented a queue capable of processing an infinite number of stories at scale, hosting over fifty models on Replicate. Jobs are triggered, and permissions states are synced using Firebase functions.
         </p>
         <p itemprop="description">
-          The SEEQ app collects stories and uses machine learning for testing
-          your hypotheses and validating assumptions. Without the right tools,
-          that process can be time consuming, expensive, and frustrating --
-          leaving you with lots of information but little in the way of
-          actionable insights. Without the right insights, how are you going to
-          identify and address large unmet needs in order to drive new brands,
-          products and business growth?
+          The SEEQ app collects stories and utilizes machine learning to test hypotheses and validate assumptions. Without the right tools, this process can be time-consuming, expensive, and frustrating—leading to an abundance of information but few actionable insights. Identifying and addressing large unmet needs is crucial for driving new brands, products, and business growth.
         </p>
       </article>
 
@@ -109,23 +82,13 @@
           </h6>
         </header>
         <p itemprop="description">
-          Realness is social media re-imagined as a tool rather than a
-          popularity contest. Serverless and auditable, Realness embraces trust
-          but verify. It's a single page app that runs from the web and
-          homescreen as fast as native applications. Data is saved on the phone,
-          storing on the server only what is essential for the service.
+          Realness reimagines social media as a tool rather than a popularity contest. Serverless and auditable, Realness embraces the "trust but verify" ethos. It’s a single-page app that operates from the web and home screen with the speed of native applications. Data is stored on the phone, with only essential information stored on the server.
         </p>
         <p itemprop="description">
-          I designed and built my own NoSQL backend based on the microdata
-          format. This has made supporting client first development natural and
-          offered the choice to leave some data on device. Realness is future
-          proof, responsive, progressive, fast with offline capabilities.
+          I designed and built my own NoSQL backend based on the Microdata format, which supports client-first development and offers the option to store data locally. Realness is future-proof, responsive, progressive, and fast, with offline capabilities.
         </p>
         <p itemprop="description">
-          I designed my own UI framework and chose Vue as my primary development
-          tool. I used Jest for Test Driven development and followed best
-          practices throughout, I was able to switch between design, test, and
-          build fluidly for an ideal development workflow.
+          I created my own UI framework and chose Vue as my primary development tool. Using Jest for Test-Driven Development and adhering to best practices, I fluidly transitioned between design, testing, and building for an optimal development workflow.
         </p>
       </article>
       <article itemscope itemtype="http://schema.org/Event/Job">
@@ -148,21 +111,10 @@
           </h6>
         </header>
         <p itemprop="description">
-          <a
-            href="https://vueschool.io/articles/vuejs-tutorials/tooling-saves-your-bacon/"
-            >I helped</a
-          >
-          Happs.tv diagnose and fix performance problems. I helped an insurance
-          broker negotiate their transition from vue 2 to 3 by focusing on
-          developer adoption through code review. I worked with the VueSchool
-          team to interview and recommend qualified candidates from all over the
-          world for an NFT startup
+          At Happs.tv, I diagnosed and fixed performance problems and assisted an insurance broker in transitioning from Vue 2 to Vue 3 by focusing on developer adoption through code review. I collaborated with the VueSchool team to interview and recommend qualified candidates for an NFT startup.
         </p>
         <p itemprop="description">
-          I built the <a href="https://vueschool.io/hiring"> hiring app</a> for
-          VueSchool. We were able to execute from idea to release in less that
-          two and a half months. helping VueSchool enter a new business
-          vertical.
+          I led the development of a <a href="https://vueschool.io/hiring"> hiring app</a> for VueSchool, taking it from concept to release in just two and a half months, helping the company enter a new business vertical.
         </p>
       </article>
       <article itemscope itemtype="http://schema.org/Event/Job">
@@ -184,17 +136,10 @@
           </h6>
         </header>
         <p itemprop="description">
-          Savvy, a WebRTC based video streaming service that connects teachers
-          and learners, received its first round of funding within two weeks of
-          my start date. I spent my first three months architecting and building
-          the minimum viable product. The next three months I hired the dev team
-          and we built our beta release.
+          A WebRTC-based video streaming service that connects teachers and learners, secured its first round of funding within two weeks of my start date. In my first three months, I architected and built the minimum viable product. In the following three months, I hired the development team and we launched the beta release.
         </p>
         <p itemprop="description">
-          I designed and built out Savvy's double-sided marketplace using
-          Stripe. I integrated Savvy's calendar features into Google Calendar. I
-          built out a front end framework optimized for writing CSS and
-          event-driven javascript.
+          I designed and built Savvy's double-sided marketplace using Stripe and integrated its calendar features with Google Calendar. I developed a front-end framework optimized for writing CSS and event-driven JavaScript.
         </p>
       </article>
       <article itemscope itemtype="http://schema.org/Event/Job">
@@ -218,11 +163,7 @@
           </h6>
         </header>
         <p itemprop="description">
-          Built the administrative console our partners used to access and
-          configure how their embedded content is viewed. Worked on the Tout
-          Javascript SDK and products used to embed Tout video players on
-          partner websites. Analyzed and optimized client-side and server-side
-          performance for a very high volume system.
+          I also built the administrative console our partners use to access and configure their embedded content. At Tout, I worked on the JavaScript SDK and products used to embed Tout video players on partner websites, analyzing and optimizing both client-side and server-side performance for a high-traffic system.
         </p>
       </article>
       <article itemscope itemtype="http://schema.org/Event/Job">
@@ -243,31 +184,14 @@
           </h6>
         </header>
         <p itemprop="description">
-          I created Copper.is as a service that you used to tip the creators of
-          the content you experienced online. I wrote extensions for Chrome,
-          Firefox and Safari. You click a button on your browser and Copper
-          would find the person you tipped sign them up and pay them for the
-          content you enjoyed.
+          I created Copper.is as a service for tipping online content creators. I developed browser extensions for Chrome, Firefox, and Safari, allowing users to tip creators and automatically sign them up to receive payments.
+        </p>
+
+        <p itemprop="description">
+          This double-sided marketplace was built as a finite-state machine with Ruby on Rails on top of Postgres, hosted on Heroku. Stripe was used as an escrow and payments endpoint. The challenge of automating the process of finding, authorizing, and paying creators was solved by scraping content and contacting creators through social embeds, achieving an 80% success rate.
         </p>
         <p itemprop="description">
-          This double sided marketplace was built as a finite-state machine with
-          Ruby on Rails sitting on top of Postgres and was hosted on Heroku. I
-          used stripe as an escrow and payments endpoint.
-        </p>
-        <p itemprop="description">
-          How to automate finding, authorizing, and paying the creators was the
-          tricky bit. We solved it by scraping the content people paid for
-          social embeds (which were everywhere at the time) contacting the
-          creators through those services and then providing oAuth
-          authorizations that we would use as proof they created the content. We
-          had an 80% hit rate.
-        </p>
-        <p itemprop="description">
-          I Founded, architected, and led the development team, similar to
-          Patreon. Built the service from concept to fully functional product. I
-          gathered developers, brought in legal, and investment resources and
-          worked with the incubator Hattery Labs to develop the brand and
-          product.
+          I founded, architected, and led the development team for Copper.is, similar to Patreon, and built the service from concept to a fully functional product. I assembled the development team, brought in legal and investment resources, and collaborated with Hattery Labs to develop the brand and product.
         </p>
       </article>
       <article itemscope itemtype="http://schema.org/Event/Job">
@@ -287,9 +211,7 @@
           </h6>
         </header>
         <p itemprop="description">
-          Took over an internal AdWords purchasing application built in Adobe
-          Flex. Ported the code base to Rails and completed the project 9 months
-          ahead of schedule.
+          I took over an internal AdWords purchasing application built in Adobe Flex, ported the codebase to Rails, and completed the project nine months ahead of schedule.
         </p>
       </article>
       <article itemscope itemtype="http://schema.org/Event/Job">
@@ -315,10 +237,7 @@
           </h6>
         </header>
         <p itemprop="description">
-          Implemented new functionality for the homepage and the site’s most
-          popular feature, “Never Ending Movie Quiz”. Optimized site for search
-          engines. Evangelized and helped the adoption of more consistent
-          javascript framework.
+          I implemented new functionality for the homepage and the "Never Ending Movie Quiz" feature, optimized the site for search engines, and advocated for the adoption of a consistent JavaScript framework.
         </p>
       </article>
       <article itemscope itemtype="http://schema.org/Event/Job">
@@ -343,13 +262,7 @@
           </h6>
         </header>
         <p itemprop="description">
-          Architected and implemented a publishing rights application. Built a
-          search service based on Lucent, which is able to query over 2 million
-          tracks with result times consistently ten times faster than the
-          existing search system. Created a continuous build system with the
-          help of Maven and Continuum. Leveraged Prototype, Scriptaculous and
-          some of my own event based insanity to focus the middle tier on
-          marshaling data to the client.
+          I architected and implemented a publishing rights application and built a search service based on Lucene, capable of querying over 2 million tracks with response times ten times faster than the existing system. I created a continuous build system using Maven and Continuum, leveraging Prototype, Scriptaculous, and custom event-based solutions to focus the middle tier on marshaling data to the client.
         </p>
       </article>
       <article itemscope itemtype="http://schema.org/Event/Job">
@@ -371,12 +284,7 @@
           </h6>
         </header>
         <p itemprop="description">
-          Developed cross-browser backward and forward compatible User Agent
-          framework based on Tapestry. Designed a client event model that
-          supported multiple event bindings, dynamic component initialization
-          based on custom HTML attributes. Created a development environment
-          that abstracted developers from the specifics of how the user
-          interface functioned.
+          I developed a cross-browser, backward, and forward-compatible User Agent framework based on Tapestry. I designed a client event model supporting multiple event bindings and dynamic component initialization based on custom HTML attributes. I created a development environment that abstracted developers from the intricacies of the user interface.
         </p>
       </article>
       <article itemscope itemtype="http://schema.org/Event/Job">
@@ -396,23 +304,11 @@
           </h6>
         </header>
         <p itemprop="description">
-          Worked with offshore developers on best practices for struts, tiles,
-          and general application development. Implemented a development build
-          system that supports deployment to multiple applications servers and
-          operating systems. The build was customizable at appropriate
-          resolutions and ran 500% faster than the previous build system.
+          I collaborated with offshore developers on best practices for Struts, Tiles, and general application development. I implemented a development build system that supported deployment to multiple application servers and operating systems, running 500% faster than the previous build system.
         </p>
         <p itemprop="description">
-          Spearheaded the refactor of the user interface to conform to web
-          standards, decreasing page size sixty percent, while increasing
-          cross-platform browser support, both forward and backward
-          compatibility, application skinning, global print capabilities, as
-          well as
-          <a target="_blank" href="https://www.britannica.com/technology/WAP"
-            >WAP</a
-          >
-          and palm support. Implemented a templating mechanism to increase code
-          reuse and simplified development workflow.
+          I spearheaded the refactor of the user interface to conform to web standards, decreasing page size by 60% while increasing cross-platform browser support, both forward and backward compatibility, application skinning, global print capabilities, and Palm support. I implemented a templating mechanism to increase code reuse and simplify the development workflow.
+
         </p>
       </article>
       <article itemscope itemtype="http://schema.org/Event/Job">
@@ -433,11 +329,7 @@
           </h6>
         </header>
         <p itemprop="description">
-          Managed a team of 5 developers from design through release.
-          Architected and drove the implementation of the presentation layer for
-          an enterprise application management portal. Evangelized, implemented,
-          and maintained a modular approach for the user interface elements,
-          which increased code reuse and reduced time to market
+          As the lead developer of a five-person team, I managed the design and implementation of the presentation layer for an enterprise application management portal. I advocated for and maintained a modular approach to user interface elements, increasing code reuse and reducing time to market.
         </p>
       </article>
       <article itemscope itemtype="http://schema.org/Event/Job">
@@ -457,23 +349,10 @@
           </h6>
         </header>
         <p itemprop="description">
-          Facilitated the migration of a knowledge management portal application
-          from ColdFusion to J2EE. Mentored 6 developers through this
-          transition. Proposed the application architecture and development
-          migration path from ColdFusion to java, which entailed porting an
-          unwieldy, two-tiered web application, to a scalable, multi-tiered,
-          fault-tolerant enterprise application. Designed a flexible, and
-          scalable security system, which was applied at different levels of
-          granularity throughout the application.
+          I facilitated the migration of a knowledge management portal application from ColdFusion to J2EE, mentoring six developers through the transition. I proposed the application architecture and development migration path, porting a complex, two-tiered web application to a scalable, multi-tiered, fault-tolerant enterprise application. I designed a flexible, scalable security system that applied at different levels of granularity throughout the application.
         </p>
         <p itemprop="description">
-          Provided technical support to client engineers, prospective customers,
-          and business partners. Performed onsite installations and integration
-          of application. Introduced departmental reorganizations, and
-          development processes such as use cases, functional specification,
-          design meetings, code reviews, that greatly increased application
-          stability, and the capacity to quickly add features to the
-          application.
+          I provided technical support to client engineers, prospective customers, and business partners, performing onsite installations and integration of the application. I introduced departmental reorganizations and development processes, such as use cases, functional specifications, design meetings, and code reviews, significantly increasing application stability and the capacity to add features quickly.
         </p>
       </article>
       <article itemscope itemtype="http://schema.org/Event/Job">
@@ -493,13 +372,7 @@
           </h6>
         </header>
         <p itemprop="description">
-          Ported the beta of the product from a rigid, duplicative, asp.net
-          application architecture to a multi-tiered, MVC based, Java
-          application. Evaluated and implemented drivers for use with
-          Microsoft’s SQL Server that resulted in a three fold increase in
-          application scalability. Developed flexible personalization and robust
-          security services which allowed other developers to focus on the
-          specifics of application development.
+          I ported a beta product from a rigid, duplicative ASP.NET architecture to a multi-tiered, MVC-based Java application. I evaluated and implemented drivers for use with Microsoft SQL Server, resulting in a threefold increase in application scalability. I developed flexible personalization and robust security services, allowing other developers to focus on application-specific development.
         </p>
       </article>
       <article itemscope itemtype="http://schema.org/Event/Job">
@@ -519,12 +392,7 @@
           </h6>
         </header>
         <p itemprop="description">
-          Designed and implemented a personalization and security mechanism that
-          created a secure, configurable environment for children to experience
-          the Internet. Developed a lightweight application for rating and
-          retrieving acceptable content for children. Built personalization
-          features that allowed parents to determine the types of content
-          delivered to their children.
+          I designed and implemented a personalization and security mechanism that created a secure, configurable environment for children to experience the Internet. I developed a lightweight application for rating and retrieving acceptable content for children, with personalization features allowing parents to control the types of content delivered to their children.
         </p>
       </article>
       <article itemscope itemtype="http://schema.org/Event/Job">
@@ -546,13 +414,8 @@
           </h6>
         </header>
         <p itemprop="description">
-          Developed and maintained Visual Basic applications for the different
-          departments within the firm. Designed and implemented an unattended
-          Windows NT desktop installation which included the installation of 23
-          applications for 1400 users firm wide. Developed regression tests to
-          ensure application stability. Organized the firm’s technical support
-          efforts. These efforts noticeably decreased the turnaround time in
-          addressing users support issues.
+          I developed and maintained Visual Basic applications for different departments within the firm. I designed and implemented an unattended Windows NT desktop installation, including the installation of 23 applications for 1,400 users firm-wide. I developed regression tests to ensure application stability and organized the firm's technical support efforts, noticeably decreasing the turnaround time for addressing user support issues.
+
         </p>
       </article>
       <footer>
@@ -603,7 +466,7 @@
       & > article
         width: inherit
         @media print
-          &:nth-of-type(n+9)
+          &:nth-of-type(n+10)
             display: none !important
         header
           display:block
