@@ -1,99 +1,35 @@
 {
-  "name": "scott-fryxell-blog",
-  "version": "1.0.0",
-  "private": true,
-  "author": "Scott Fryxell <sfryxell@gmail.com>",
+  "name": "scott-fryxell-website",
+  "version": "2.0.0",
+  "description": "Scott Fryxell's personal website built with Eleventy",
+  "main": ".eleventy.js",
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate",
-    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
-    "lint": "yarn lint:js",
-    "test": "jest"
+    "start": "eleventy --serve",
+    "dev": "eleventy --serve",
+    "build": "eleventy",
+    "debug": "DEBUG=* eleventy",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
+  "keywords": [
+    "eleventy",
+    "11ty",
+    "static-site"
+  ],
+  "author": "Scott Fryxell",
+  "license": "ISC",
   "dependencies": {
-    "@nuxt/content": "1.15.0",
-    "nuxt": "2.15.7"
+    "@realness.online/web": "^1.4.34"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "7.14.7",
-    "@nuxtjs/eslint-config": "6.0.1",
-    "@nuxtjs/eslint-module": "3.0.2",
-    "@realness.online/web": "1.1.1",
-    "babel-core": "7.0.0-bridge.0",
-    "core-js": "3.15.1",
-    "eslint": "7.29.0",
-    "eslint-config-prettier": "8.3.0",
-    "eslint-plugin-nuxt": "2.0.0",
-    "eslint-plugin-vue": "7.12.1",
-    "husky": "6.0.0",
-    "lint-staged": "10.5.4",
-    "prettier": "2.3.2",
-    "stylus": "0.54.5",
-    "stylus-loader": "3.0.2"
-  },
-  "prettier": {
-    "semi": false,
-    "singleQuote": true,
-    "trailingComma": "none",
-    "bracketSameLine": true,
-    "arrowParens": "avoid",
-    "vueIndentScriptAndStyle": true
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "browser": true,
-      "es2021": true,
-      "jest": true,
-      "serviceworker": true,
-      "worker": true
-    },
-    "globals": {
-      "defineProps": "readonly",
-      "defineEmits": "readonly",
-      "defineExpose": "readonly",
-      "withDefaults": "readonly"
-    },
-    "extends": [
-      "eslint:recommended",
-      "plugin:vue/vue3-recommended",
-      "prettier"
-    ],
-    "rules": {
-      "no-import-assign": "off",
-      "camelcase": 0,
-      "indent": "off",
-      "lines-between-class-members": 0,
-      "space-before-function-paren": [
-        "error",
-        {
-          "anonymous": "never",
-          "named": "never",
-          "asyncArrow": "always"
-        }
-      ],
-      "vue/multi-word-component-names": "off",
-      "vue/require-default-prop": "off",
-      "vue/prop-name-casing": [
-        "error",
-        "snake_case"
-      ],
-      "vue/singleline-html-element-content-newline": "off",
-      "vue/html-closing-bracket-spacing": [
-        "error",
-        {
-          "selfClosingTag": "always"
-        }
-      ],
-      "vue/html-closing-bracket-newline": [
-        "error",
-        {
-          "singleline": "never",
-          "multiline": "never"
-        }
-      ]
-    }
+    "@11ty/eleventy": "^2.0.1",
+    "markdown-it": "^13.0.1",
+    "markdown-it-prism": "^2.3.0",
+    "eslint": "^8.40.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.8"
   }
 }
