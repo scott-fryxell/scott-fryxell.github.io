@@ -3,11 +3,8 @@ const markdownItPrism = require('markdown-it-prism');
 
 module.exports = function(eleventyConfig) {
   // Copy static assets
-  eleventyConfig.addPassthroughCopy('static');
-  eleventyConfig.addPassthroughCopy('posters');
-
-  // Handle CSS
-  eleventyConfig.addPassthroughCopy('assets');
+  // eleventyConfig.addPassthroughCopy('posters');
+  eleventyConfig.addPassthroughCopy('public');
 
   // Configure Markdown
   let markdownLibrary = markdownIt({
@@ -24,13 +21,25 @@ module.exports = function(eleventyConfig) {
     return `${title} - Scott Fryxell`;
   });
 
+  // Add date filters
+  eleventyConfig.addFilter("dateIso", date => {
+    return date.toISOString();
+  });
+
+  eleventyConfig.addFilter("dateReadable", date => {
+    return date.toDateString();
+  });
+
+  // Create a collection for blog posts
+  eleventyConfig.addCollection("posts", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("articles/*.md");
+  });
+
   return {
     dir: {
       input: '.',
       output: '_site',
-      includes: '_includes',
-      layouts: '_includes/layouts',
-      data: '_data'
+      layouts: 'layouts'
     },
     templateFormats: ['md', 'njk', 'html'],
     markdownTemplateEngine: 'njk',

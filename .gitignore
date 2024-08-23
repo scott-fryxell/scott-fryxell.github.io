@@ -1,8 +1,21 @@
-overage
+# Dependencies
 node_modules/
+
+# Build output
+_site/
+
+# Logs
+*.log
+
+# Environment variables
 .env
-.nuxt
-dist
+
+# OS files
 .DS_Store
+Thumbs.db
+
+# Editor directories and files
+.idea/
+.vscode/
 *.swp
-content/articles/.obsidian/*
+*.swo
