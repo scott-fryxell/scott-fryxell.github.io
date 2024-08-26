@@ -21,15 +21,16 @@
   "author": "Scott Fryxell",
   "license": "ISC",
   "dependencies": {
-    "@realness.online/web": "^1.4.34"
+    "@realness.online/web": "^1.4.34",
+    "stylus": "^0.63.0"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "markdown-it": "^13.0.1",
-    "markdown-it-prism": "^2.3.0",
     "eslint": "^8.40.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "markdown-it": "^13.0.1",
+    "markdown-it-prism": "^2.3.0",
     "prettier": "^2.8.8"
   }
 }
