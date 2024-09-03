@@ -1,6 +1,7 @@
 ---
-layout: layouts/base.njk
-permalink: /blog/
+layout: base.njk
+permalink: /
+title: Home
 ---
 <h1>Blog Posts</h1>
 
@@ -10,8 +11,9 @@ permalink: /blog/
     <article>
       <h2><a href="{{ post.url | url }}">{{ post.data.title }}</a></h2>
       <time datetime="{{ post.date | dateIso }}">{{ post.date | dateReadable }}</time>
+      {% console.log(post.data) %}
       {% if post.data.description %}
-        <p>{{ post.data.description }}</p>
+        <p>{{ post.data.description}}</p>
       {% endif %}
     </article>
   </li>

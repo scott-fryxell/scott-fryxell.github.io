@@ -1,7 +1,6 @@
 ---
 title: sketchy vibes ≠ sketchy people
 date: 2019-07-16
-layout: post.hbs
 ---
 
 I have a successful career in engineering, but I had to do more than homework to get here.

@@ -38,7 +38,7 @@ module.exports = function (eleventyConfig) {
 
   // Create a collection for blog posts
   eleventyConfig.addCollection('posts', function (collectionApi) {
-    return collectionApi.getFilteredByGlob('articles/*.md');
+    return collectionApi.getFilteredByGlob('articles/**/*.md');
   });
 
   // Add Stylus as a template engine

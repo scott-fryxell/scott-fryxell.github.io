@@ -1,7 +1,7 @@
 {
   "name": "scott-fryxell-website",
   "version": "2.0.0",
-  "description": "Scott Fryxell's personal website built with Eleventy",
+  "description": "Scott Fryxell's personal website",
   "main": ".eleventy.js",
   "scripts": {
     "start": "eleventy --serve",
@@ -14,17 +14,19 @@
     "format:check": "prettier --check ."
   },
   "keywords": [
-    "eleventy",
+    "resume",
+    "work history",
+    "portfolio",
+    "blog",
     "11ty",
     "static-site"
   ],
   "author": "Scott Fryxell",
   "license": "ISC",
-  "dependencies": {
-    "@realness.online/web": "^1.4.34",
-    "stylus": "^0.63.0"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "@realness.online/web": "^1.4.34",
+    "stylus": "^0.63.0",
     "@11ty/eleventy": "^2.0.1",
     "eslint": "^8.40.0",
     "eslint-config-prettier": "^8.8.0",
