@@ -1,21 +1,14 @@
 ---
 layout: base.njk
 permalink: /
-title: Home
+title: This is
 ---
-<h1>Blog Posts</h1>
-
-<ul>
 {% for post in collections.posts | reverse %}
-  <li>
-    <article>
+  <article>
+    <header>
       <h2><a href="{{ post.url | url }}">{{ post.data.title }}</a></h2>
-      <time datetime="{{ post.date | dateIso }}">{{ post.date | dateReadable }}</time>
-      {% console.log(post.data) %}
-      {% if post.data.description %}
-        <p>{{ post.data.description}}</p>
-      {% endif %}
-    </article>
-  </li>
+      <time datetime="{{ post.date | dateIso }}">{{ post.date | full_date }}</time>
+    </header>
+    {{ post.content | safe}}
+  </article>
 {% endfor %}
-</ul>

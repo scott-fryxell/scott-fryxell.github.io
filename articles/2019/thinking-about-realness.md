@@ -1,5 +1,4 @@
 ---
-title: Thinking About Realness
 date: 2019-08-10
 ---
 
