@@ -57,6 +57,8 @@
         min-width: 30vw
         padding: 0 1rem
         text-transform: capitalize
+    & div.nuxt-content img
+      max-width: 29rem
     & > h5
       padding: 0 1rem
     & > details
