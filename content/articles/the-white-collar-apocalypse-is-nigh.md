@@ -20,11 +20,10 @@ Rainbows, and standing in awe of our vast human potential; how we are all just s
 
 #### verses
 
-##### [Careerism Is Ruining College ![A woman in a library studying so hard!](https://static01.nyt.com/images/2024/09/24/opinion/24glassman/24glassman-facebookJumbo.jpg)
-](https://www.nytimes.com/2024/09/24/opinion/college-linkedin-finance-consulting.html)
+##### [Careerism Is Ruining College ![A woman in a library studying so hard!](https://static01.nyt.com/images/2024/09/24/opinion/24glassman/24glassman-facebookJumbo.jpg)](https://www.nytimes.com/2024/09/24/opinion/college-linkedin-finance-consulting.html)
 
 
-## Quote Battle
+## Quote Battle!
 
 First Sam Altman with the Civilization is the first AI, a sentiment I agree with.
 
