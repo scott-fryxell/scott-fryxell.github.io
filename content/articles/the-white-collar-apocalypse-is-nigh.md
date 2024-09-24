@@ -5,7 +5,7 @@ img: Scott_Fryxell_Thursday, July 4 at 12_03 PM.svg
 
 I don't have a degree, but I have worked in tech two plus decades and I can tell you it's interesting as all get out to watch the status economy begining it's downward spiral. Imagine spending the first twenty five years of your life striving to become the kind of person society prioritizes only to graduate into a world where you are the first victim of "The intelligence Age".
 
-I mean it's not gonna crush my soul if I have to go back to working construction or to earn my keep via manual labor. I've already done it with pride. My dad was a welder and I admire all that he did to keep our family together. But the future is not bright for the children of the status economy. All that they've known is drying up around them.
+I mean it's not gonna crush my soul if I have to go back to working construction or to earn my keep in selling vintage clothing. I've already done it with pride. My dad was a welder and I admire all that he did to keep our family together. But the future is not bright for the children of the status economy. All that they've known is drying up around them.
 
 I think two articles in juxtaposition make my point. One from Sam Alman the other an opinion piece for the NYTimes by Isabella Glassman.
 
