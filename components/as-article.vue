@@ -59,6 +59,7 @@
         text-transform: capitalize
     blockquote
       font-style: italic
+      margin-left: 1rem
     & div.nuxt-content img
       max-width: 29rem
     & > h5
