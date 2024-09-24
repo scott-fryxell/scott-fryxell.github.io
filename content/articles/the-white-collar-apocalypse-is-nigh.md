@@ -55,7 +55,7 @@ How to square this with a college system build on ever more elitist rings of sca
 
 Those of us who strive outside the elitist system are thrown away before we even get in the room. Innovation subsumes to desperate monopoly. Picking the right friends matters.
 
-They have food. They are at the begining of a lifetime of oportunity and yet are acting like they will all be homeless unless admitted into the right clubs.
+They have food. shelter, belonging, and are at the begining of a lifetime of oportunity and yet are acting like they will all be homeless unless admitted into the right clubs.
 
   > Isabella Glassman: Unfortunately, I knew my state government internship was a scarlet letter of inadequacy. My classmates seemed to think the world comprised investment bankers, management consultants — and everyone else.
 
