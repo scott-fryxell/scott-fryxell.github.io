@@ -7,9 +7,9 @@ I don't have a degree, but I have worked in tech two plus decades and I can tell
 
 I mean it's not gonna crush my soul if I have to go back to working construction or to earn my keep via manual labor. I've already done it with pride. My dad was a welder and I admire all that he did to keep our family together. But the future is not bright for the children of the status economy. All that they've known is drying up around them.
 
-I think two articles in juxtaposition make my point. One from Sam Alman the other an opinion piece for the NyTimes by Isabella Glassman.
+I think two articles in juxtaposition make my point. One from Sam Alman the other an opinion piece for the NYTimes by Isabella Glassman.
 
-two opposing views emanating out of the center of elitism. What's it gonna be? Our education system is preparing our children to enter a winner take all monopoly fight against each other to dominate our futures.
+Opposing views emanating out of the center of elitism. What's it gonna be? Our education system is preparing our children to enter a winner take all monopoly fight against each other to dominate our futures.
 
 or
 
