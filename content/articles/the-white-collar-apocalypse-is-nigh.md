@@ -18,7 +18,7 @@ Rainbows, and standing in awe of our vast human potential; how we are all just s
 ##### [The Intelligence Age](https://ia.samaltman.com/).
 ![imprssionist art for our glorious future](https://sama-ia.vercel.app/images/cover.png)
 
-###### verses
+#### verses
 
 ##### [Careerism Is Ruining College](https://www.nytimes.com/2024/09/24/opinion/college-linkedin-finance-consulting.html)
 
