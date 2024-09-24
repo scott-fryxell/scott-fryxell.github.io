@@ -43,9 +43,7 @@ False scarcity has our college students running scared. And the ones that win ar
 
 This is manufactured scarcity. These kids are often from affluent families with security. and yet they are actiing like they won't be able to survive. That they will be judged as failures unless they strive and glass face eveyone in perpetual excitement and motivation.
 
-Each of them is forced into faking it, striving, proving their value or dye judged as unworthy of the favor of the gods!
-
-Any of these kids who get into Wharton are going to feel absolutely entitled to all the cake. They worked so hard beating the rest of us at going to college they'll know, be absoutly certain, they deseve it.
+Each of them is forced into faking it, striving, proving their value or die judged as unworthy. Service never enters the equation (unless it pads the resume). Any of these kids who get into Wharton are going to feel absolutely entitled to all the cake. They worked so hard beating the rest of us at going to college they'll know, be absoutly certain, they deseve it.
 
   > Isabella Glassman: Naturally, when thousands of students rush into the same handful of majors and professions, supply cannot possibly meet demand. That’s particularly true now, as openings for postgraduate tech industry jobs [advertised](https://www.wsj.com/lifestyle/careers/computer-science-majors-job-market-7ad443bf) on the student job board Handshake decreased about 30 percent this spring from the prior year. [Job openings in the financial sector](https://www.retailbankerinternational.com/analysis/inflation-market-turbulence-contributing-to-decline-in-finance-jobs/) are similarly declining. [Consulting firms](https://www.reveliolabs.com/news/business/the-view-from-30k-feet-tough-times-ahead-for-consulting/#:~:text=First%2C%20we%20find%20that%20despite,dates%20for%20undergraduates%20and%20MBAs.) have cut numbers of new hires and delayed start dates for undergraduates with offers.
 
