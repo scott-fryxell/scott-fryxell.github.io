@@ -2,13 +2,29 @@
 layout: base.njk
 permalink: /
 title: This is
+
 ---
 {% for post in collections.posts | reverse %}
-  <article>
-    <header>
-      <h2><a href="{{ post.url | url }}">{{ post.data.title }}</a></h2>
-      <time datetime="{{ post.date | dateIso }}">{{ post.date | full_date }}</time>
-    </header>
-    {{ post.content | safe}}
-  </article>
+<article>
+  <header>
+    <h2><a href="{{ post.url | url }}">{{ post.data.title }}</a></h2>
+    <time datetime="{{ post.date | dateIso }}">{{ post.date | full_date }}</time>
+  </header>
+  {{ post.content | safe}}
+</article>
 {% endfor %}
+<footer>
+  {% if pagination.href.previous %}
+    <a href="{{pagination.href.previous}}">Previous Page</a>
+  {% endif %}
+  {% if pagination.href.next %}
+    <a href="{{pagination.href.next}}">Next Page</a>
+  {% endif %}
+</footer>
+<style>
+  article {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+</style>
