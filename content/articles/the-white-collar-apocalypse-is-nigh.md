@@ -47,7 +47,7 @@ Each of them is forced into faking it, striving, proving their value or die judg
 
   > Isabella Glassman: Naturally, when thousands of students rush into the same handful of majors and professions, supply cannot possibly meet demand. That’s particularly true now, as openings for postgraduate tech industry jobs [advertised](https://www.wsj.com/lifestyle/careers/computer-science-majors-job-market-7ad443bf) on the student job board Handshake decreased about 30 percent this spring from the prior year. [Job openings in the financial sector](https://www.retailbankerinternational.com/analysis/inflation-market-turbulence-contributing-to-decline-in-finance-jobs/) are similarly declining. [Consulting firms](https://www.reveliolabs.com/news/business/the-view-from-30k-feet-tough-times-ahead-for-consulting/#:~:text=First%2C%20we%20find%20that%20despite,dates%20for%20undergraduates%20and%20MBAs.) have cut numbers of new hires and delayed start dates for undergraduates with offers.
 
-Desperation abounds among our most privileged children. They can't sleep, they are depressed and doom scrolling like desperate starving children.  They know the oportunities are drying up. They will be desperate to survive as the robots steal their opportunities.
+Desperation abounds among our most privileged children. They can't sleep, they are depressed and doom scrolling like desperate starving children.  They know the oportunities are drying up; How will They  survive as the robots steal their opportunities?
 
   > Sam Altman: AI models will soon serve as autonomous personal assistants who carry out specific tasks on our behalf like coordinating medical care on your behalf. At some point further down the road, AI systems are going to get so good that they help us make better next-generation systems and make scientific progress across the board.
 
@@ -59,7 +59,7 @@ They have food. shelter, belonging, and are at the begining of a lifetime of opo
 
   > Isabella Glassman: Unfortunately, I knew my state government internship was a scarlet letter of inadequacy. My classmates seemed to think the world comprised investment bankers, management consultants — and everyone else.
 
-How is AI gonna change any of this? It's just another tool to enable a bunch of desperate kids to run as hard as they can at the wall.  How can elitism spare the time to see anyone else.
+How is AI gonna change any of this? It's just another tool to enable a bunch of desperate kids to run as hard as they can at the wall. How can elitism spare the time to see anyone else.
 
   > Sam Altman: As we have seen with other technologies, there will also be downsides, and we need to start working now to maximize AI’s benefits while minimizing its harms. As one example, we expect that this technology can cause a significant change in labor markets (good and bad) in the coming years, but most jobs will change more slowly than most people think,
 
