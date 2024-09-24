@@ -25,7 +25,7 @@ Rainbows, and standing in awe of our vast human potential; how we are all just s
 
 ## Quote Battle!
 
-First Sam Altman with the Civilization is the first AI, a sentiment I agree with.
+Civilization is the first AI, a sentiment I agree with.
 
   > Sam Altman: We are more capable not because of genetic change, but because we benefit from the infrastructure of society being way smarter and more capable than any one of us; in an important sense, society itself is a form of advanced intelligence. Our grandparents – and the generations that came before them – built and achieved great things.
 
