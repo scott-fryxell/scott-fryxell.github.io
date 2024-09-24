@@ -68,3 +68,5 @@ We can use AI right now as another boogey man to light fires of desperation unde
 > Sam Altman – Stanford graduate: I believe the future is going to be so bright that no one can do it justice by trying to write about it now; a defining characteristic of the Intelligence Age will be massive prosperity.
 
 Right.  This is the part where elitists slow down and notice the rest of us are busting our ass's too.
+
+[comment](https://news.ycombinator.com/item?id=41641560)
