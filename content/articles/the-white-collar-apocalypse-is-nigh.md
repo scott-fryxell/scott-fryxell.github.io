@@ -2,14 +2,11 @@
 date: 2024-09-24
 img: Scott_Fryxell_Thursday, July 4 at 12_03 PM.svg
 ---
-
-I don't have a degree, but I have worked in tech two plus decades and I can tell you it's interesting as all get out to watch the status economy begining it's downward spiral. Imagine spending the first twenty five years of your life striving to become the kind of person society prioritizes only to graduate into a world where you are the first victim of "The intelligence Age".
+I don't have a degree, but I have worked in tech two plus decades and I can tell you it's interesting as all get out to watch the status economy beginning its downward spiral. Imagine spending the first twenty-five years of your life striving to become the kind of person society prioritizes only to graduate into a world where you are the first victim of "The Intelligence Age".
 
 I mean it's not gonna crush my soul if I have to go back to working construction or to earn my keep in selling vintage clothing. I've already done it with pride. My dad was a welder and I admire all that he did to keep our family together. But the future is not bright for the children of the status economy. All that they've known is drying up around them.
-
-I think two articles in juxtaposition make my point. One from Sam Alman the other an opinion piece for the NYTimes by Isabella Glassman.
-
-Opposing views emanating out of the center of elitism. What's it gonna be? Our education system is preparing our children to enter a winner take all monopoly fight against each other to dominate our futures.
+I think two articles in juxtaposition make my point. One from Sam Altman the other an opinion piece for the NYTimes by Isabella Glassman.
+Opposing views emanating out of the center of elitism. What's it gonna be? Our education system is preparing our children to enter a winner-take-all monopoly fight against each other to dominate our futures.
 
 or
 
@@ -43,15 +40,15 @@ False scarcity has our college students running scared. And the ones that win ar
 
 This is manufactured scarcity. These kids are often from affluent families with security. and yet they are actiing like they won't be able to survive. That they will be judged as failures unless they strive and glass face eveyone in perpetual excitement and motivation.
 
-Each of them is forced into faking it, striving, proving their value or die judged as unworthy. Service never enters the equation (unless it pads the resume). Any of these kids who get into Wharton are going to feel absolutely entitled to all the cake. They worked so hard beating the rest of us at going to college they'll know, be absoutly certain, they deseve it.
+Each of them is forced into faking it, striving, proving their value or die judged as unworthy. Service never enters the equation (unless it pads the resume). Any of these kids who get into Wharton are going to feel absolutely entitled to all the cake. They worked so hard beating the rest of us at going to college they'll know, be absolutely certain, they deserve it.
 
   > Isabella Glassman: Naturally, when thousands of students rush into the same handful of majors and professions, supply cannot possibly meet demand. That’s particularly true now, as openings for postgraduate tech industry jobs [advertised](https://www.wsj.com/lifestyle/careers/computer-science-majors-job-market-7ad443bf) on the student job board Handshake decreased about 30 percent this spring from the prior year. [Job openings in the financial sector](https://www.retailbankerinternational.com/analysis/inflation-market-turbulence-contributing-to-decline-in-finance-jobs/) are similarly declining. [Consulting firms](https://www.reveliolabs.com/news/business/the-view-from-30k-feet-tough-times-ahead-for-consulting/#:~:text=First%2C%20we%20find%20that%20despite,dates%20for%20undergraduates%20and%20MBAs.) have cut numbers of new hires and delayed start dates for undergraduates with offers.
 
-Desperation abounds among our most privileged children. They can't sleep, they are depressed and doom scrolling like desperate starving children.  They know the oportunities are drying up; How will They  survive as the robots steal their opportunities?
+Desperation abounds among our most privileged children. They can't sleep, they are depressed and doom scrolling like desperate starving children.  They know the opportunities are drying up; How will They survive as the robots steal everything they've earned ?
 
   > Sam Altman: AI models will soon serve as autonomous personal assistants who carry out specific tasks on our behalf like coordinating medical care on your behalf. At some point further down the road, AI systems are going to get so good that they help us make better next-generation systems and make scientific progress across the board.
 
-How to square this with a college system build on ever more elitist rings of scarcity, A system that pits kids with wealthy parents in a desperate struggle for survivle against each other.
+How to square this with a college system build on ever more elitist rings of scarcity, A system that pits kids with wealthy parents in a desperate struggle for survival against each other.
 
 Those of us who strive outside the elitist system are thrown away before we even get in the room. Innovation subsumes to desperate monopoly. Picking the right friends matters.
 
@@ -63,10 +60,10 @@ How is AI gonna change any of this? It's just another tool to enable a bunch of 
 
   > Sam Altman: As we have seen with other technologies, there will also be downsides, and we need to start working now to maximize AI’s benefits while minimizing its harms. As one example, we expect that this technology can cause a significant change in labor markets (good and bad) in the coming years, but most jobs will change more slowly than most people think,
 
-We can use AI right now as another boogey man to light fires of desperation under the ass's of our over achievers. Who don't even see me or you as viable humans. Especially once they find out what colleges we didn't get into.
+We can use AI right now as another boogey man to light fires of desperation under the asses of our over achievers. Who don't even see me or you as viable humans. Especially once they find out what colleges we didn't get into.
 
 > Sam Altman – Stanford graduate: I believe the future is going to be so bright that no one can do it justice by trying to write about it now; a defining characteristic of the Intelligence Age will be massive prosperity.
 
-Right.  This is the part where elitists slow down and notice the rest of us are busting our ass's too.
+Right.  This is the part where elitists slow down and notice the rest of us.
 
 [comment](https://news.ycombinator.com/item?id=41641560)
