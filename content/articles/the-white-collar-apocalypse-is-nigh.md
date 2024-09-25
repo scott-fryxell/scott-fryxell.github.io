@@ -15,7 +15,7 @@ Rainbows, and standing in awe of our vast human potential; how we are all just s
 ##### [The Intelligence Age ![imprssionist art for our glorious future](https://sama-ia.vercel.app/images/cover.png)](https://ia.samaltman.com/).
 
 
-#### verses
+#### versus
 
 ##### [Careerism Is Ruining College ![A woman in a library studying so hard!](https://static01.nyt.com/images/2024/09/24/opinion/24glassman/24glassman-facebookJumbo.jpg)](https://www.nytimes.com/2024/09/24/opinion/college-linkedin-finance-consulting.html)
 
@@ -38,7 +38,7 @@ False scarcity has our college students running scared. And the ones that win ar
 
   > Isabella Glassman: It sounds silly — in hindsight, it was — but that is how I felt when I was surrounded by thousands of intelligent classmates competing for the same handful of results. I’d wake up at 3:30 a.m. from the recurring nightmare that I didn’t land an internship my junior year summer. I heard people, maybe friends, endlessly discussing the “only way” to be successful. I consoled a sobbing roommate after she failed to land the job her parents expected her to get.
 
-This is manufactured scarcity. These kids are often from affluent families with security. and yet they are actiing like they won't be able to survive. That they will be judged as failures unless they strive and glass face eveyone in perpetual excitement and motivation.
+This is manufactured scarcity. These kids are often from affluent families with security. and yet they are acting like they won't be able to survive. That they will be judged as failures unless they strive and glass face everyone in perpetual excitement and motivation.
 
 Each of them is forced into faking it, striving, proving their value or die judged as unworthy. Service never enters the equation (unless it pads the resume). Any of these kids who get into Wharton are going to feel absolutely entitled to all the cake. They worked so hard beating the rest of us at going to college they'll know, be absolutely certain, they deserve it.
 
@@ -52,7 +52,7 @@ How to square this with a college system build on ever more elitist rings of sca
 
 Those of us who strive outside the elitist system are thrown away before we even get in the room. Innovation subsumes to desperate monopoly. Picking the right friends matters.
 
-They have food. shelter, belonging, and are at the begining of a lifetime of oportunity and yet are acting like they will all be homeless unless admitted into the right clubs.
+They have food. shelter, belonging, and are at the beginning of a lifetime of opportunity and yet are acting like they will all be homeless unless admitted into the right clubs.
 
   > Isabella Glassman: Unfortunately, I knew my state government internship was a scarlet letter of inadequacy. My classmates seemed to think the world comprised investment bankers, management consultants — and everyone else.
 
