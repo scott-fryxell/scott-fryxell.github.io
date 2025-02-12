@@ -8,9 +8,13 @@ img: Scott_Fryxell_Tuesday, November 26 at 3_43 PM.svg
 
 I've been scaling up my work with Cursor's AI in the last three months. More than line completion, I am using it to help me work through and implement solutions. Trying to push what I can get done.
 
-It has been going well. I feel like I am two and sometimes three developers and the code I am writing has higher standards and is willing to go deeper. I have a fairly intense [linter](https://github.com/realness-online/web/blob/main/eslint.config.js); have begun getting type visibility with [JSDoc](https://github.com/realness-online/web/blob/main/tsconfig.json).  I brought my test harness back online. Nothings perfect. all three are works in process but feel like the ideal tooling cursor can help me work with. I have more useful tools without paying the extraordinary costs in harness maintenance is amazing. The busy work is less of a headwind now. Knowing I have a best practices machine at the ready has me going harder. and not being slowed down by testing feels like I've got a buddy back.
+It has been going well. I feel like I am two and sometimes three developers and the code I am writing has higher standards and is willing to go deeper. 
 
-But my confidence to trust the work I'm doing with AI is because I know to harden myself for the future. I learned how to survive in vim last year, It's going to be my low assistance editor and to keep my abilitiy to do the handshake I have [forked](https://github.com/scott-fryxell/kata-machine) into a deno version ThePrimeagen's kata machine.
+In the last three months I have brought online a fairly intense [linter](https://github.com/realness-online/web/blob/main/eslint.config.js); have begun getting type visibility with [JSDoc](https://github.com/realness-online/web/blob/main/tsconfig.json).  I even brought my test harness back online. Nothings perfect. all three are works in process but feel like the ideal baselines and perfect tooling for cursor to help me work with. 
+
+I have more useful tools without paying the extraordinary costs in harness maintenance. I am finding the sweet spot. and it's amazing that the busy work is less of a headwind now. That I have a best practices machine at the ready has me going harder. and not being slowed down by testing feels like I've got a buddy back.
+
+But my confidence to trust the work I'm doing with AI is because I know to harden myself for the future. I learned how to survive in vim this last year, It's going to be my low assistance editor and to keep my ability to support the nerd handshake, I have [forked](https://github.com/scott-fryxell/kata-machine) into a deno version ThePrimeagen's kata machine.
 
 This is the dream right: we are stronger for it.
 
@@ -18,7 +22,7 @@ This is the dream right: we are stronger for it.
 
 [Finding out](https://www.youtube.com/watch?v=OkR6-74jq0E) that Anthropic is asking developers to not use AI during the interview process is pretty bonkers. I think it shows that we've always half-assed our way into finding good developers.
 
-This morning I fixed a bug with syncing anonymous posters and statements when a user signs into the application. I got a solution that kinda worked with Cursor's (and Claude's) help. Then I went for a walk and without being in front of a computer found myself fixing the bugs I knew the solution I had just implemented created. You know, I had the full application and its intricacies in my head and was able to walk through my solution and find additional bugs.
+This morning I fixed a bug with syncing anonymous posters and statements when a user signs into the application. I got a solution that kinda worked with Cursor's (and Claude's) help. Then I went for a walk and without being in front of a computer found myself fixing the bugs I knew the solution I had just implemented created. I had the full application and its intricacies in my head and was able to walk through my solution and find additional bugs.
 
 This gets at the heart of what we should be hiring for – the ability to put a problem in your head and then play with it like a living, functioning system.
 
