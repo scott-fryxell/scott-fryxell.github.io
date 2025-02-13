@@ -6,7 +6,7 @@ img: Scott_Fryxell_Thursday, February 6 at 1_32 PM.svg
 
 ## Working with AI
 
-I've been scaling up my work with Cursor's AI in the last three months. More than line completion, I am using it to help me work through and implement solutions. Trying to push what I can get done.
+I've been scaling up my work with Cursor's AI in the last three months. More than line completion, I am using it to help me work through and implement solutions; trying to push what I can get done.
 
 It has been going well. I feel like I am two and sometimes three developers and the code I am writing has higher standards and is willing to go deeper.
 
@@ -73,7 +73,7 @@ But with Realness this approach would prove to be unstable, because of how diffe
 
 Since Realness is an HTML database build to be device centric we want the `itemid` attribute to be the source of truth the rest of the application relies on. The poster's file name can and will change based on the context. On the network it's saved as `/author/type/created-at` which is optimized for feeds.
 
-When you download the poster the name is ornate `Scott_Fryxell_Thursday, February 6 at 1_31 PM.svg`, as rococo as I can go with a file name. And I love it for that
+When you download the poster the name is ornate `Scott Fryxell, Thursday, February 6 at 1_31 PM.svg`, as rococo as I can go with a file name. And I love it for that
 
 by keeping the source of truth inside the html I can query it's [Microdata](https://developer.mozilla.org/en-US/docs/Web/HTML/Microdata) and build an object model magically. It comes alive on device and keeps my promise to the user that the server is  inert.
 
