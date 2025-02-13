@@ -28,7 +28,6 @@ This gets at the heart of what we should be hiring for – the ability to put a 
 
 When we give interviewees problems during an interview, we're not giving them time to load the model into their brains and then show you how it works for them. Their goals are to game your system hoping to be lucky enough to have studied the exact problem you're giving them to solve.
 
-
 ## A Whole Class of Bugs
 
 These 22 lines of code remove a whole class of bugs around document ID:
@@ -76,7 +75,6 @@ When you download the poster the name is ornate `Scott Fryxell, Thursday, Februa
 by keeping the source of truth inside the html I can query it's [Microdata](https://developer.mozilla.org/en-US/docs/Web/HTML/Microdata) and build an object model magically. It comes alive on device and keeps my promise to the user that the server is  inert.
 
 I can live in both of these worlds I can load them both into my imagination and compare contrast and analyze how they perform against their purpose.
-
 
 ## What Really Matters
 
