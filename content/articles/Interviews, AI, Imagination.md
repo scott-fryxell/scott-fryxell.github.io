@@ -10,13 +10,13 @@ I've been scaling up my work with Cursor's AI in the last three months. More tha
 
 It has been going well. I feel like I am two and sometimes three developers and the code I am writing has higher standards and is willing to go deeper.
 
-In the last three months I have upgraded to a fairly intense set of [linting](https://github.com/realness-online/web/blob/main/eslint.config.js) rules; have begun getting type visibility via [JSDoc](https://github.com/realness-online/web/blob/main/tsconfig.json). I even brought my test harness back online. Nothings perfect, all three are works in progress but I feel like these are ideal setups for where cursor shines.
+In the last three months I have upgraded to a fairly intense set of [linting](https://github.com/realness-online/web/blob/main/eslint.config.js) rules; have begun getting type visibility via [JSDoc](https://github.com/realness-online/web/blob/main/tsconfig.json). I even brought my test harness back online. Nothing's perfect, all three are works in progress but I feel like these are ideal setups for where cursor shines.
 
-I have more useful tools without paying extraordinary costs in harness maintenance. I am finding the sweet spot. it is amazing that the busy work is less of a headwind now. That I have a best practices machine at the ready has me going harder. and not being slowed down by testing feels like I've got a buddy back.
+I have more useful tools without paying extraordinary costs in harness maintenance. I am finding the sweet spot. It is amazing that the busy work is less of a headwind now. That I have a best practices machine at the ready has me going harder. And not being slowed down by testing feels like I've got a buddy back.
 
 But my confidence to trust the work I'm doing with AI is not blind. I know to harden myself for the future. I learned how to survive in vim this last year, It's going to be my low assistance editor and to keep my ability to support the nerd handshake, I have [forked](https://github.com/scott-fryxell/kata-machine) into a deno version ThePrimeagen's kata machine.
 
-This is the dream right: we are stronger for AI, More capable.
+This is the dream, right: we are stronger for AI, More capable.
 
 ## The Interview Problem
 
@@ -82,4 +82,4 @@ I can live in both of these worlds I can load them both into my imagination and 
 
 It shouldn't matter that the developer is using AI. What matters is how good you can ride the bicycle of your mind.
 
-I want to hire and work with people that have active imaginations, are tidy, and can hang out with queers and meat-heads in equal measure, who want a friend group filled with some mother fuckers who are on fetlife and others who go to church. You know, they keep themselves clean and can navigate peculiarities with curiosity.
+I want to hire and work with people that have active imaginations, are tidy, and can hang out with queers and meat-heads in equal measure, who want a friend group filled with some motherfuckers who are on fetlife and others who go to church. You know, they keep themselves clean and can navigate peculiarities with curiosity.
