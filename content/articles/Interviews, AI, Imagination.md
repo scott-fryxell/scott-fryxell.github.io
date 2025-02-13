@@ -14,9 +14,9 @@ In the last three months I have upgraded to a fairly intense set of [linting](ht
 
 I have more useful tools without paying extraordinary costs in harness maintenance. I am finding the sweet spot. It is amazing that the busy work is less of a headwind now. That I have a best practices machine at the ready has me going harder. And not being slowed down by testing feels like I've got a buddy back.
 
-But my confidence to trust the work I'm doing with AI is not blind. I know to harden myself for the future. I learned how to survive in vim this last year, It's going to be my low assistance editor and to keep my ability to support the nerd handshake, I have [forked](https://github.com/scott-fryxell/kata-machine) into a deno version ThePrimeagen's kata machine.
+But my confidence to trust the work I'm doing with AI is not blind. I know to harden myself for the future. I learned how to survive in vim this last year, It's going to be my low assistance editor. To keep my ability to support the nerd handshake, I have [forked](https://github.com/scott-fryxell/kata-machine) into a deno version ThePrimeagen's kata machine.
 
-This is the dream, right: we are stronger for AI, More capable.
+This is the dream, right: we are stronger for AI, More capable; rewarded for pushing ourselves harder.
 
 ## The Interview Problem
 
