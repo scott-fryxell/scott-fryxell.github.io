@@ -30,11 +30,6 @@ The issue with our interview process becomes clear when you look at it this way.
 
 When we give interviewees problems during an interview, we're not giving them time to load the model into their brains and then show you how it works for them. They are hoping to be lucky enough to have studied the exact problem you're giving them to solve.
 
-## What Really Matters
-
-It shouldn't matter that the developer is using AI. What matters is how good you can ride the bicycle of your mind.
-
-I want to hire and work with people that have active imaginations, are tidy, and can hang out with queers and meat-heads in equal measure, who want a friend group filled with some mother fuckers who are on fetlife and others who go to church. You know, they keep themselves clean and can navigate peculiarities with curiosity.
 
 ## A Whole Class of Bugs
 
@@ -72,14 +67,21 @@ These are the kinds of worries I have swimming around in my head.
 
 ## I, Hypocrite
 
-Document id is immutable with Firestore. When working in Firestore you want to build your app around one source of truth for id. Now we are doing everything we can in our schema to never duplicate it.
+When working in Firestore you want to build your app around the document id as the one source of truth. the change above reinforces document id as king. Using data converters frees me to have easy access in code to id while never duplicating it inside the schema. Now we are doing what we can in our app to enable fast development and intuitive developer experience while maintaining data integrity.
 
 But with Realness this approach would prove to be unstable, because of how different the databases purpose are.
 
-Since Realness is an HTML database we want the `itemid` attribute to be the source of truth the rest of the application relies on. The poster's file name can and will change based on the context. On the network it's saved as `/author/type/created-at` which is optimized for feeds.
+Since Realness is an HTML database build to be device centric we want the `itemid` attribute to be the source of truth the rest of the application relies on. The poster's file name can and will change based on the context. On the network it's saved as `/author/type/created-at` which is optimized for feeds.
 
 When you download the poster the name is ornate `Scott_Fryxell_Thursday, February 6 at 1_31 PM.svg`, as rococo as I can go with a file name. And I love it for that
 
 by keeping the source of truth inside the html I can query it's [Microdata](https://developer.mozilla.org/en-US/docs/Web/HTML/Microdata) and build an object model magically. It comes alive on device and keeps my promise to the user that the server is  inert.
 
 I can live in both of these worlds I can load them both into my imagination and compare contrast and analyze how they perform against their purpose.
+
+
+## What Really Matters
+
+It shouldn't matter that the developer is using AI. What matters is how good you can ride the bicycle of your mind.
+
+I want to hire and work with people that have active imaginations, are tidy, and can hang out with queers and meat-heads in equal measure, who want a friend group filled with some mother fuckers who are on fetlife and others who go to church. You know, they keep themselves clean and can navigate peculiarities with curiosity.
