@@ -1,6 +1,6 @@
 ---
 date: 2025-02-12
-img: Scott_Fryxell_Tuesday, November 26 at 3_43 PM.svg
+img: Scott_Fryxell_Thursday, February 6 at 1_32 PM.svg
 ---
 
 
@@ -8,9 +8,9 @@ img: Scott_Fryxell_Tuesday, November 26 at 3_43 PM.svg
 
 I've been scaling up my work with Cursor's AI in the last three months. More than line completion, I am using it to help me work through and implement solutions. Trying to push what I can get done.
 
-It has been going well. I feel like I am two and sometimes three developers and the code I am writing has higher standards and is willing to go deeper. 
+It has been going well. I feel like I am two and sometimes three developers and the code I am writing has higher standards and is willing to go deeper.
 
-In the last three months I have brought online a fairly intense [linter](https://github.com/realness-online/web/blob/main/eslint.config.js); have begun getting type visibility with [JSDoc](https://github.com/realness-online/web/blob/main/tsconfig.json).  I even brought my test harness back online. Nothings perfect. all three are works in process but feel like the ideal baselines and perfect tooling for cursor to help me work with. 
+In the last three months I have brought online a fairly intense [linter](https://github.com/realness-online/web/blob/main/eslint.config.js); have begun getting type visibility with [JSDoc](https://github.com/realness-online/web/blob/main/tsconfig.json).  I even brought my test harness back online. Nothings perfect. all three are works in process but feel like the ideal baselines and perfect tooling for cursor to help me work with.
 
 I have more useful tools without paying the extraordinary costs in harness maintenance. I am finding the sweet spot. and it's amazing that the busy work is less of a headwind now. That I have a best practices machine at the ready has me going harder. and not being slowed down by testing feels like I've got a buddy back.
 
