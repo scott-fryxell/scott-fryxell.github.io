@@ -20,9 +20,9 @@ This is the dream right: we are stronger for it.
 
 ## The Interview Problem
 
-[Finding out](https://www.404media.co/anthropic-claude-job-application-ai-assistants/) that Anthropic is asking developers to not use AI during the interview process is pretty bonkers. I think it shows that we've always half-assed our way into finding good developers.
+[Finding out](https://www.404media.co/anthropic-claude-job-application-ai-assistants/) that Anthropic is asking developers to not use AI during the interview process is pretty bonkers. I think it shows that we've always half-assed our way into finding good engineers.
 
-This morning I fixed a bug with syncing anonymous posters and statements when a user signs into the application. I got a solution that kinda worked with Cursor's (and Claude's) help. Then I went for a walk and without being in front of a computer found myself fixing the bugs I knew the solution I had just implemented created. I had the full application and its intricacies in my head and was able to walk through my solution and find additional bugs.
+This morning I fixed a bug with syncing anonymous posters and statements when a user signs into the application. I got a solution that kinda worked with Cursor's (and Claude's) help. Then I went for a walk and without being in front of a computer found myself fixing the bugs I knew the solution I had just implemented created. I had the application and its intricacies in my head and was able to walk through my solution and find additional bugs.
 
 This gets at the heart of what we should be hiring for – the ability to put a problem in your head and then play with it like a living, functioning system.
 
