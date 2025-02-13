@@ -10,9 +10,9 @@ I've been scaling up my work with Cursor's AI in the last three months. More tha
 
 It has been going well. I feel like I am two and sometimes three developers and the code I am writing has higher standards and is willing to go deeper.
 
-In the last three months I have brought online a fairly intense [linter](https://github.com/realness-online/web/blob/main/eslint.config.js); have begun getting type visibility with [JSDoc](https://github.com/realness-online/web/blob/main/tsconfig.json).  I even brought my test harness back online. Nothings perfect. all three are works in process but feel like the ideal baselines and are a good fit for where cursor shines.
+In the last three months I have upgraded to a fairly intense set of [linting](https://github.com/realness-online/web/blob/main/eslint.config.js) rules; have begun getting type visibility via [JSDoc](https://github.com/realness-online/web/blob/main/tsconfig.json). I even brought my test harness back online. Nothings perfect, all three are works in progress but I feel like these are ideal setups for where cursor shines.
 
-I have more useful tools without paying extraordinary costs in harness maintenance. I am finding the sweet spot. and it's amazing that the busy work is less of a headwind now. That I have a best practices machine at the ready has me going harder. and not being slowed down by testing feels like I've got a buddy back.
+I have more useful tools without paying extraordinary costs in harness maintenance. I am finding the sweet spot. it is amazing that the busy work is less of a headwind now. That I have a best practices machine at the ready has me going harder. and not being slowed down by testing feels like I've got a buddy back.
 
 But my confidence to trust the work I'm doing with AI is not blind. I know to harden myself for the future. I learned how to survive in vim this last year, It's going to be my low assistance editor and to keep my ability to support the nerd handshake, I have [forked](https://github.com/scott-fryxell/kata-machine) into a deno version ThePrimeagen's kata machine.
 
@@ -24,11 +24,9 @@ This is the dream right: we are stronger for AI, More capable.
 
 This morning I fixed a bug with syncing anonymous posters and statements when a user signs into the application. I got a solution that kinda worked with Cursor's (and Claude's) help. Then I went for a walk and without being in front of a computer found myself fixing the bugs I knew the solution I had just implemented created. I had the application and its intricacies in my head and was able to walk through my solution and find additional bugs.
 
-This gets at the heart of what we should be hiring for – the ability to put a problem in your head and then play with it like a living, functioning system.
+This gets at the heart of what we should be hiring for – the ability to put a problem in your head and then play with it like a living, functioning system. We're stuck interviewing for memorization and intense recall when we should be looking for systems imagination.
 
-The issue with our interview process becomes clear when you look at it this way. We're stuck interviewing for memorization and intense recall when we should be looking for systems imagination.
-
-When we give interviewees problems during an interview, we're not giving them time to load the model into their brains and then show you how it works for them. They're goals are to game your system hoping to be lucky enough to have studied the exact problem you're giving them to solve.
+When we give interviewees problems during an interview, we're not giving them time to load the model into their brains and then show you how it works for them. Their goals are to game your system hoping to be lucky enough to have studied the exact problem you're giving them to solve.
 
 
 ## A Whole Class of Bugs
