@@ -10,7 +10,7 @@ I've been scaling up my work with Cursor's AI in the last three months. More tha
 
 It has been going well. I feel like I am two and sometimes three developers and the code I am writing has higher standards and is willing to go deeper.
 
-In the last three months I have upgraded to a fairly intense set of [linting](https://github.com/realness-online/web/blob/main/eslint.config.js) rules; have begun getting type visibility via [JSDoc](https://github.com/realness-online/web/blob/main/tsconfig.json). I even brought my test harness back online. Nothing's perfect, all three are works in progress but I feel like these are ideal setups for where cursor shines as an assistant. I can learn about how to type for clarity, get inference errors sorted quickly; fix linting mismatches and even repair and create tests that build my confidence.
+I have upgraded to a fairly intense set of [linting](https://github.com/realness-online/web/blob/main/eslint.config.js) rules; have type visibility via [JSDoc](https://github.com/realness-online/web/blob/main/tsconfig.json). I even brought my test harness back online. Nothing's perfect, all three are works in progress but I feel like these are ideal setups for where cursor shines as an assistant. I can learn about how to type for clarity, get inference errors sorted quickly; fix linting mismatches and even repair and create tests that build my confidence.
 
 I have more useful tools without paying extraordinary costs in harness maintenance. I am finding the sweet spot. It is amazing that the busy work is less of a headwind now. That I have a best practices machine at the ready has me going harder. And not being slowed down by testing feels like I've got a buddy back.
 
