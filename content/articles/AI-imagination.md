@@ -81,3 +81,5 @@ I can live in both of these worlds I can load them both into my imagination and 
 It shouldn't matter that the developer is using AI. What matters is how good you can ride the bicycle of your mind.
 
 I want to hire and work with people that have active imaginations, are tidy, and can hang out with queers and meat-heads in equal measure, who want a friend group filled with some motherfuckers who are on fetlife and others who go to church. You know, they keep themselves clean and can navigate peculiarities with curiosity.
+
+[comments](https://news.ycombinator.com/item?id=43054340)
