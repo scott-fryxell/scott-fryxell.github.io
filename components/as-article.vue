@@ -30,10 +30,11 @@
         const options = {
           year: 'numeric',
           month: 'long',
-          day: 'numeric',
-          timeZone: 'America/Los_Angeles'
+          day: 'numeric'
         }
-        return new Date(date).toLocaleDateString('en', options)
+        // Create date object and force it to be interpreted as UTC
+        const utc_date = new Date(date + 'T00:00:00Z')
+        return utc_date.toLocaleDateString('en', options)
       },
       format_title(slug) {
         return slug.replace(/-/g, ' ')
