@@ -32,8 +32,9 @@
           month: 'long',
           day: 'numeric'
         }
-        // Create date object and force it to be interpreted as UTC
-        const utc_date = new Date(date + 'T00:00:00Z')
+        // First ensure we have a valid date string in YYYY-MM-DD format
+        const date_str = date.toString().split('T')[0]
+        const utc_date = new Date(`${date_str}T12:00:00Z`)
         return utc_date.toLocaleDateString('en', options)
       },
       format_title(slug) {
