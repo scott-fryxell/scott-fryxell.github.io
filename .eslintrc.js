@@ -16,5 +16,14 @@ module.exports = {
   plugins: [
   ],
   // add your custom rules here
-  rules: {}
+  rules: {
+    'camelcase': 'off',
+    'naming-convention': [
+      'error',
+      {
+        'selector': 'default',
+        'format': ['snake_case']
+      }
+    ]
+  }
 }
