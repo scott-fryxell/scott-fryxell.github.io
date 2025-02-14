@@ -27,7 +27,12 @@
     },
     methods: {
       format_date(date) {
-        const options = { year: 'numeric', month: 'long', day: 'numeric' }
+        const options = {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+          timeZone: 'America/Los_Angeles'
+        }
         return new Date(date).toLocaleDateString('en', options)
       },
       format_title(slug) {
