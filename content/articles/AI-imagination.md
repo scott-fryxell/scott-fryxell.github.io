@@ -4,7 +4,7 @@ img: Scott_Fryxell_Thursday, February 6 at 1_32 PM.svg
 ---
 
 
-## Working with AI
+## Working with it
 
 I've been scaling up my work with Cursor's AI in the last three months. More than line completion, I am using it to help me work through and implement solutions; trying to push what I can get done.
 
