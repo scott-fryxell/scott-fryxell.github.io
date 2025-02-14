@@ -1,5 +1,5 @@
 ---
-date: 2025-02-14T08:32-0800
+date: 2025-02-14T08
 img: Scott_Fryxell_Thursday, February 6 at 1_32 PM.svg
 ---
 
