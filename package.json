@@ -24,7 +24,7 @@
     "@babel/eslint-parser": "^7.14.7",
     "@nuxtjs/eslint-config": "^6.0.1",
     "@nuxtjs/eslint-module": "^3.0.2",
-    "@realness.online/web": "^1.1.1",
+    "@realness.online/web": "1.1.1",
     "babel-core": "7.0.0-bridge.0",
     "core-js": "^3.15.1",
     "eslint": "^7.29.0",
