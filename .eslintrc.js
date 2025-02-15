@@ -17,13 +17,6 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
-    'camelcase': 'off',
-    'naming-convention': [
-      'error',
-      {
-        'selector': 'default',
-        'format': ['snake_case']
-      }
-    ]
+    'camelcase': 'off'
   }
 }

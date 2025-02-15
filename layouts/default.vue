@@ -37,6 +37,7 @@
     flex-direction: column
     pre
       overflow-x: scroll
+      max-width: 90vw
     h1, h2, h3, a
       background: -webkit-linear-gradient(60deg, blue , red)
       background-clip: text
