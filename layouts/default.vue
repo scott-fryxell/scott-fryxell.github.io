@@ -4,6 +4,7 @@
       <h1><NuxtLink to="/">Scott Fryxell</NuxtLink></h1>
       <nav>
         <NuxtLink to="/resume">Resume</NuxtLink>
+        <a href="https://realness.online" target="_blank" rel="noopener noreferrer">Thoughts</a>
       </nav>
     </header>
     <Nuxt />
