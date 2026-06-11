@@ -1,0 +1,419 @@
+@font-face {
+  font-display: swap;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 300;
+  src: url(/fonts/Lato-Light-Subset.woff2) format('woff2');
+}
+@font-face {
+  font-display: swap;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 400;
+  src: url(/fonts/Lato-Regular-Subset.woff2) format('woff2');
+}
+@font-face {
+  font-display: swap;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 800;
+  src: url(/fonts/Lato-Heavy-Subset.woff2) format('woff2');
+}
+
+:root {
+  --base-line: 1.333rem;
+  --blue: hsl(180, 35%, 32%);
+  --red: hsl(0, 35%, 38%);
+  --text: hsl(40, 8%, 12%);
+  --surface: hsl(40, 12%, 96%);
+  --max-width: 48rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --blue: hsl(180, 40%, 62%);
+    --red: hsl(0, 40%, 62%);
+    --text: hsl(40, 8%, 88%);
+    --surface: hsl(40, 4%, 10%);
+  }
+}
+
+body {
+  font-family: Lato, system-ui, sans-serif;
+  font-weight: 400;
+  font-size: clamp(1.125rem, 1.125rem + (1.333 - 1.125) * (100dvw - 24rem) / (80rem - 24rem), 1.333rem);
+  background: var(--surface);
+  color: var(--text);
+  margin: 0;
+  line-height: 1.6;
+}
+
+main {
+  min-height: 100dvh;
+}
+
+/* ── Site header ── */
+
+main > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: calc(var(--base-line) * 0.5) var(--base-line);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--surface);
+}
+
+main > header h1 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+main > header h1 a {
+  background: linear-gradient(60deg, var(--blue), var(--red));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  gap: var(--base-line);
+}
+
+nav a {
+  color: var(--blue);
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+nav a:hover {
+  color: var(--red);
+}
+
+/* ── Figure / poster ── */
+
+figure {
+  margin: 0;
+  display: grid;
+  grid-template-rows: 1fr;
+  height: min(56.25vw, 72dvh);
+  overflow: hidden;
+}
+
+figure img {
+  min-height: 0;
+  width: 100%;
+  object-fit: cover;
+  grid-area: 1 / 1;
+  display: block;
+}
+
+figcaption {
+  grid-area: 1 / 1;
+  align-self: end;
+  padding: var(--base-line);
+  background: linear-gradient(to top, hsla(0, 0%, 0%, 0.72) 0%, transparent 100%);
+  color: hsl(40, 12%, 92%);
+}
+
+figcaption h1,
+figcaption h2 {
+  margin: 0 0 calc(var(--base-line) * 0.25);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  font-size: clamp(1.602rem, 1.602rem + (2.441 - 1.602) * (100dvw - 24rem) / (80rem - 24rem), 2.441rem);
+  color: inherit;
+}
+
+figcaption h2 {
+  font-size: clamp(1.266rem, 1.266rem + (1.953 - 1.266) * (100dvw - 24rem) / (80rem - 24rem), 1.953rem);
+}
+
+figcaption time {
+  font-size: 0.8em;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+/* ── Index / details expand ── */
+
+section > article {
+  border-bottom: 1px solid color-mix(in srgb, var(--blue) 20%, transparent);
+}
+
+details > summary {
+  display: block;
+  list-style: none;
+  cursor: pointer;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details[open] > summary figcaption {
+  background: linear-gradient(to top, hsla(0, 0%, 0%, 0.85) 0%, transparent 100%);
+}
+
+details[open] > section {
+  animation: slide-down 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slide-down {
+  from {
+    clip-path: inset(0 0 100% 0);
+    opacity: 0;
+  }
+  to {
+    clip-path: inset(0 0 0% 0);
+    opacity: 1;
+  }
+}
+
+/* ── Article page ── */
+
+article[itemscope] > figure {
+  height: min(56.25vw, 88dvh);
+}
+
+section[itemprop="articleBody"] {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: calc(var(--base-line) * 2) var(--base-line);
+}
+
+section[itemprop="articleBody"] p {
+  margin: 0 0 var(--base-line);
+}
+
+section[itemprop="articleBody"] h1,
+section[itemprop="articleBody"] h2,
+section[itemprop="articleBody"] h3 {
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin: calc(var(--base-line) * 2) 0 var(--base-line);
+  background: linear-gradient(60deg, var(--blue), var(--red));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+section[itemprop="articleBody"] a {
+  color: var(--blue);
+  text-decoration: none;
+  border-bottom: 0.08vmin solid var(--blue);
+  transition: color 0.8s ease-in-out 0.1s;
+}
+
+section[itemprop="articleBody"] a:hover {
+  color: var(--red);
+}
+
+section[itemprop="articleBody"] blockquote {
+  border-left: 3px solid var(--red);
+  margin: var(--base-line) 0;
+  padding-left: var(--base-line);
+  font-style: italic;
+  opacity: 0.8;
+}
+
+section[itemprop="articleBody"] pre {
+  background: color-mix(in srgb, var(--blue) 8%, var(--surface));
+  padding: var(--base-line);
+  overflow-x: auto;
+  margin: var(--base-line) 0;
+  border-radius: 0.25rem;
+}
+
+section[itemprop="articleBody"] code {
+  font-family: 'Monaco', 'Menlo', monospace;
+  font-size: 0.875em;
+}
+
+section[itemprop="articleBody"] ul,
+section[itemprop="articleBody"] ol {
+  padding-left: calc(var(--base-line) * 1.5);
+  margin: 0 0 var(--base-line);
+}
+
+section[itemprop="articleBody"] li {
+  margin-bottom: calc(var(--base-line) * 0.33);
+}
+
+footer {
+  height: calc(var(--base-line) * 4);
+}
+
+/* ── Resume ── */
+
+section[itemtype*="Person"] > header {
+  display: grid;
+  grid-template-rows: 1fr;
+  height: min(56.25vw, 72dvh);
+  overflow: hidden;
+}
+
+section[itemtype*="Person"] > header img {
+  min-height: 0;
+  width: 100%;
+  object-fit: cover;
+  grid-area: 1 / 1;
+  display: block;
+}
+
+section[itemtype*="Person"] > header address {
+  grid-area: 1 / 1;
+  align-self: end;
+  padding: var(--base-line);
+  background: linear-gradient(to top, hsla(0, 0%, 0%, 0.72) 0%, transparent 100%);
+  color: hsl(40, 12%, 92%);
+  font-style: normal;
+  display: flex;
+  gap: var(--base-line);
+  align-items: baseline;
+}
+
+section[itemtype*="Person"] > header address p {
+  margin: 0;
+  font-weight: 300;
+  font-size: clamp(1.266rem, 1.266rem + (1.953 - 1.266) * (100dvw - 24rem) / (80rem - 24rem), 1.953rem);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+section[itemtype*="Person"] > header address a {
+  color: hsl(40, 12%, 75%);
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+section[itemtype*="Person"] > header address a:hover {
+  color: hsl(40, 12%, 92%);
+}
+
+#skills,
+#experience {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: calc(var(--base-line) * 2) var(--base-line);
+}
+
+#skills h2,
+#experience > header h2 {
+  margin: 0 0 var(--base-line);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  font-size: clamp(1.424rem, 1.424rem + (1.953 - 1.424) * (100dvw - 24rem) / (80rem - 24rem), 1.953rem);
+  background: linear-gradient(60deg, var(--blue), var(--red));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+#skills p {
+  margin: 0;
+  color: color-mix(in srgb, var(--text) 70%, transparent);
+  font-size: 0.875em;
+  line-height: 1.7;
+}
+
+#experience > header {
+  border-bottom: 1px solid color-mix(in srgb, var(--blue) 20%, transparent);
+  padding-bottom: calc(var(--base-line) * 1.5);
+  margin-bottom: calc(var(--base-line) * 1.5);
+}
+
+#experience > header p {
+  margin: 0 0 var(--base-line);
+}
+
+#experience > header p:last-child {
+  margin-bottom: 0;
+}
+
+article[itemtype*="Job"] {
+  padding: calc(var(--base-line) * 1.5) 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--blue) 15%, transparent);
+}
+
+article[itemtype*="Job"]:last-of-type {
+  border-bottom: none;
+}
+
+article[itemtype*="Job"] > header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: calc(var(--base-line) * 0.25) var(--base-line);
+  margin-bottom: calc(var(--base-line) * 0.75);
+}
+
+article[itemtype*="Job"] > header h3 {
+  margin: 0;
+  font-weight: 400;
+  font-size: clamp(1.125rem, 1.125rem + (1.266 - 1.125) * (100dvw - 24rem) / (80rem - 24rem), 1.266rem);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+article[itemtype*="Job"] > header h3 a[itemprop="url"] {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+article[itemtype*="Job"] > header h3 a[itemprop="url"]:hover {
+  color: var(--red);
+}
+
+article[itemtype*="Job"] > header h6 {
+  margin: 0;
+  font-weight: 300;
+  font-size: 0.8em;
+  color: color-mix(in srgb, var(--text) 55%, transparent);
+  white-space: nowrap;
+}
+
+time[itemprop="startdate"],
+time[itemprop="enddate"] {
+  font-variant-numeric: tabular-nums;
+}
+
+article[itemtype*="Job"] p[itemprop="description"] {
+  margin: 0 0 calc(var(--base-line) * 0.75);
+}
+
+article[itemtype*="Job"] p[itemprop="description"]:last-child {
+  margin-bottom: 0;
+}
+
+article[itemtype*="Job"] p[itemprop="description"] a {
+  color: var(--blue);
+  text-decoration: none;
+  border-bottom: 0.08vmin solid var(--blue);
+  transition: color 0.8s ease-in-out 0.1s;
+}
+
+article[itemtype*="Job"] p[itemprop="description"] a:hover {
+  color: var(--red);
+}
+
+#experience > footer {
+  height: auto;
+  padding: calc(var(--base-line) * 2) 0 0;
+  color: color-mix(in srgb, var(--text) 60%, transparent);
+  font-size: 0.875em;
+}
+
+#experience > footer a {
+  color: var(--blue);
+  text-decoration: none;
+}
