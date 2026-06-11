@@ -162,12 +162,18 @@ details[open] > summary figcaption {
 }
 
 details[open] > section {
-  animation: slide-down 0.35s ease-out;
+  animation: slide-down 0.45s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @keyframes slide-down {
-  from { opacity: 0; transform: translateY(-0.5rem); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    clip-path: inset(0 0 100% 0);
+    opacity: 0;
+  }
+  to {
+    clip-path: inset(0 0 0% 0);
+    opacity: 1;
+  }
 }
 
 /* ── Article page ── */
@@ -243,4 +249,171 @@ section[itemprop="articleBody"] li {
 
 footer {
   height: calc(var(--base-line) * 4);
+}
+
+/* ── Resume ── */
+
+section[itemtype*="Person"] > header {
+  display: grid;
+  grid-template-rows: 1fr;
+  height: min(56.25vw, 72dvh);
+  overflow: hidden;
+}
+
+section[itemtype*="Person"] > header img {
+  min-height: 0;
+  width: 100%;
+  object-fit: cover;
+  grid-area: 1 / 1;
+  display: block;
+}
+
+section[itemtype*="Person"] > header address {
+  grid-area: 1 / 1;
+  align-self: end;
+  padding: var(--base-line);
+  background: linear-gradient(to top, hsla(0, 0%, 0%, 0.72) 0%, transparent 100%);
+  color: hsl(40, 12%, 92%);
+  font-style: normal;
+  display: flex;
+  gap: var(--base-line);
+  align-items: baseline;
+}
+
+section[itemtype*="Person"] > header address p {
+  margin: 0;
+  font-weight: 300;
+  font-size: clamp(1.266rem, 1.266rem + (1.953 - 1.266) * (100dvw - 24rem) / (80rem - 24rem), 1.953rem);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+section[itemtype*="Person"] > header address a {
+  color: hsl(40, 12%, 75%);
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+section[itemtype*="Person"] > header address a:hover {
+  color: hsl(40, 12%, 92%);
+}
+
+#skills,
+#experience {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: calc(var(--base-line) * 2) var(--base-line);
+}
+
+#skills h2,
+#experience > header h2 {
+  margin: 0 0 var(--base-line);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  font-size: clamp(1.424rem, 1.424rem + (1.953 - 1.424) * (100dvw - 24rem) / (80rem - 24rem), 1.953rem);
+  background: linear-gradient(60deg, var(--blue), var(--red));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+#skills p {
+  margin: 0;
+  color: color-mix(in srgb, var(--text) 70%, transparent);
+  font-size: 0.875em;
+  line-height: 1.7;
+}
+
+#experience > header {
+  border-bottom: 1px solid color-mix(in srgb, var(--blue) 20%, transparent);
+  padding-bottom: calc(var(--base-line) * 1.5);
+  margin-bottom: calc(var(--base-line) * 1.5);
+}
+
+#experience > header p {
+  margin: 0 0 var(--base-line);
+}
+
+#experience > header p:last-child {
+  margin-bottom: 0;
+}
+
+article[itemtype*="Job"] {
+  padding: calc(var(--base-line) * 1.5) 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--blue) 15%, transparent);
+}
+
+article[itemtype*="Job"]:last-of-type {
+  border-bottom: none;
+}
+
+article[itemtype*="Job"] > header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: calc(var(--base-line) * 0.25) var(--base-line);
+  margin-bottom: calc(var(--base-line) * 0.75);
+}
+
+article[itemtype*="Job"] > header h3 {
+  margin: 0;
+  font-weight: 400;
+  font-size: clamp(1.125rem, 1.125rem + (1.266 - 1.125) * (100dvw - 24rem) / (80rem - 24rem), 1.266rem);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+article[itemtype*="Job"] > header h3 a[itemprop="url"] {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+article[itemtype*="Job"] > header h3 a[itemprop="url"]:hover {
+  color: var(--red);
+}
+
+article[itemtype*="Job"] > header h6 {
+  margin: 0;
+  font-weight: 300;
+  font-size: 0.8em;
+  color: color-mix(in srgb, var(--text) 55%, transparent);
+  white-space: nowrap;
+}
+
+time[itemprop="startdate"],
+time[itemprop="enddate"] {
+  font-variant-numeric: tabular-nums;
+}
+
+article[itemtype*="Job"] p[itemprop="description"] {
+  margin: 0 0 calc(var(--base-line) * 0.75);
+}
+
+article[itemtype*="Job"] p[itemprop="description"]:last-child {
+  margin-bottom: 0;
+}
+
+article[itemtype*="Job"] p[itemprop="description"] a {
+  color: var(--blue);
+  text-decoration: none;
+  border-bottom: 0.08vmin solid var(--blue);
+  transition: color 0.8s ease-in-out 0.1s;
+}
+
+article[itemtype*="Job"] p[itemprop="description"] a:hover {
+  color: var(--red);
+}
+
+#experience > footer {
+  height: auto;
+  padding: calc(var(--base-line) * 2) 0 0;
+  color: color-mix(in srgb, var(--text) 60%, transparent);
+  font-size: 0.875em;
+}
+
+#experience > footer a {
+  color: var(--blue);
+  text-decoration: none;
 }
