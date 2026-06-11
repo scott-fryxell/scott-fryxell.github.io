@@ -1,6 +1,6 @@
 ---
 date: 2024-09-24
-img: Scott_Fryxell_Thursday, July 4 at 12_03 PM.svg
+img: Scott Fryxell @ Monday afternoon, April 6 - 1775512190351.svg
 ---
 I don't have a degree, but I have worked in tech two plus decades and I can tell you it's interesting as all get out to watch the status economy beginning its downward spiral. Imagine spending the first twenty-five years of your life striving to become the kind of person society prioritizes only to graduate into a world where you are the first victim of "The Intelligence Age".
 

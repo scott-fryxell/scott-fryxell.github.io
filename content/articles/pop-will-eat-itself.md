@@ -1,6 +1,6 @@
 ---
 date: 2023-02-21
-img: Scott_Fryxell_Wednesday, December 28 at 5_07 PM.svg
+img: Scott Fryxell @ Saturday morning, March 28 - 1774722516401.svg
 description: When will the training data become polluted
 ---
 

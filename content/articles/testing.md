@@ -1,6 +1,6 @@
 ---
 date: 2022-05-24
-img: Scott_Fryxell_Wednesday, June 1, 9_49 AM.svg
+img: Scott Fryxell @ Tuesday morning, April 28 - 1777400888727.svg
 ---
 
 Testing is difficult. Testing asks a lot of you. Testing isn't into freebies or rewards. But I do it. I see what it brings to the table. For years I have tested religiously. But in February I put my testing down and am focused on releasing. I won't be brining testing back, not until I'm out in the open with realness. It's why everything feels easy to do now, effortless, Hyper complex interoperating moving parts harmonizing their efforts. That's what this code base feels like. Balanced.

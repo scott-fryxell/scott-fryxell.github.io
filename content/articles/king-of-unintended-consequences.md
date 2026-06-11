@@ -1,6 +1,6 @@
 ---
 date: 2025-04-28
-img: "Scott-Fryxell, Thursday, April 17 at 3_38 PM.svg"
+img: Scott Fryxell @ Friday afternoon, March 20 - 1774050569770.svg
 ---
 
 *He'll send us to Mars in huge rocket ships. Send the robots he's made along to assist.*

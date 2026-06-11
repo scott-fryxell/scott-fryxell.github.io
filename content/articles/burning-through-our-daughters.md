@@ -1,6 +1,6 @@
 ---
 date: 2024-02-19
-img: Scott_Fryxell_Wednesday, January 17 at 12_11 PM.svg
+img: Scott Fryxell @ Monday morning, May 11 - 1778525491351.svg
 ---
 
 Why do I think advertising is gross. It's that they will enable the highest bidder to reinforce that's its okay to gamble. It's okay to keep scrolling, It's okay to to starve yourself for a fleeting sense of self control. It's okay, because it's up to your family to teach you what's healthy and not advertisings job to keep us on the golden path. Lets normalize consumption and checking out and rely on traditional family structures and private schools (even better if they are boarding schools), and well educated parents to help us with what's right and what's true.

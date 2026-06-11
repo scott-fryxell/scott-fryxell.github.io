@@ -1,6 +1,6 @@
 ---
 date: 2023-02-20
-img: Scott_Fryxell_Thursday, December 22 at 3_13 PM.svg
+img: Scott Fryxell @ Saturday morning, May 2 - 1777748151656.svg
 description: Ethical journalism in conversation with AI
 ---
 
