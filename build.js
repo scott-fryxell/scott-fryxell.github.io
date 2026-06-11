@@ -11,6 +11,20 @@ const SITE = 'https://scott-fryxell.github.io'
 const DRAFTS = process.argv.includes('--drafts')
 const RESUME_IMG = '/posters/Scott Fryxell @ Wednesday afternoon, March 4 - 1772667028251.svg'
 
+const minor_words = new Set([
+  'a', 'an', 'and', 'as', 'at', 'but', 'by', 'for', 'in',
+  'nor', 'of', 'on', 'or', 'so', 'the', 'to', 'up', 'with', 'yet'
+])
+
+function title_case(str) {
+  const words = str.split(' ')
+  return words.map((word, i) => {
+    if (i !== 0 && i !== words.length - 1 && minor_words.has(word.toLowerCase()))
+      return word.toLowerCase()
+    return word.charAt(0).toUpperCase() + word.slice(1)
+  }).join(' ')
+}
+
 function format_date(str) {
   if (!str) return ''
   return new Date(`${str.split('T')[0]}T12:00:00Z`)
@@ -108,7 +122,7 @@ async function build_article(file) {
   const src = await readFile(file, 'utf8')
   const { frontmatter: data } = await parse(src)
   const slug = relative(ARTICLES, file).replace(/\.md$/, '')
-  const title = data.title || slug.split('/').pop().replace(/-/g, ' ')
+  const title = title_case(data.title || slug.split('/').pop().replace(/-/g, ' '))
   const draft = data.draft === true || data.draft === 'true'
   if (draft && !DRAFTS) return { slug, title, date: data.date, draft }
   const html = await render(src)
