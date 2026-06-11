@@ -71,9 +71,28 @@ async function walk(dir) {
   return files
 }
 
+const poster_sizes = {}
+
+async function load_poster_sizes() {
+  const dir = join(STATIC, 'posters')
+  for (const name of await readdir(dir)) {
+    if (!name.endsWith('.svg')) continue
+    const svg = await readFile(join(dir, name), 'utf8')
+    const box = svg.match(/viewBox="[\d.-]+ [\d.-]+ ([\d.]+) ([\d.]+)"/)
+    if (box) poster_sizes[name] = { width: Number(box[1]), height: Number(box[2]) }
+  }
+}
+
+function poster_attrs(img) {
+  const size = poster_sizes[img]
+  if (!size) return ''
+  const ratio = (size.width / size.height).toFixed(4)
+  return ` width="${size.width}" height="${size.height}" style="--ratio: ${ratio}"`
+}
+
 function poster(data, title, heading = 'h2') {
   return `<figure>
-      ${data.img ? `<img src="/posters/${data.img}" alt="" loading="lazy">` : ''}
+      ${data.img ? `<img src="/posters/${data.img}"${poster_attrs(data.img)} alt="" loading="lazy">` : ''}
       <figcaption>
         <${heading} itemprop="headline">${title}</${heading}>
         ${data.date ? `<time itemprop="datePublished" datetime="${data.date}">${format_date(data.date)}</time>` : ''}
@@ -132,6 +151,7 @@ async function main() {
   await cp(STATIC, OUT, { recursive: true }).catch(() => {})
   if (existsSync('style.css')) await cp('style.css', join(OUT, 'style.css'))
 
+  await load_poster_sizes()
   const files = await walk(ARTICLES)
   const articles = await Promise.all(files.map(build_article))
   await build_index(articles)
