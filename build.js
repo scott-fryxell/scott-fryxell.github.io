@@ -8,6 +8,7 @@ const ARTICLES = 'content/articles'
 const STATIC = 'static'
 const OUT = 'dist'
 const SITE = 'https://scott-fryxell.github.io'
+const DRAFTS = process.argv.includes('--drafts')
 const RESUME_IMG = '/posters/Scott Fryxell @ Wednesday afternoon, March 4 - 1772667028251.svg'
 
 function format_date(str) {
@@ -83,18 +84,17 @@ async function load_poster_sizes() {
   }
 }
 
-function poster_attrs(img) {
-  const size = poster_sizes[img]
-  if (!size) return ''
-  const ratio = (size.width / size.height).toFixed(4)
-  return ` width="${size.width}" height="${size.height}" style="--ratio: ${ratio}"`
-}
-
-function poster(data, title, heading = 'h2') {
-  return `<figure>
-      ${data.img ? `<img src="/posters/${data.img}"${poster_attrs(data.img)} alt="" loading="lazy">` : ''}
+function poster(data, title, heading = 'h2', href = null) {
+  const size = poster_sizes[data.img]
+  const ratio = size ? (size.width / size.height).toFixed(4) : null
+  const focus = data.focus ? `; --focus: ${data.focus}` : ''
+  const figure_style = ratio ? ` style="--ratio: ${ratio}${focus}"` : ''
+  const img_attrs = size ? ` width="${size.width}" height="${size.height}"` : ''
+  const headline = href ? `<a itemprop="url" href="${href}">${title}</a>` : title
+  return `<figure${figure_style}>
+      ${data.img ? `<img src="/posters/${data.img}"${img_attrs} alt="" loading="lazy">` : ''}
       <figcaption>
-        <${heading} itemprop="headline">${title}</${heading}>
+        <${heading} itemprop="headline">${headline}</${heading}>
         ${data.date ? `<time itemprop="datePublished" datetime="${data.date}">${format_date(data.date)}</time>` : ''}
       </figcaption>
     </figure>`
@@ -109,6 +109,8 @@ async function build_article(file) {
   const { frontmatter: data } = await parse(src)
   const slug = relative(ARTICLES, file).replace(/\.md$/, '')
   const title = data.title || slug.split('/').pop().replace(/-/g, ' ')
+  const draft = data.draft === true || data.draft === 'true'
+  if (draft && !DRAFTS) return { slug, title, date: data.date, draft }
   const html = await render(src)
   const article = `<article itemscope itemtype="http://schema.org/BlogPosting">
     ${poster(data, title, 'h1')}
@@ -118,16 +120,16 @@ async function build_article(file) {
   await mkdir(join(OUT, 'blog', slug), { recursive: true })
   const description = data.description || strip_tags(html).slice(0, 160).trim()
   await writeFile(out, shell(title, article, { url: `/blog/${slug}`, img: data.img, description, type: 'article' }))
-  return { slug, title, date: data.date, img: data.img, draft: data.draft === 'true', html }
+  return { slug, title, date: data.date, img: data.img, focus: data.focus, draft, html }
 }
 
 async function build_index(articles) {
   const published = articles
-    .filter(a => !a.draft)
+    .filter(a => DRAFTS || !a.draft)
     .sort((a, b) => (b.date || '').localeCompare(a.date || ''))
   const items = published.map(a => `<article itemscope itemtype="http://schema.org/BlogPosting">
     <details>
-      <summary>${poster(a, a.title)}</summary>
+      <summary>${poster(a, a.title, 'h2', `/blog/${a.slug}`)}</summary>
       <section itemprop="articleBody">${a.html}</section>
     </details>
   </article>`).join('\n')
