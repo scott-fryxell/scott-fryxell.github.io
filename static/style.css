@@ -108,6 +108,7 @@ figure {
 figure img {
   min-height: 0;
   width: 100%;
+  height: 100%;
   object-fit: cover;
   grid-area: 1 / 1;
   display: block;
@@ -179,7 +180,22 @@ details[open] > section {
 /* ── Article page ── */
 
 article[itemscope] > figure {
-  height: min(56.25vw, 88dvh);
+  height: auto;
+  width: fit-content;
+  margin-inline: auto;
+}
+
+article[itemscope] > figure img {
+  width: min(100vw, calc(88dvh * var(--ratio, 1.78)));
+  height: auto;
+  aspect-ratio: var(--ratio, 1.78);
+}
+
+/* Caption must not widen the fit-content figure past the poster,
+   or its gradient paints onto the bare page background */
+article[itemscope] > figure figcaption {
+  width: 0;
+  min-width: 100%;
 }
 
 section[itemprop="articleBody"] {
