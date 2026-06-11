@@ -1,6 +1,6 @@
 ---
 date: 2022-04-10
-img: Scott_Fryxell_Wednesday, June 1, 9_47 AM.svg
+img: Scott Fryxell @ Saturday afternoon, February 14 - 1771102323263.svg
 ---
 
 I've built out the posters that realness generate. It's what I envisage a poster to look like. It's created from a source image but has characteristics that take advantage of svg,

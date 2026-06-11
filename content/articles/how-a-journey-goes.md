@@ -1,6 +1,6 @@
 ---
 date: 2022-02-11
-img: Scott_Fryxell_posters_Sunday, August 8, 3_33 PM.svg
+img: Scott Fryxell @ Saturday afternoon, February 14 - 1771102323286.svg
 ---
 
 Katie said recently that YouTube will always be more exciting than what she wants to do. That it's impossible to walk away from for that reason. If she spends time on YouTube she looses the sensitivity to pursue her actual interests.
