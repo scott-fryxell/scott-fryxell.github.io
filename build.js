@@ -8,7 +8,7 @@ const ARTICLES = 'content/articles'
 const STATIC = 'static'
 const OUT = 'dist'
 const SITE = 'https://scott-fryxell.github.io'
-const RESUME_IMG = '/posters/Scott_Fryxell_Thursday, May 30 at 3_22 PM.svg'
+const RESUME_IMG = '/posters/Scott Fryxell @ Wednesday afternoon, March 4 - 1772667028251.svg'
 
 function format_date(str) {
   if (!str) return ''

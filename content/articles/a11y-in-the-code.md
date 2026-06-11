@@ -1,6 +1,6 @@
 ---
 date: 2021-11-09
-img: Scott_Fryxell_posters_Thursday, July 8, 1_38 PM.svg
+img: Scott Fryxell @ Friday afternoon, February 27 - 1772229663708.svg
 alt: '16th Street Bart station. At the far end with a train in the station'
 ---
 

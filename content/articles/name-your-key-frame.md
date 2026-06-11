@@ -1,6 +1,6 @@
 ---
 date: 2021-12-01
-img: Scott_Fryxell_posters_Saturday, April 17, 10_47 AM.svg
+img: Scott Fryxell @ Sunday evening, February 15 - 1771204510724.svg
 ---
 
 Let's say you are building an animation and you can describe the objects inside
