@@ -1,7 +1,7 @@
 ---
 title: you align with it
 date: 2026-06-07
-img: Scott_Fryxell_Wednesday, June 1, 9_50 AM.svg
+img: Scott Fryxell @ Friday afternoon, March 20 - 1774050380281.svg
 ---
 
 _"The disagreement between the two camps is loud because they disagree about how the designing should go, but underneath the loudness sits a much larger agreement, which is that the participants in the debate are the ones doing the designing and everyone else is what gets designed for."_

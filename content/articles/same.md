@@ -1,6 +1,6 @@
 ---
 date: 2024-02-16
-img: Scott_Fryxell_Monday, December 25 at 4_53 PM.svg
+img: Scott Fryxell @ Saturday afternoon, May 30 - 1780179724324.svg
 ---
 
 I made a [reply](https://news.ycombinator.com/item?id=39299007#39377420) on hacker news that I want to plant a little firmer in the ground.

@@ -1,6 +1,6 @@
 ---
 date: 2023-02-16
-img: Scott_Fryxell_Wednesday, January 25 at 1_35 PM.svg
+img: Scott Fryxell @ Sunday afternoon, April 19 - 1776628375386.svg
 description: For developers trying to exist outside walled gardens the home screen is the fulcrum that enforces Apple's monopoly.
 ---
 

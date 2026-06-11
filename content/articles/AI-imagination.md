@@ -1,6 +1,6 @@
 ---
 date: 2025-02-14
-img: Scott_Fryxell_Thursday, February 6 at 1_32 PM.svg
+img: Scott Fryxell @ Friday evening, June 5 - 1780715551093.svg
 ---
 
 

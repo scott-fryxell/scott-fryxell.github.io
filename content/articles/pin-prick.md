@@ -1,6 +1,6 @@
 ---
 date: 2022-07-16
-img: Scott_Fryxell_Saturday, July 9 at 12_57 PM.svg
+img: Scott Fryxell @ Thursday evening, May 14 - 1778813394184.svg
 ---
 
 Testing correctly slows you down. It slows you down so much that Scientists spend entire careers focusing and validating and peer reviewing and questioning tiny silos around small questions just to open up a pin prick of light on reality.
