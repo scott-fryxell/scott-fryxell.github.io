@@ -1,4 +1,4 @@
-# Scott Fryxell | San Francisco | sfryxell@gmail.com
+# Scott Fryxell | San Francisco | scott@realness.online
 
 Full Stack Development, Frontend Architecture, Cloud Infrastructure, Product Development, User Experience, Distributed Systems, Data Modeling
 
