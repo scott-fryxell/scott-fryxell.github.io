@@ -1,5 +1,6 @@
 ---
 title: Family Money
+draft: true
 date: 2019-07-10
 ---
 
@@ -14,7 +15,5 @@ Be in the real world. If you can't, bring in people from the real world. See or 
 We have a nasty habit of telling sheltered people they should lead (Be a rich kid, do whatever you want! Here have all this money, disrupt!). Teams have become so weighted in family money that the term disruption has mutated into, "What do my friends need?" and this way of thinking becomes less useful the farther our worlds are apart.
 
 Every team needs someone who can bring its purpose back to earth; otherwise you are flying your organization blind.
-
-
 
 [Every time I hear some tech genius talk about how he got his first computer when he was seven and was writing basic apps by eight I want to scream family money and charge at him with a spike. It's ugly who you've become and no one but your mom is proud of you.]
