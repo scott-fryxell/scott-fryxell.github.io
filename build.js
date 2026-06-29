@@ -121,10 +121,16 @@ function strip_tags(html) {
   return html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim()
 }
 
+function article_slug(file) {
+  const parts = relative(ARTICLES, file).replace(/\.md$/, '').split('/')
+  if (/^\d{4}$/.test(parts[0])) return parts.slice(1).join('/')
+  return parts.join('/')
+}
+
 async function build_article(file) {
   const src = await readFile(file, 'utf8')
   const { frontmatter: data } = await parse(src)
-  const slug = relative(ARTICLES, file).replace(/\.md$/, '')
+  const slug = article_slug(file)
   const title = title_case(data.title || slug.split('/').pop().replace(/-/g, ' '))
   const draft = data.draft === true || data.draft === 'true'
   if (draft && !DRAFTS) return { slug, title, date: data.date, draft }
