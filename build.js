@@ -32,8 +32,8 @@ function format_date(str) {
 }
 
 function shell(title, body, meta = {}) {
-  const full_title = meta.root ? title : `${title} — Scott Fryxell`
-  const description = meta.description || 'Software developer in San Francisco specializing in JavaScript, Vue, and modern web applications.'
+  const full_title = meta.root ? `${title} — Humanist Software Developer` : `${title} — Scott Fryxell`
+  const description = meta.description || 'Humanist software developer in San Francisco — building tools that respect the people who use them.'
   const canonical = meta.url ? `${SITE}${meta.url}` : SITE
   const og_image = `${SITE}/posters/${encodeURIComponent(meta.img || RESUME_IMG.replace('/posters/', ''))}`
   const og_type = meta.type || 'website'
@@ -62,7 +62,10 @@ function shell(title, body, meta = {}) {
 <body>
 <main>
   <header>
-    <h1><a href="/">Scott Fryxell</a></h1>
+    <div class="title-group">
+      <h1><a href="/">Scott Fryxell</a></h1>
+      <p class="subtitle">Humanist Software Developer</p>
+    </div>
     <nav>
       <a href="/resume">Resume</a>
       <a href="https://realness.online/?from=blog">Thoughts</a>

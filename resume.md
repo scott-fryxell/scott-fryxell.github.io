@@ -1,23 +1,27 @@
 # Scott Fryxell | San Francisco | scott@realness.online
 
-Full Stack Development, Frontend Architecture, Cloud Infrastructure, Product Development, User Experience, Distributed Systems, Data Modeling
+Humanist Software Developer — building tools that respect the people who use them.
 
 ---
 
 ### Engineer at Share More Stories
-*2022 - Present*
-Designed scalable queue system processing stories through 50+ ML models using Vue and Google Cloud. Implemented Firebase functions for automated job triggers and granular permissions management. Built analytics platform for testing hypotheses and validating assumptions at scale.
+
+_2022 - Present_
+Lead engineer on a platform that helps organizations hear and understand human stories at scale. Designed a queue system processing stories through 50+ ML models — humans first, analysis second.
 
 ### Founder, Engineer at Realness
-*2018 - Present*
-Created social platform sans server side process's.  privacy-focused, decentralized and based on vector graphics. This required that I design and implement a custom NoSQL database.  A bespoke client first homepage installable offline-capable progressive web app — Every detail considered.
+
+_2018 - Present_
+Social media redesigned as a tool rather than a popularity contest — serverless, auditable, self-hostable. Custom NoSQL backend around the microdata format so data stays on device. A PWA with no server-side processes and no gatekeepers.
 
 ### Consultant at VueSchool
-*2021 - 2022*
-I diagnosed and quadrupled the performance of WEB-RTC based mobile streaming platform, fixed latency feed and auto play performance problems, I Built a hiring platform expanding VueSchool's business verticals. Led technical interviews and performance optimization projects.  Guided VueSchool's migration from Vue 2 to 3.
+
+_2021 - 2022_
+Quadrupled the performance of a WebRTC mobile streaming platform. Guided VueSchool's Vue 2 to 3 migration. Built the hiring app from idea to release in under three months.
 
 ### CEO, Founder at Copper
-*2010 - 2014*
-Created browser-based micropayment system for content creators, similar to Patreon. Built finite-state machine backend with Rails and Postgres, integrated Stripe for payments. Automated creator discovery and verification through social OAuth with 80% hit rate. Led development team and secured funding and brand development through Hattery Labs.
 
-*[more @ scott-fryxell.github.io →](https://scott-fryxell.github.io/resume)*
+_2010 - 2014_
+Browser-based micropayment system for creators — built from the conviction that creators deserve to be paid for their work. Rails/Postgres finite-state machine, Stripe as escrow, social OAuth for creator discovery (80% hit rate).
+
+_[more @ scott-fryxell.github.io →](https://scott-fryxell.github.io/resume)_

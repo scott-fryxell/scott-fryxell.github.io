@@ -3,21 +3,21 @@
   font-family: Lato;
   font-style: normal;
   font-weight: 300;
-  src: url(/fonts/Lato-Light-Subset.woff2) format('woff2');
+  src: url(/fonts/Lato-Light-Subset.woff2) format("woff2");
 }
 @font-face {
   font-display: swap;
   font-family: Lato;
   font-style: normal;
   font-weight: 400;
-  src: url(/fonts/Lato-Regular-Subset.woff2) format('woff2');
+  src: url(/fonts/Lato-Regular-Subset.woff2) format("woff2");
 }
 @font-face {
   font-display: swap;
   font-family: Lato;
   font-style: normal;
   font-weight: 800;
-  src: url(/fonts/Lato-Heavy-Subset.woff2) format('woff2');
+  src: url(/fonts/Lato-Heavy-Subset.woff2) format("woff2");
 }
 
 :root {
@@ -41,7 +41,11 @@
 body {
   font-family: Lato, system-ui, sans-serif;
   font-weight: 400;
-  font-size: clamp(1.125rem, 1.125rem + (1.333 - 1.125) * (100dvw - 24rem) / (80rem - 24rem), 1.333rem);
+  font-size: clamp(
+    1.125rem,
+    1.125rem + (1.333 - 1.125) * (100dvw - 24rem) / (80rem - 24rem),
+    1.333rem
+  );
   background: var(--surface);
   color: var(--text);
   margin: 0;
@@ -65,6 +69,12 @@ main > header {
   background: var(--surface);
 }
 
+main > header .title-group {
+  display: flex;
+  align-items: baseline;
+  gap: calc(var(--base-line) * 0.5);
+}
+
 main > header h1 {
   margin: 0;
   font-size: 1rem;
@@ -78,6 +88,23 @@ main > header h1 a {
   -webkit-background-clip: text;
   color: transparent;
   text-decoration: none;
+}
+
+main > header .subtitle {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: color-mix(in srgb, var(--text) 55%, transparent);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+@media (max-width: 30rem) {
+  main > header .title-group {
+    flex-direction: column;
+    gap: 0;
+  }
 }
 
 nav {
@@ -121,7 +148,11 @@ figcaption {
   grid-area: 1 / 1;
   align-self: end;
   padding: var(--base-line);
-  background: linear-gradient(to top, hsla(0, 0%, 0%, 0.72) 0%, transparent 100%);
+  background: linear-gradient(
+    to top,
+    hsla(0, 0%, 0%, 0.72) 0%,
+    transparent 100%
+  );
   color: hsl(40, 12%, 92%);
 }
 
@@ -131,12 +162,20 @@ figcaption h2 {
   font-weight: 300;
   letter-spacing: -0.02em;
   line-height: 1.1;
-  font-size: clamp(1.602rem, 1.602rem + (2.441 - 1.602) * (100dvw - 24rem) / (80rem - 24rem), 2.441rem);
+  font-size: clamp(
+    1.602rem,
+    1.602rem + (2.441 - 1.602) * (100dvw - 24rem) / (80rem - 24rem),
+    2.441rem
+  );
   color: inherit;
 }
 
 figcaption h2 {
-  font-size: clamp(1.266rem, 1.266rem + (1.953 - 1.266) * (100dvw - 24rem) / (80rem - 24rem), 1.953rem);
+  font-size: clamp(
+    1.266rem,
+    1.266rem + (1.953 - 1.266) * (100dvw - 24rem) / (80rem - 24rem),
+    1.953rem
+  );
 }
 
 figcaption time {
@@ -178,11 +217,15 @@ details > summary figcaption {
 }
 
 details > summary figcaption::after {
-  content: '+';
+  content: "+";
   position: absolute;
   right: var(--base-line);
   bottom: var(--base-line);
-  font-size: clamp(1.602rem, 1.602rem + (2.441 - 1.602) * (100dvw - 24rem) / (80rem - 24rem), 2.441rem);
+  font-size: clamp(
+    1.602rem,
+    1.602rem + (2.441 - 1.602) * (100dvw - 24rem) / (80rem - 24rem),
+    2.441rem
+  );
   font-weight: 300;
   line-height: 1;
   transition: rotate 0.3s ease;
@@ -203,7 +246,11 @@ details[open] > summary figcaption {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: linear-gradient(to right, hsla(0, 0%, 0%, 0.78) 0%, transparent 55%);
+  background: linear-gradient(
+    to right,
+    hsla(0, 0%, 0%, 0.78) 0%,
+    transparent 55%
+  );
   animation: fade-in 0.45s ease both;
 }
 
@@ -322,7 +369,7 @@ section[itemprop="articleBody"] pre {
 }
 
 section[itemprop="articleBody"] code {
-  font-family: 'Monaco', 'Menlo', monospace;
+  font-family: "Monaco", "Menlo", monospace;
   font-size: 0.875em;
 }
 
@@ -372,7 +419,11 @@ section[itemtype*="Person"] > header img {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    background: linear-gradient(to right, hsla(0, 0%, 0%, 0.78) 0%, transparent 55%);
+    background: linear-gradient(
+      to right,
+      hsla(0, 0%, 0%, 0.78) 0%,
+      transparent 55%
+    );
     animation: fade-in 0.45s ease both;
   }
 
@@ -395,7 +446,11 @@ section[itemtype*="Person"] > header address {
   grid-area: 1 / 1;
   align-self: end;
   padding: var(--base-line);
-  background: linear-gradient(to top, hsla(0, 0%, 0%, 0.72) 0%, transparent 100%);
+  background: linear-gradient(
+    to top,
+    hsla(0, 0%, 0%, 0.72) 0%,
+    transparent 100%
+  );
   color: hsl(40, 12%, 92%);
   font-style: normal;
   display: flex;
@@ -406,7 +461,11 @@ section[itemtype*="Person"] > header address {
 section[itemtype*="Person"] > header address p {
   margin: 0;
   font-weight: 300;
-  font-size: clamp(1.266rem, 1.266rem + (1.953 - 1.266) * (100dvw - 24rem) / (80rem - 24rem), 1.953rem);
+  font-size: clamp(
+    1.266rem,
+    1.266rem + (1.953 - 1.266) * (100dvw - 24rem) / (80rem - 24rem),
+    1.953rem
+  );
   letter-spacing: -0.02em;
   line-height: 1;
 }
@@ -434,7 +493,11 @@ section[itemtype*="Person"] > header address a:hover {
   font-weight: 300;
   letter-spacing: -0.02em;
   line-height: 1;
-  font-size: clamp(1.424rem, 1.424rem + (1.953 - 1.424) * (100dvw - 24rem) / (80rem - 24rem), 1.953rem);
+  font-size: clamp(
+    1.424rem,
+    1.424rem + (1.953 - 1.424) * (100dvw - 24rem) / (80rem - 24rem),
+    1.953rem
+  );
   background: linear-gradient(60deg, var(--blue), var(--red));
   background-clip: text;
   -webkit-background-clip: text;
@@ -483,7 +546,11 @@ article[itemtype*="Job"] > header {
 article[itemtype*="Job"] > header h3 {
   margin: 0;
   font-weight: 400;
-  font-size: clamp(1.125rem, 1.125rem + (1.266 - 1.125) * (100dvw - 24rem) / (80rem - 24rem), 1.266rem);
+  font-size: clamp(
+    1.125rem,
+    1.125rem + (1.266 - 1.125) * (100dvw - 24rem) / (80rem - 24rem),
+    1.266rem
+  );
   letter-spacing: -0.01em;
   line-height: 1.2;
 }
