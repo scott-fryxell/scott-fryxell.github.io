@@ -56,27 +56,61 @@
         <time itemprop="datePublished" datetime="2025-02-14">February 14, 2025</time>
       </figcaption>
     </figure></summary>
-      <section itemprop="articleBody"><h2 id="working-with-it">Working with it</h2>
-<p>I've been scaling up my work with Cursor's AI in the last three months. More than line completion, I am using it to help me work through and implement solutions; trying to push what I can get done.</p>
-<p>It has been going well. I feel like I am two and sometimes three developers and the code I am writing has higher standards and is willing to go deeper.</p>
-<p>I have upgraded to a fairly intense set of <a href="https://github.com/realness-online/web/blob/main/eslint.config.js">linting</a> rules; have type visibility via <a href="https://github.com/realness-online/web/blob/main/tsconfig.json">JSDoc</a>. I even brought my test harness back online. Nothing's perfect, all three are works in progress but I feel like these are ideal setups for where cursor shines as an assistant. I can learn about how to type for clarity, get inference errors sorted quickly; fix linting mismatches and even repair and create tests that build my confidence.</p>
-<p>I have more useful tools without paying extraordinary costs in harness maintenance. I am finding the sweet spot. It is amazing that the busy work is less of a headwind now. That I have a best practices machine at the ready has me going harder. And not being slowed down by testing feels like I've got a buddy back.</p>
-<p>But my confidence to trust the work I'm doing with AI is not blind. I know to harden myself for the future. I learned how to survive in vim this last year, It's going to be my low assistance editor. To keep my ability to support the nerd handshake, I have <a href="https://github.com/scott-fryxell/kata-machine">forked</a> into a deno version the Primeagen's kata machine.</p>
-<p>This is the dream, right: we are stronger for AI, More capable; rewarded for pushing ourselves.</p>
+      <section itemprop="articleBody"><h1 id="working-with-it">Working with it</h1>
+<p>I've been scaling up my work with Cursor's AI in the last three months. More
+than line completion, I am using it to help me work through and implement
+solutions; trying to push what I can get done.</p>
+<p>It has been going well. I feel like I am two and sometimes three developers and
+the code I am writing has higher standards and is willing to go deeper.</p>
+<p>I have upgraded to a fairly intense set of
+<a href="https://github.com/realness-online/web/blob/main/eslint.config.js">linting</a>
+rules; have type visibility via
+<a href="https://github.com/realness-online/web/blob/main/tsconfig.json">JSDoc</a>. I even
+brought my test harness back online. Nothing's perfect, all three are works in
+progress but I feel like these are ideal setups for where cursor shines as an
+assistant. I can learn about how to type for clarity, get inference errors
+sorted quickly; fix linting mismatches and even repair and create tests that
+build my confidence.</p>
+<p>I have more useful tools without paying extraordinary costs in harness
+maintenance. I am finding the sweet spot. It is amazing that the busy work is
+less of a headwind now. That I have a best practices machine at the ready has me
+going harder. And not being slowed down by testing feels like I've got a buddy
+back.</p>
+<p>But my confidence to trust the work I'm doing with AI is not blind. I know to
+harden myself for the future. I learned how to survive in vim this last year,
+It's going to be my low assistance editor. To keep my ability to support the
+nerd handshake, I have <a href="https://github.com/scott-fryxell/kata-machine">forked</a>
+into a deno version the Primeagen's kata machine.</p>
+<p>This is the dream, right: we are stronger for AI, More capable; rewarded for
+pushing ourselves.</p>
 <h2 id="the-interview-problem">The Interview Problem</h2>
-<p><a href="https://www.404media.co/anthropic-claude-job-application-ai-assistants/">Finding out</a> that Anthropic is asking developers to not use AI during the interview process is pretty bonkers. I think it shows that we've always half-assed our way into finding good engineers.</p>
-<p>This morning I fixed a bug with syncing anonymous posters and statements when a user signs into the application. I got a solution that kinda worked with Cursor's (and Claude's) help. Then I went for a walk and without being in front of a computer found myself fixing the bugs I knew the solution I had just implemented created. I had the application and its intricacies in my head and was able to walk through my solution and find additional bugs.</p>
-<p>This gets at the heart of what we should be hiring for – the ability to put a problem in your head and then play with it like a living, functioning system. We're stuck interviewing for memorization and intense recall when we should be looking for systems imagination.</p>
-<p>When we give interviewees problems during an interview, we're not giving them time to load the model into their brains and then show you how it works for them. Their goals are to game your system hoping to be lucky enough to have studied the exact problem you're giving them to solve.</p>
+<p><a href="https://www.404media.co/anthropic-claude-job-application-ai-assistants/">Finding out</a>
+that Anthropic is asking developers to not use AI during the interview process
+is pretty bonkers. I think it shows that we've always half-assed our way into
+finding good engineers.</p>
+<p>This morning I fixed a bug with syncing anonymous posters and statements when a
+user signs into the application. I got a solution that kinda worked with
+Cursor's (and Claude's) help. Then I went for a walk and without being in front
+of a computer found myself fixing the bugs I knew the solution I had just
+implemented created. I had the application and its intricacies in my head and
+was able to walk through my solution and find additional bugs.</p>
+<p>This gets at the heart of what we should be hiring for – the ability to put a
+problem in your head and then play with it like a living, functioning system.
+We're stuck interviewing for memorization and intense recall when we should be
+looking for systems imagination.</p>
+<p>When we give interviewees problems during an interview, we're not giving them
+time to load the model into their brains and then show you how it works for
+them. Their goals are to game your system hoping to be lucky enough to have
+studied the exact problem you're giving them to solve.</p>
 <h2 id="a-whole-class-of-bugs">A Whole Class of Bugs</h2>
 <p>These 22 lines of code remove a whole class of bugs around document ID:</p>
 <pre language="typescript"><code class="language-typescript">const convert: FirestoreDataConverter&lt;DocumentData, DocumentData&gt; = {
   fromFirestore: (
     snapshot: DocumentSnapshot&lt;DocumentData&gt;,
-    options: SnapshotOptions
+    options: SnapshotOptions,
   ) =&gt; {
-    const data = snapshot.data(options)
-    if (!data) return null
+    const data = snapshot.data(options);
+    if (!data) return null;
     const return_data = {
       ...data,
       id: snapshot.id,
@@ -84,27 +118,49 @@
       path: snapshot.ref.path,
       created_at: snapshot.createTime?.toDate(),
       updated_at: snapshot.updateTime?.toDate(),
-      read_at: snapshot.readTime?.toDate()
-    }
-    return return_data
+      read_at: snapshot.readTime?.toDate(),
+    };
+    return return_data;
   },
   toFirestore: (model: WithFieldValue&lt;DocumentData&gt;) =&gt; {
-    const { updated_at, created_at, id, read_at, ...data } = model
-    return data
-  }
-}</code></pre>
-<p>Only in the beginning of your firestore app can you store the document ID inside the document. If references get out of sync, you'll barely notice yourself driving into the wall.</p>
+    const { updated_at, created_at, id, read_at, ...data } = model;
+    return data;
+  },
+};</code></pre>
+<p>Only in the beginning of your firestore app can you store the document ID inside
+the document. If references get out of sync, you'll barely notice yourself
+driving into the wall.</p>
 <p>These are the kinds of worries I have swimming around in my head.</p>
 <h2 id="i-hypocrite">I, Hypocrite</h2>
-<p>When working in Firestore you want to build your app around the document id as the one source of truth. the change above reinforces document id as king. Using data converters frees me to have easy access in code to id while never duplicating it inside the schema. Now we are doing what we can in our app to enable fast development and intuitive developer experience while maintaining data integrity.</p>
-<p>But with Realness this approach would prove to be unstable, because of how different the databases purpose are.</p>
-<p>Since Realness is an HTML database build to be device centric we want the <code>itemid</code> attribute to be the source of truth the rest of the application relies on. The poster's file name can and will change based on the context. On the network it's saved as <code>/author/type/created-at</code> which is optimized for feeds.</p>
-<p>When you download the poster the name is ornate <code>Scott Fryxell, Thursday, February 6 at 1_31 PM.svg</code>, as rococo as I can go with a file name.</p>
-<p>by keeping the source of truth inside the html I can query it's <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Microdata">Microdata</a> and build an object model magically. It comes alive on device and keeps my promise to the user that the server is  inert.</p>
-<p>I can live in both of these worlds I can load them both into my imagination and compare contrast and analyze how they perform against their purpose.</p>
+<p>When working in Firestore you want to build your app around the document id as
+the one source of truth. the change above reinforces document id as king. Using
+data converters frees me to have easy access in code to id while never
+duplicating it inside the schema. Now we are doing what we can in our app to
+enable fast development and intuitive developer experience while maintaining
+data integrity.</p>
+<p>But with Realness this approach would prove to be unstable, because of how
+different the databases purpose are.</p>
+<p>Since Realness is an HTML database build to be device centric we want the
+<code>itemid</code> attribute to be the source of truth the rest of the application relies
+on. The poster's file name can and will change based on the context. On the
+network it's saved as <code>/author/type/created-at</code> which is optimized for feeds.</p>
+<p>When you download the poster the name is ornate
+<code>Scott Fryxell, Thursday, February 6 at 1_31 PM.svg</code>, as rococo as I can go with
+a file name.</p>
+<p>by keeping the source of truth inside the html I can query it's
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Microdata">Microdata</a> and
+build an object model magically. It comes alive on device and keeps my promise
+to the user that the server is inert.</p>
+<p>I can live in both of these worlds I can load them both into my imagination and
+compare contrast and analyze how they perform against their purpose.</p>
 <h2 id="what-really-matters">What Really Matters</h2>
-<p>It shouldn't matter that the developer is using AI. What matters is how good you can ride the bicycle of your mind.</p>
-<p>I want to hire and work with people that have active imaginations, are tidy, and can hang out with queers and meat-heads in equal measure, who want a friend group filled with some motherfuckers who are on fetlife and others who go to church. You know, they keep themselves clean and can navigate peculiarities with curiosity.</p>
+<p>It shouldn't matter that the developer is using AI. What matters is how good you
+can ride the bicycle of your mind.</p>
+<p>I want to hire and work with people that have active imaginations, are tidy, and
+can hang out with queers and meat-heads in equal measure, who want a friend
+group filled with some motherfuckers who are on fetlife and others who go to
+church. You know, they keep themselves clean and can navigate peculiarities with
+curiosity.</p>
 <p><a href="https://news.ycombinator.com/item?id=43054340">comments</a></p></section>
     </details>
   </article>
@@ -255,9 +311,13 @@ Opposing views emanating out of the center of elitism. What's it gonna be? Our e
         <time itemprop="datePublished" datetime="2023-02-16">February 16, 2023</time>
       </figcaption>
     </figure></summary>
-      <section itemprop="articleBody"><p>On iOS, all web apps launched from the home screen have to execute within a webkit rendering context.</p>
-<p>For developers trying to exist outside walled gardens the home screen is the fulcrum that enforces Apple's monopoly.</p>
-<p>I've read about how the EU is forcing apple to allow rendering engines other then webkit. My hope is that we can hold the line and demand these rendering engines have access to the home screen.</p>
+      <section itemprop="articleBody"><p>On iOS, all web apps launched from the home screen have to execute within a
+webkit rendering context.</p>
+<p>For developers trying to exist outside walled gardens the home screen is the
+fulcrum that enforces Apple's monopoly.</p>
+<p>I've read about how the EU is forcing apple to allow rendering engines other
+then webkit. My hope is that we can hold the line and demand these rendering
+engines have access to the home screen.</p>
 <p>For me, this is the only sure path to a fair marketplace.</p>
 <h5 id="a-comments"><a href="https://news.ycombinator.com/item?id=34824520">comments</a></h5></section>
     </details>
@@ -315,12 +375,27 @@ Opposing views emanating out of the center of elitism. What's it gonna be? Our e
         <time itemprop="datePublished" datetime="2022-05-18">May 18, 2022</time>
       </figcaption>
     </figure></summary>
-      <section itemprop="articleBody"><p>Edge poses weird quandries when you start taking advantage of how close your code and data are.</p>
-<p>I have used HTML for some Pinia duties for years. the current state of any object is the html that is being rendered. If I need new state I load the object from the local database and render it. It's instant.</p>
-<p>I use The DOM to manage mutations. What the person is viewing is what the components are sharing. The data is right there. Nothing is out of sync from the user.</p>
-<p>The state can be shared accross components via <code>load</code> and <code>list</code> methods I have keyed to microdata's <code>itemid</code>x attribute itemid=/${userid}/posters/${created_at}. Most of the time this works great. But ocassionally I need changes I'm making to spread out accross each component instantly rather than waiting for <code>load</code> and <code>list</code> to be called. This is where Vue 3's composables have come in handy.</p>
-<p>In Realness, Relations are who you are following. They are referenced in like 15 modules. Each instance of relations only knows about itself and isn't aware of changes. I have to pass events for everything to coordinate.</p>
-<p>This has created some spaghetti code that I spent yesterday cleaning up with <a href="https://vueschool.io/articles/vuejs-tutorials/home-rolled-store-with-the-vue-js-composition-api/">module level reference</a> variables defined inside composable files eg <code>@/use/people</code>. State changes can be shared accross all modules instantly bringing feature parity with Pinia.</p></section>
+      <section itemprop="articleBody"><p>Edge poses weird quandries when you start taking advantage of how close your
+code and data are.</p>
+<p>I have used HTML for some Pinia duties for years. the current state of any
+object is the html that is being rendered. If I need new state I load the object
+from the local database and render it. It's instant.</p>
+<p>I use The DOM to manage mutations. What the person is viewing is what the
+components are sharing. The data is right there. Nothing is out of sync from the
+user.</p>
+<p>The state can be shared accross components via <code>load</code> and <code>list</code> methods I have
+keyed to microdata's <code>itemid</code>x attribute
+itemid=/${userid}/posters/${created_at}. Most of the time this works great. But
+ocassionally I need changes I'm making to spread out accross each component
+instantly rather than waiting for <code>load</code> and <code>list</code> to be called. This is where
+Vue 3's composables have come in handy.</p>
+<p>In Realness, Relations are who you are following. They are referenced in like 15
+modules. Each instance of relations only knows about itself and isn't aware of
+changes. I have to pass events for everything to coordinate.</p>
+<p>This has created some spaghetti code that I spent yesterday cleaning up with
+<a href="https://vueschool.io/articles/vuejs-tutorials/home-rolled-store-with-the-vue-js-composition-api/">module level reference</a>
+variables defined inside composable files eg <code>@/use/people</code>. State changes can
+be shared accross all modules instantly bringing feature parity with Pinia.</p></section>
     </details>
   </article>
 <article itemscope itemtype="http://schema.org/BlogPosting">
@@ -460,9 +535,12 @@ Opposing views emanating out of the center of elitism. What's it gonna be? Our e
         <time itemprop="datePublished" datetime="2022-01-22">January 22, 2022</time>
       </figcaption>
     </figure></summary>
-      <section itemprop="articleBody"><p>I can feel sql slowing me down. I spent 4 hours yesterday massaging 465 entries to get them to import into SQL. It's like 1983.</p>
-<p>Because HTML is so permissive I don't have this problem. I always get a dom. I can always dig into what's going on.</p>
-<p>Enterprise's love SQL. And profiting from your laziness. Facebook is SQL. Realness is HTML.</p>
+      <section itemprop="articleBody"><p>I can feel sql slowing me down. I spent 4 hours yesterday massaging 465 entries
+to get them to import into SQL. It's like 1983.</p>
+<p>Because HTML is so permissive I don't have this problem. I always get a dom. I
+can always dig into what's going on.</p>
+<p>Enterprise's love SQL. And profiting from your laziness. Facebook is SQL.
+Realness is HTML.</p>
 <p>HTML is my database</p></section>
     </details>
   </article>
@@ -509,15 +587,33 @@ challenge that people on realness can help realize.</p></section>
       </figcaption>
     </figure></summary>
       <section itemprop="articleBody"><p>I am not above using a hack.</p>
-<p>I am finishing this conversion to Vue 3.2. I am comfortable with it now. I let my tests start to fail and knew my coverage was gonna drop. I will also let my tests fail from time to time.</p>
-<p>VueSchool let me spend October and November learning Vue 3.2, and typescript, and Nuxt, and vuetify, and a whole host of other pieces of the vue ecosystem. Having gone hard and studied and focused on learning where we are as an industry, I am turning back towards My specific development goal – making realness posters fun. My immediate goal is How to color, style and animate the posters realness creates. I've got the social network part built. Converting pictures that you take into vector graphics with multiple layers that you can color and animate.</p>
+<p>I am finishing this conversion to Vue 3.2. I am comfortable with it now. I let
+my tests start to fail and knew my coverage was gonna drop. I will also let my
+tests fail from time to time.</p>
+<p>VueSchool let me spend October and November learning Vue 3.2, and typescript,
+and Nuxt, and vuetify, and a whole host of other pieces of the vue ecosystem.
+Having gone hard and studied and focused on learning where we are as an
+industry, I am turning back towards My specific development goal – making
+realness posters fun. My immediate goal is How to color, style and animate the
+posters realness creates. I've got the social network part built. Converting
+pictures that you take into vector graphics with multiple layers that you can
+color and animate.</p>
 <p>I use firebase storage as to store data in html files. I am happy with my stack.</p>
-<p>Up to now I have used Microdata to describe my types - and a simple 100 line javascript file to parse them. Posters, Avatars, Events, Statements.</p>
-<p>But animating and styling posters is complex. The data that cab exist on a single element is non trivial.</p>
-<p>A path element along could contain 50 or so relevant attributes that I may want to style. I have this problem with svg animate elements too. With a ruleset and validations I don't want to duplicate.</p>
-<p>With a simple one line change I am able to bind a complex element to my data model. It's any animation I can imagine - Run on the GPU. I have easy access to every Object in HTML CSS, and SVG.</p>
-<p>I think of HTML as a first class citizen. I can describe any data type in HTML. Up to now I have satisfied using micro data for this purpose.</p>
-<p>But SVG poses a unique problem. I want all of the attributes, validations, rulesets and privelages of a path element. I need to know everything about it. And I don't want to reproduce it myself.</p>
+<p>Up to now I have used Microdata to describe my types - and a simple 100 line
+javascript file to parse them. Posters, Avatars, Events, Statements.</p>
+<p>But animating and styling posters is complex. The data that cab exist on a
+single element is non trivial.</p>
+<p>A path element along could contain 50 or so relevant attributes that I may want
+to style. I have this problem with svg animate elements too. With a ruleset and
+validations I don't want to duplicate.</p>
+<p>With a simple one line change I am able to bind a complex element to my data
+model. It's any animation I can imagine - Run on the GPU. I have easy access to
+every Object in HTML CSS, and SVG.</p>
+<p>I think of HTML as a first class citizen. I can describe any data type in HTML.
+Up to now I have satisfied using micro data for this purpose.</p>
+<p>But SVG poses a unique problem. I want all of the attributes, validations,
+rulesets and privelages of a path element. I need to know everything about it.
+And I don't want to reproduce it myself.</p>
 <pre><code>
 // from
 case 'path':return element.outerHTML
@@ -525,23 +621,38 @@ case 'path':return element.outerHTML
 // from
 case 'path':return element
 </code></pre>
-<p>Microdata lets me set SVGPathElement directly. I was never constrained to string values. Item supports complex HTML types intuitively.</p>
-<p>with change I get runtime <a href="https://www.motiontricks.com/creating-dynamic-svg-elements-with-javascript/">typing</a> for any path elements <code>&lt;path itemprop="vector"/&gt;</code>.</p>
-<p>Any time I want to type based on an html Element I can. I have sensible defaults and configurable complexity.</p>
-<p>What I love about this is I have easy access to all of CSS's animation effects. Which I can trust to be accelerated on the GPU.</p>
+<p>Microdata lets me set SVGPathElement directly. I was never constrained to string
+values. Item supports complex HTML types intuitively.</p>
+<p>with change I get runtime
+<a href="https://www.motiontricks.com/creating-dynamic-svg-elements-with-javascript/">typing</a>
+for any path elements <code>&lt;path itemprop="vector"/&gt;</code>.</p>
+<p>Any time I want to type based on an html Element I can. I have sensible defaults
+and configurable complexity.</p>
+<p>What I love about this is I have easy access to all of CSS's animation effects.
+Which I can trust to be accelerated on the GPU.</p>
 <blockquote>
-  browsers, you can use CSS for attributes like cx, cy, r etc. When SVG2 is released, it will have geometry properties (cx, cy, r, rx, ry etc.). I’m not going to dive too deep into upcoming features. You can read more about that at your leisure.
+  browsers, you can use CSS for attributes like cx, cy, r etc. When SVG2 is
+  released, it will have geometry properties (cx, cy, r, rx, ry etc.). I’m not
+  going to dive too deep into upcoming features. You can read more about that at
+  your leisure.
 </blockquote>
 <ul>
   <li>This has convinced me that HTML is database.</li>
   <li>I want to spend my performance budget wisely.</li>
-  <li>I can build Realness AND build a service that serves validated transforms in HTML</li>
-  <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/path">event setting d via style</a> which is crazy and amazing to me</li>
+  <li>I can build Realness AND build a service that serves validated transforms in
+  HTML</li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/path">event setting d via style</a>
+  which is crazy and amazing to me</li>
 </ul>
 <p>A secondary</p>
-<p>How am I going to animate these vector graphics in a way that I can make downloadable? I have landed on using CSS's animation tools first but haven't yet figured out how to incorporate the named animation into the downloaded vector.</p>
-<p>You can make and attach your own custom comoponents to and attach then manipulate them as types during your runtime.</p>
-<p>This is better typing than Even if you need to extract your data to a database I would argue that this is a more natural way to write webapps. It's a natureal friend of serverless edge and data sanctity.</p></section>
+<p>How am I going to animate these vector graphics in a way that I can make
+downloadable? I have landed on using CSS's animation tools first but haven't yet
+figured out how to incorporate the named animation into the downloaded vector.</p>
+<p>You can make and attach your own custom comoponents to and attach then
+manipulate them as types during your runtime.</p>
+<p>This is better typing than Even if you need to extract your data to a database I
+would argue that this is a more natural way to write webapps. It's a natureal
+friend of serverless edge and data sanctity.</p></section>
     </details>
   </article>
 <article itemscope itemtype="http://schema.org/BlogPosting">
@@ -553,31 +664,32 @@ case 'path':return element
         <time itemprop="datePublished" datetime="2021-11-09">November 9, 2021</time>
       </figcaption>
     </figure></summary>
-      <section itemprop="articleBody"><p>I can't spell the word accessibility. I can’t spell a lot of words. As a dyslexic, it's even harder for me to read them. I was diagnosed in my late thirties, well into my career as a software developer. Dyslexia––commonly defined as a brain-based learning disability that specifically impairs a person’s ability to read despite having normal intelligence––affects up to 20 percent of the population and is the most common of all neuro-cognitive disorders. As software development matures into the twenty-first century, most software companies will have us on their teams.</p>
-<p>We can talk about accessibility, or we can practice accessibility. How do we include and optimize for the widest array of readers? Take a moment to consider variable naming.</p>
-<p>As I read through a line of code, my brain only processes the shape of the whole word to begin to understand it. It is a spacial understanding, rather than linear. PascalCase is becoming all the rage as it improves editors’ ability to autocomplete and make inferences about code. VueJs is going all in on PascelCase and the new <code>&lt;script setup&gt;</code> syntactic sugar. You have to use PascalCase to get components auto-included in your template. But for my own purposes and for the accessibility of others like me, I use snake_case and kabab-case for my naming.</p>
-<p>Forced into other types of casing slows me down. I am robbed of my shape-first reading strategy.</p>
-<p>We've been using spaces between words for ten thousand years. And it’s been less than a century since dyslexia has been widely understood. I don't understand why I have to <a href="https://v3.vuejs.org/style-guide/#self-closing-components-strongly-recommended">prove</a> having a space between words makes programming accessible to the largest possible audience.</p></section>
-    </details>
-  </article>
-<article itemscope itemtype="http://schema.org/BlogPosting">
-    <details>
-      <summary><figure>
-      
-      <figcaption>
-        <h2 itemprop="headline"><a itemprop="url" href="/blog/2020/time-for-people">It's Been a Year</a></h2>
-        <time itemprop="datePublished" datetime="2020-01-05">January 5, 2020</time>
-      </figcaption>
-    </figure></summary>
-      <section itemprop="articleBody"><p>Realness is far enough along now for beta users. I want to announce realness to technical people who can help me evaluate it's effectiveness.</p>
-<p>What I need most at first are people to try out nerds.realness.online and see what they think. I have yet to set that url up.</p>
-<p>is it a viable option for taking social networking away from the people who would.  manipulate us into beliebing</p>
-<p>I'm gonna publish my journals from the last couple of years so there is some idea what this shit has been like to build.</p>
-<p>First I gotta go through them and censor the names of any women I did perverted things to in my writing.</p>
-<p>I just watched this documentary about <a href="https://www.youtube.com/watch?v=JHDkALRz5Rk">poverty in american</a> and am loosing my mind in hatred for all the wealth around me.</p>
-<p>I'm gonna choke to death from all the teeth I'm missing. But I'm not really here you fucking assholes am I. You just see <a href="https://danwang.co/college-girardian-terror/">each other</a>.</p>
-<p>I need help. But I'm enraged by the people who are in the best postion to help me. Who are you tech fuckers anymore, because I don't recognize anyone I can work with.</p>
-<p>I feel alone</p></section>
+      <section itemprop="articleBody"><p>I can't spell the word accessibility. I can’t spell a lot of words. As a
+dyslexic, it's even harder for me to read them. I was diagnosed in my late
+thirties, well into my career as a software developer. Dyslexia––commonly
+defined as a brain-based learning disability that specifically impairs a
+person’s ability to read despite having normal intelligence––affects up to 20
+percent of the population and is the most common of all neuro-cognitive
+disorders. As software development matures into the twenty-first century, most
+software companies will have us on their teams.</p>
+<p>We can talk about accessibility, or we can practice accessibility. How do we
+include and optimize for the widest array of readers? Take a moment to consider
+variable naming.</p>
+<p>As I read through a line of code, my brain only processes the shape of the whole
+word to begin to understand it. It is a spacial understanding, rather than
+linear. PascalCase is becoming all the rage as it improves editors’ ability to
+autocomplete and make inferences about code. VueJs is going all in on PascelCase
+and the new <code>&lt;script setup&gt;</code> syntactic sugar. You have to use PascalCase to get
+components auto-included in your template. But for my own purposes and for the
+accessibility of others like me, I use snake_case and kabab-case for my naming.</p>
+<p>Forced into other types of casing slows me down. I am robbed of my shape-first
+reading strategy.</p>
+<p>We've been using spaces between words for ten thousand years. And it’s been less
+than a century since dyslexia has been widely understood. I don't understand why
+I have to
+<a href="https://v3.vuejs.org/style-guide/#self-closing-components-strongly-recommended">prove</a>
+having a space between words makes programming accessible to the largest
+possible audience.</p></section>
     </details>
   </article></section>
   <footer></footer>
