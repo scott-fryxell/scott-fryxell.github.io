@@ -1,5 +1,6 @@
 ---
 title: Thinking About Realness
+draft: true
 date: 2019-08-10
 ---
 
@@ -13,12 +14,11 @@ We leave it to you and your device to know what your relationships are. We belie
 
 Realness has no idea about your relationships. We know who you are individually, what each of you post, but have no idea who your friends are on the network.
 
-
 ## Trust but verify
+
 We believe all healthy relationships support a trust but verify foundation. You can read and hopefully understand the code that we have written so that you can verify what we are saying is real. Realness is out in the open. It's a foundational element of how we want to work and live in this world.
 
 I want to focus on our unique view of relationships. It's too great a power
-
 
 Realness is designed to function without advertising. We don't believe that people should be able to pay to get access to the time you are socializing.
 
@@ -27,7 +27,6 @@ Realness is designed to be fast. It uses vector graphics for this, but also beca
 Realness is a serious attempt at recreating community online. It's an attempt to start afresh carrying forward some lessons we have all learned.
 
 I invite you to join us, as we re-align ourselves with the stars and try this one more time.
-
 
 ## Pyramiding it
 
