@@ -83,6 +83,9 @@ dist
 # Service worker
 sw.*
 
+# mkcert local certs
+*.pem
+
 # macOS
 .DS_Store
 

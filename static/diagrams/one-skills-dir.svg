@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 268" width="660" height="268" role="img" aria-labelledby="stitle sdesc">
+  <title id="stitle">One skills directory, three agents</title>
+  <desc id="sdesc">A single box on the left marked skills slash, twenty seven skills, harness wide. Three curved lines fan out from it to three boxes on the right - pi, Claude Code, and Cursor. Each line is labelled with the path that tool insists on looking in: bin slash pi with the skill flag, dot claude slash skills, and dot cursor slash skills. Only the first is a real argument; the other two are symlinks pointing back at the one directory.</desc>
+  <style>
+    .box { fill: #c9cfd6; }
+    .source { fill: #d0342c; fill-opacity: .18; stroke: #d0342c; stroke-width: 2; }
+    .name { fill: #1b1f24; font: 600 17px system-ui, sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .source-name { fill: #d0342c; font: 700 19px system-ui, sans-serif; text-anchor: middle; dominant-baseline: central; letter-spacing: .02em; }
+    .meta { fill: #6b7480; font: 400 13px system-ui, sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .wire { fill: none; stroke: #6b7480; stroke-width: 1.5; }
+    .wire-real { stroke: #d0342c; stroke-width: 2; }
+    .edge { fill: #6b7480; font: 400 13px system-ui, sans-serif; text-anchor: middle; }
+    .edge-real { fill: #d0342c; font: 600 13px system-ui, sans-serif; text-anchor: middle; }
+    .tip { fill: #6b7480; }
+    .tip-real { fill: #d0342c; }
+    @media (prefers-color-scheme: dark) {
+      .box { fill: #4a525c; }
+      .name { fill: #e6eaee; }
+      .meta, .edge { fill: #9aa4b0; }
+      .wire { stroke: #9aa4b0; }
+      .source { fill: #e2554c; fill-opacity: .22; stroke: #e2554c; }
+      .source-name, .edge-real { fill: #f0776e; }
+      .wire-real { stroke: #e2554c; }
+      .tip { fill: #9aa4b0; }
+      .tip-real { fill: #e2554c; }
+    }
+  </style>
+
+  <rect class="source" x="24" y="96" width="188" height="76" rx="6"/>
+  <text class="source-name" x="118" y="126">skills/</text>
+  <text class="meta" x="118" y="150">27 skills, harness wide</text>
+
+  <path class="wire wire-real" d="M212 118C300 118 340 46 428 46"/>
+  <path class="wire" d="M212 134H428"/>
+  <path class="wire" d="M212 150C300 150 340 222 428 222"/>
+
+  <path class="tip tip-real" d="M428 40l14 6-14 6z"/>
+  <path class="tip" d="M428 128l14 6-14 6z"/>
+  <path class="tip" d="M428 216l14 6-14 6z"/>
+
+  <text class="edge edge-real" x="320" y="60">bin/pi --skill</text>
+  <text class="edge" x="320" y="126">.claude/skills -&gt;</text>
+  <text class="edge" x="300" y="216">.cursor/skills -&gt;</text>
+
+  <rect class="box" x="444" y="22" width="192" height="48" rx="6"/>
+  <text class="name" x="540" y="46">pi</text>
+
+  <rect class="box" x="444" y="110" width="192" height="48" rx="6"/>
+  <text class="name" x="540" y="134">Claude Code</text>
+
+  <rect class="box" x="444" y="198" width="192" height="48" rx="6"/>
+  <text class="name" x="540" y="222">Cursor</text>
+</svg>

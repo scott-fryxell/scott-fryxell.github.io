@@ -27,6 +27,10 @@
   --text: hsl(40, 8%, 12%);
   --surface: hsl(40, 12%, 96%);
   --max-width: 48rem;
+  /* prose measure: ch tracks the fluid font size, rem would not */
+  --measure: 50ch;
+  /* plates, code and tables break past the measure to here */
+  --wide: 64rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -43,7 +47,7 @@ body {
   font-weight: 400;
   font-size: clamp(
     1.125rem,
-    1.125rem + (1.333 - 1.125) * (100dvw - 24rem) / (80rem - 24rem),
+    1.125rem + (1.333rem - 1.125rem) * (100dvw - 24rem) / (80rem - 24rem),
     1.333rem
   );
   background: var(--surface);
@@ -54,6 +58,23 @@ body {
 
 main {
   min-height: 100dvh;
+}
+
+/* ── Section break: three clay dots, a pause marker ── */
+
+hr {
+  border: 0;
+  margin: calc(var(--base-line) * 2) auto;
+  text-align: center;
+}
+
+hr::before {
+  content: "...";
+  color: var(--red);
+  font-size: 1.5em;
+  letter-spacing: 0.4em;
+  /* letter-spacing trails the last dot; pad the left to recentre */
+  padding-left: 0.4em;
 }
 
 /* ── Site header ── */
@@ -164,7 +185,7 @@ figcaption h2 {
   line-height: 1.1;
   font-size: clamp(
     1.602rem,
-    1.602rem + (2.441 - 1.602) * (100dvw - 24rem) / (80rem - 24rem),
+    1.602rem + (2.441rem - 1.602rem) * (100dvw - 24rem) / (80rem - 24rem),
     2.441rem
   );
   color: inherit;
@@ -173,7 +194,7 @@ figcaption h2 {
 figcaption h2 {
   font-size: clamp(
     1.266rem,
-    1.266rem + (1.953 - 1.266) * (100dvw - 24rem) / (80rem - 24rem),
+    1.266rem + (1.953rem - 1.266rem) * (100dvw - 24rem) / (80rem - 24rem),
     1.953rem
   );
 }
@@ -193,6 +214,11 @@ figcaption a:hover {
   text-decoration: underline;
   text-decoration-thickness: 0.04em;
   text-underline-offset: 0.15em;
+}
+
+strong, b {
+  font-weight: 800;
+  color: var(--red);
 }
 
 /* ── Index / details expand ── */
@@ -223,7 +249,7 @@ details > summary figcaption::after {
   bottom: var(--base-line);
   font-size: clamp(
     1.602rem,
-    1.602rem + (2.441 - 1.602) * (100dvw - 24rem) / (80rem - 24rem),
+    1.602rem + (2.441rem - 1.602rem) * (100dvw - 24rem) / (80rem - 24rem),
     2.441rem
   );
   font-weight: 300;
@@ -246,12 +272,21 @@ details[open] > summary figcaption {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: linear-gradient(
-    to right,
-    hsla(0, 0%, 0%, 0.78) 0%,
-    transparent 55%
-  );
+  background: none;
+  color: var(--text);
   animation: fade-in 0.45s ease both;
+}
+
+@media (prefers-color-scheme: dark) {
+  details[open] > summary figcaption {
+    background: linear-gradient(
+      to right,
+      hsla(0, 0%, 0%, 0.92) 0%,
+      hsla(0, 0%, 0%, 0.55) 30%,
+      transparent 60%
+    );
+    color: hsl(40, 12%, 92%);
+  }
 }
 
 /* Title and date ride the same curve as the poster — title leads, date follows */
@@ -299,29 +334,164 @@ details[open] > section {
 
 /* ── Article page ── */
 
-article[itemscope] > figure {
-  height: auto;
-  width: fit-content;
-  margin-inline: auto;
-}
-
 article[itemscope] > figure img {
-  width: min(100vw, calc(88dvh * var(--ratio, 1.78)));
-  height: auto;
-  aspect-ratio: var(--ratio, 1.78);
+  width: calc(min(56.25vw, 72dvh) * var(--ratio, 1.78));
 }
 
-/* Caption must not widen the fit-content figure past the poster,
-   or its gradient paints onto the bare page background */
 article[itemscope] > figure figcaption {
-  width: 0;
-  min-width: 100%;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  /* Light mode: no scrim, dark text on the page surface */
+  background: none;
+  color: var(--text);
 }
 
+@media (prefers-color-scheme: dark) {
+  article[itemscope] > figure figcaption {
+    background: linear-gradient(
+      to right,
+      hsla(0, 0%, 0%, 0.92) 0%,
+      hsla(0, 0%, 0%, 0.55) 30%,
+      transparent 60%
+    );
+    color: hsl(40, 12%, 92%);
+  }
+}
+
+article[itemscope] > figure .back-link {
+  position: absolute;
+  left: var(--base-line);
+  bottom: var(--base-line);
+  display: block;
+  width: calc(var(--base-line) * 1.75);
+  height: calc(var(--base-line) * 1.75);
+  color: transparent;
+  text-decoration: none;
+}
+
+article[itemscope] > figure .back-link:hover {
+  text-decoration: none;
+}
+
+article[itemscope] > figure .back-link::before {
+  content: "+";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-size: clamp(
+    1.602rem,
+    1.602rem + (2.441rem - 1.602rem) * (100dvw - 24rem) / (80rem - 24rem),
+    2.441rem
+  );
+  font-weight: 300;
+  line-height: 1;
+  rotate: 45deg;
+  color: hsl(40, 12%, 92%);
+}
+
+article[itemscope] > figure figcaption h1 {
+  font-size: clamp(
+    1.266rem,
+    1.266rem + (1.953rem - 1.266rem) * (100dvw - 24rem) / (80rem - 24rem),
+    1.953rem
+  );
+}
+
+/* Narrow screens have no room beside the poster, so the split becomes a
+   stack: art on top, caption below on the surface instead of over the art. */
+@media (max-width: 40rem) {
+  article[itemscope] > figure {
+    height: auto;
+    grid-template-rows: auto auto;
+  }
+
+  article[itemscope] > figure img {
+    grid-area: 1 / 1;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  article[itemscope] > figure figcaption {
+    grid-area: 2 / 1;
+    background: none;
+    color: var(--text);
+    padding-bottom: calc(var(--base-line) * 3);
+  }
+
+  article[itemscope] > figure .back-link::before {
+    color: var(--text);
+  }
+
+  /* the arc needs the gutters too - let it run edge to edge */
+  section[itemprop="articleBody"] > .plate:has(img[src*="frontier-zone"]) {
+    grid-column: full;
+  }
+}
+
+/* Three tracks: prose sits on text, plates and code widen to wide, nothing
+   needs full yet but the gutter is there when something does. */
 section[itemprop="articleBody"] {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: calc(var(--base-line) * 2) var(--base-line);
+  --gutter: var(--base-line);
+  --bleed: calc((var(--wide) - var(--measure)) / 2);
+
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax(var(--gutter), 1fr)
+    [wide-start] minmax(0, var(--bleed))
+    [text-start] min(var(--measure), 100% - var(--gutter) * 2) [text-end]
+    minmax(0, var(--bleed))
+    [wide-end] minmax(var(--gutter), 1fr) [full-end];
+  padding: calc(var(--base-line) * 2) 0;
+}
+
+section[itemprop="articleBody"] > * {
+  grid-column: text;
+}
+
+section[itemprop="articleBody"] > .plate,
+section[itemprop="articleBody"] > pre,
+section[itemprop="articleBody"] > table {
+  grid-column: wide;
+}
+
+section[itemprop="articleBody"] > details,
+section[itemprop="articleBody"] > .inline-reveal-panel {
+  grid-column: wide;
+}
+
+section[itemprop="articleBody"] > details > summary {
+  max-width: var(--measure);
+}
+
+section[itemprop="articleBody"] > .inline-reveal-panel[hidden] {
+  display: none;
+}
+
+section[itemprop="articleBody"] .plate {
+  margin: calc(var(--base-line) * 2) 0;
+  height: auto;
+  overflow: visible;
+
+  & img {
+    display: block;
+    justify-self: center;
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+  }
+
+  & figcaption {
+    margin-top: calc(var(--base-line) / 2);
+    font-size: 0.8em;
+    font-weight: 300;
+    line-height: 1.4;
+    color: color-mix(in srgb, var(--text) 60%, transparent);
+    max-width: var(--measure);
+  }
 }
 
 section[itemprop="articleBody"] p {
@@ -366,11 +536,48 @@ section[itemprop="articleBody"] pre {
   overflow-x: auto;
   margin: var(--base-line) 0;
   border-radius: 0.25rem;
+
+  /* shiki writes both themes into every span; pick the light one by default */
+  & span {
+    color: var(--shiki-light);
+    font-style: var(--shiki-light-font-style, normal);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  section[itemprop="articleBody"] pre span {
+    color: var(--shiki-dark);
+    font-style: var(--shiki-dark-font-style, normal);
+  }
 }
 
 section[itemprop="articleBody"] code {
   font-family: "Monaco", "Menlo", monospace;
   font-size: 0.875em;
+}
+
+section[itemprop="articleBody"] table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--base-line) 0;
+  text-align: left;
+
+  & th,
+  & td {
+    padding: calc(var(--base-line) / 3) calc(var(--base-line) / 2);
+    border-bottom: 1px solid color-mix(in srgb, var(--blue) 20%, transparent);
+    vertical-align: baseline;
+  }
+
+  & th {
+    font-weight: 600;
+  }
+
+  & td:first-child {
+    font-family: "Monaco", "Menlo", monospace;
+    font-size: 0.875em;
+    white-space: nowrap;
+  }
 }
 
 section[itemprop="articleBody"] ul,
@@ -381,6 +588,12 @@ section[itemprop="articleBody"] ol {
 
 section[itemprop="articleBody"] li {
   margin-bottom: calc(var(--base-line) * 0.33);
+}
+
+/* Print-only apparatus: the numbers and their endnote list (see @media print) */
+.note-mark,
+.notes {
+  display: none;
 }
 
 footer {
@@ -419,11 +632,8 @@ section[itemtype*="Person"] > header img {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    background: linear-gradient(
-      to right,
-      hsla(0, 0%, 0%, 0.78) 0%,
-      transparent 55%
-    );
+    background: none;
+    color: var(--text);
     animation: fade-in 0.45s ease both;
   }
 
@@ -463,7 +673,7 @@ section[itemtype*="Person"] > header address p {
   font-weight: 300;
   font-size: clamp(
     1.266rem,
-    1.266rem + (1.953 - 1.266) * (100dvw - 24rem) / (80rem - 24rem),
+    1.266rem + (1.953rem - 1.266rem) * (100dvw - 24rem) / (80rem - 24rem),
     1.953rem
   );
   letter-spacing: -0.02em;
@@ -495,7 +705,7 @@ section[itemtype*="Person"] > header address a:hover {
   line-height: 1;
   font-size: clamp(
     1.424rem,
-    1.424rem + (1.953 - 1.424) * (100dvw - 24rem) / (80rem - 24rem),
+    1.424rem + (1.953rem - 1.424rem) * (100dvw - 24rem) / (80rem - 24rem),
     1.953rem
   );
   background: linear-gradient(60deg, var(--blue), var(--red));
@@ -548,7 +758,7 @@ article[itemtype*="Job"] > header h3 {
   font-weight: 400;
   font-size: clamp(
     1.125rem,
-    1.125rem + (1.266 - 1.125) * (100dvw - 24rem) / (80rem - 24rem),
+    1.125rem + (1.266rem - 1.125rem) * (100dvw - 24rem) / (80rem - 24rem),
     1.266rem
   );
   letter-spacing: -0.01em;
@@ -606,4 +816,382 @@ article[itemtype*="Job"] p[itemprop="description"] a:hover {
 #experience > footer a {
   color: var(--blue);
   text-decoration: none;
+}
+
+/* ── Skill map ── */
+
+/* Five stops of the planning loop. auto-fit means the columns fold to two,
+   then one, as the measure narrows - no breakpoints, no shrinking text. */
+section[itemprop="articleBody"] .skill-map {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: calc(var(--base-line) * 0.5);
+}
+
+section[itemprop="articleBody"] .skill-map section {
+  padding: calc(var(--base-line) * 0.75);
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--text) 12%, transparent);
+}
+
+section[itemprop="articleBody"] .skill-map section.lead {
+  background: color-mix(in srgb, var(--red) 14%, transparent);
+  outline: 1.5px solid var(--red);
+}
+
+section[itemprop="articleBody"] .skill-map h3 {
+  margin: 0 0 calc(var(--base-line) * 0.5);
+  padding-bottom: calc(var(--base-line) * 0.25);
+  border-bottom: 1px solid color-mix(in srgb, var(--text) 25%, transparent);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.04em;
+  background: none;
+  color: var(--text);
+}
+
+section[itemprop="articleBody"] .skill-map section.lead h3,
+section[itemprop="articleBody"] .skill-map section.lead li {
+  color: var(--red);
+  font-weight: 700;
+}
+
+section[itemprop="articleBody"] .skill-map ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+section[itemprop="articleBody"] .skill-map li {
+  font-family: ui-monospace, Menlo, monospace;
+  font-size: 0.72rem;
+  line-height: 2.1;
+  overflow-wrap: anywhere;
+}
+
+/* ── Print ──
+   Paper has no dark mode, no hover, no scroll. Gradient-clipped headings go
+   invisible, the poster band eats a page, and the article grid wastes the
+   sheet. Rebuild the page as a document: one column, black on white, links
+   that print where they point. */
+
+@page {
+  margin: 18mm 16mm;
+}
+
+@media print {
+  :root {
+    --text: black;
+    --surface: white;
+    --blue: black;
+    --red: black;
+    --base-line: 12pt;
+  }
+
+  body {
+    background: white;
+    color: black;
+    font-size: 11pt;
+    line-height: 1.5;
+  }
+
+  main {
+    min-height: 0;
+  }
+
+  /* Chrome/Safari keep backgrounds off by default; say so anyway */
+  * {
+    background: none !important;
+    box-shadow: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+
+  /* Site chrome, the poster band, and the affordances that only work on a
+     screen have no job on paper */
+  main > header nav,
+  footer,
+  figure img,
+  details > summary figcaption::after,
+  .inline-reveal-panel {
+    display: none;
+  }
+
+  /* The close "x" is positioned by a rule specific enough (article > figure
+     .back-link) to beat a bare .back-link here, so match that specificity -
+     otherwise it survives onto paper as a stray mark. */
+  article[itemscope] > figure .back-link {
+    display: none;
+  }
+
+  main > header {
+    position: static;
+    padding: 0 0 6pt;
+    border-bottom: 0.5pt solid black;
+    margin-bottom: 12pt;
+  }
+
+  main > header h1 {
+    font-size: 10pt;
+  }
+
+  main > header h1 a,
+  main > header .subtitle {
+    color: black;
+    -webkit-text-fill-color: black;
+  }
+
+  /* The poster is decorative (alt=""). What survives is the caption, which
+     becomes the article's title block. */
+  figure {
+    display: block;
+    height: auto;
+    overflow: visible;
+    break-inside: avoid;
+    break-after: avoid;
+  }
+
+  figcaption {
+    display: block;
+    padding: 0;
+    color: black;
+  }
+
+  figcaption h1,
+  figcaption h2 {
+    font-size: 20pt;
+    font-weight: 400;
+    margin: 0 0 3pt;
+    color: black;
+  }
+
+  figcaption time {
+    font-size: 9pt;
+    opacity: 1;
+    color: black;
+  }
+
+  /* One column, full measure of the page */
+  section[itemprop="articleBody"] {
+    display: block;
+    padding: 12pt 0 0;
+  }
+
+  section[itemprop="articleBody"] > .plate,
+  section[itemprop="articleBody"] > pre,
+  section[itemprop="articleBody"] > table,
+  section[itemprop="articleBody"] > details {
+    max-width: none;
+  }
+
+  /* Gradient text prints as nothing - put the ink back */
+  section[itemprop="articleBody"] h1,
+  section[itemprop="articleBody"] h2,
+  section[itemprop="articleBody"] h3,
+  #skills h2,
+  #experience > header h2 {
+    background: none;
+    -webkit-text-fill-color: black;
+    color: black;
+    font-weight: 600;
+    break-after: avoid;
+    break-inside: avoid;
+    margin: 16pt 0 6pt;
+  }
+
+  section[itemprop="articleBody"] h1 { font-size: 16pt; }
+  section[itemprop="articleBody"] h2 { font-size: 14pt; }
+  section[itemprop="articleBody"] h3 { font-size: 12pt; }
+
+  p, li, blockquote {
+    orphans: 3;
+    widows: 3;
+  }
+
+  section[itemprop="articleBody"] p {
+    margin: 0 0 8pt;
+  }
+
+  /* A printed link is a dead end unless it says where it goes. Articles
+     carry numbered endnotes; the resume has few enough to inline. */
+  article[itemtype*="Job"] a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    word-break: break-all;
+  }
+
+  .note-mark {
+    display: inline;
+    font-size: 0.7em;
+    font-weight: 600;
+    line-height: 0;
+    vertical-align: super;
+  }
+
+  .notes {
+    display: block;
+    break-before: avoid;
+    margin: 16pt 0 0;
+    padding: 8pt 0 0 18pt;
+    border-top: 0.5pt solid hsl(0, 0%, 70%);
+    font-size: 8.5pt;
+    line-height: 1.5;
+    word-break: break-all;
+  }
+
+  .notes li {
+    margin-bottom: 2pt;
+  }
+
+  section[itemprop="articleBody"] a,
+  article[itemtype*="Job"] a {
+    color: black;
+    /* border, not text-decoration - a line-through underlines the URL too */
+    text-decoration: none;
+    border-bottom: 0.5pt solid black;
+  }
+
+  section[itemprop="articleBody"] blockquote {
+    border-left: 1pt solid black;
+    opacity: 1;
+    break-inside: avoid;
+  }
+
+  /* Shiki writes both themes into every span - paper takes the light one */
+  section[itemprop="articleBody"] pre {
+    border: 0.5pt solid hsl(0, 0%, 70%);
+    padding: 8pt;
+    font-size: 8.5pt;
+    line-height: 1.4;
+    overflow: visible;
+    white-space: pre-wrap;
+    word-break: break-word;
+    break-inside: avoid;
+
+    & span {
+      color: var(--shiki-light) !important;
+    }
+  }
+
+  section[itemprop="articleBody"] table {
+    break-inside: avoid;
+    font-size: 9.5pt;
+
+    & th,
+    & td {
+      border-bottom: 0.5pt solid hsl(0, 0%, 70%);
+    }
+
+    & td:first-child {
+      white-space: normal;
+    }
+  }
+
+  section[itemprop="articleBody"] thead {
+    display: table-header-group;
+  }
+
+  /* Diagrams are content - keep them, just stop them from straddling a break */
+  .plate {
+    break-inside: avoid;
+    margin: 12pt 0;
+
+    & img {
+      max-width: 100%;
+      max-height: 8in;
+      height: auto;
+    }
+
+    & figcaption {
+      font-size: 9pt;
+      color: hsl(0, 0%, 35%);
+    }
+  }
+
+  .skill-map {
+    break-inside: avoid;
+
+    & section {
+      border: 0.5pt solid hsl(0, 0%, 70%);
+    }
+
+    & section.lead {
+      outline: none;
+      border-width: 1.5pt;
+    }
+
+    & li {
+      color: black !important;
+      line-height: 1.5;
+    }
+  }
+
+  /* Index: the cards are a screen affordance. Print the open ones as
+     articles and leave the closed ones as a titled list. */
+  section > article {
+    border-bottom: none;
+    break-before: page;
+  }
+
+  section > article:first-child {
+    break-before: auto;
+  }
+
+  details > summary {
+    cursor: auto;
+  }
+
+  details:not([open]) {
+    break-before: auto;
+  }
+
+  details:not([open]) figcaption h2 {
+    font-size: 12pt;
+  }
+
+  /* ── Resume ── */
+
+  section[itemtype*="Person"] > header {
+    display: block;
+    height: auto;
+    overflow: visible;
+  }
+
+  section[itemtype*="Person"] > header img {
+    display: none;
+  }
+
+  section[itemtype*="Person"] > header address {
+    display: block;
+    padding: 0;
+    color: black;
+  }
+
+  section[itemtype*="Person"] > header address p {
+    font-size: 18pt;
+    margin: 0 0 3pt;
+  }
+
+  section[itemtype*="Person"] > header address a {
+    color: black;
+    font-size: 10pt;
+    margin-right: 12pt;
+  }
+
+  #skills,
+  #experience {
+    max-width: none;
+    padding: 12pt 0 0;
+  }
+
+  article[itemtype*="Job"] {
+    break-inside: avoid;
+    padding: 8pt 0;
+    border-bottom: 0.5pt solid hsl(0, 0%, 80%);
+  }
+
+  #experience > footer {
+    padding-top: 12pt;
+  }
 }

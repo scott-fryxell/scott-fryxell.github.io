@@ -6,10 +6,13 @@
   "author": "Scott Fryxell <scott@realness.online>",
   "scripts": {
     "build": "node build.js",
-    "dev": "node build.js --drafts && npx serve dist"
+    "certs": "mkcert scott-fryxell.local",
+    "dev": "sh serve.sh",
+    "start": "npm run dev"
   },
   "dependencies": {
     "@comark/html": "latest",
-    "comark": "^0.4.0"
+    "comark": "^0.4.0",
+    "shiki": "^4.4.3"
   }
 }
