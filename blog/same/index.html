@@ -3,22 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="darkreader-lock">
   <title>Same — Scott Fryxell</title>
-  <meta name="description" content="I made a reply on hacker news that I want to plant a little firmer in the ground. I don't use the NYtimes app; though I pay for a subscription. I do not accept">
+  <meta name="description" content="I made a reply 1 on hacker news that I want to plant a little firmer in the ground. I don't use the NYtimes app; though I pay for a subscription. I do not accep">
   <link rel="canonical" href="https://scott-fryxell.github.io/blog/same">
   <meta property="og:site_name" content="Scott Fryxell">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Same — Scott Fryxell">
-  <meta property="og:description" content="I made a reply on hacker news that I want to plant a little firmer in the ground. I don't use the NYtimes app; though I pay for a subscription. I do not accept">
+  <meta property="og:description" content="I made a reply 1 on hacker news that I want to plant a little firmer in the ground. I don't use the NYtimes app; though I pay for a subscription. I do not accep">
   <meta property="og:url" content="https://scott-fryxell.github.io/blog/same">
   <meta property="og:image" content="https://scott-fryxell.github.io/posters/Scott%20Fryxell%20%40%20Saturday%20afternoon%2C%20May%2030%20-%201780179724324.svg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Same — Scott Fryxell">
-  <meta name="twitter:description" content="I made a reply on hacker news that I want to plant a little firmer in the ground. I don't use the NYtimes app; though I pay for a subscription. I do not accept">
+  <meta name="twitter:description" content="I made a reply 1 on hacker news that I want to plant a little firmer in the ground. I don't use the NYtimes app; though I pay for a subscription. I do not accep">
   <meta name="twitter:image" content="https://scott-fryxell.github.io/posters/Scott%20Fryxell%20%40%20Saturday%20afternoon%2C%20May%2030%20-%201780179724324.svg">
   <link rel="stylesheet" href="/style.css">
   <link rel="icon" type="image/svg+xml" href="/icons.svg">
   <link rel="apple-touch-icon" href="/192.png">
+  
 </head>
 <body>
 <main>
@@ -38,9 +40,10 @@
       <figcaption>
         <h1 itemprop="headline">Same</h1>
         <time itemprop="datePublished" datetime="2024-02-16">February 16, 2024</time>
+        <a class="back-link" href="/" aria-label="Back to blog">x</a>
       </figcaption>
     </figure>
-    <section itemprop="articleBody"><p>I made a <a href="https://news.ycombinator.com/item?id=39299007#39377420">reply</a> on hacker news that I want to plant a little firmer in the ground.</p>
+    <section itemprop="articleBody"><p>I made a <a href="https://news.ycombinator.com/item?id=39299007#39377420">reply</a><sup class="note-mark">1</sup> on hacker news that I want to plant a little firmer in the ground.</p>
 <p>I don't use the NYtimes app; though I pay for a subscription. I do not accept advertising into my life. I think its wrong to let wealthy people have a shot at manipulating me. I trust the nytimes journalistic standards but not their advertising.</p>
 <p>I don't push this shit on my kid. but I did make a social media app for us to share so she knows what I mean. It's the best way I knew how to guarantee she'd understand. That's it.</p>
 <p>The only way I can enforce my beliefs on the nytimes (and Washington post, WSJ, youtube, and amazon prime) is to use the web. I know this is a minority position. And I know I have no recourse against Applications that are compiled into native apps and hosted by Apple. In Apples world they can get at me all they want.</p>
@@ -55,9 +58,22 @@
 <p>I get to pick what goes into my eyes. PWA is the only guarantee I could find that can cut the mustard for the standards I want to live by. You don't get to point and be scared about it. You don't support me mother fucker I don't support you. Fair enough.</p>
 <p>Who I do support is Europe. They are the noble warrior in this fight. They should go hard here. They should force Apple to suppot PWA cause it's PWA support or make a third party the arbiter of what spec shit Apple has to implement. Apple is turning an EU mandate into an excuse to grab more control.</p>
 <p>No mercy.</p>
-<p><a href="https://news.ycombinator.com/item?id=39404458">comments</a></p></section>
+<p><a href="https://news.ycombinator.com/item?id=39404458">comments</a><sup class="note-mark">2</sup></p><ol class="notes"><li>https://news.ycombinator.com/item?id=39299007#39377420</li><li>https://news.ycombinator.com/item?id=39404458</li></ol></section>
   </article>
   <footer></footer>
 </main>
+<script>
+  document.addEventListener('click', event => {
+    const link = event.target.closest('a[data-reveal-target]')
+    if (!link) return
+    const target = link.getAttribute('data-reveal-target')
+    const panel = document.getElementById(target)
+    if (!panel) return
+    event.preventDefault()
+    const opening = panel.hidden
+    panel.hidden = !opening
+    if (opening) panel.scrollIntoView({ block: 'nearest' })
+  })
+</script>
 </body>
 </html>

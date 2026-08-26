@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="darkreader-lock">
   <title>Pin Prick — Scott Fryxell</title>
   <meta name="description" content="Testing correctly slows you down. It slows you down so much that Scientists spend entire careers focusing and validating and peer reviewing and questioning tiny">
   <link rel="canonical" href="https://scott-fryxell.github.io/blog/pin-prick">
@@ -19,6 +20,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="icon" type="image/svg+xml" href="/icons.svg">
   <link rel="apple-touch-icon" href="/192.png">
+  
 </head>
 <body>
 <main>
@@ -38,6 +40,7 @@
       <figcaption>
         <h1 itemprop="headline">Pin Prick</h1>
         <time itemprop="datePublished" datetime="2022-07-16">July 16, 2022</time>
+        <a class="back-link" href="/" aria-label="Back to blog">x</a>
       </figcaption>
     </figure>
     <section itemprop="articleBody"><p>Testing correctly slows you down. It slows you down so much that Scientists spend entire careers focusing and validating and peer reviewing and questioning tiny silos around small questions just to open up a pin prick of light on reality.</p>
@@ -47,5 +50,18 @@
   </article>
   <footer></footer>
 </main>
+<script>
+  document.addEventListener('click', event => {
+    const link = event.target.closest('a[data-reveal-target]')
+    if (!link) return
+    const target = link.getAttribute('data-reveal-target')
+    const panel = document.getElementById(target)
+    if (!panel) return
+    event.preventDefault()
+    const opening = panel.hidden
+    panel.hidden = !opening
+    if (opening) panel.scrollIntoView({ block: 'nearest' })
+  })
+</script>
 </body>
 </html>

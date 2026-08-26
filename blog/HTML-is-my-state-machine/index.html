@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="darkreader-lock">
   <title>HTML Is My State Machine — Scott Fryxell</title>
   <meta name="description" content="Edge poses weird quandries when you start taking advantage of how close your code and data are. I have used HTML for some Pinia duties for years. the current st">
   <link rel="canonical" href="https://scott-fryxell.github.io/blog/HTML-is-my-state-machine">
@@ -19,6 +20,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="icon" type="image/svg+xml" href="/icons.svg">
   <link rel="apple-touch-icon" href="/192.png">
+  
 </head>
 <body>
 <main>
@@ -38,6 +40,7 @@
       <figcaption>
         <h1 itemprop="headline">HTML Is My State Machine</h1>
         <time itemprop="datePublished" datetime="2022-05-18">May 18, 2022</time>
+        <a class="back-link" href="/" aria-label="Back to blog">x</a>
       </figcaption>
     </figure>
     <section itemprop="articleBody"><p>Edge poses weird quandries when you start taking advantage of how close your
@@ -58,11 +61,24 @@ Vue 3's composables have come in handy.</p>
 modules. Each instance of relations only knows about itself and isn't aware of
 changes. I have to pass events for everything to coordinate.</p>
 <p>This has created some spaghetti code that I spent yesterday cleaning up with
-<a href="https://vueschool.io/articles/vuejs-tutorials/home-rolled-store-with-the-vue-js-composition-api/">module level reference</a>
+<a href="https://vueschool.io/articles/vuejs-tutorials/home-rolled-store-with-the-vue-js-composition-api/">module level reference</a><sup class="note-mark">1</sup>
 variables defined inside composable files eg <code>@/use/people</code>. State changes can
-be shared accross all modules instantly bringing feature parity with Pinia.</p></section>
+be shared accross all modules instantly bringing feature parity with Pinia.</p><ol class="notes"><li>https://vueschool.io/articles/vuejs-tutorials/home-rolled-store-with-the-vue-js-composition-api/</li></ol></section>
   </article>
   <footer></footer>
 </main>
+<script>
+  document.addEventListener('click', event => {
+    const link = event.target.closest('a[data-reveal-target]')
+    if (!link) return
+    const target = link.getAttribute('data-reveal-target')
+    const panel = document.getElementById(target)
+    if (!panel) return
+    event.preventDefault()
+    const opening = panel.hidden
+    panel.hidden = !opening
+    if (opening) panel.scrollIntoView({ block: 'nearest' })
+  })
+</script>
 </body>
 </html>

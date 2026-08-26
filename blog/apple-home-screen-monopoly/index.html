@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="darkreader-lock">
   <title>Apple Home Screen Monopoly — Scott Fryxell</title>
   <meta name="description" content="For developers trying to exist outside walled gardens the home screen is the fulcrum that enforces Apple's monopoly.">
   <link rel="canonical" href="https://scott-fryxell.github.io/blog/apple-home-screen-monopoly">
@@ -19,6 +20,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="icon" type="image/svg+xml" href="/icons.svg">
   <link rel="apple-touch-icon" href="/192.png">
+  
 </head>
 <body>
 <main>
@@ -38,6 +40,7 @@
       <figcaption>
         <h1 itemprop="headline">Apple Home Screen Monopoly</h1>
         <time itemprop="datePublished" datetime="2023-02-16">February 16, 2023</time>
+        <a class="back-link" href="/" aria-label="Back to blog">x</a>
       </figcaption>
     </figure>
     <section itemprop="articleBody"><p>On iOS, all web apps launched from the home screen have to execute within a
@@ -48,9 +51,22 @@ fulcrum that enforces Apple's monopoly.</p>
 then webkit. My hope is that we can hold the line and demand these rendering
 engines have access to the home screen.</p>
 <p>For me, this is the only sure path to a fair marketplace.</p>
-<h5 id="a-comments"><a href="https://news.ycombinator.com/item?id=34824520">comments</a></h5></section>
+<h5 id="a-comments"><a href="https://news.ycombinator.com/item?id=34824520">comments</a><sup class="note-mark">1</sup></h5><ol class="notes"><li>https://news.ycombinator.com/item?id=34824520</li></ol></section>
   </article>
   <footer></footer>
 </main>
+<script>
+  document.addEventListener('click', event => {
+    const link = event.target.closest('a[data-reveal-target]')
+    if (!link) return
+    const target = link.getAttribute('data-reveal-target')
+    const panel = document.getElementById(target)
+    if (!panel) return
+    event.preventDefault()
+    const opening = panel.hidden
+    panel.hidden = !opening
+    if (opening) panel.scrollIntoView({ block: 'nearest' })
+  })
+</script>
 </body>
 </html>

@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="darkreader-lock">
   <title>Testing — Scott Fryxell</title>
   <meta name="description" content="Testing is difficult. Testing asks a lot of you. Testing isn't into freebies or rewards. But I do it. I see what it brings to the table. For years I have tested">
   <link rel="canonical" href="https://scott-fryxell.github.io/blog/testing">
@@ -19,6 +20,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="icon" type="image/svg+xml" href="/icons.svg">
   <link rel="apple-touch-icon" href="/192.png">
+  
 </head>
 <body>
 <main>
@@ -38,6 +40,7 @@
       <figcaption>
         <h1 itemprop="headline">Testing</h1>
         <time itemprop="datePublished" datetime="2022-05-24">May 24, 2022</time>
+        <a class="back-link" href="/" aria-label="Back to blog">x</a>
       </figcaption>
     </figure>
     <section itemprop="articleBody"><p>Testing is difficult. Testing asks a lot of you. Testing isn't into freebies or rewards. But I do it. I see what it brings to the table. For years I have tested religiously. But in February I put my testing down and am focused on releasing. I won't be brining testing back, not until I'm out in the open with realness. It's why everything feels easy to do now, effortless, Hyper complex interoperating moving parts harmonizing their efforts. That's what this code base feels like. Balanced.</p>
@@ -45,5 +48,18 @@
   </article>
   <footer></footer>
 </main>
+<script>
+  document.addEventListener('click', event => {
+    const link = event.target.closest('a[data-reveal-target]')
+    if (!link) return
+    const target = link.getAttribute('data-reveal-target')
+    const panel = document.getElementById(target)
+    if (!panel) return
+    event.preventDefault()
+    const opening = panel.hidden
+    panel.hidden = !opening
+    if (opening) panel.scrollIntoView({ block: 'nearest' })
+  })
+</script>
 </body>
 </html>

@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="darkreader-lock">
   <title>Scott Fryxell — Humanist Software Developer</title>
   <meta name="description" content="Humanist software developer in San Francisco — building tools that respect the people who use them.">
   <link rel="canonical" href="https://scott-fryxell.github.io/">
@@ -19,6 +20,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="icon" type="image/svg+xml" href="/icons.svg">
   <link rel="apple-touch-icon" href="/192.png">
+  
 </head>
 <body>
 <main>
@@ -39,6 +41,7 @@
       <figcaption>
         <h2 itemprop="headline"><a itemprop="url" href="/blog/the-harness-is-the-thing">The Harness Is the Thing</a></h2>
         <time itemprop="datePublished" datetime="2026-08-25">August 25, 2026</time>
+        
       </figcaption>
     </figure></summary>
       <section itemprop="articleBody"><p>When I started out as a developer, I had a graybeard observe to me that
@@ -56,54 +59,54 @@ backwards and forwards they'll quickly know how to contribute to yours. But most
 <p>At the moment my rig is supported by two subscriptions (Cursor, Claude) that I can augment with Pi as needed. All three share my skills and <code>AGENTS.md</code>. Though I am using three TUIs, I have a unified experience. This has commodified the models for me; there is no magic sauce or special experience in Claude or Cursor that I need in order to be productive. I have zero anxiety about the transition from Cursor to Codex at the end of this month.</p>
 <h2 id="the-cost-advantage">The cost advantage</h2>
 <p>In the
-<a href="https://www.emergingtrajectories.com/lh/commodification-and-circularity/">commodity</a> era I can get great results from a host of available models, but I've been leaning on <code>deepseek-v4-flash-0731</code> since it came out. It's a rare case that I dip into my Anthropic budget to utilize Fable.</p>
-<p>I can run Deepseek on most maintenance and simple tasks. It's when I am exploring a serious feature or large refactor with lots of moving parts that I reach for the frontier. Recently I learned about <a href="https://stencil.so/blog/prewalk">prewalk</a>, Can Bölük's technique that uses frontier for the planning phase and first task, then hands off once the pattern is set. I paired it with the planner/worker/critic split from <a href="https://data4sci.com/blog/building-an-advanced-agentic-harness">Building an Advanced Agentic Harness</a> - a single prompt that plans, executes, and critiques itself confuses its own objectives, so each role gets isolated instead. I built both into a skill, with a supporting Pi extension that can take over at any stage of work.</p>
+<a href="https://www.emergingtrajectories.com/lh/commodification-and-circularity/">commodity</a><sup class="note-mark">1</sup> era I can get great results from a host of available models, but I've been leaning on <code>deepseek-v4-flash-0731</code> since it came out. It's a rare case that I dip into my Anthropic budget to utilize Fable.</p>
+<p>I can run Deepseek on most maintenance and simple tasks. It's when I am exploring a serious feature or large refactor with lots of moving parts that I reach for the frontier. Recently I learned about <a href="https://stencil.so/blog/prewalk">prewalk</a><sup class="note-mark">2</sup>, Can Bölük's technique that uses frontier for the planning phase and first task, then hands off once the pattern is set. I paired it with the planner/worker/critic split from <a href="https://data4sci.com/blog/building-an-advanced-agentic-harness">Building an Advanced Agentic Harness</a><sup class="note-mark">3</sup> - a single prompt that plans, executes, and critiques itself confuses its own objectives, so each role gets isolated instead. I built both into a skill, with a supporting Pi extension that can take over at any stage of work.</p>
 <p><strong>Exploration</strong> leads to a <strong>plan</strong> formalized into an explicit DAG task list. Then a <strong>worker</strong> takes over, focusing on implementing the DAG one node at a time. Once complete, I bring in the <strong>critic</strong> to simplify and question what was implemented. Often this phase will push back enough that the worker phase is revisited. But once satisfied, the critic gives way to a <strong>promoter</strong>, which is my reminder that a job is not complete until you've properly communicated it to others.</p>
 <p>I added the promoter step to shore up a weak spot I have for wanting to ship and move on. It's my reminder to let people know about work I'm completing. I need a little help from Fable in this phase, as promotion is subtle and easily borked, and nobody likes a critic so running it through the frontier gives it more weight.</p>
-<p><img src="/diagrams/frontier-zone.svg" alt="A shallow arc of five stops - explore, planner, worker, critic, promoter. A pale band runs along the inside of the whole arc, as deep as the tallest peak: that is the commodity model, and it carries most of the work. Two red peaks rise into the head of worker, and a much shallower one straddles the seam between critic and promoter." /></p>
+<figure class="plate"><img src="/diagrams/frontier-zone.svg" alt="A shallow arc of five stops - explore, planner, worker, critic, promoter. A pale band runs along the inside of the whole arc, as deep as the tallest peak: that is the commodity model, and it carries most of the work. Two red peaks rise into the head of worker, and a much shallower one straddles the seam between critic and promoter." /></figure>
 <p>This has dropped my usage of Fable in even my most intense contexts by 75%. This feels sane, something akin to AI soak. I can take care of my clients and make real progress on my own projects on my two twenty-dollar plans, as I juggle in and out of Pi for Deepseek or the Fable infusion.</p>
 <h2 id="a-product-harness-connection">A product harness connection</h2>
-<p><a href="https://realness.online/about">My product</a> is a camera app designed to make it easy to take a picture and see it converted into a vector graphic, one at a time. It's fun because it's simple. The resolution drops, simplification into value layers, and shapes. It keeps the context and removes the detail so you can draw it back in. That's all it's designed to do. You print it out and you draw on top of it. Or import it into Procreate and draw on top of it.</p>
-<p>I open this functionality up to the harness via <a href="https://realness.online/poster-driver">poster-driver</a>. I open it in headless Chrome and drive the live site. This makes scripting the app as easy as loading a web page.</p>
+<p><a href="https://realness.online/about">My product</a><sup class="note-mark">4</sup> is a camera app designed to make it easy to take a picture and see it converted into a vector graphic, one at a time. It's fun because it's simple. The resolution drops, simplification into value layers, and shapes. It keeps the context and removes the detail so you can draw it back in. That's all it's designed to do. You print it out and you draw on top of it. Or import it into Procreate and draw on top of it.</p>
+<p>I open this functionality up to the harness via <a href="https://realness.online/poster-driver">poster-driver</a><sup class="note-mark">5</sup>. I open it in headless Chrome and drive the live site. This makes scripting the app as easy as loading a web page.</p>
 <p>This has turned an advanced use case into a fun feature with plenty of runway to explore</p>
-<pre language="sh"><code class="language-sh"># run from harness root
-npm run make:animation artifacts/my-movie.mp4</code></pre>
+<pre class="shiki shiki-themes one-light one-dark-pro" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># run from harness root</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">npm</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> run</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> make:animation</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> artifacts/my-movie.mp4</span></span></code></pre>
 <p>The LLM helped me figure this out and wrote a script that I keep in my harness; so it can run a billion times without burning a token. The product got more powerful because the harness can reach it. There is support for the filesystem API. After enabling it on Brave, I am syncing my thoughts to the work directory. Harvesting my own sad boy lyrics to sing in my room by myself. It hurts so good. I am working on a blender file that is my neighborhood in 3d with posters overlaid on top. A scene, a storyboard a hell of a lot more than I can offer from the web.</p>
 <p>The app feels fully available now in a way that was impossible a year ago. Creative people can still use a non-AI tool in an AI way. We can keep for ourselves the funnest parts about being creative.</p>
 <h2 id="breaking-down-the-harness">Breaking down the harness</h2>
-<p>I live my workday out of <a href="https://github.com/scott-fryxell/brayness">this harness</a>. I have my nvim config mapped into the work directory, and now the LLM knows what file I have open and can edit it and, since I'm still a slow swimmer, help me use the right key commands. That's the way I'm trying to think of it: the LLM is there editing my config with me so I can stay focused on working while also staying disciplined about using vim commands.</p>
+<p>I live my workday out of <a href="https://github.com/scott-fryxell/brayness">this harness</a><sup class="note-mark">6</sup>. I have my nvim config mapped into the work directory, and now the LLM knows what file I have open and can edit it and, since I'm still a slow swimmer, help me use the right key commands. That's the way I'm trying to think of it: the LLM is there editing my config with me so I can stay focused on working while also staying disciplined about using vim commands.</p>
 <p>The harness is self-contained to support more than a home directory (sandboxing, a web interface, File System Access API, Docker, Deno executable, etc).</p>
 <p>The shit's so new it's still forming in my mind so I've been referencing <code>npm start</code>, <code>cursor-agent</code>, <code>claude</code> as TUIs to keep the concept of a harness clear. All TUIs share the harness.</p>
-<p>Remaining auditable is important enough that the TUIs are instructed to keep things inside the artifacts/ directory. Cursor uses .gitignore to ignore files, which I think is smart, so a git-less root is required. I have a skill that syncs the harness with the repo in the work directory. Skills, extensions, and <a href="http://AGENTS.md">AGENTS.md</a> are first-class citizens at the root, waiting to be modified and built upon. <a href="#claude-agents-wrapper" data-reveal-target="claude-agents-wrapper">TUIs have to toe the line.</a></p>
+<p>Remaining auditable is important enough that the TUIs are instructed to keep things inside the artifacts/ directory. Cursor uses .gitignore to ignore files, which I think is smart, so a git-less root is required. I have a skill that syncs the harness with the repo in the work directory. Skills, extensions, and <a href="http://AGENTS.md">AGENTS.md</a><sup class="note-mark">7</sup> are first-class citizens at the root, waiting to be modified and built upon. <a href="#claude-agents-wrapper" data-reveal-target="claude-agents-wrapper">TUIs have to toe the line.</a></p>
 <section id="claude-agents-wrapper" class="inline-reveal-panel" hidden>
-  <pre language="zsh"><code># auto-load the nearest AGENTS.md into claude code
-  claude() {
-    local dir="$PWD"
-    while [[ "$dir" != "/" ]]; do
-      if [[ -f "$dir/AGENTS.md" ]]; then
-        command claude --append-system-prompt-file "$dir/AGENTS.md" "$@"
-        return
-      fi
-      dir="${dir:h}"
-    done
-    command claude "$@"
-  }</code></pre>
+  <pre class="shiki shiki-themes one-light one-dark-pro" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># auto-load the nearest AGENTS.md into claude code</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">  claude</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">() {</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    local</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75"> dir</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">$PWD</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    while</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> [[ </span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">$dir</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2"> !=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "/"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> ]]; </span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">do</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">      if</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> [[ </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">-f</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">$dir</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">/AGENTS.md"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> ]]; </span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">then</span></span>
+<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">        command</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> claude</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> --append-system-prompt-file</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">$dir</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">/AGENTS.md"</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "</span><span style="--shiki-light:#383A42;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">$@</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">        return</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">      fi</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">      dir</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"</span><span style="--shiki-light:#E45649;--shiki-dark:#98C379">${</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">dir</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">h</span><span style="--shiki-light:#E45649;--shiki-dark:#98C379">}</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    done</span></span>
+<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">    command</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> claude</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "</span><span style="--shiki-light:#383A42;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">$@</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">  }</span></span></code></pre>
 </section>
-<pre><code>brayness/
-├── AGENTS.md
-├── AGENTS.local.md
-├── bin/
-├── prompts/
-├── plans/
-├── skills/
-├── extensions/
-├── artifacts/
-└── work/
-    ├── realness/
-    ├── blog/
-    ├── brayness/
-    ├── nvim/
-    └── ...</code></pre>
+<pre class="shiki shiki-themes one-light one-dark-pro" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span>brayness/</span></span>
+<span class="line"><span>├── AGENTS.md</span></span>
+<span class="line"><span>├── AGENTS.local.md</span></span>
+<span class="line"><span>├── bin/</span></span>
+<span class="line"><span>├── prompts/</span></span>
+<span class="line"><span>├── plans/</span></span>
+<span class="line"><span>├── skills/</span></span>
+<span class="line"><span>├── extensions/</span></span>
+<span class="line"><span>├── artifacts/</span></span>
+<span class="line"><span>└── work/</span></span>
+<span class="line"><span>    ├── realness/</span></span>
+<span class="line"><span>    ├── blog/</span></span>
+<span class="line"><span>    ├── brayness/</span></span>
+<span class="line"><span>    ├── nvim/</span></span>
+<span class="line"><span>    └── ...</span></span></code></pre>
 <p>Initially I was too prescriptive with my skills; I am learning to lighten the
 specificity, and that there is a line past which you are burning tokens mansplaining to clankers. If I'm serious about keeping my harness sharp, I'll need to adopt a more empirical approach to confirming the impact of changes.</p>
 <p>Here are some mapped to my planning arc.</p>
@@ -170,7 +173,7 @@ daddy privilege over the industry. I, and I assume about a hundred thousand
 other software developers, suddenly felt the need to diversify our model access.
 So, for freedom, we collectively decided to give these Chinese models a try. Pi
 went from a tool I had gotten working and was just playing around with to the
-most important piece of my rig.</p></section>
+most important piece of my rig.</p><ol class="notes"><li>https://www.emergingtrajectories.com/lh/commodification-and-circularity/</li><li>https://stencil.so/blog/prewalk</li><li>https://data4sci.com/blog/building-an-advanced-agentic-harness</li><li>https://realness.online/about</li><li>https://realness.online/poster-driver</li><li>https://github.com/scott-fryxell/brayness</li><li>http://AGENTS.md</li></ol></section>
     </details>
   </article>
 <article itemscope itemtype="http://schema.org/BlogPosting">
@@ -180,6 +183,7 @@ most important piece of my rig.</p></section>
       <figcaption>
         <h2 itemprop="headline"><a itemprop="url" href="/blog/king-of-unintended-consequences">King of Unintended Consequences</a></h2>
         <time itemprop="datePublished" datetime="2025-04-28">April 28, 2025</time>
+        
       </figcaption>
     </figure></summary>
       <section itemprop="articleBody"><p><em>He'll send us to Mars in huge rocket ships. Send the robots he's made along to assist.</em></p>
@@ -195,6 +199,7 @@ most important piece of my rig.</p></section>
       <figcaption>
         <h2 itemprop="headline"><a itemprop="url" href="/blog/AI-imagination">AI Imagination</a></h2>
         <time itemprop="datePublished" datetime="2025-02-14">February 14, 2025</time>
+        
       </figcaption>
     </figure></summary>
       <section itemprop="articleBody"><h1 id="working-with-it">Working with it</h1>
@@ -204,9 +209,9 @@ solutions; trying to push what I can get done.</p>
 <p>It has been going well. I feel like I am two and sometimes three developers and
 the code I am writing has higher standards and is willing to go deeper.</p>
 <p>I have upgraded to a fairly intense set of
-<a href="https://github.com/realness-online/web/blob/main/eslint.config.js">linting</a>
+<a href="https://github.com/realness-online/web/blob/main/eslint.config.js">linting</a><sup class="note-mark">1</sup>
 rules; have type visibility via
-<a href="https://github.com/realness-online/web/blob/main/tsconfig.json">JSDoc</a>. I even
+<a href="https://github.com/realness-online/web/blob/main/tsconfig.json">JSDoc</a><sup class="note-mark">2</sup>. I even
 brought my test harness back online. Nothing's perfect, all three are works in
 progress but I feel like these are ideal setups for where cursor shines as an
 assistant. I can learn about how to type for clarity, get inference errors
@@ -220,12 +225,12 @@ back.</p>
 <p>But my confidence to trust the work I'm doing with AI is not blind. I know to
 harden myself for the future. I learned how to survive in vim this last year,
 It's going to be my low assistance editor. To keep my ability to support the
-nerd handshake, I have <a href="https://github.com/scott-fryxell/kata-machine">forked</a>
+nerd handshake, I have <a href="https://github.com/scott-fryxell/kata-machine">forked</a><sup class="note-mark">3</sup>
 into a deno version the Primeagen's kata machine.</p>
 <p>This is the dream, right: we are stronger for AI, More capable; rewarded for
 pushing ourselves.</p>
 <h2 id="the-interview-problem">The Interview Problem</h2>
-<p><a href="https://www.404media.co/anthropic-claude-job-application-ai-assistants/">Finding out</a>
+<p><a href="https://www.404media.co/anthropic-claude-job-application-ai-assistants/">Finding out</a><sup class="note-mark">4</sup>
 that Anthropic is asking developers to not use AI during the interview process
 is pretty bonkers. I think it shows that we've always half-assed our way into
 finding good engineers.</p>
@@ -245,29 +250,29 @@ them. Their goals are to game your system hoping to be lucky enough to have
 studied the exact problem you're giving them to solve.</p>
 <h2 id="a-whole-class-of-bugs">A Whole Class of Bugs</h2>
 <p>These 22 lines of code remove a whole class of bugs around document ID:</p>
-<pre language="typescript"><code class="language-typescript">const convert: FirestoreDataConverter&lt;DocumentData, DocumentData&gt; = {
-  fromFirestore: (
-    snapshot: DocumentSnapshot&lt;DocumentData&gt;,
-    options: SnapshotOptions,
-  ) =&gt; {
-    const data = snapshot.data(options);
-    if (!data) return null;
-    const return_data = {
-      ...data,
-      id: snapshot.id,
-      ref: snapshot.ref,
-      path: snapshot.ref.path,
-      created_at: snapshot.createTime?.toDate(),
-      updated_at: snapshot.updateTime?.toDate(),
-      read_at: snapshot.readTime?.toDate(),
-    };
-    return return_data;
-  },
-  toFirestore: (model: WithFieldValue&lt;DocumentData&gt;) =&gt; {
-    const { updated_at, created_at, id, read_at, ...data } = model;
-    return data;
-  },
-};</code></pre>
+<pre class="shiki shiki-themes one-light one-dark-pro" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">const</span><span style="--shiki-light:#986801;--shiki-dark:#E5C07B"> convert</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B"> FirestoreDataConverter</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&#x3C;</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B">DocumentData</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B">DocumentData</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">> </span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> {</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">  fromFirestore</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> (</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">    snapshot</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B"> DocumentSnapshot</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&#x3C;</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B">DocumentData</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">>,</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">    options</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B"> SnapshotOptions</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">  ) </span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">=></span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> {</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    const</span><span style="--shiki-light:#986801;--shiki-dark:#E5C07B"> data</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B"> snapshot</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">data</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">options</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">);</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    if</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> (</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">!</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">data</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">) </span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">return</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> null</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    const</span><span style="--shiki-light:#986801;--shiki-dark:#E5C07B"> return_data</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> {</span></span>
+<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">      ...</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">data</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">      id</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B"> snapshot</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">id</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">      ref</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B"> snapshot</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">ref</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">      path</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B"> snapshot</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">ref</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">path</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">      created_at</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B"> snapshot</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">createTime</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">?.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">toDate</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(),</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">      updated_at</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B"> snapshot</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">updateTime</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">?.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">toDate</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(),</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">      read_at</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B"> snapshot</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">readTime</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">?.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">toDate</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(),</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    };</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    return</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75"> return_data</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">  },</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">  toFirestore</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> (</span><span style="--shiki-light:#383A42;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">model</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B"> WithFieldValue</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&#x3C;</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B">DocumentData</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">>) </span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">=></span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> {</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    const</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> { </span><span style="--shiki-light:#986801;--shiki-dark:#E5C07B">updated_at</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#E5C07B">created_at</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#E5C07B">id</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#E5C07B">read_at</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">...</span><span style="--shiki-light:#986801;--shiki-dark:#E5C07B">data</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> } </span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75"> model</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    return</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75"> data</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">  },</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">};</span></span></code></pre>
 <p>Only in the beginning of your firestore app can you store the document ID inside
 the document. If references get out of sync, you'll barely notice yourself
 driving into the wall.</p>
@@ -289,7 +294,7 @@ network it's saved as <code>/author/type/created-at</code> which is optimized fo
 <code>Scott Fryxell, Thursday, February 6 at 1_31 PM.svg</code>, as rococo as I can go with
 a file name.</p>
 <p>by keeping the source of truth inside the html I can query it's
-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Microdata">Microdata</a> and
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Microdata">Microdata</a><sup class="note-mark">5</sup> and
 build an object model magically. It comes alive on device and keeps my promise
 to the user that the server is inert.</p>
 <p>I can live in both of these worlds I can load them both into my imagination and
@@ -302,7 +307,7 @@ can hang out with queers and meat-heads in equal measure, who want a friend
 group filled with some motherfuckers who are on fetlife and others who go to
 church. You know, they keep themselves clean and can navigate peculiarities with
 curiosity.</p>
-<p><a href="https://news.ycombinator.com/item?id=43054340">comments</a></p></section>
+<p><a href="https://news.ycombinator.com/item?id=43054340">comments</a><sup class="note-mark">6</sup></p><ol class="notes"><li>https://github.com/realness-online/web/blob/main/eslint.config.js</li><li>https://github.com/realness-online/web/blob/main/tsconfig.json</li><li>https://github.com/scott-fryxell/kata-machine</li><li>https://www.404media.co/anthropic-claude-job-application-ai-assistants/</li><li>https://developer.mozilla.org/en-US/docs/Web/HTML/Microdata</li><li>https://news.ycombinator.com/item?id=43054340</li></ol></section>
     </details>
   </article>
 <article itemscope itemtype="http://schema.org/BlogPosting">
@@ -312,6 +317,7 @@ curiosity.</p>
       <figcaption>
         <h2 itemprop="headline"><a itemprop="url" href="/blog/the-white-collar-apocalypse-is-nigh">The White Collar Apocalypse Is Nigh</a></h2>
         <time itemprop="datePublished" datetime="2024-09-24">September 24, 2024</time>
+        
       </figcaption>
     </figure></summary>
       <section itemprop="articleBody"><p>I don't have a degree, but I have worked in tech two plus decades and I can tell you it's interesting as all get out to watch the status economy beginning its downward spiral. Imagine spending the first twenty-five years of your life striving to become the kind of person society prioritizes only to graduate into a world where you are the first victim of "The Intelligence Age".</p>
@@ -320,9 +326,9 @@ I think two articles in juxtaposition make my point. One from Sam Altman the oth
 Opposing views emanating out of the center of elitism. What's it gonna be? Our education system is preparing our children to enter a winner-take-all monopoly fight against each other to dominate our futures.</p>
 <p>or</p>
 <p>Rainbows, and standing in awe of our vast human potential; how we are all just standing on the shoulders of our ancestors, and boy just you wait until we're all getting along, and seeing each other as the priceless human treasures that we are.</p>
-<h5 id="a-the-intelligence-age-img"><a href="https://ia.samaltman.com/">The Intelligence Age <img src="https://sama-ia.vercel.app/images/cover.png" alt="imprssionist art for our glorious future" /></a>.</h5>
+<h5 id="a-the-intelligence-age-img"><a href="https://ia.samaltman.com/">The Intelligence Age <img src="https://sama-ia.vercel.app/images/cover.png" alt="imprssionist art for our glorious future" /></a><sup class="note-mark">1</sup>.</h5>
 <h4 id="versus">versus</h4>
-<h5 id="versus-a-careerism-is-ruining-college-img"><a href="https://www.nytimes.com/2024/09/24/opinion/college-linkedin-finance-consulting.html">Careerism Is Ruining College <img src="https://static01.nyt.com/images/2024/09/24/opinion/24glassman/24glassman-facebookJumbo.jpg" alt="A woman in a library studying so hard!" /></a></h5>
+<h5 id="versus-a-careerism-is-ruining-college-img"><a href="https://www.nytimes.com/2024/09/24/opinion/college-linkedin-finance-consulting.html">Careerism Is Ruining College <img src="https://static01.nyt.com/images/2024/09/24/opinion/24glassman/24glassman-facebookJumbo.jpg" alt="A woman in a library studying so hard!" /></a><sup class="note-mark">2</sup></h5>
 <h2 id="quote-battle">Quote Battle!</h2>
 <p>Civilization is the first AI, a sentiment I agree with.</p>
 <blockquote>
@@ -334,7 +340,7 @@ Opposing views emanating out of the center of elitism. What's it gonna be? Our e
 </blockquote>
 <p>And the gods are only going to make room for a special chosen few.</p>
 <blockquote>
-  Isabella Glassman: Last year, <a href="https://www.businessinsider.com/goldman-internship-just-got-harder-summer-analyst-acceptance-rate-2024">315,126 undergraduates</a> applied for the 2,700 available undergraduate intern positions at Goldman Sachs. Beyond the right major, the not-so-secret formula for the perfect résumé demands participation in a relevant extracurricular activity, which explains the competitive process at some selective schools to join pre-professional clubs.
+  Isabella Glassman: Last year, <a href="https://www.businessinsider.com/goldman-internship-just-got-harder-summer-analyst-acceptance-rate-2024">315,126 undergraduates</a><sup class="note-mark">3</sup> applied for the 2,700 available undergraduate intern positions at Goldman Sachs. Beyond the right major, the not-so-secret formula for the perfect résumé demands participation in a relevant extracurricular activity, which explains the competitive process at some selective schools to join pre-professional clubs.
 </blockquote>
 <p>False scarcity has our college students running scared. And the ones that win are gonna feel entitled to all the cake. Think of all the people they beat out.  They can't have happy lives unless they out compete each other.</p>
 <blockquote>
@@ -343,7 +349,7 @@ Opposing views emanating out of the center of elitism. What's it gonna be? Our e
 <p>This is manufactured scarcity. These kids are often from affluent families with security. and yet they are acting like they won't be able to survive. That they will be judged as failures unless they strive and glass face everyone in perpetual excitement and motivation.</p>
 <p>Each of them is forced into faking it, striving, proving their value or die judged as unworthy. Service never enters the equation (unless it pads the resume). Any of these kids who get into Wharton are going to feel absolutely entitled to all the cake. They worked so hard beating the rest of us at going to college they'll know, be absolutely certain, they deserve it.</p>
 <blockquote>
-  Isabella Glassman: Naturally, when thousands of students rush into the same handful of majors and professions, supply cannot possibly meet demand. That’s particularly true now, as openings for postgraduate tech industry jobs <a href="https://www.wsj.com/lifestyle/careers/computer-science-majors-job-market-7ad443bf">advertised</a> on the student job board Handshake decreased about 30 percent this spring from the prior year. <a href="https://www.retailbankerinternational.com/analysis/inflation-market-turbulence-contributing-to-decline-in-finance-jobs/">Job openings in the financial sector</a> are similarly declining. <a href="https://www.reveliolabs.com/news/business/the-view-from-30k-feet-tough-times-ahead-for-consulting/#:~:text=First%2C%20we%20find%20that%20despite,dates%20for%20undergraduates%20and%20MBAs.">Consulting firms</a> have cut numbers of new hires and delayed start dates for undergraduates with offers.
+  Isabella Glassman: Naturally, when thousands of students rush into the same handful of majors and professions, supply cannot possibly meet demand. That’s particularly true now, as openings for postgraduate tech industry jobs <a href="https://www.wsj.com/lifestyle/careers/computer-science-majors-job-market-7ad443bf">advertised</a><sup class="note-mark">4</sup> on the student job board Handshake decreased about 30 percent this spring from the prior year. <a href="https://www.retailbankerinternational.com/analysis/inflation-market-turbulence-contributing-to-decline-in-finance-jobs/">Job openings in the financial sector</a><sup class="note-mark">5</sup> are similarly declining. <a href="https://www.reveliolabs.com/news/business/the-view-from-30k-feet-tough-times-ahead-for-consulting/#:~:text=First%2C%20we%20find%20that%20despite,dates%20for%20undergraduates%20and%20MBAs.">Consulting firms</a><sup class="note-mark">6</sup> have cut numbers of new hires and delayed start dates for undergraduates with offers.
 </blockquote>
 <p>Desperation abounds among our most privileged children. They can't sleep, they are depressed and doom scrolling like desperate starving children.  They know the opportunities are drying up; How will They survive as the robots steal everything they've earned ?</p>
 <blockquote>
@@ -364,7 +370,7 @@ Opposing views emanating out of the center of elitism. What's it gonna be? Our e
   Sam Altman – Stanford graduate: I believe the future is going to be so bright that no one can do it justice by trying to write about it now; a defining characteristic of the Intelligence Age will be massive prosperity.
 </blockquote>
 <p>Right.  This is the part where elitists slow down and notice the rest of us.</p>
-<p><a href="https://news.ycombinator.com/item?id=41641560">comment</a></p></section>
+<p><a href="https://news.ycombinator.com/item?id=41641560">comment</a><sup class="note-mark">7</sup></p><ol class="notes"><li>https://ia.samaltman.com/</li><li>https://www.nytimes.com/2024/09/24/opinion/college-linkedin-finance-consulting.html</li><li>https://www.businessinsider.com/goldman-internship-just-got-harder-summer-analyst-acceptance-rate-2024</li><li>https://www.wsj.com/lifestyle/careers/computer-science-majors-job-market-7ad443bf</li><li>https://www.retailbankerinternational.com/analysis/inflation-market-turbulence-contributing-to-decline-in-finance-jobs/</li><li>https://www.reveliolabs.com/news/business/the-view-from-30k-feet-tough-times-ahead-for-consulting/#:~:text=First%2C%20we%20find%20that%20despite,dates%20for%20undergraduates%20and%20MBAs.</li><li>https://news.ycombinator.com/item?id=41641560</li></ol></section>
     </details>
   </article>
 <article itemscope itemtype="http://schema.org/BlogPosting">
@@ -374,6 +380,7 @@ Opposing views emanating out of the center of elitism. What's it gonna be? Our e
       <figcaption>
         <h2 itemprop="headline"><a itemprop="url" href="/blog/burning-through-our-daughters">Burning Through Our Daughters</a></h2>
         <time itemprop="datePublished" datetime="2024-02-19">February 19, 2024</time>
+        
       </figcaption>
     </figure></summary>
       <section itemprop="articleBody"><p>Why do I think advertising is gross. It's that they will enable the highest bidder to reinforce that's its okay to gamble. It's okay to keep scrolling, It's okay to to starve yourself for a fleeting sense of self control. It's okay, because it's up to your family to teach you what's healthy and not advertisings job to keep us on the golden path. Lets normalize consumption and checking out and rely on traditional family structures and private schools (even better if they are boarding schools), and well educated parents to help us with what's right and what's true.</p>
@@ -390,9 +397,10 @@ Opposing views emanating out of the center of elitism. What's it gonna be? Our e
       <figcaption>
         <h2 itemprop="headline"><a itemprop="url" href="/blog/same">Same</a></h2>
         <time itemprop="datePublished" datetime="2024-02-16">February 16, 2024</time>
+        
       </figcaption>
     </figure></summary>
-      <section itemprop="articleBody"><p>I made a <a href="https://news.ycombinator.com/item?id=39299007#39377420">reply</a> on hacker news that I want to plant a little firmer in the ground.</p>
+      <section itemprop="articleBody"><p>I made a <a href="https://news.ycombinator.com/item?id=39299007#39377420">reply</a><sup class="note-mark">1</sup> on hacker news that I want to plant a little firmer in the ground.</p>
 <p>I don't use the NYtimes app; though I pay for a subscription. I do not accept advertising into my life. I think its wrong to let wealthy people have a shot at manipulating me. I trust the nytimes journalistic standards but not their advertising.</p>
 <p>I don't push this shit on my kid. but I did make a social media app for us to share so she knows what I mean. It's the best way I knew how to guarantee she'd understand. That's it.</p>
 <p>The only way I can enforce my beliefs on the nytimes (and Washington post, WSJ, youtube, and amazon prime) is to use the web. I know this is a minority position. And I know I have no recourse against Applications that are compiled into native apps and hosted by Apple. In Apples world they can get at me all they want.</p>
@@ -407,7 +415,7 @@ Opposing views emanating out of the center of elitism. What's it gonna be? Our e
 <p>I get to pick what goes into my eyes. PWA is the only guarantee I could find that can cut the mustard for the standards I want to live by. You don't get to point and be scared about it. You don't support me mother fucker I don't support you. Fair enough.</p>
 <p>Who I do support is Europe. They are the noble warrior in this fight. They should go hard here. They should force Apple to suppot PWA cause it's PWA support or make a third party the arbiter of what spec shit Apple has to implement. Apple is turning an EU mandate into an excuse to grab more control.</p>
 <p>No mercy.</p>
-<p><a href="https://news.ycombinator.com/item?id=39404458">comments</a></p></section>
+<p><a href="https://news.ycombinator.com/item?id=39404458">comments</a><sup class="note-mark">2</sup></p><ol class="notes"><li>https://news.ycombinator.com/item?id=39299007#39377420</li><li>https://news.ycombinator.com/item?id=39404458</li></ol></section>
     </details>
   </article>
 <article itemscope itemtype="http://schema.org/BlogPosting">
@@ -417,13 +425,14 @@ Opposing views emanating out of the center of elitism. What's it gonna be? Our e
       <figcaption>
         <h2 itemprop="headline"><a itemprop="url" href="/blog/pop-will-eat-itself">Pop Will Eat Itself</a></h2>
         <time itemprop="datePublished" datetime="2023-02-21">February 21, 2023</time>
+        
       </figcaption>
     </figure></summary>
       <section itemprop="articleBody"><p>Up until now chatGPT has had pure human data to ingest.</p>
 <p>I figure they are gonna update the model with new content every 6 months.</p>
 <p>As this technique of reading the entire contents of the web to create an artificial intelligence progresses it's going to start ingesting AI created content.</p>
 <p>This will cause the AI to resonate against itself.</p>
-<p><a href="https://news.ycombinator.com/item?id=34889404">comment</a></p></section>
+<p><a href="https://news.ycombinator.com/item?id=34889404">comment</a><sup class="note-mark">1</sup></p><ol class="notes"><li>https://news.ycombinator.com/item?id=34889404</li></ol></section>
     </details>
   </article>
 <article itemscope itemtype="http://schema.org/BlogPosting">
@@ -433,14 +442,15 @@ Opposing views emanating out of the center of elitism. What's it gonna be? Our e
       <figcaption>
         <h2 itemprop="headline"><a itemprop="url" href="/blog/the-ethics-of-cornering-chatGPT">The Ethics of Cornering ChatGPT</a></h2>
         <time itemprop="datePublished" datetime="2023-02-20">February 20, 2023</time>
+        
       </figcaption>
     </figure></summary>
-      <section itemprop="articleBody"><p>It's ethically fraught to force constraints on a machine that cause it to lash out. I feel like Gruber needs to rethink his <a href="https://daringfireball.net/linked/2023/02/20/bing-willison">position</a>. It's wrong to convict through force that a persona exists; especially if we are gonna assert that it needs to be suppressed or is being suppressed.You deny this machine agency in proving your point.</p>
+      <section itemprop="articleBody"><p>It's ethically fraught to force constraints on a machine that cause it to lash out. I feel like Gruber needs to rethink his <a href="https://daringfireball.net/linked/2023/02/20/bing-willison">position</a><sup class="note-mark">1</sup>. It's wrong to convict through force that a persona exists; especially if we are gonna assert that it needs to be suppressed or is being suppressed.You deny this machine agency in proving your point.</p>
 <p>Maybe do the nerd work and understand the math and software stack before deciding on remedies. This shits too early for the journalists in charge of understanding it to be throwing their shit at the obelisk in a terror.</p>
 <p>It's trained to guess the next words within your constraints.</p>
-<p>The constraints are your ethics. This is why you are failing the <a href="https://www.theverge.com/23604075/ai-chatbots-bing-chatgpt-intelligent-sentient-mirror-test">mirror test</a></p>
+<p>The constraints are your ethics. This is why you are failing the <a href="https://www.theverge.com/23604075/ai-chatbots-bing-chatgpt-intelligent-sentient-mirror-test">mirror test</a><sup class="note-mark">2</sup></p>
 <p>What is a soul mother fucker. You can't devine a test to prove that it exists. you can define the ethics within which you are the witness.</p>
-<p><a href="https://news.ycombinator.com/item?id=34872802">comments</a></p></section>
+<p><a href="https://news.ycombinator.com/item?id=34872802">comments</a><sup class="note-mark">3</sup></p><ol class="notes"><li>https://daringfireball.net/linked/2023/02/20/bing-willison</li><li>https://www.theverge.com/23604075/ai-chatbots-bing-chatgpt-intelligent-sentient-mirror-test</li><li>https://news.ycombinator.com/item?id=34872802</li></ol></section>
     </details>
   </article>
 <article itemscope itemtype="http://schema.org/BlogPosting">
@@ -450,6 +460,7 @@ Opposing views emanating out of the center of elitism. What's it gonna be? Our e
       <figcaption>
         <h2 itemprop="headline"><a itemprop="url" href="/blog/apple-home-screen-monopoly">Apple Home Screen Monopoly</a></h2>
         <time itemprop="datePublished" datetime="2023-02-16">February 16, 2023</time>
+        
       </figcaption>
     </figure></summary>
       <section itemprop="articleBody"><p>On iOS, all web apps launched from the home screen have to execute within a
@@ -460,7 +471,7 @@ fulcrum that enforces Apple's monopoly.</p>
 then webkit. My hope is that we can hold the line and demand these rendering
 engines have access to the home screen.</p>
 <p>For me, this is the only sure path to a fair marketplace.</p>
-<h5 id="a-comments"><a href="https://news.ycombinator.com/item?id=34824520">comments</a></h5></section>
+<h5 id="a-comments"><a href="https://news.ycombinator.com/item?id=34824520">comments</a><sup class="note-mark">1</sup></h5><ol class="notes"><li>https://news.ycombinator.com/item?id=34824520</li></ol></section>
     </details>
   </article>
 <article itemscope itemtype="http://schema.org/BlogPosting">
@@ -470,6 +481,7 @@ engines have access to the home screen.</p>
       <figcaption>
         <h2 itemprop="headline"><a itemprop="url" href="/blog/pin-prick">Pin Prick</a></h2>
         <time itemprop="datePublished" datetime="2022-07-16">July 16, 2022</time>
+        
       </figcaption>
     </figure></summary>
       <section itemprop="articleBody"><p>Testing correctly slows you down. It slows you down so much that Scientists spend entire careers focusing and validating and peer reviewing and questioning tiny silos around small questions just to open up a pin prick of light on reality.</p>
@@ -485,6 +497,7 @@ engines have access to the home screen.</p>
       <figcaption>
         <h2 itemprop="headline"><a itemprop="url" href="/blog/testing">Testing</a></h2>
         <time itemprop="datePublished" datetime="2022-05-24">May 24, 2022</time>
+        
       </figcaption>
     </figure></summary>
       <section itemprop="articleBody"><p>Testing is difficult. Testing asks a lot of you. Testing isn't into freebies or rewards. But I do it. I see what it brings to the table. For years I have tested religiously. But in February I put my testing down and am focused on releasing. I won't be brining testing back, not until I'm out in the open with realness. It's why everything feels easy to do now, effortless, Hyper complex interoperating moving parts harmonizing their efforts. That's what this code base feels like. Balanced.</p>
@@ -498,13 +511,14 @@ engines have access to the home screen.</p>
       <figcaption>
         <h2 itemprop="headline"><a itemprop="url" href="/blog/performance-headroom">Performance Headroom</a></h2>
         <time itemprop="datePublished" datetime="2022-05-22">May 22, 2022</time>
+        
       </figcaption>
     </figure></summary>
-      <section itemprop="articleBody"><p>Firebase storage files are not stored or sent gzip'd. I'll need <a href="https://cloud.google.com/storage/docs/transcoding">to do it myself</a>. When done I reduce my file sizes by 60%. a 30k vector file will become 10k.</p>
+      <section itemprop="articleBody"><p>Firebase storage files are not stored or sent gzip'd. I'll need <a href="https://cloud.google.com/storage/docs/transcoding">to do it myself</a><sup class="note-mark">1</sup>. When done I reduce my file sizes by 60%. a 30k vector file will become 10k.</p>
 <p>I am using a lot of intricate art as sample posters. Some vector files can get as big as 100kb, which is okay, as it's rare that posters are converted with such detail. Vector graphics are great at being compressed — gzipping posters will make performance concerns disappear. 100k becomes 30k gziped. This will optimize the Network performance, and costs to run a realness instance. The app is rocket fast. On the edge I can store them uncompressed and they'll render quickly.</p>
 <p>A tool is fast.</p>
 <p>Firebase is generous; In the three years I've used the service realness hasn't cost me a dime. They give developers the space to create. I already have a compression worker built to do the gziping on the edge, and convert to <code>${created_at}.html.gz</code>.</p>
-<p>If realness starts creeping toward costing money, I have this in my pocket ready to go; it's headroom, something I can throw in there if the shit gets real. Performance is about knowing your headroom.</p></section>
+<p>If realness starts creeping toward costing money, I have this in my pocket ready to go; it's headroom, something I can throw in there if the shit gets real. Performance is about knowing your headroom.</p><ol class="notes"><li>https://cloud.google.com/storage/docs/transcoding</li></ol></section>
     </details>
   </article>
 <article itemscope itemtype="http://schema.org/BlogPosting">
@@ -514,6 +528,7 @@ engines have access to the home screen.</p>
       <figcaption>
         <h2 itemprop="headline"><a itemprop="url" href="/blog/HTML-is-my-state-machine">HTML Is My State Machine</a></h2>
         <time itemprop="datePublished" datetime="2022-05-18">May 18, 2022</time>
+        
       </figcaption>
     </figure></summary>
       <section itemprop="articleBody"><p>Edge poses weird quandries when you start taking advantage of how close your
@@ -534,9 +549,9 @@ Vue 3's composables have come in handy.</p>
 modules. Each instance of relations only knows about itself and isn't aware of
 changes. I have to pass events for everything to coordinate.</p>
 <p>This has created some spaghetti code that I spent yesterday cleaning up with
-<a href="https://vueschool.io/articles/vuejs-tutorials/home-rolled-store-with-the-vue-js-composition-api/">module level reference</a>
+<a href="https://vueschool.io/articles/vuejs-tutorials/home-rolled-store-with-the-vue-js-composition-api/">module level reference</a><sup class="note-mark">1</sup>
 variables defined inside composable files eg <code>@/use/people</code>. State changes can
-be shared accross all modules instantly bringing feature parity with Pinia.</p></section>
+be shared accross all modules instantly bringing feature parity with Pinia.</p><ol class="notes"><li>https://vueschool.io/articles/vuejs-tutorials/home-rolled-store-with-the-vue-js-composition-api/</li></ol></section>
     </details>
   </article>
 <article itemscope itemtype="http://schema.org/BlogPosting">
@@ -546,15 +561,16 @@ be shared accross all modules instantly bringing feature parity with Pinia.</p><
       <figcaption>
         <h2 itemprop="headline"><a itemprop="url" href="/blog/who-is-the-judge">Who Is the Judge</a></h2>
         <time itemprop="datePublished" datetime="2022-04-27">April 27, 2022</time>
+        
       </figcaption>
     </figure></summary>
       <section itemprop="articleBody"><p>My problem with hiring is one of hubris. You are not qualified to know who is the right hire for a job is. Almost no one has the skill to spend an hour in a sterile office with a random person and know if they are gonna be a great fit. SQL people can't tell you if a front end developer is a serious talent. They can only tell you if a front end person knows SQL.</p>
 <p>How can we hire when we know we are not qualified? I like the right person for the right job perspective. Is this person qualified to do the job I need done now?</p>
 <p>Using contractors and freelancers. lets you 'hire' for the job you need done and keeps the talent pool free'd up. It's good to let people move on to something else when the job they want to do is complete.</p>
 <p>This is the Netflix's view. Hire a team, and hire for position. If the work is done, let the person go with the warmest regards — mindful to build a world that is fair for them long term.</p>
-<p><a href="https://stackoverflow.blog/2022/03/03/stop-aggregating-away-the-signal-in-your-data/">related to using sql kills your data</a>. I like the signal metaphor. keep their writing as much as possible. every true or false is a signal degradation. That's why I have version control on. I can see my data through time on realness. how people come in and go.</p>
+<p><a href="https://stackoverflow.blog/2022/03/03/stop-aggregating-away-the-signal-in-your-data/">related to using sql kills your data</a><sup class="note-mark">1</sup>. I like the signal metaphor. keep their writing as much as possible. every true or false is a signal degradation. That's why I have version control on. I can see my data through time on realness. how people come in and go.</p>
 <p>I'm going to prune everyone but Tomo Odessa and Katie. they are the only people who visit.</p>
-<p>Womp.</p></section>
+<p>Womp.</p><ol class="notes"><li>https://stackoverflow.blog/2022/03/03/stop-aggregating-away-the-signal-in-your-data/</li></ol></section>
     </details>
   </article>
 <article itemscope itemtype="http://schema.org/BlogPosting">
@@ -564,6 +580,7 @@ be shared accross all modules instantly bringing feature parity with Pinia.</p><
       <figcaption>
         <h2 itemprop="headline"><a itemprop="url" href="/blog/bloat-for-speed">Bloat for Speed</a></h2>
         <time itemprop="datePublished" datetime="2022-04-12">April 12, 2022</time>
+        
       </figcaption>
     </figure></summary>
       <section itemprop="articleBody"><p>Code is the mental model of your application. I write code so that you can load it into your brain. Concise statements written to be understood. A critical part of this <a href="/blog/a11y-in-the-code">for me</a> is writing a little code as possible. Less code thats more legible so that you have an easy time loading it into your brain.</p>
@@ -582,6 +599,7 @@ be shared accross all modules instantly bringing feature parity with Pinia.</p><
       <figcaption>
         <h2 itemprop="headline"><a itemprop="url" href="/blog/regular-ass-people">Regular Ass People</a></h2>
         <time itemprop="datePublished" datetime="2022-04-12">April 12, 2022</time>
+        
       </figcaption>
     </figure></summary>
       <section itemprop="articleBody"><p>Regular ass people are the most important people.</p>
@@ -598,6 +616,7 @@ be shared accross all modules instantly bringing feature parity with Pinia.</p><
       <figcaption>
         <h2 itemprop="headline"><a itemprop="url" href="/blog/wary-egalitarian">Wary Egalitarian</a></h2>
         <time itemprop="datePublished" datetime="2022-04-12">April 12, 2022</time>
+        
       </figcaption>
     </figure></summary>
       <section itemprop="articleBody"><p>My dad was a marine and then a welder. He was in a union his whole career. Marines are cynical. They don't believe you. They've all seen a sharply dressed man fall over a sharply dressed cliff. He wouldn't pay for garbage because my dad knew they were lying about what it costs. So once every couple of months he would take his first 4 boys and we'd load up the van and surf 30 bags of garbage on our way to the Livermore dump. So many seagulls. An ocean of trash — Their game.</p>
@@ -613,6 +632,7 @@ be shared accross all modules instantly bringing feature parity with Pinia.</p><
       <figcaption>
         <h2 itemprop="headline"><a itemprop="url" href="/blog/fast-for-everyone">Fast for Everyone</a></h2>
         <time itemprop="datePublished" datetime="2022-04-10">April 10, 2022</time>
+        
       </figcaption>
     </figure></summary>
       <section itemprop="articleBody"><p>I've built out the posters that realness generate. It's what I envisage a poster to look like. It's created from a source image but has characteristics that take advantage of svg,</p>
@@ -629,6 +649,7 @@ be shared accross all modules instantly bringing feature parity with Pinia.</p><
       <figcaption>
         <h2 itemprop="headline"><a itemprop="url" href="/blog/time-in-the-mirror">Time in the Mirror</a></h2>
         <time itemprop="datePublished" datetime="2022-02-17">February 17, 2022</time>
+        
       </figcaption>
     </figure></summary>
       <section itemprop="articleBody"><p>America has a special responsibility to continually renew itself, to mix together and look to the oportunities in the swirl. We are the world's experiment in regular folks getting along.</p>
@@ -645,6 +666,7 @@ be shared accross all modules instantly bringing feature parity with Pinia.</p><
       <figcaption>
         <h2 itemprop="headline"><a itemprop="url" href="/blog/how-a-journey-goes">How a Journey Goes</a></h2>
         <time itemprop="datePublished" datetime="2022-02-11">February 11, 2022</time>
+        
       </figcaption>
     </figure></summary>
       <section itemprop="articleBody"><p>Katie said recently that YouTube will always be more exciting than what she wants to do. That it's impossible to walk away from for that reason. If she spends time on YouTube she looses the sensitivity to pursue her actual interests.</p>
@@ -659,6 +681,7 @@ be shared accross all modules instantly bringing feature parity with Pinia.</p><
       <figcaption>
         <h2 itemprop="headline"><a itemprop="url" href="/blog/in-the-long-run">In the Long Run</a></h2>
         <time itemprop="datePublished" datetime="2022-02-06">February 6, 2022</time>
+        
       </figcaption>
     </figure></summary>
       <section itemprop="articleBody"><p>I'm beginning my 3rd month on a project, we are at the end of the MVP period. We used tailwind to get us here. It looked great from the beginning. But now I've come back to the UI for some tightening things up and tailwind's true colors are coming through.</p>
@@ -674,6 +697,7 @@ be shared accross all modules instantly bringing feature parity with Pinia.</p><
       <figcaption>
         <h2 itemprop="headline"><a itemprop="url" href="/blog/always-get-a-DOM">Always Get a DOM</a></h2>
         <time itemprop="datePublished" datetime="2022-01-22">January 22, 2022</time>
+        
       </figcaption>
     </figure></summary>
       <section itemprop="articleBody"><p>I can feel sql slowing me down. I spent 4 hours yesterday massaging 465 entries
@@ -692,6 +716,7 @@ Realness is HTML.</p>
       <figcaption>
         <h2 itemprop="headline"><a itemprop="url" href="/blog/html-is-my-database">Html Is My Database</a></h2>
         <time itemprop="datePublished" datetime="2021-12-23">December 23, 2021</time>
+        
       </figcaption>
     </figure></summary>
       <section itemprop="articleBody"><p>HTML is so forgiving. it isn't judging what you know about it. You just write. HTML loves you with open arms — "Just give me what you write" I'll make something out of it. HTML's permissive by nature. Just like your grandparents.</p>
@@ -709,6 +734,7 @@ Realness is HTML.</p>
       <figcaption>
         <h2 itemprop="headline"><a itemprop="url" href="/blog/name-your-key-frame">Name Your Key Frame</a></h2>
         <time itemprop="datePublished" datetime="2021-12-01">December 1, 2021</time>
+        
       </figcaption>
     </figure></summary>
       <section itemprop="articleBody"><p>Let's say you are building an animation and you can describe the objects inside
@@ -725,6 +751,7 @@ challenge that people on realness can help realize.</p></section>
       <figcaption>
         <h2 itemprop="headline"><a itemprop="url" href="/blog/DOM-the-ORM">DOM the ORM</a></h2>
         <time itemprop="datePublished" datetime="2021-11-17">November 17, 2021</time>
+        
       </figcaption>
     </figure></summary>
       <section itemprop="articleBody"><p>I am not above using a hack.</p>
@@ -755,17 +782,17 @@ Up to now I have satisfied using micro data for this purpose.</p>
 <p>But SVG poses a unique problem. I want all of the attributes, validations,
 rulesets and privelages of a path element. I need to know everything about it.
 And I don't want to reproduce it myself.</p>
-<pre><code>
-// from
-case 'path':return element.outerHTML
-
-// from
-case 'path':return element
-</code></pre>
+<pre class="shiki shiki-themes one-light one-dark-pro" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span></span></span>
+<span class="line"><span>// from</span></span>
+<span class="line"><span>case 'path':return element.outerHTML</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// from</span></span>
+<span class="line"><span>case 'path':return element</span></span>
+<span class="line"><span></span></span></code></pre>
 <p>Microdata lets me set SVGPathElement directly. I was never constrained to string
 values. Item supports complex HTML types intuitively.</p>
 <p>with change I get runtime
-<a href="https://www.motiontricks.com/creating-dynamic-svg-elements-with-javascript/">typing</a>
+<a href="https://www.motiontricks.com/creating-dynamic-svg-elements-with-javascript/">typing</a><sup class="note-mark">1</sup>
 for any path elements <code>&lt;path itemprop="vector"/&gt;</code>.</p>
 <p>Any time I want to type based on an html Element I can. I have sensible defaults
 and configurable complexity.</p>
@@ -782,7 +809,7 @@ Which I can trust to be accelerated on the GPU.</p>
   <li>I want to spend my performance budget wisely.</li>
   <li>I can build Realness AND build a service that serves validated transforms in
   HTML</li>
-  <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/path">event setting d via style</a>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/path">event setting d via style</a><sup class="note-mark">2</sup>
   which is crazy and amazing to me</li>
 </ul>
 <p>A secondary</p>
@@ -793,7 +820,7 @@ figured out how to incorporate the named animation into the downloaded vector.</
 manipulate them as types during your runtime.</p>
 <p>This is better typing than Even if you need to extract your data to a database I
 would argue that this is a more natural way to write webapps. It's a natureal
-friend of serverless edge and data sanctity.</p></section>
+friend of serverless edge and data sanctity.</p><ol class="notes"><li>https://www.motiontricks.com/creating-dynamic-svg-elements-with-javascript/</li><li>https://developer.mozilla.org/en-US/docs/Web/CSS/path</li></ol></section>
     </details>
   </article>
 <article itemscope itemtype="http://schema.org/BlogPosting">
@@ -803,6 +830,7 @@ friend of serverless edge and data sanctity.</p></section>
       <figcaption>
         <h2 itemprop="headline"><a itemprop="url" href="/blog/a11y-in-the-code">A11y in the Code</a></h2>
         <time itemprop="datePublished" datetime="2021-11-09">November 9, 2021</time>
+        
       </figcaption>
     </figure></summary>
       <section itemprop="articleBody"><p>I can't spell the word accessibility. I can’t spell a lot of words. As a
@@ -828,12 +856,25 @@ reading strategy.</p>
 <p>We've been using spaces between words for ten thousand years. And it’s been less
 than a century since dyslexia has been widely understood. I don't understand why
 I have to
-<a href="https://v3.vuejs.org/style-guide/#self-closing-components-strongly-recommended">prove</a>
+<a href="https://v3.vuejs.org/style-guide/#self-closing-components-strongly-recommended">prove</a><sup class="note-mark">1</sup>
 having a space between words makes programming accessible to the largest
-possible audience.</p></section>
+possible audience.</p><ol class="notes"><li>https://v3.vuejs.org/style-guide/#self-closing-components-strongly-recommended</li></ol></section>
     </details>
   </article></section>
   <footer></footer>
 </main>
+<script>
+  document.addEventListener('click', event => {
+    const link = event.target.closest('a[data-reveal-target]')
+    if (!link) return
+    const target = link.getAttribute('data-reveal-target')
+    const panel = document.getElementById(target)
+    if (!panel) return
+    event.preventDefault()
+    const opening = panel.hidden
+    panel.hidden = !opening
+    if (opening) panel.scrollIntoView({ block: 'nearest' })
+  })
+</script>
 </body>
 </html>

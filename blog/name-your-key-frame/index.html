@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="darkreader-lock">
   <title>Name Your Key Frame — Scott Fryxell</title>
   <meta name="description" content="Let's say you are building an animation and you can describe the objects inside each keyframe. Your focused on a landscape. Those hills would come to life with">
   <link rel="canonical" href="https://scott-fryxell.github.io/blog/name-your-key-frame">
@@ -19,6 +20,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="icon" type="image/svg+xml" href="/icons.svg">
   <link rel="apple-touch-icon" href="/192.png">
+  
 </head>
 <body>
 <main>
@@ -38,6 +40,7 @@
       <figcaption>
         <h1 itemprop="headline">Name Your Key Frame</h1>
         <time itemprop="datePublished" datetime="2021-12-01">December 1, 2021</time>
+        <a class="back-link" href="/" aria-label="Back to blog">x</a>
       </figcaption>
     </figure>
     <section itemprop="articleBody"><p>Let's say you are building an animation and you can describe the objects inside
@@ -48,5 +51,18 @@ challenge that people on realness can help realize.</p></section>
   </article>
   <footer></footer>
 </main>
+<script>
+  document.addEventListener('click', event => {
+    const link = event.target.closest('a[data-reveal-target]')
+    if (!link) return
+    const target = link.getAttribute('data-reveal-target')
+    const panel = document.getElementById(target)
+    if (!panel) return
+    event.preventDefault()
+    const opening = panel.hidden
+    panel.hidden = !opening
+    if (opening) panel.scrollIntoView({ block: 'nearest' })
+  })
+</script>
 </body>
 </html>

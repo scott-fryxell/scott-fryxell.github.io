@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="darkreader-lock">
   <title>Burning Through Our Daughters — Scott Fryxell</title>
   <meta name="description" content="Why do I think advertising is gross. It's that they will enable the highest bidder to reinforce that's its okay to gamble. It's okay to keep scrolling, It's oka">
   <link rel="canonical" href="https://scott-fryxell.github.io/blog/burning-through-our-daughters">
@@ -19,6 +20,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="icon" type="image/svg+xml" href="/icons.svg">
   <link rel="apple-touch-icon" href="/192.png">
+  
 </head>
 <body>
 <main>
@@ -38,6 +40,7 @@
       <figcaption>
         <h1 itemprop="headline">Burning Through Our Daughters</h1>
         <time itemprop="datePublished" datetime="2024-02-19">February 19, 2024</time>
+        <a class="back-link" href="/" aria-label="Back to blog">x</a>
       </figcaption>
     </figure>
     <section itemprop="articleBody"><p>Why do I think advertising is gross. It's that they will enable the highest bidder to reinforce that's its okay to gamble. It's okay to keep scrolling, It's okay to to starve yourself for a fleeting sense of self control. It's okay, because it's up to your family to teach you what's healthy and not advertisings job to keep us on the golden path. Lets normalize consumption and checking out and rely on traditional family structures and private schools (even better if they are boarding schools), and well educated parents to help us with what's right and what's true.</p>
@@ -48,5 +51,18 @@
   </article>
   <footer></footer>
 </main>
+<script>
+  document.addEventListener('click', event => {
+    const link = event.target.closest('a[data-reveal-target]')
+    if (!link) return
+    const target = link.getAttribute('data-reveal-target')
+    const panel = document.getElementById(target)
+    if (!panel) return
+    event.preventDefault()
+    const opening = panel.hidden
+    panel.hidden = !opening
+    if (opening) panel.scrollIntoView({ block: 'nearest' })
+  })
+</script>
 </body>
 </html>

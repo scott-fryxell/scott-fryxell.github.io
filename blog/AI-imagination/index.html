@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="darkreader-lock">
   <title>AI Imagination — Scott Fryxell</title>
   <meta name="description" content="Working with it I've been scaling up my work with Cursor's AI in the last three months. More than line completion, I am using it to help me work through and imp">
   <link rel="canonical" href="https://scott-fryxell.github.io/blog/AI-imagination">
@@ -19,6 +20,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="icon" type="image/svg+xml" href="/icons.svg">
   <link rel="apple-touch-icon" href="/192.png">
+  
 </head>
 <body>
 <main>
@@ -38,6 +40,7 @@
       <figcaption>
         <h1 itemprop="headline">AI Imagination</h1>
         <time itemprop="datePublished" datetime="2025-02-14">February 14, 2025</time>
+        <a class="back-link" href="/" aria-label="Back to blog">x</a>
       </figcaption>
     </figure>
     <section itemprop="articleBody"><h1 id="working-with-it">Working with it</h1>
@@ -47,9 +50,9 @@ solutions; trying to push what I can get done.</p>
 <p>It has been going well. I feel like I am two and sometimes three developers and
 the code I am writing has higher standards and is willing to go deeper.</p>
 <p>I have upgraded to a fairly intense set of
-<a href="https://github.com/realness-online/web/blob/main/eslint.config.js">linting</a>
+<a href="https://github.com/realness-online/web/blob/main/eslint.config.js">linting</a><sup class="note-mark">1</sup>
 rules; have type visibility via
-<a href="https://github.com/realness-online/web/blob/main/tsconfig.json">JSDoc</a>. I even
+<a href="https://github.com/realness-online/web/blob/main/tsconfig.json">JSDoc</a><sup class="note-mark">2</sup>. I even
 brought my test harness back online. Nothing's perfect, all three are works in
 progress but I feel like these are ideal setups for where cursor shines as an
 assistant. I can learn about how to type for clarity, get inference errors
@@ -63,12 +66,12 @@ back.</p>
 <p>But my confidence to trust the work I'm doing with AI is not blind. I know to
 harden myself for the future. I learned how to survive in vim this last year,
 It's going to be my low assistance editor. To keep my ability to support the
-nerd handshake, I have <a href="https://github.com/scott-fryxell/kata-machine">forked</a>
+nerd handshake, I have <a href="https://github.com/scott-fryxell/kata-machine">forked</a><sup class="note-mark">3</sup>
 into a deno version the Primeagen's kata machine.</p>
 <p>This is the dream, right: we are stronger for AI, More capable; rewarded for
 pushing ourselves.</p>
 <h2 id="the-interview-problem">The Interview Problem</h2>
-<p><a href="https://www.404media.co/anthropic-claude-job-application-ai-assistants/">Finding out</a>
+<p><a href="https://www.404media.co/anthropic-claude-job-application-ai-assistants/">Finding out</a><sup class="note-mark">4</sup>
 that Anthropic is asking developers to not use AI during the interview process
 is pretty bonkers. I think it shows that we've always half-assed our way into
 finding good engineers.</p>
@@ -88,29 +91,29 @@ them. Their goals are to game your system hoping to be lucky enough to have
 studied the exact problem you're giving them to solve.</p>
 <h2 id="a-whole-class-of-bugs">A Whole Class of Bugs</h2>
 <p>These 22 lines of code remove a whole class of bugs around document ID:</p>
-<pre language="typescript"><code class="language-typescript">const convert: FirestoreDataConverter&lt;DocumentData, DocumentData&gt; = {
-  fromFirestore: (
-    snapshot: DocumentSnapshot&lt;DocumentData&gt;,
-    options: SnapshotOptions,
-  ) =&gt; {
-    const data = snapshot.data(options);
-    if (!data) return null;
-    const return_data = {
-      ...data,
-      id: snapshot.id,
-      ref: snapshot.ref,
-      path: snapshot.ref.path,
-      created_at: snapshot.createTime?.toDate(),
-      updated_at: snapshot.updateTime?.toDate(),
-      read_at: snapshot.readTime?.toDate(),
-    };
-    return return_data;
-  },
-  toFirestore: (model: WithFieldValue&lt;DocumentData&gt;) =&gt; {
-    const { updated_at, created_at, id, read_at, ...data } = model;
-    return data;
-  },
-};</code></pre>
+<pre class="shiki shiki-themes one-light one-dark-pro" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">const</span><span style="--shiki-light:#986801;--shiki-dark:#E5C07B"> convert</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B"> FirestoreDataConverter</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&#x3C;</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B">DocumentData</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B">DocumentData</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">> </span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> {</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">  fromFirestore</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> (</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">    snapshot</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B"> DocumentSnapshot</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&#x3C;</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B">DocumentData</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">>,</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">    options</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B"> SnapshotOptions</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">  ) </span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">=></span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> {</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    const</span><span style="--shiki-light:#986801;--shiki-dark:#E5C07B"> data</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B"> snapshot</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">data</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">options</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">);</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    if</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> (</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">!</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">data</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">) </span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">return</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> null</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    const</span><span style="--shiki-light:#986801;--shiki-dark:#E5C07B"> return_data</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> {</span></span>
+<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">      ...</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">data</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">      id</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B"> snapshot</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">id</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">      ref</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B"> snapshot</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">ref</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">      path</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B"> snapshot</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">ref</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">path</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">      created_at</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B"> snapshot</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">createTime</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">?.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">toDate</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(),</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">      updated_at</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B"> snapshot</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">updateTime</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">?.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">toDate</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(),</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">      read_at</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B"> snapshot</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">readTime</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">?.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">toDate</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(),</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    };</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    return</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75"> return_data</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">  },</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">  toFirestore</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> (</span><span style="--shiki-light:#383A42;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">model</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B"> WithFieldValue</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&#x3C;</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B">DocumentData</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">>) </span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">=></span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> {</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    const</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> { </span><span style="--shiki-light:#986801;--shiki-dark:#E5C07B">updated_at</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#E5C07B">created_at</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#E5C07B">id</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#E5C07B">read_at</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">...</span><span style="--shiki-light:#986801;--shiki-dark:#E5C07B">data</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> } </span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75"> model</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    return</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75"> data</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">  },</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">};</span></span></code></pre>
 <p>Only in the beginning of your firestore app can you store the document ID inside
 the document. If references get out of sync, you'll barely notice yourself
 driving into the wall.</p>
@@ -132,7 +135,7 @@ network it's saved as <code>/author/type/created-at</code> which is optimized fo
 <code>Scott Fryxell, Thursday, February 6 at 1_31 PM.svg</code>, as rococo as I can go with
 a file name.</p>
 <p>by keeping the source of truth inside the html I can query it's
-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Microdata">Microdata</a> and
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Microdata">Microdata</a><sup class="note-mark">5</sup> and
 build an object model magically. It comes alive on device and keeps my promise
 to the user that the server is inert.</p>
 <p>I can live in both of these worlds I can load them both into my imagination and
@@ -145,9 +148,22 @@ can hang out with queers and meat-heads in equal measure, who want a friend
 group filled with some motherfuckers who are on fetlife and others who go to
 church. You know, they keep themselves clean and can navigate peculiarities with
 curiosity.</p>
-<p><a href="https://news.ycombinator.com/item?id=43054340">comments</a></p></section>
+<p><a href="https://news.ycombinator.com/item?id=43054340">comments</a><sup class="note-mark">6</sup></p><ol class="notes"><li>https://github.com/realness-online/web/blob/main/eslint.config.js</li><li>https://github.com/realness-online/web/blob/main/tsconfig.json</li><li>https://github.com/scott-fryxell/kata-machine</li><li>https://www.404media.co/anthropic-claude-job-application-ai-assistants/</li><li>https://developer.mozilla.org/en-US/docs/Web/HTML/Microdata</li><li>https://news.ycombinator.com/item?id=43054340</li></ol></section>
   </article>
   <footer></footer>
 </main>
+<script>
+  document.addEventListener('click', event => {
+    const link = event.target.closest('a[data-reveal-target]')
+    if (!link) return
+    const target = link.getAttribute('data-reveal-target')
+    const panel = document.getElementById(target)
+    if (!panel) return
+    event.preventDefault()
+    const opening = panel.hidden
+    panel.hidden = !opening
+    if (opening) panel.scrollIntoView({ block: 'nearest' })
+  })
+</script>
 </body>
 </html>

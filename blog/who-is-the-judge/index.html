@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="darkreader-lock">
   <title>Who Is the Judge — Scott Fryxell</title>
   <meta name="description" content="My problem with hiring is one of hubris. You are not qualified to know who is the right hire for a job is. Almost no one has the skill to spend an hour in a ste">
   <link rel="canonical" href="https://scott-fryxell.github.io/blog/who-is-the-judge">
@@ -19,6 +20,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="icon" type="image/svg+xml" href="/icons.svg">
   <link rel="apple-touch-icon" href="/192.png">
+  
 </head>
 <body>
 <main>
@@ -38,17 +40,31 @@
       <figcaption>
         <h1 itemprop="headline">Who Is the Judge</h1>
         <time itemprop="datePublished" datetime="2022-04-27">April 27, 2022</time>
+        <a class="back-link" href="/" aria-label="Back to blog">x</a>
       </figcaption>
     </figure>
     <section itemprop="articleBody"><p>My problem with hiring is one of hubris. You are not qualified to know who is the right hire for a job is. Almost no one has the skill to spend an hour in a sterile office with a random person and know if they are gonna be a great fit. SQL people can't tell you if a front end developer is a serious talent. They can only tell you if a front end person knows SQL.</p>
 <p>How can we hire when we know we are not qualified? I like the right person for the right job perspective. Is this person qualified to do the job I need done now?</p>
 <p>Using contractors and freelancers. lets you 'hire' for the job you need done and keeps the talent pool free'd up. It's good to let people move on to something else when the job they want to do is complete.</p>
 <p>This is the Netflix's view. Hire a team, and hire for position. If the work is done, let the person go with the warmest regards — mindful to build a world that is fair for them long term.</p>
-<p><a href="https://stackoverflow.blog/2022/03/03/stop-aggregating-away-the-signal-in-your-data/">related to using sql kills your data</a>. I like the signal metaphor. keep their writing as much as possible. every true or false is a signal degradation. That's why I have version control on. I can see my data through time on realness. how people come in and go.</p>
+<p><a href="https://stackoverflow.blog/2022/03/03/stop-aggregating-away-the-signal-in-your-data/">related to using sql kills your data</a><sup class="note-mark">1</sup>. I like the signal metaphor. keep their writing as much as possible. every true or false is a signal degradation. That's why I have version control on. I can see my data through time on realness. how people come in and go.</p>
 <p>I'm going to prune everyone but Tomo Odessa and Katie. they are the only people who visit.</p>
-<p>Womp.</p></section>
+<p>Womp.</p><ol class="notes"><li>https://stackoverflow.blog/2022/03/03/stop-aggregating-away-the-signal-in-your-data/</li></ol></section>
   </article>
   <footer></footer>
 </main>
+<script>
+  document.addEventListener('click', event => {
+    const link = event.target.closest('a[data-reveal-target]')
+    if (!link) return
+    const target = link.getAttribute('data-reveal-target')
+    const panel = document.getElementById(target)
+    if (!panel) return
+    event.preventDefault()
+    const opening = panel.hidden
+    panel.hidden = !opening
+    if (opening) panel.scrollIntoView({ block: 'nearest' })
+  })
+</script>
 </body>
 </html>

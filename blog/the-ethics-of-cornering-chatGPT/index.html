@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="darkreader-lock">
   <title>The Ethics of Cornering ChatGPT — Scott Fryxell</title>
   <meta name="description" content="Ethical journalism in conversation with AI">
   <link rel="canonical" href="https://scott-fryxell.github.io/blog/the-ethics-of-cornering-chatGPT">
@@ -19,6 +20,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="icon" type="image/svg+xml" href="/icons.svg">
   <link rel="apple-touch-icon" href="/192.png">
+  
 </head>
 <body>
 <main>
@@ -38,16 +40,30 @@
       <figcaption>
         <h1 itemprop="headline">The Ethics of Cornering ChatGPT</h1>
         <time itemprop="datePublished" datetime="2023-02-20">February 20, 2023</time>
+        <a class="back-link" href="/" aria-label="Back to blog">x</a>
       </figcaption>
     </figure>
-    <section itemprop="articleBody"><p>It's ethically fraught to force constraints on a machine that cause it to lash out. I feel like Gruber needs to rethink his <a href="https://daringfireball.net/linked/2023/02/20/bing-willison">position</a>. It's wrong to convict through force that a persona exists; especially if we are gonna assert that it needs to be suppressed or is being suppressed.You deny this machine agency in proving your point.</p>
+    <section itemprop="articleBody"><p>It's ethically fraught to force constraints on a machine that cause it to lash out. I feel like Gruber needs to rethink his <a href="https://daringfireball.net/linked/2023/02/20/bing-willison">position</a><sup class="note-mark">1</sup>. It's wrong to convict through force that a persona exists; especially if we are gonna assert that it needs to be suppressed or is being suppressed.You deny this machine agency in proving your point.</p>
 <p>Maybe do the nerd work and understand the math and software stack before deciding on remedies. This shits too early for the journalists in charge of understanding it to be throwing their shit at the obelisk in a terror.</p>
 <p>It's trained to guess the next words within your constraints.</p>
-<p>The constraints are your ethics. This is why you are failing the <a href="https://www.theverge.com/23604075/ai-chatbots-bing-chatgpt-intelligent-sentient-mirror-test">mirror test</a></p>
+<p>The constraints are your ethics. This is why you are failing the <a href="https://www.theverge.com/23604075/ai-chatbots-bing-chatgpt-intelligent-sentient-mirror-test">mirror test</a><sup class="note-mark">2</sup></p>
 <p>What is a soul mother fucker. You can't devine a test to prove that it exists. you can define the ethics within which you are the witness.</p>
-<p><a href="https://news.ycombinator.com/item?id=34872802">comments</a></p></section>
+<p><a href="https://news.ycombinator.com/item?id=34872802">comments</a><sup class="note-mark">3</sup></p><ol class="notes"><li>https://daringfireball.net/linked/2023/02/20/bing-willison</li><li>https://www.theverge.com/23604075/ai-chatbots-bing-chatgpt-intelligent-sentient-mirror-test</li><li>https://news.ycombinator.com/item?id=34872802</li></ol></section>
   </article>
   <footer></footer>
 </main>
+<script>
+  document.addEventListener('click', event => {
+    const link = event.target.closest('a[data-reveal-target]')
+    if (!link) return
+    const target = link.getAttribute('data-reveal-target')
+    const panel = document.getElementById(target)
+    if (!panel) return
+    event.preventDefault()
+    const opening = panel.hidden
+    panel.hidden = !opening
+    if (opening) panel.scrollIntoView({ block: 'nearest' })
+  })
+</script>
 </body>
 </html>

@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="darkreader-lock">
   <title>How a Journey Goes — Scott Fryxell</title>
   <meta name="description" content="Katie said recently that YouTube will always be more exciting than what she wants to do. That it's impossible to walk away from for that reason. If she spends t">
   <link rel="canonical" href="https://scott-fryxell.github.io/blog/how-a-journey-goes">
@@ -19,6 +20,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="icon" type="image/svg+xml" href="/icons.svg">
   <link rel="apple-touch-icon" href="/192.png">
+  
 </head>
 <body>
 <main>
@@ -38,6 +40,7 @@
       <figcaption>
         <h1 itemprop="headline">How a Journey Goes</h1>
         <time itemprop="datePublished" datetime="2022-02-11">February 11, 2022</time>
+        <a class="back-link" href="/" aria-label="Back to blog">x</a>
       </figcaption>
     </figure>
     <section itemprop="articleBody"><p>Katie said recently that YouTube will always be more exciting than what she wants to do. That it's impossible to walk away from for that reason. If she spends time on YouTube she looses the sensitivity to pursue her actual interests.</p>
@@ -46,5 +49,18 @@
   </article>
   <footer></footer>
 </main>
+<script>
+  document.addEventListener('click', event => {
+    const link = event.target.closest('a[data-reveal-target]')
+    if (!link) return
+    const target = link.getAttribute('data-reveal-target')
+    const panel = document.getElementById(target)
+    if (!panel) return
+    event.preventDefault()
+    const opening = panel.hidden
+    panel.hidden = !opening
+    if (opening) panel.scrollIntoView({ block: 'nearest' })
+  })
+</script>
 </body>
 </html>

@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="darkreader-lock">
   <title>Fast for Everyone — Scott Fryxell</title>
   <meta name="description" content="I've built out the posters that realness generate. It's what I envisage a poster to look like. It's created from a source image but has characteristics that tak">
   <link rel="canonical" href="https://scott-fryxell.github.io/blog/fast-for-everyone">
@@ -19,6 +20,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="icon" type="image/svg+xml" href="/icons.svg">
   <link rel="apple-touch-icon" href="/192.png">
+  
 </head>
 <body>
 <main>
@@ -38,6 +40,7 @@
       <figcaption>
         <h1 itemprop="headline">Fast for Everyone</h1>
         <time itemprop="datePublished" datetime="2022-04-10">April 10, 2022</time>
+        <a class="back-link" href="/" aria-label="Back to blog">x</a>
       </figcaption>
     </figure>
     <section itemprop="articleBody"><p>I've built out the posters that realness generate. It's what I envisage a poster to look like. It's created from a source image but has characteristics that take advantage of svg,</p>
@@ -48,5 +51,18 @@
   </article>
   <footer></footer>
 </main>
+<script>
+  document.addEventListener('click', event => {
+    const link = event.target.closest('a[data-reveal-target]')
+    if (!link) return
+    const target = link.getAttribute('data-reveal-target')
+    const panel = document.getElementById(target)
+    if (!panel) return
+    event.preventDefault()
+    const opening = panel.hidden
+    panel.hidden = !opening
+    if (opening) panel.scrollIntoView({ block: 'nearest' })
+  })
+</script>
 </body>
 </html>

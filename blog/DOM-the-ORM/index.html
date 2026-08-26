@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="darkreader-lock">
   <title>DOM the ORM — Scott Fryxell</title>
   <meta name="description" content="How a single change opens the DOM up to be our persistence hero">
   <link rel="canonical" href="https://scott-fryxell.github.io/blog/DOM-the-ORM">
@@ -19,6 +20,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="icon" type="image/svg+xml" href="/icons.svg">
   <link rel="apple-touch-icon" href="/192.png">
+  
 </head>
 <body>
 <main>
@@ -38,6 +40,7 @@
       <figcaption>
         <h1 itemprop="headline">DOM the ORM</h1>
         <time itemprop="datePublished" datetime="2021-11-17">November 17, 2021</time>
+        <a class="back-link" href="/" aria-label="Back to blog">x</a>
       </figcaption>
     </figure>
     <section itemprop="articleBody"><p>I am not above using a hack.</p>
@@ -68,17 +71,17 @@ Up to now I have satisfied using micro data for this purpose.</p>
 <p>But SVG poses a unique problem. I want all of the attributes, validations,
 rulesets and privelages of a path element. I need to know everything about it.
 And I don't want to reproduce it myself.</p>
-<pre><code>
-// from
-case 'path':return element.outerHTML
-
-// from
-case 'path':return element
-</code></pre>
+<pre class="shiki shiki-themes one-light one-dark-pro" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span></span></span>
+<span class="line"><span>// from</span></span>
+<span class="line"><span>case 'path':return element.outerHTML</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// from</span></span>
+<span class="line"><span>case 'path':return element</span></span>
+<span class="line"><span></span></span></code></pre>
 <p>Microdata lets me set SVGPathElement directly. I was never constrained to string
 values. Item supports complex HTML types intuitively.</p>
 <p>with change I get runtime
-<a href="https://www.motiontricks.com/creating-dynamic-svg-elements-with-javascript/">typing</a>
+<a href="https://www.motiontricks.com/creating-dynamic-svg-elements-with-javascript/">typing</a><sup class="note-mark">1</sup>
 for any path elements <code>&lt;path itemprop="vector"/&gt;</code>.</p>
 <p>Any time I want to type based on an html Element I can. I have sensible defaults
 and configurable complexity.</p>
@@ -95,7 +98,7 @@ Which I can trust to be accelerated on the GPU.</p>
   <li>I want to spend my performance budget wisely.</li>
   <li>I can build Realness AND build a service that serves validated transforms in
   HTML</li>
-  <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/path">event setting d via style</a>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/path">event setting d via style</a><sup class="note-mark">2</sup>
   which is crazy and amazing to me</li>
 </ul>
 <p>A secondary</p>
@@ -106,9 +109,22 @@ figured out how to incorporate the named animation into the downloaded vector.</
 manipulate them as types during your runtime.</p>
 <p>This is better typing than Even if you need to extract your data to a database I
 would argue that this is a more natural way to write webapps. It's a natureal
-friend of serverless edge and data sanctity.</p></section>
+friend of serverless edge and data sanctity.</p><ol class="notes"><li>https://www.motiontricks.com/creating-dynamic-svg-elements-with-javascript/</li><li>https://developer.mozilla.org/en-US/docs/Web/CSS/path</li></ol></section>
   </article>
   <footer></footer>
 </main>
+<script>
+  document.addEventListener('click', event => {
+    const link = event.target.closest('a[data-reveal-target]')
+    if (!link) return
+    const target = link.getAttribute('data-reveal-target')
+    const panel = document.getElementById(target)
+    if (!panel) return
+    event.preventDefault()
+    const opening = panel.hidden
+    panel.hidden = !opening
+    if (opening) panel.scrollIntoView({ block: 'nearest' })
+  })
+</script>
 </body>
 </html>

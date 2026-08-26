@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="darkreader-lock">
   <title>Pop Will Eat Itself — Scott Fryxell</title>
   <meta name="description" content="When will the training data become polluted">
   <link rel="canonical" href="https://scott-fryxell.github.io/blog/pop-will-eat-itself">
@@ -19,6 +20,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="icon" type="image/svg+xml" href="/icons.svg">
   <link rel="apple-touch-icon" href="/192.png">
+  
 </head>
 <body>
 <main>
@@ -38,15 +40,29 @@
       <figcaption>
         <h1 itemprop="headline">Pop Will Eat Itself</h1>
         <time itemprop="datePublished" datetime="2023-02-21">February 21, 2023</time>
+        <a class="back-link" href="/" aria-label="Back to blog">x</a>
       </figcaption>
     </figure>
     <section itemprop="articleBody"><p>Up until now chatGPT has had pure human data to ingest.</p>
 <p>I figure they are gonna update the model with new content every 6 months.</p>
 <p>As this technique of reading the entire contents of the web to create an artificial intelligence progresses it's going to start ingesting AI created content.</p>
 <p>This will cause the AI to resonate against itself.</p>
-<p><a href="https://news.ycombinator.com/item?id=34889404">comment</a></p></section>
+<p><a href="https://news.ycombinator.com/item?id=34889404">comment</a><sup class="note-mark">1</sup></p><ol class="notes"><li>https://news.ycombinator.com/item?id=34889404</li></ol></section>
   </article>
   <footer></footer>
 </main>
+<script>
+  document.addEventListener('click', event => {
+    const link = event.target.closest('a[data-reveal-target]')
+    if (!link) return
+    const target = link.getAttribute('data-reveal-target')
+    const panel = document.getElementById(target)
+    if (!panel) return
+    event.preventDefault()
+    const opening = panel.hidden
+    panel.hidden = !opening
+    if (opening) panel.scrollIntoView({ block: 'nearest' })
+  })
+</script>
 </body>
 </html>

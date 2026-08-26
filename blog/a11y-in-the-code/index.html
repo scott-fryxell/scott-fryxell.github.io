@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="darkreader-lock">
   <title>A11y in the Code — Scott Fryxell</title>
   <meta name="description" content="I can't spell the word accessibility. I can’t spell a lot of words. As a dyslexic, it's even harder for me to read them. I was diagnosed in my late thirties, we">
   <link rel="canonical" href="https://scott-fryxell.github.io/blog/a11y-in-the-code">
@@ -19,6 +20,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="icon" type="image/svg+xml" href="/icons.svg">
   <link rel="apple-touch-icon" href="/192.png">
+  
 </head>
 <body>
 <main>
@@ -38,6 +40,7 @@
       <figcaption>
         <h1 itemprop="headline">A11y in the Code</h1>
         <time itemprop="datePublished" datetime="2021-11-09">November 9, 2021</time>
+        <a class="back-link" href="/" aria-label="Back to blog">x</a>
       </figcaption>
     </figure>
     <section itemprop="articleBody"><p>I can't spell the word accessibility. I can’t spell a lot of words. As a
@@ -63,11 +66,24 @@ reading strategy.</p>
 <p>We've been using spaces between words for ten thousand years. And it’s been less
 than a century since dyslexia has been widely understood. I don't understand why
 I have to
-<a href="https://v3.vuejs.org/style-guide/#self-closing-components-strongly-recommended">prove</a>
+<a href="https://v3.vuejs.org/style-guide/#self-closing-components-strongly-recommended">prove</a><sup class="note-mark">1</sup>
 having a space between words makes programming accessible to the largest
-possible audience.</p></section>
+possible audience.</p><ol class="notes"><li>https://v3.vuejs.org/style-guide/#self-closing-components-strongly-recommended</li></ol></section>
   </article>
   <footer></footer>
 </main>
+<script>
+  document.addEventListener('click', event => {
+    const link = event.target.closest('a[data-reveal-target]')
+    if (!link) return
+    const target = link.getAttribute('data-reveal-target')
+    const panel = document.getElementById(target)
+    if (!panel) return
+    event.preventDefault()
+    const opening = panel.hidden
+    panel.hidden = !opening
+    if (opening) panel.scrollIntoView({ block: 'nearest' })
+  })
+</script>
 </body>
 </html>
