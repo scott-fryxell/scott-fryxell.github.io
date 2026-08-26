@@ -176,3 +176,5 @@ other software developers, suddenly felt the need to diversify our model access.
 So, for freedom, we collectively decided to give these Chinese models a try. Pi
 went from a tool I had gotten working and was just playing around with to the
 most important piece of my rig.
+
+[comments](https://news.ycombinator.com/item?id=49452346)
