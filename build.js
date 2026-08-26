@@ -1,14 +1,16 @@
 import { render } from '@comark/html'
 import { parse } from 'comark'
+import { codeToHtml } from 'shiki'
 import { readdir, readFile, writeFile, mkdir, cp } from 'fs/promises'
 import { join, relative } from 'path'
-import { existsSync } from 'fs'
+import { existsSync, watch } from 'fs'
 
 const ARTICLES = 'content/articles'
 const STATIC = 'static'
 const OUT = 'dist'
 const SITE = 'https://scott-fryxell.github.io'
 const DRAFTS = process.argv.includes('--drafts')
+const WATCH = process.argv.includes('--watch')
 const RESUME_IMG = '/posters/Scott Fryxell @ Wednesday afternoon, March 4 - 1772667028251.svg'
 
 const minor_words = new Set([
@@ -31,6 +33,19 @@ function format_date(str) {
     .toLocaleDateString('en', { year: 'numeric', month: 'long', day: 'numeric' })
 }
 
+// dev only: poll the stamp the watcher writes, reload when the build changes
+const live_reload = `<script>
+    let stamp = null
+    setInterval(async () => {
+      const next = await fetch('/build-stamp.txt', { cache: 'no-store' })
+        .then(response => response.text())
+        .catch(() => null)
+      if (!next) return
+      if (stamp && next !== stamp) location.reload()
+      stamp = next
+    }, 400)
+  </script>`
+
 function shell(title, body, meta = {}) {
   const full_title = meta.root ? `${title} — Humanist Software Developer` : `${title} — Scott Fryxell`
   const description = meta.description || 'Humanist software developer in San Francisco — building tools that respect the people who use them.'
@@ -42,6 +57,7 @@ function shell(title, body, meta = {}) {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="darkreader-lock">
   <title>${full_title}</title>
   <meta name="description" content="${description}">
   <link rel="canonical" href="${canonical}">
@@ -58,6 +74,7 @@ function shell(title, body, meta = {}) {
   <link rel="stylesheet" href="/style.css">
   <link rel="icon" type="image/svg+xml" href="/icons.svg">
   <link rel="apple-touch-icon" href="/192.png">
+  ${WATCH ? live_reload : ''}
 </head>
 <body>
 <main>
@@ -74,6 +91,19 @@ function shell(title, body, meta = {}) {
   ${body}
   <footer></footer>
 </main>
+<script>
+  document.addEventListener('click', event => {
+    const link = event.target.closest('a[data-reveal-target]')
+    if (!link) return
+    const target = link.getAttribute('data-reveal-target')
+    const panel = document.getElementById(target)
+    if (!panel) return
+    event.preventDefault()
+    const opening = panel.hidden
+    panel.hidden = !opening
+    if (opening) panel.scrollIntoView({ block: 'nearest' })
+  })
+</script>
 </body>
 </html>`
 }
@@ -101,20 +131,70 @@ async function load_poster_sizes() {
   }
 }
 
-function poster(data, title, heading = 'h2', href = null) {
+function poster(data, title, heading = 'h2', href = null, options = {}) {
   const size = poster_sizes[data.img]
   const ratio = size ? (size.width / size.height).toFixed(4) : null
   const focus = data.focus ? `; --focus: ${data.focus}` : ''
   const figure_style = ratio ? ` style="--ratio: ${ratio}${focus}"` : ''
   const img_attrs = size ? ` width="${size.width}" height="${size.height}"` : ''
   const headline = href ? `<a itemprop="url" href="${href}">${title}</a>` : title
+  const close = options.close_href
+    ? `<a class="back-link" href="${options.close_href}" aria-label="Back to blog">x</a>`
+    : ''
   return `<figure${figure_style}>
       ${data.img ? `<img src="/posters/${data.img}"${img_attrs} alt="" loading="lazy">` : ''}
       <figcaption>
-        <${heading} itemprop="headline">${headline}</${heading}>
+        <${heading} itemprop="headline">${headline}${data.draft ? ' <mark class="draft">draft</mark>' : ''}</${heading}>
         ${data.date ? `<time itemprop="datePublished" datetime="${data.date}">${format_date(data.date)}</time>` : ''}
+        ${close}
       </figcaption>
     </figure>`
+}
+
+const entities = { amp: '&', lt: '<', gt: '>', quot: '"', '#39': "'" }
+const code_block = /<pre(?: language="([^"]*)")?><code[^>]*>([\s\S]*?)<\/code><\/pre>/g
+
+// comark hands us the language on the fence; shiki turns it into themed spans
+async function highlight(html) {
+  const blocks = [...html.matchAll(code_block)]
+  if (!blocks.length) return html
+  const rendered = await Promise.all(blocks.map(([, language, code]) =>
+    codeToHtml(code.replace(/&(amp|lt|gt|quot|#39);/g, (_, name) => entities[name]), {
+      lang: language || 'text',
+      themes: { light: 'one-light', dark: 'one-dark-pro' },
+      defaultColor: false
+    })
+  ))
+  return blocks.reduce((out, block, i) => out.replace(block[0], () => rendered[i]), html)
+}
+
+const lone_image = /<p>(<img [^>]*>)<\/p>/g
+const title_attr = / title="([^"]*)"/
+
+// a paragraph that holds nothing but an image is a plate: pull it out of the
+// prose column and hand the markdown title to a caption
+function plate(html) {
+  return html.replace(lone_image, (_, img) => {
+    const caption = img.match(title_attr)?.[1]
+    return `<figure class="plate">${img.replace(title_attr, '')}${caption ? `<figcaption>${caption}</figcaption>` : ''}</figure>`
+  })
+}
+
+const external_link = /<a ([^>]*?)href="(https?:\/\/[^"]+)"([^>]*)>([\s\S]*?)<\/a>/g
+
+// paper has no hover and no address bar: number every outbound link and
+// collect the addresses into an endnote list the print sheet reveals
+function footnote(html) {
+  const seen = new Map()
+  const marked = html.replace(external_link, (_, before, href, after, text) => {
+    if (!seen.has(href)) seen.set(href, seen.size + 1)
+    const n = seen.get(href)
+    return `<a ${before}href="${href}"${after}>${text}</a><sup class="note-mark">${n}</sup>`
+  })
+  if (!seen.size) return { html: marked, notes: '' }
+  const items = [...seen.keys()].map(href => `<li>${href}</li>`).join('')
+  const notes = `<ol class="notes">${items}</ol>`
+  return { html: marked, notes }
 }
 
 function strip_tags(html) {
@@ -134,16 +214,16 @@ async function build_article(file) {
   const title = title_case(data.title || slug.split('/').pop().replace(/-/g, ' '))
   const draft = data.draft === true || data.draft === 'true'
   if (draft && !DRAFTS) return { slug, title, date: data.date, draft }
-  const html = await render(src)
+  const { html, notes } = footnote(plate(await highlight(await render(src))))
   const article = `<article itemscope itemtype="http://schema.org/BlogPosting">
-    ${poster(data, title, 'h1')}
-    <section itemprop="articleBody">${html}</section>
+    ${poster(data, title, 'h1', null, { close_href: '/' })}
+    <section itemprop="articleBody">${html}${notes}</section>
   </article>`
   const out = join(OUT, 'blog', slug, 'index.html')
   await mkdir(join(OUT, 'blog', slug), { recursive: true })
   const description = data.description || strip_tags(html).slice(0, 160).trim()
   await writeFile(out, shell(title, article, { url: `/blog/${slug}`, img: data.img, description, type: 'article' }))
-  return { slug, title, date: data.date, img: data.img, focus: data.focus, draft, html }
+  return { slug, title, date: data.date, img: data.img, focus: data.focus, draft, html, notes }
 }
 
 async function build_index(articles) {
@@ -153,7 +233,7 @@ async function build_index(articles) {
   const items = published.map(a => `<article itemscope itemtype="http://schema.org/BlogPosting">
     <details>
       <summary>${poster(a, a.title, 'h2', `/blog/${a.slug}`)}</summary>
-      <section itemprop="articleBody">${a.html}</section>
+      <section itemprop="articleBody">${a.html}${a.notes || ''}</section>
     </details>
   </article>`).join('\n')
   const latest = published.find(a => a.img)
@@ -171,7 +251,7 @@ async function build_resume() {
   }))
 }
 
-async function main() {
+async function build() {
   await mkdir(OUT, { recursive: true })
   await cp(STATIC, OUT, { recursive: true }).catch(() => {})
   if (existsSync('style.css')) await cp('style.css', join(OUT, 'style.css'))
@@ -181,7 +261,21 @@ async function main() {
   const articles = await Promise.all(files.map(build_article))
   await build_index(articles)
   await build_resume()
+  if (WATCH) await writeFile(join(OUT, 'build-stamp.txt'), String(Date.now()))
   console.log(`built ${articles.length} articles`)
 }
 
-main()
+function watch_sources() {
+  let pending = null
+  const rebuild = () => {
+    clearTimeout(pending)
+    pending = setTimeout(() => build().catch(error => console.error(error.message)), 50)
+  }
+  for (const dir of ['content', STATIC]) watch(dir, { recursive: true }, rebuild)
+  watch('resume.html', rebuild)
+  watch('build.js', rebuild)
+  console.log('watching content, static, resume.html, build.js')
+}
+
+await build()
+if (WATCH) watch_sources()
