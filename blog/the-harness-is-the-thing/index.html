@@ -12,11 +12,16 @@
   <meta property="og:title" content="The Harness Is the Thing — Scott Fryxell">
   <meta property="og:description" content="Models are commodifying. The harness - skills, extensions, a scriptable app - is where the work and the leverage now live.">
   <meta property="og:url" content="https://scott-fryxell.github.io/blog/the-harness-is-the-thing">
-  <meta property="og:image" content="https://scott-fryxell.github.io/posters/Scott%20Fryxell%20%40%20Sunday%20evening%2C%20April%2012%20-%201776042845045.svg">
+  <meta property="og:image" content="https://scott-fryxell.github.io/og/Scott%20Fryxell%20%40%20Sunday%20evening%2C%20April%2012%20-%201776042845045.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The Harness Is the Thing — Scott Fryxell">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="The Harness Is the Thing — Scott Fryxell">
   <meta name="twitter:description" content="Models are commodifying. The harness - skills, extensions, a scriptable app - is where the work and the leverage now live.">
-  <meta name="twitter:image" content="https://scott-fryxell.github.io/posters/Scott%20Fryxell%20%40%20Sunday%20evening%2C%20April%2012%20-%201776042845045.svg">
+  <meta name="twitter:image" content="https://scott-fryxell.github.io/og/Scott%20Fryxell%20%40%20Sunday%20evening%2C%20April%2012%20-%201776042845045.jpg">
+  <meta name="twitter:image:alt" content="The Harness Is the Thing — Scott Fryxell">
   <link rel="stylesheet" href="/style.css">
   <link rel="icon" type="image/svg+xml" href="/icons.svg">
   <link rel="apple-touch-icon" href="/192.png">
@@ -43,7 +48,7 @@
         <a class="back-link" href="/" aria-label="Back to blog">x</a>
       </figcaption>
     </figure>
-    <section itemprop="articleBody"><p>When I started out as a developer, I had a graybeard observe to me that
+    <section itemprop="articleBody"><p>When I started out as a developer, I had a graybeard observe for me that
 Moore's law also applies to software. I didn't understand that this constant conversation about how we were solving problems was the arc of progress; that complaining about J2EE and how slow Netbeans was, and wheezing about table-based layouts and constant full-page reloads, was the day-to-day optimizing that is also an engine of progress.</p>
 <p>The last eighteen months have been a particular window of relentless
 improvement. Tab completions have given way to agentic coding which has given
@@ -60,7 +65,7 @@ backwards and forwards they'll quickly know how to contribute to yours. But most
 <p>In the
 <a href="https://www.emergingtrajectories.com/lh/commodification-and-circularity/">commodity</a><sup class="note-mark">1</sup> era I can get great results from a host of available models, but I've been leaning on <code>deepseek-v4-flash-0731</code> since it came out. It's a rare case that I dip into my Anthropic budget to utilize Fable.</p>
 <p>I can run Deepseek on most maintenance and simple tasks. It's when I am exploring a serious feature or large refactor with lots of moving parts that I reach for the frontier. Recently I learned about <a href="https://stencil.so/blog/prewalk">prewalk</a><sup class="note-mark">2</sup>, Can Bölük's technique that uses frontier for the planning phase and first task, then hands off once the pattern is set. I paired it with the planner/worker/critic split from <a href="https://data4sci.com/blog/building-an-advanced-agentic-harness">Building an Advanced Agentic Harness</a><sup class="note-mark">3</sup> - a single prompt that plans, executes, and critiques itself confuses its own objectives, so each role gets isolated instead. I built both into a skill, with a supporting Pi extension that can take over at any stage of work.</p>
-<p><strong>Exploration</strong> leads to a <strong>plan</strong> formalized into an explicit DAG task list. Then a <strong>worker</strong> takes over, focusing on implementing the DAG one node at a time. Once complete, I bring in the <strong>critic</strong> to simplify and question what was implemented. Often this phase will push back enough that the worker phase is revisited. But once satisfied, the critic gives way to a <strong>promoter</strong>, which is my reminder that a job is not complete until you've properly communicated it to others.</p>
+<p><strong>Exploration</strong> leads to a <strong>plan</strong> formalized into an explicit DAG (directed acyclic graph) task list. Then a <strong>worker</strong> takes over, focusing on implementing the DAG one node at a time. Once complete, I bring in the <strong>critic</strong> to simplify and question what was implemented. Often this phase will push back enough that the worker phase is revisited. But once satisfied, the critic gives way to a <strong>promoter</strong>, which is my reminder that a job is not complete until you've properly communicated it to others.</p>
 <p>I added the promoter step to shore up a weak spot I have for wanting to ship and move on. It's my reminder to let people know about work I'm completing. I need a little help from Fable in this phase, as promotion is subtle and easily borked, and nobody likes a critic so running it through the frontier gives it more weight.</p>
 <figure class="plate"><img src="/diagrams/frontier-zone.svg" alt="A shallow arc of five stops - explore, planner, worker, critic, promoter. A pale band runs along the inside of the whole arc, as deep as the tallest peak: that is the commodity model, and it carries most of the work. Two red peaks rise into the head of worker, and a much shallower one straddles the seam between critic and promoter." /></figure>
 <p>This has dropped my usage of Fable in even my most intense contexts by 75%. This feels sane, something akin to AI soak. I can take care of my clients and make real progress on my own projects on my two twenty-dollar plans, as I juggle in and out of Pi for Deepseek or the Fable infusion.</p>
