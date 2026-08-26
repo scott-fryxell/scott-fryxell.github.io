@@ -8,7 +8,7 @@ description:
 img: Scott Fryxell @ Sunday evening, April 12 - 1776042845045.svg
 ---
 
-When I started out as a developer, I had a graybeard observe to me that
+When I started out as a developer, I had a graybeard observe for me that
 Moore's law also applies to software. I didn't understand that this constant conversation about how we were solving problems was the arc of progress; that complaining about J2EE and how slow Netbeans was, and wheezing about table-based layouts and constant full-page reloads, was the day-to-day optimizing that is also an engine of progress.
 
 The last eighteen months have been a particular window of relentless
@@ -33,7 +33,7 @@ In the
 
 I can run Deepseek on most maintenance and simple tasks. It's when I am exploring a serious feature or large refactor with lots of moving parts that I reach for the frontier. Recently I learned about [prewalk](https://stencil.so/blog/prewalk), Can Bölük's technique that uses frontier for the planning phase and first task, then hands off once the pattern is set. I paired it with the planner/worker/critic split from [Building an Advanced Agentic Harness](https://data4sci.com/blog/building-an-advanced-agentic-harness) - a single prompt that plans, executes, and critiques itself confuses its own objectives, so each role gets isolated instead. I built both into a skill, with a supporting Pi extension that can take over at any stage of work.
 
-**Exploration** leads to a **plan** formalized into an explicit DAG task list. Then a **worker** takes over, focusing on implementing the DAG one node at a time. Once complete, I bring in the **critic** to simplify and question what was implemented. Often this phase will push back enough that the worker phase is revisited. But once satisfied, the critic gives way to a **promoter**, which is my reminder that a job is not complete until you've properly communicated it to others.
+**Exploration** leads to a **plan** formalized into an explicit DAG (directed acyclic graph) task list. Then a **worker** takes over, focusing on implementing the DAG one node at a time. Once complete, I bring in the **critic** to simplify and question what was implemented. Often this phase will push back enough that the worker phase is revisited. But once satisfied, the critic gives way to a **promoter**, which is my reminder that a job is not complete until you've properly communicated it to others.
 
 I added the promoter step to shore up a weak spot I have for wanting to ship and move on. It's my reminder to let people know about work I'm completing. I need a little help from Fable in this phase, as promotion is subtle and easily borked, and nobody likes a critic so running it through the frontier gives it more weight.
 

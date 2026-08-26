@@ -1,6 +1,7 @@
 import { render } from '@comark/html'
 import { parse } from 'comark'
 import { codeToHtml } from 'shiki'
+import sharp from 'sharp'
 import { readdir, readFile, writeFile, mkdir, cp } from 'fs/promises'
 import { join, relative } from 'path'
 import { existsSync, watch } from 'fs'
@@ -12,6 +13,8 @@ const SITE = 'https://scott-fryxell.github.io'
 const DRAFTS = process.argv.includes('--drafts')
 const WATCH = process.argv.includes('--watch')
 const RESUME_IMG = '/posters/Scott Fryxell @ Wednesday afternoon, March 4 - 1772667028251.svg'
+const OG_WIDTH = 1200
+const OG_HEIGHT = 630
 
 const minor_words = new Set([
   'a', 'an', 'and', 'as', 'at', 'but', 'by', 'for', 'in',
@@ -50,7 +53,7 @@ function shell(title, body, meta = {}) {
   const full_title = meta.root ? `${title} — Humanist Software Developer` : `${title} — Scott Fryxell`
   const description = meta.description || 'Humanist software developer in San Francisco — building tools that respect the people who use them.'
   const canonical = meta.url ? `${SITE}${meta.url}` : SITE
-  const og_image = `${SITE}/posters/${encodeURIComponent(meta.img || RESUME_IMG.replace('/posters/', ''))}`
+  const og_image = `${SITE}${meta.og_image_path}`
   const og_type = meta.type || 'website'
   return `<!doctype html>
 <html lang="en">
@@ -67,10 +70,15 @@ function shell(title, body, meta = {}) {
   <meta property="og:description" content="${description}">
   <meta property="og:url" content="${canonical}">
   <meta property="og:image" content="${og_image}">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="${OG_WIDTH}">
+  <meta property="og:image:height" content="${OG_HEIGHT}">
+  <meta property="og:image:alt" content="${full_title}">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${full_title}">
   <meta name="twitter:description" content="${description}">
   <meta name="twitter:image" content="${og_image}">
+  <meta name="twitter:image:alt" content="${full_title}">
   <link rel="stylesheet" href="/style.css">
   <link rel="icon" type="image/svg+xml" href="/icons.svg">
   <link rel="apple-touch-icon" href="/192.png">
@@ -120,6 +128,25 @@ async function walk(dir) {
 }
 
 const poster_sizes = {}
+const og_images = new Map()
+
+// social previews (iMessage, Slack, Twitter) don't render SVG og:image —
+// flatten each referenced poster to a fixed-size raster once per build
+async function raster_og_image(img) {
+  const name = img || RESUME_IMG.replace('/posters/', '')
+  if (og_images.has(name)) return og_images.get(name)
+  const out_name = name.replace(/\.svg$/i, '.jpg')
+  const path = `/og/${encodeURIComponent(out_name)}`
+  await mkdir(join(OUT, 'og'), { recursive: true })
+  const buffer = await sharp(join(STATIC, 'posters', name), { density: 150 })
+    .resize(OG_WIDTH, OG_HEIGHT, { fit: 'cover', position: 'centre' })
+    .flatten({ background: '#ffffff' })
+    .jpeg({ quality: 82 })
+    .toBuffer()
+  await writeFile(join(OUT, 'og', out_name), buffer)
+  og_images.set(name, path)
+  return path
+}
 
 async function load_poster_sizes() {
   const dir = join(STATIC, 'posters')
@@ -222,7 +249,8 @@ async function build_article(file) {
   const out = join(OUT, 'blog', slug, 'index.html')
   await mkdir(join(OUT, 'blog', slug), { recursive: true })
   const description = data.description || strip_tags(html).slice(0, 160).trim()
-  await writeFile(out, shell(title, article, { url: `/blog/${slug}`, img: data.img, description, type: 'article' }))
+  const og_image_path = await raster_og_image(data.img)
+  await writeFile(out, shell(title, article, { url: `/blog/${slug}`, og_image_path, description, type: 'article' }))
   return { slug, title, date: data.date, img: data.img, focus: data.focus, draft, html, notes }
 }
 
@@ -237,18 +265,43 @@ async function build_index(articles) {
     </details>
   </article>`).join('\n')
   const latest = published.find(a => a.img)
-  await writeFile(join(OUT, 'index.html'), shell('Scott Fryxell', `<section>${items}</section>`, { root: true, url: '/', img: latest?.img }))
+  const og_image_path = await raster_og_image(latest?.img)
+  await writeFile(join(OUT, 'index.html'), shell('Scott Fryxell', `<section>${items}</section>`, { root: true, url: '/', og_image_path }))
 }
 
 async function build_resume() {
   const html = await readFile('resume.html', 'utf8')
   await mkdir(join(OUT, 'resume'), { recursive: true })
   const description = 'Software developer with 25+ years experience across the full range of craft — design, architecture, implementation, and delivery. Based in San Francisco.'
+  const og_image_path = await raster_og_image()
   await writeFile(join(OUT, 'resume', 'index.html'), shell('Resume', html, {
     url: '/resume',
+    og_image_path,
     description,
     type: 'profile'
   }))
+}
+
+async function build_sitemap(articles) {
+  const published = articles.filter(a => DRAFTS || !a.draft)
+  const urls = [
+    { loc: '/', lastmod: published[0]?.date },
+    { loc: '/resume' },
+    ...published.map(a => ({ loc: `/blog/${a.slug}`, lastmod: a.date }))
+  ]
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls.map(u => `  <url>
+    <loc>${SITE}${u.loc}</loc>${u.lastmod ? `\n    <lastmod>${u.lastmod.split('T')[0]}</lastmod>` : ''}
+  </url>`).join('\n')}
+</urlset>
+`
+  await writeFile(join(OUT, 'sitemap.xml'), xml)
+  await writeFile(join(OUT, 'robots.txt'), `User-agent: *
+Allow: /
+
+Sitemap: ${SITE}/sitemap.xml
+`)
 }
 
 async function build() {
@@ -261,6 +314,7 @@ async function build() {
   const articles = await Promise.all(files.map(build_article))
   await build_index(articles)
   await build_resume()
+  await build_sitemap(articles)
   if (WATCH) await writeFile(join(OUT, 'build-stamp.txt'), String(Date.now()))
   console.log(`built ${articles.length} articles`)
 }
