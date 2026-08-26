@@ -60,21 +60,12 @@ main {
   min-height: 100dvh;
 }
 
-/* ── Section break: three clay dots, a pause marker ── */
-
 hr {
   border: 0;
-  margin: calc(var(--base-line) * 2) auto;
-  text-align: center;
-}
-
-hr::before {
-  content: "...";
-  color: var(--red);
-  font-size: 1.5em;
-  letter-spacing: 0.4em;
-  /* letter-spacing trails the last dot; pad the left to recentre */
-  padding-left: 0.4em;
+  height: 1px;
+  width: 3em;
+  margin: var(--base-line) auto;
+  background: color-mix(in srgb, var(--text) 30%, transparent);
 }
 
 /* ── Site header ── */
