@@ -207,7 +207,8 @@ figcaption a:hover {
   text-underline-offset: 0.15em;
 }
 
-strong, b {
+strong,
+b {
   font-weight: 800;
   color: var(--red);
 }
@@ -472,6 +473,7 @@ section[itemprop="articleBody"] .plate {
     justify-self: center;
     object-fit: contain;
     width: 100%;
+    max-width: var(--measure);
     height: auto;
   }
 
@@ -522,6 +524,8 @@ section[itemprop="articleBody"] blockquote {
 }
 
 section[itemprop="articleBody"] pre {
+  max-width: var(--measure);
+  justify-self: center;
   background: color-mix(in srgb, var(--blue) 8%, var(--surface));
   padding: var(--base-line);
   overflow-x: auto;
@@ -991,11 +995,19 @@ section[itemprop="articleBody"] .skill-map li {
     margin: 16pt 0 6pt;
   }
 
-  section[itemprop="articleBody"] h1 { font-size: 16pt; }
-  section[itemprop="articleBody"] h2 { font-size: 14pt; }
-  section[itemprop="articleBody"] h3 { font-size: 12pt; }
+  section[itemprop="articleBody"] h1 {
+    font-size: 16pt;
+  }
+  section[itemprop="articleBody"] h2 {
+    font-size: 14pt;
+  }
+  section[itemprop="articleBody"] h3 {
+    font-size: 12pt;
+  }
 
-  p, li, blockquote {
+  p,
+  li,
+  blockquote {
     orphans: 3;
     widows: 3;
   }
