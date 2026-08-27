@@ -138,7 +138,11 @@ async function raster_og_image(img) {
   const out_name = name.replace(/\.svg$/i, '.jpg')
   const path = `/og/${encodeURIComponent(out_name)}`
   await mkdir(join(OUT, 'og'), { recursive: true })
-  const buffer = await sharp(join(STATIC, 'posters', name), { density: 150 })
+  const svg = await readFile(join(STATIC, 'posters', name), 'utf8')
+  const complete_svg = svg.includes('id="background"') && !svg.includes('href="#background"')
+    ? svg.replace(/(<svg\b[^>]*>)/, '$1<use itemprop="background" href="#background"/>')
+    : svg
+  const buffer = await sharp(Buffer.from(complete_svg), { density: 150 })
     .resize(OG_WIDTH, OG_HEIGHT, { fit: 'cover', position: 'centre' })
     .flatten({ background: '#ffffff' })
     .jpeg({ quality: 82 })
