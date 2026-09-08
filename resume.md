@@ -2,6 +2,8 @@
 
 Humanist Software Developer — building tools that respect the people who use them.
 
+I build for groups whose purpose sits outside the shopping mall. Churches, punks, veterans, families — people whose reasons for gathering don't survive being optimized. Most of the work is in the last mile: turning what a system knows into something a person can pick up and use without being taught.
+
 ---
 
 ### Engineer at Share More Stories
