@@ -131,7 +131,7 @@ Here are some mapped to my planning arc.
   <section>
     <h3>worker</h3>
     <ul>
-      <li>realness-design</li>
+      <li>useless</li>
       <li>typography</li>
       <li>user-interface</li>
       <li>rust-best-practices</li>
