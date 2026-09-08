@@ -1132,12 +1132,12 @@ section[itemprop="articleBody"] .skill-map li {
 
   /* Index: the cards are a screen affordance. Print the open ones as
      articles and leave the closed ones as a titled list. */
-  section > article {
+  section > article:not([itemtype*="Job"]) {
     border-bottom: none;
     break-before: page;
   }
 
-  section > article:first-child {
+  section > article:not([itemtype*="Job"]):first-child {
     break-before: auto;
   }
 
