@@ -3,7 +3,7 @@ date: 2026-07-16
 draft: true
 title: The Tech Stack Is Only One Percent Explored
 description: Nielsen's wide tech tree; venture's thin sliver; Realness as a device-first medium — limited stack, explored hard, like the inert-HTML lore of 2457.
-img: new-posters/Sunday evening, April 12 - 1776042845045.svg
+img: Scott Fryxell @ Sunday evening, April 12 - 1776042845045.svg
 ---
 
 # The Tech Stack Is Only One Percent Explored
