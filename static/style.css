@@ -725,6 +725,10 @@ section[itemtype*="Person"] > header address a:hover {
   line-height: 1.7;
 }
 
+#skills p + p {
+  margin-top: calc(var(--base-line) * 0.5);
+}
+
 #experience > header {
   border-bottom: 1px solid color-mix(in srgb, var(--blue) 20%, transparent);
   padding-bottom: calc(var(--base-line) * 1.5);
@@ -1211,7 +1215,7 @@ section[itemprop="articleBody"] .skill-map li {
   #skills,
   #experience {
     max-width: none;
-    padding: 12pt 0 0;
+    padding: 8pt 0 0;
   }
 
   /* Jobs may split across a break - keeping each one whole strands a third
@@ -1219,7 +1223,7 @@ section[itemprop="articleBody"] .skill-map li {
      page foot, which is the part that actually reads badly. */
   article[itemtype*="Job"] {
     break-inside: auto;
-    padding: 4pt 0;
+    padding: 2.5pt 0;
     border-bottom: 0.5pt solid hsl(0, 0%, 80%);
   }
 
@@ -1242,6 +1246,6 @@ section[itemprop="articleBody"] .skill-map li {
 
   #experience > footer {
     display: block;
-    padding-top: 12pt;
+    padding-top: 6pt;
   }
 }
