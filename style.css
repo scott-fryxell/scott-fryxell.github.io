@@ -446,8 +446,17 @@ section[itemprop="articleBody"] > * {
 
 section[itemprop="articleBody"] > .plate,
 section[itemprop="articleBody"] > pre,
-section[itemprop="articleBody"] > table {
+section[itemprop="articleBody"] > table,
+section[itemprop="articleBody"] > iframe {
   grid-column: wide;
+}
+
+section[itemprop="articleBody"] > iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  margin: calc(var(--base-line) * 2) 0;
 }
 
 section[itemprop="articleBody"] > details,
@@ -891,6 +900,13 @@ section[itemprop="articleBody"] .skill-map li {
     line-height: 1.5;
   }
 
+  /* The resume runs tighter than an article - sixteen jobs at article
+     size costs two extra sheets, and a resume is scanned, not read. */
+  body:has(section[itemtype*="Person"]) {
+    font-size: 10pt;
+    line-height: 1.4;
+  }
+
   main {
     min-height: 0;
   }
@@ -1017,10 +1033,14 @@ section[itemprop="articleBody"] .skill-map li {
   }
 
   /* A printed link is a dead end unless it says where it goes. Articles
-     carry numbered endnotes; the resume has few enough to inline. */
+     carry numbered endnotes; a resume job prints its URL on the line under
+     the company name. */
   article[itemtype*="Job"] a[href^="http"]::after {
-    content: " (" attr(href) ")";
-    font-size: 0.8em;
+    content: attr(href);
+    display: block;
+    font-size: 0.72em;
+    font-weight: 300;
+    line-height: 1.5;
     word-break: break-all;
   }
 
@@ -1053,6 +1073,12 @@ section[itemprop="articleBody"] .skill-map li {
     /* border, not text-decoration - a line-through underlines the URL too */
     text-decoration: none;
     border-bottom: 0.5pt solid black;
+  }
+
+  /* The company name carries its URL on the next line, so the printed name
+     reads as plain text */
+  article[itemtype*="Job"] a[href^="http"] {
+    border-bottom: none;
   }
 
   section[itemprop="articleBody"] blockquote {
@@ -1188,13 +1214,34 @@ section[itemprop="articleBody"] .skill-map li {
     padding: 12pt 0 0;
   }
 
+  /* Jobs may split across a break - keeping each one whole strands a third
+     of every page. The heading rules below stop a title orphaning at a
+     page foot, which is the part that actually reads badly. */
   article[itemtype*="Job"] {
-    break-inside: avoid;
-    padding: 8pt 0;
+    break-inside: auto;
+    padding: 4pt 0;
     border-bottom: 0.5pt solid hsl(0, 0%, 80%);
   }
 
+  article[itemtype*="Job"] h3 {
+    break-after: avoid;
+    margin: 0 0 2pt;
+  }
+
+  article[itemtype*="Job"] p {
+    margin: 0 0 4pt;
+    orphans: 2;
+    widows: 2;
+  }
+
+  /* Two sheets is the cap. Sixteen roles run three, so the printed resume
+     stops at LRN and the note at the end carries the rest. */
+  article[itemtype*="Job"]:nth-of-type(n + 11) {
+    display: none;
+  }
+
   #experience > footer {
+    display: block;
     padding-top: 12pt;
   }
 }
