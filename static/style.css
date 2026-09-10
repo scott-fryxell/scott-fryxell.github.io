@@ -725,10 +725,6 @@ section[itemtype*="Person"] > header address a:hover {
   line-height: 1.7;
 }
 
-#skills p + p {
-  margin-top: calc(var(--base-line) * 0.5);
-}
-
 #experience > header {
   border-bottom: 1px solid color-mix(in srgb, var(--blue) 20%, transparent);
   padding-bottom: calc(var(--base-line) * 1.5);
