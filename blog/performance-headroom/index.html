@@ -25,20 +25,14 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="icon" type="image/svg+xml" href="/icons.svg">
   <link rel="apple-touch-icon" href="/192.png">
+  <script type="module" src="/scripts/detect.js"></script>
+  <script type="module" src="/scripts/reveal.js"></script>
+  <script type="module" src="/scripts/diagrams.js"></script>
   
 </head>
 <body>
 <main>
-  <header>
-    <div class="title-group">
-      <h1><a href="/">Scott Fryxell</a></h1>
-      <p class="subtitle">Humanist Software Developer</p>
-    </div>
-    <nav>
-      <a href="/resume">Resume</a>
-      <a href="https://realness.online/?from=blog">Thoughts</a>
-    </nav>
-  </header>
+  <template src="/partials/header.html"></template>
   <article itemscope itemtype="http://schema.org/BlogPosting">
     <figure style="--ratio: 1.3340">
       <img src="/posters/Scott Fryxell @ Wednesday evening, March 25 - 1774493263931.svg" width="683" height="512" alt="" loading="lazy">
@@ -54,20 +48,7 @@
 <p>Firebase is generous; In the three years I've used the service realness hasn't cost me a dime. They give developers the space to create. I already have a compression worker built to do the gziping on the edge, and convert to <code>${created_at}.html.gz</code>.</p>
 <p>If realness starts creeping toward costing money, I have this in my pocket ready to go; it's headroom, something I can throw in there if the shit gets real. Performance is about knowing your headroom.</p><ol class="notes"><li>https://cloud.google.com/storage/docs/transcoding</li></ol></section>
   </article>
-  <footer></footer>
+  <template src="/partials/footer.html"></template>
 </main>
-<script>
-  document.addEventListener('click', event => {
-    const link = event.target.closest('a[data-reveal-target]')
-    if (!link) return
-    const target = link.getAttribute('data-reveal-target')
-    const panel = document.getElementById(target)
-    if (!panel) return
-    event.preventDefault()
-    const opening = panel.hidden
-    panel.hidden = !opening
-    if (opening) panel.scrollIntoView({ block: 'nearest' })
-  })
-</script>
 </body>
 </html>

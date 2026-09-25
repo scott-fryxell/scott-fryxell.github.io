@@ -25,20 +25,14 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="icon" type="image/svg+xml" href="/icons.svg">
   <link rel="apple-touch-icon" href="/192.png">
+  <script type="module" src="/scripts/detect.js"></script>
+  <script type="module" src="/scripts/reveal.js"></script>
+  <script type="module" src="/scripts/diagrams.js"></script>
   
 </head>
 <body>
 <main>
-  <header>
-    <div class="title-group">
-      <h1><a href="/">Scott Fryxell</a></h1>
-      <p class="subtitle">Humanist Software Developer</p>
-    </div>
-    <nav>
-      <a href="/resume">Resume</a>
-      <a href="https://realness.online/?from=blog">Thoughts</a>
-    </nav>
-  </header>
+  <template src="/partials/header.html"></template>
   <article itemscope itemtype="http://schema.org/BlogPosting">
     <figure style="--ratio: 1.3379">
       <img src="/posters/Scott Fryxell @ Tuesday morning, April 28 - 1777400888727.svg" width="685" height="512" alt="" loading="lazy">
@@ -51,20 +45,7 @@
     <section itemprop="articleBody"><p>Testing is difficult. Testing asks a lot of you. Testing isn't into freebies or rewards. But I do it. I see what it brings to the table. For years I have tested religiously. But in February I put my testing down and am focused on releasing. I won't be brining testing back, not until I'm out in the open with realness. It's why everything feels easy to do now, effortless, Hyper complex interoperating moving parts harmonizing their efforts. That's what this code base feels like. Balanced.</p>
 <p>That's what testing does. It's your muscles, and your harmony machine. but you turn it off when you gotta focus, pausing to make room for getting shit done. Sometimes you gotta kill your idols to see what they are.</p></section>
   </article>
-  <footer></footer>
+  <template src="/partials/footer.html"></template>
 </main>
-<script>
-  document.addEventListener('click', event => {
-    const link = event.target.closest('a[data-reveal-target]')
-    if (!link) return
-    const target = link.getAttribute('data-reveal-target')
-    const panel = document.getElementById(target)
-    if (!panel) return
-    event.preventDefault()
-    const opening = panel.hidden
-    panel.hidden = !opening
-    if (opening) panel.scrollIntoView({ block: 'nearest' })
-  })
-</script>
 </body>
 </html>

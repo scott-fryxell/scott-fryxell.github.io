@@ -25,20 +25,14 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="icon" type="image/svg+xml" href="/icons.svg">
   <link rel="apple-touch-icon" href="/192.png">
+  <script type="module" src="/scripts/detect.js"></script>
+  <script type="module" src="/scripts/reveal.js"></script>
+  <script type="module" src="/scripts/diagrams.js"></script>
   
 </head>
 <body>
 <main>
-  <header>
-    <div class="title-group">
-      <h1><a href="/">Scott Fryxell</a></h1>
-      <p class="subtitle">Humanist Software Developer</p>
-    </div>
-    <nav>
-      <a href="/resume">Resume</a>
-      <a href="https://realness.online/?from=blog">Thoughts</a>
-    </nav>
-  </header>
+  <template src="/partials/header.html"></template>
   <article itemscope itemtype="http://schema.org/BlogPosting">
     <figure style="--ratio: 1.3340">
       <img src="/posters/Scott Fryxell @ Monday morning, May 11 - 1778525491351.svg" width="683" height="512" alt="" loading="lazy">
@@ -54,20 +48,7 @@
 <p>Right Mark, let's eat up some daughters, well use them as magnets for boys and culture and well burn through them confident that nice families will save the daughters that matter.</p>
 <p>That's our universe, Yours and mine. Lets glad hand every wealthy whim; Empowering new religions of wealth and followers. And my identity trumps your poverty. The only family that matters is the wealthy ones. That's whats gross about advertising.</p></section>
   </article>
-  <footer></footer>
+  <template src="/partials/footer.html"></template>
 </main>
-<script>
-  document.addEventListener('click', event => {
-    const link = event.target.closest('a[data-reveal-target]')
-    if (!link) return
-    const target = link.getAttribute('data-reveal-target')
-    const panel = document.getElementById(target)
-    if (!panel) return
-    event.preventDefault()
-    const opening = panel.hidden
-    panel.hidden = !opening
-    if (opening) panel.scrollIntoView({ block: 'nearest' })
-  })
-</script>
 </body>
 </html>

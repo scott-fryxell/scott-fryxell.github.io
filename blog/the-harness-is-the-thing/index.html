@@ -25,20 +25,14 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="icon" type="image/svg+xml" href="/icons.svg">
   <link rel="apple-touch-icon" href="/192.png">
+  <script type="module" src="/scripts/detect.js"></script>
+  <script type="module" src="/scripts/reveal.js"></script>
+  <script type="module" src="/scripts/diagrams.js"></script>
   
 </head>
 <body>
 <main>
-  <header>
-    <div class="title-group">
-      <h1><a href="/">Scott Fryxell</a></h1>
-      <p class="subtitle">Humanist Software Developer</p>
-    </div>
-    <nav>
-      <a href="/resume">Resume</a>
-      <a href="https://realness.online/?from=blog">Thoughts</a>
-    </nav>
-  </header>
+  <template src="/partials/header.html"></template>
   <article itemscope itemtype="http://schema.org/BlogPosting">
     <figure style="--ratio: 0.7496">
       <img src="/posters/Scott Fryxell @ Sunday evening, April 12 - 1776042845045.svg" width="512" height="683" alt="" loading="lazy">
@@ -180,20 +174,7 @@ went from a tool I had gotten working and was just playing around with to the
 most important piece of my rig.</p>
 <p><a href="https://news.ycombinator.com/item?id=49452346">comments</a><sup class="note-mark">7</sup></p><ol class="notes"><li>https://www.emergingtrajectories.com/lh/commodification-and-circularity/</li><li>https://stencil.so/blog/prewalk</li><li>https://data4sci.com/blog/building-an-advanced-agentic-harness</li><li>https://realness.online/about</li><li>https://realness.online/poster-driver</li><li>https://github.com/scott-fryxell/brayness</li><li>https://news.ycombinator.com/item?id=49452346</li></ol></section>
   </article>
-  <footer></footer>
+  <template src="/partials/footer.html"></template>
 </main>
-<script>
-  document.addEventListener('click', event => {
-    const link = event.target.closest('a[data-reveal-target]')
-    if (!link) return
-    const target = link.getAttribute('data-reveal-target')
-    const panel = document.getElementById(target)
-    if (!panel) return
-    event.preventDefault()
-    const opening = panel.hidden
-    panel.hidden = !opening
-    if (opening) panel.scrollIntoView({ block: 'nearest' })
-  })
-</script>
 </body>
 </html>

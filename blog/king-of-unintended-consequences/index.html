@@ -25,20 +25,14 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="icon" type="image/svg+xml" href="/icons.svg">
   <link rel="apple-touch-icon" href="/192.png">
+  <script type="module" src="/scripts/detect.js"></script>
+  <script type="module" src="/scripts/reveal.js"></script>
+  <script type="module" src="/scripts/diagrams.js"></script>
   
 </head>
 <body>
 <main>
-  <header>
-    <div class="title-group">
-      <h1><a href="/">Scott Fryxell</a></h1>
-      <p class="subtitle">Humanist Software Developer</p>
-    </div>
-    <nav>
-      <a href="/resume">Resume</a>
-      <a href="https://realness.online/?from=blog">Thoughts</a>
-    </nav>
-  </header>
+  <template src="/partials/header.html"></template>
   <article itemscope itemtype="http://schema.org/BlogPosting">
     <figure style="--ratio: 0.7496">
       <img src="/posters/Scott Fryxell @ Friday afternoon, March 20 - 1774050569770.svg" width="512" height="683" alt="" loading="lazy">
@@ -53,20 +47,7 @@
 <p>Our salvation becomes robot escape velocity, a two-for-one deal; so you can still plan on getting nuked into dust, no matter how many planets you add to the mix.</p>
 <p>It would be impossible for robots to evolve on desolate planets, so our legacy will be having been dumb enough to set them off like a bomb in the home of an unsuspecting universe.</p></section>
   </article>
-  <footer></footer>
+  <template src="/partials/footer.html"></template>
 </main>
-<script>
-  document.addEventListener('click', event => {
-    const link = event.target.closest('a[data-reveal-target]')
-    if (!link) return
-    const target = link.getAttribute('data-reveal-target')
-    const panel = document.getElementById(target)
-    if (!panel) return
-    event.preventDefault()
-    const opening = panel.hidden
-    panel.hidden = !opening
-    if (opening) panel.scrollIntoView({ block: 'nearest' })
-  })
-</script>
 </body>
 </html>

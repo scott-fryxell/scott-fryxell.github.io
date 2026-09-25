@@ -25,20 +25,14 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="icon" type="image/svg+xml" href="/icons.svg">
   <link rel="apple-touch-icon" href="/192.png">
+  <script type="module" src="/scripts/detect.js"></script>
+  <script type="module" src="/scripts/reveal.js"></script>
+  <script type="module" src="/scripts/diagrams.js"></script>
   
 </head>
 <body>
 <main>
-  <header>
-    <div class="title-group">
-      <h1><a href="/">Scott Fryxell</a></h1>
-      <p class="subtitle">Humanist Software Developer</p>
-    </div>
-    <nav>
-      <a href="/resume">Resume</a>
-      <a href="https://realness.online/?from=blog">Thoughts</a>
-    </nav>
-  </header>
+  <template src="/partials/header.html"></template>
   <article itemscope itemtype="http://schema.org/BlogPosting">
     <figure style="--ratio: 0.7496">
       <img src="/posters/Scott Fryxell @ Saturday afternoon, February 14 - 1771102323286.svg" width="512" height="683" alt="" loading="lazy">
@@ -52,20 +46,7 @@
 <p>CC was explaining what was so hard about git for a linguist "IT's so tedious', while we're on the 14 riding out to the excelsior. He's got a masters and a family in El Paso, Latin, but his family's college is like mine.</p>
 <p>It's all so tedious. At first it feels like torture, you have to settle into it; Will yourself to attention. And then slowly, like an observer, You bring your focus on your goals. You bring your silence onto your intellectual self. The part of you You know a modern human needs. Over and over again. Your whole life. I'm just a reminder to CC of something he's already had to conquer. On this bus together we are one.</p></section>
   </article>
-  <footer></footer>
+  <template src="/partials/footer.html"></template>
 </main>
-<script>
-  document.addEventListener('click', event => {
-    const link = event.target.closest('a[data-reveal-target]')
-    if (!link) return
-    const target = link.getAttribute('data-reveal-target')
-    const panel = document.getElementById(target)
-    if (!panel) return
-    event.preventDefault()
-    const opening = panel.hidden
-    panel.hidden = !opening
-    if (opening) panel.scrollIntoView({ block: 'nearest' })
-  })
-</script>
 </body>
 </html>
