@@ -20,11 +20,9 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
-          cache: 'npm'
+          node-version: 24
 
-      - run: npm ci
-
+      # Downloads the static example into .cache/static, then builds
       - run: npm run build
 
       - name: Deploy

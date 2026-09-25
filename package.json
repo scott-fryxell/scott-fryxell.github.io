@@ -5,15 +5,9 @@
   "type": "module",
   "author": "Scott Fryxell <scott@realness.online>",
   "scripts": {
-    "build": "node build.js",
-    "certs": "mkcert scott-fryxell.local",
-    "dev": "sh serve.sh",
+    "engine": "test -f .cache/static/build.js || (npx -y giget gh:scott-fryxell/brayness-examples/static .cache/static && npm --prefix .cache/static install --no-fund --no-audit)",
+    "build": "npm run engine && node .cache/static/build.js",
+    "dev": "npm run engine && node .cache/static/serve.js",
     "start": "npm run dev"
-  },
-  "dependencies": {
-    "@comark/html": "latest",
-    "comark": "^0.4.0",
-    "sharp": "^0.35.3",
-    "shiki": "^4.4.3"
   }
 }

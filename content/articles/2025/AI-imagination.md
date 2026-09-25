@@ -1,4 +1,5 @@
 ---
+title: AI Imagination
 date: 2025-02-14
 img: Scott Fryxell @ Friday evening, June 5 - 1780715551093.svg
 ---

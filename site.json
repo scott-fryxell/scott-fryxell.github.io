@@ -1,0 +1,16 @@
+{
+  "url": "https://scott-fryxell.github.io",
+  "name": "Scott Fryxell",
+  "tagline": "Humanist Software Developer",
+  "description": "Humanist software developer in San Francisco — building tools that respect the people who use them.",
+  "poster": "Scott Fryxell @ Wednesday afternoon, March 4 - 1772667028251.svg",
+  "head": "<meta name=\"darkreader-lock\">",
+  "back_label": "Back to blog",
+  "pages": {
+    "resume": {
+      "title": "Resume",
+      "description": "Software developer with 25+ years experience across the full range of craft — design, architecture, implementation, and delivery. Based in San Francisco.",
+      "type": "profile"
+    }
+  }
+}
