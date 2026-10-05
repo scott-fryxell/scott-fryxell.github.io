@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 372" width="720" height="372" role="img" aria-labelledby="ht hd">
+  <title id="ht">One machine, many sessions</title>
+  <desc id="hd">Three states of the same machine. Running, about thirty sessions sit on a solid bar, about twenty cents an hour. Asleep, the bar is dimmed and a couple hundred sessions are drawn as small flat marks - the disks stay, about eighty cents a month, and the files are still there. Put away, there is no machine at all: the same marks sit inside a dashed outline, nothing is rented, and the files wait in a bucket.</desc>
+  <style>
+    :root { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+    .host { fill: #7f93a8; }
+    .host-dim { fill: #7f93a8; opacity: .4; }
+    .slot { fill: #f7f5f1; stroke: #6b7480; stroke-width: 1; }
+    .tick { fill: #6b7480; opacity: .45; }
+    .ghost { fill: none; stroke: #6b7480; stroke-width: 1.5; stroke-dasharray: 6 5; }
+    .host-label { fill: #1b1f24; font: 600 15px system-ui, sans-serif; dominant-baseline: central; }
+    .state { fill: #1b1f24; font: 700 17px system-ui, sans-serif; dominant-baseline: central; }
+    .state-dim { fill: #6b7480; font: 700 17px system-ui, sans-serif; dominant-baseline: central; }
+    .note { fill: #6b7480; font: 400 13px system-ui, sans-serif; text-anchor: end; dominant-baseline: central; }
+    @media (prefers-color-scheme: dark) {
+      .host { fill: #4a525c; }
+      .host-dim { fill: #4a525c; opacity: .4; }
+      .slot { fill: #1b1a18; stroke: #9aa4b0; }
+      .tick { fill: #9aa4b0; }
+      .ghost { stroke: #9aa4b0; }
+      .host-label { fill: #e6eaee; }
+      .state { fill: #e6eaee; }
+      .state-dim { fill: #9aa4b0; }
+      .note { fill: #9aa4b0; }
+    }
+  </style>
+
+  <defs>
+    <pattern id="tickfield" x="160" y="178" width="14" height="12" patternUnits="userSpaceOnUse">
+      <rect class="tick" width="10" height="8" rx="2"/>
+    </pattern>
+    <pattern id="tickfield2" x="160" y="302" width="14" height="12" patternUnits="userSpaceOnUse">
+      <rect class="tick" width="10" height="8" rx="2"/>
+    </pattern>
+  </defs>
+
+  <text class="state" x="24" y="24">running</text>
+  <text class="note" x="696" y="24">one machine, about thirty at once</text>
+  <rect class="host" x="24" y="40" width="672" height="64" rx="6"/>
+  <rect class="slot" x="160" y="52" width="30" height="22" rx="3"/>
+  <rect class="slot" x="195" y="52" width="30" height="22" rx="3"/>
+  <rect class="slot" x="230" y="52" width="30" height="22" rx="3"/>
+  <rect class="slot" x="265" y="52" width="30" height="22" rx="3"/>
+  <rect class="slot" x="300" y="52" width="30" height="22" rx="3"/>
+  <rect class="slot" x="335" y="52" width="30" height="22" rx="3"/>
+  <rect class="slot" x="370" y="52" width="30" height="22" rx="3"/>
+  <rect class="slot" x="405" y="52" width="30" height="22" rx="3"/>
+  <rect class="slot" x="440" y="52" width="30" height="22" rx="3"/>
+  <rect class="slot" x="475" y="52" width="30" height="22" rx="3"/>
+  <rect class="slot" x="510" y="52" width="30" height="22" rx="3"/>
+  <rect class="slot" x="545" y="52" width="30" height="22" rx="3"/>
+  <rect class="slot" x="580" y="52" width="30" height="22" rx="3"/>
+  <rect class="slot" x="615" y="52" width="30" height="22" rx="3"/>
+  <rect class="slot" x="650" y="52" width="30" height="22" rx="3"/>
+  <rect class="slot" x="160" y="78" width="30" height="22" rx="3"/>
+  <rect class="slot" x="195" y="78" width="30" height="22" rx="3"/>
+  <rect class="slot" x="230" y="78" width="30" height="22" rx="3"/>
+  <rect class="slot" x="265" y="78" width="30" height="22" rx="3"/>
+  <rect class="slot" x="300" y="78" width="30" height="22" rx="3"/>
+  <rect class="slot" x="335" y="78" width="30" height="22" rx="3"/>
+  <rect class="slot" x="370" y="78" width="30" height="22" rx="3"/>
+  <rect class="slot" x="405" y="78" width="30" height="22" rx="3"/>
+  <rect class="slot" x="440" y="78" width="30" height="22" rx="3"/>
+  <rect class="slot" x="475" y="78" width="30" height="22" rx="3"/>
+  <rect class="slot" x="510" y="78" width="30" height="22" rx="3"/>
+  <rect class="slot" x="545" y="78" width="30" height="22" rx="3"/>
+  <rect class="slot" x="580" y="78" width="30" height="22" rx="3"/>
+  <rect class="slot" x="615" y="78" width="30" height="22" rx="3"/>
+  <rect class="slot" x="650" y="78" width="30" height="22" rx="3"/>
+  <text class="host-label" x="44" y="72">one machine</text>
+
+  <text class="state-dim" x="24" y="148">asleep</text>
+  <text class="note" x="696" y="148">a couple hundred, 80&#162; a month, files still on disk</text>
+  <rect class="host-dim" x="24" y="164" width="672" height="64" rx="6"/>
+  <rect x="160" y="178" width="530" height="36" fill="url(#tickfield)"/>
+
+  <text class="state-dim" x="24" y="272">put away</text>
+  <text class="note" x="696" y="272">nothing rented, files waiting in a bucket</text>
+  <rect class="ghost" x="24" y="288" width="672" height="64" rx="6"/>
+  <rect x="160" y="302" width="530" height="36" fill="url(#tickfield2)"/>
+</svg>

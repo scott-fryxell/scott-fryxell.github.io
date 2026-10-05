@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" width="720" height="320" role="img" aria-labelledby="dt dd">
+  <title id="dt">One session, many doors</title>
+  <desc id="dd">Your session in the middle, drawn in red as the subject. Three doors on the left lead into it - a browser, where you type into a page; a terminal, where you attach the way you attach to a server; and a program, through the HTTP API. Inside, brayness is already set up. One wire leaves to the right to a live URL, the app the session built.</desc>
+  <style>
+    :root { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+    .box { fill: #c9cfd6; }
+    .subject { fill: #d0342c; fill-opacity: .18; stroke: #d0342c; stroke-width: 2; }
+    .name { fill: #1b1f24; font: 600 17px system-ui, sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .subject-name { fill: #d0342c; font: 700 19px system-ui, sans-serif; text-anchor: middle; dominant-baseline: central; letter-spacing: .02em; }
+    .meta { fill: #6b7480; font: 400 13px system-ui, sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .wire { fill: none; stroke: #6b7480; stroke-width: 1.5; }
+    .tip { fill: #6b7480; }
+    @media (prefers-color-scheme: dark) {
+      .box { fill: #4a525c; }
+      .name { fill: #e6eaee; }
+      .meta { fill: #9aa4b0; }
+      .wire { stroke: #9aa4b0; }
+      .tip { fill: #9aa4b0; }
+      .subject { fill: #e2554c; fill-opacity: .22; stroke: #e2554c; }
+      .subject-name { fill: #f0776e; }
+    }
+  </style>
+
+  <path class="wire" d="M194 70C240 70 246 140 276 140"/>
+  <path class="wire" d="M194 160H276"/>
+  <path class="wire" d="M194 250C240 250 246 180 276 180"/>
+  <path class="tip" d="M276 134l14 6-14 6z"/>
+  <path class="tip" d="M276 154l14 6-14 6z"/>
+  <path class="tip" d="M276 174l14 6-14 6z"/>
+
+  <rect class="box" x="24" y="40" width="170" height="60" rx="6"/>
+  <text class="name" x="109" y="66">a browser</text>
+  <text class="meta" x="109" y="86">type into a page</text>
+
+  <rect class="box" x="24" y="130" width="170" height="60" rx="6"/>
+  <text class="name" x="109" y="156">a terminal</text>
+  <text class="meta" x="109" y="176">attach like a login</text>
+
+  <rect class="box" x="24" y="220" width="170" height="60" rx="6"/>
+  <text class="name" x="109" y="246">a program</text>
+  <text class="meta" x="109" y="266">the HTTP API</text>
+
+  <rect class="subject" x="290" y="110" width="210" height="100" rx="6"/>
+  <text class="subject-name" x="395" y="150">your session</text>
+  <text class="meta" x="395" y="176">brayness, already set up</text>
+
+  <path class="wire" d="M500 160H546"/>
+  <path class="tip" d="M546 154l14 6-14 6z"/>
+  <rect class="box" x="560" y="136" width="136" height="48" rx="6"/>
+  <text class="name" x="628" y="160">a live URL</text>
+</svg>

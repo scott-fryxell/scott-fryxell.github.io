@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" width="720" height="320" role="img" aria-labelledby="vt vd">
+  <title id="vt">Two ways an app gets seen</title>
+  <desc id="vd">An app is built inside a session, drawn in red as the subject. Two wires leave it. The upper one reaches the app served from the session itself, live while the session is up. The lower one reaches the app published to a host, a plain URL with nothing running. The same app, two ways to reach it.</desc>
+  <style>
+    :root { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+    .box { fill: #c9cfd6; }
+    .subject { fill: #d0342c; fill-opacity: .18; stroke: #d0342c; stroke-width: 2; }
+    .name { fill: #1b1f24; font: 600 17px system-ui, sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .subject-name { fill: #d0342c; font: 700 19px system-ui, sans-serif; text-anchor: middle; dominant-baseline: central; letter-spacing: .02em; }
+    .meta { fill: #6b7480; font: 400 13px system-ui, sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .wire { fill: none; stroke: #6b7480; stroke-width: 1.5; }
+    .tip { fill: #6b7480; }
+    .capt { fill: #6b7480; font: 400 13px system-ui, sans-serif; text-anchor: middle; dominant-baseline: central; }
+    @media (prefers-color-scheme: dark) {
+      .box { fill: #4a525c; }
+      .name { fill: #e6eaee; }
+      .meta, .capt { fill: #9aa4b0; }
+      .wire { stroke: #9aa4b0; }
+      .tip { fill: #9aa4b0; }
+      .subject { fill: #e2554c; fill-opacity: .22; stroke: #e2554c; }
+      .subject-name { fill: #f0776e; }
+    }
+  </style>
+
+  <path class="wire" d="M224 160C320 160 340 100 426 100"/>
+  <path class="wire" d="M224 160C320 160 340 220 426 220"/>
+  <path class="tip" d="M426 94l14 6-14 6z"/>
+  <path class="tip" d="M426 214l14 6-14 6z"/>
+
+  <rect class="subject" x="24" y="120" width="200" height="80" rx="6"/>
+  <text class="subject-name" x="124" y="152">an app</text>
+  <text class="meta" x="124" y="176">built in the session</text>
+
+  <rect class="box" x="440" y="64" width="256" height="72" rx="6"/>
+  <text class="name" x="568" y="90">served from the session</text>
+  <text class="meta" x="568" y="114">live while the session is up</text>
+
+  <rect class="box" x="440" y="184" width="256" height="72" rx="6"/>
+  <text class="name" x="568" y="210">published to a host</text>
+  <text class="meta" x="568" y="234">a plain URL, nothing running</text>
+
+  <text class="capt" x="360" y="300">the same app, two ways to reach it</text>
+</svg>

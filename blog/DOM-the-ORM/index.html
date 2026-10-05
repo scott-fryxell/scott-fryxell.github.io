@@ -1,48 +1,49 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="darkreader-lock">
-  <title>DOM the ORM — Scott Fryxell</title>
-  <meta name="description" content="How a single change opens the DOM up to be our persistence hero">
-  <link rel="canonical" href="https://scott-fryxell.github.io/blog/DOM-the-ORM">
-  <meta property="og:site_name" content="Scott Fryxell">
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="DOM the ORM — Scott Fryxell">
-  <meta property="og:description" content="How a single change opens the DOM up to be our persistence hero">
-  <meta property="og:url" content="https://scott-fryxell.github.io/blog/DOM-the-ORM">
-  <meta property="og:image" content="https://scott-fryxell.github.io/og/Scott%20Fryxell%20%40%20Saturday%20afternoon%2C%20February%2014%20-%201771102323228.jpg">
-  <meta property="og:image:type" content="image/jpeg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="DOM the ORM — Scott Fryxell">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="DOM the ORM — Scott Fryxell">
-  <meta name="twitter:description" content="How a single change opens the DOM up to be our persistence hero">
-  <meta name="twitter:image" content="https://scott-fryxell.github.io/og/Scott%20Fryxell%20%40%20Saturday%20afternoon%2C%20February%2014%20-%201771102323228.jpg">
-  <meta name="twitter:image:alt" content="DOM the ORM — Scott Fryxell">
-  <link rel="stylesheet" href="/style.css">
-  <link rel="icon" type="image/svg+xml" href="/icons.svg">
-  <link rel="apple-touch-icon" href="/192.png">
-  <script type="module" src="/scripts/detect.js"></script>
-  <script type="module" src="/scripts/reveal.js"></script>
-  <script type="module" src="/scripts/diagrams.js"></script>
-  
-</head>
-<body>
-<main>
-  <template src="/partials/header.html"></template>
-  <article itemscope itemtype="http://schema.org/BlogPosting">
-    <figure style="--ratio: 0.7496">
-      <img src="/posters/Scott Fryxell @ Saturday afternoon, February 14 - 1771102323228.svg" width="512" height="683" alt="" loading="lazy">
-      <figcaption>
-        <h1 itemprop="headline">DOM the ORM</h1>
-        <time itemprop="datePublished" datetime="2021-11-17">November 17, 2021</time>
-        <a class="back-link" href="/" aria-label="Back to blog">x</a>
-      </figcaption>
-    </figure>
-    <section itemprop="articleBody"><p>I am not above using a hack.</p>
+    <title>DOM the ORM — Scott Fryxell</title>
+    <meta name="description" content="How a single change opens the DOM up to be our persistence hero">
+    <link rel="canonical" href="https://scott-fryxell.github.io/blog/DOM-the-ORM">
+    <meta property="og:site_name" content="Scott Fryxell">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="DOM the ORM — Scott Fryxell">
+    <meta property="og:description" content="How a single change opens the DOM up to be our persistence hero">
+    <meta property="og:url" content="https://scott-fryxell.github.io/blog/DOM-the-ORM">
+    <meta property="og:image" content="https://scott-fryxell.github.io/og/Scott%20Fryxell%20%40%20Saturday%20afternoon%2C%20February%2014%20-%201771102323228.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="DOM the ORM — Scott Fryxell">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DOM the ORM — Scott Fryxell">
+    <meta name="twitter:description" content="How a single change opens the DOM up to be our persistence hero">
+    <meta name="twitter:image" content="https://scott-fryxell.github.io/og/Scott%20Fryxell%20%40%20Saturday%20afternoon%2C%20February%2014%20-%201771102323228.jpg">
+    <meta name="twitter:image:alt" content="DOM the ORM — Scott Fryxell">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" type="image/svg+xml" href="/icons.svg">
+    <link rel="apple-touch-icon" href="/192.png">
+    <script type="module" src="/scripts/detect.js"></script>
+    <script type="module" src="/scripts/reveal.js"></script>
+    
+    <script type="module" src="/scripts/diagrams.js"></script>
+    
+  </head>
+  <body>
+  <main>
+    <template src="/partials/header.html"></template>
+    <article itemscope itemtype="http://schema.org/BlogPosting">
+      <figure style="--ratio: 0.7496">
+        <img src="/posters/Scott Fryxell @ Saturday afternoon, February 14 - 1771102323228.svg" width="512" height="683" alt="" loading="lazy">
+        <figcaption>
+          <h1 itemprop="headline">DOM the ORM</h1>
+          <time itemprop="datePublished" datetime="2021-11-17">November 17, 2021</time>
+          <a class="back-link" href="/" aria-label="Back to blog">x</a>
+        </figcaption>
+      </figure>
+      <section itemprop="articleBody"><p>I am not above using a hack.</p>
 <p>I am finishing this conversion to Vue 3.2. I am comfortable with it now. I let
 my tests start to fail and knew my coverage was gonna drop. I will also let my
 tests fail from time to time.</p>
@@ -109,8 +110,8 @@ manipulate them as types during your runtime.</p>
 <p>This is better typing than Even if you need to extract your data to a database I
 would argue that this is a more natural way to write webapps. It's a natureal
 friend of serverless edge and data sanctity.</p><ol class="notes"><li>https://www.motiontricks.com/creating-dynamic-svg-elements-with-javascript/</li><li>https://developer.mozilla.org/en-US/docs/Web/CSS/path</li></ol></section>
-  </article>
-  <template src="/partials/footer.html"></template>
-</main>
-</body>
-</html>
+    </article>
+    <template src="/partials/footer.html"></template>
+  </main>
+  </body>
+  </html>

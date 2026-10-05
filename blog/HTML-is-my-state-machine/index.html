@@ -1,48 +1,49 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="darkreader-lock">
-  <title>HTML Is My State Machine — Scott Fryxell</title>
-  <meta name="description" content="Edge poses weird quandries when you start taking advantage of how close your code and data are. I have used HTML for some Pinia duties for years. the current st">
-  <link rel="canonical" href="https://scott-fryxell.github.io/blog/HTML-is-my-state-machine">
-  <meta property="og:site_name" content="Scott Fryxell">
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="HTML Is My State Machine — Scott Fryxell">
-  <meta property="og:description" content="Edge poses weird quandries when you start taking advantage of how close your code and data are. I have used HTML for some Pinia duties for years. the current st">
-  <meta property="og:url" content="https://scott-fryxell.github.io/blog/HTML-is-my-state-machine">
-  <meta property="og:image" content="https://scott-fryxell.github.io/og/Scott%20Fryxell%20%40%20Wednesday%20morning%2C%20March%2025%20-%201774463928389.jpg">
-  <meta property="og:image:type" content="image/jpeg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="HTML Is My State Machine — Scott Fryxell">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="HTML Is My State Machine — Scott Fryxell">
-  <meta name="twitter:description" content="Edge poses weird quandries when you start taking advantage of how close your code and data are. I have used HTML for some Pinia duties for years. the current st">
-  <meta name="twitter:image" content="https://scott-fryxell.github.io/og/Scott%20Fryxell%20%40%20Wednesday%20morning%2C%20March%2025%20-%201774463928389.jpg">
-  <meta name="twitter:image:alt" content="HTML Is My State Machine — Scott Fryxell">
-  <link rel="stylesheet" href="/style.css">
-  <link rel="icon" type="image/svg+xml" href="/icons.svg">
-  <link rel="apple-touch-icon" href="/192.png">
-  <script type="module" src="/scripts/detect.js"></script>
-  <script type="module" src="/scripts/reveal.js"></script>
-  <script type="module" src="/scripts/diagrams.js"></script>
-  
-</head>
-<body>
-<main>
-  <template src="/partials/header.html"></template>
-  <article itemscope itemtype="http://schema.org/BlogPosting">
-    <figure style="--ratio: 0.7496">
-      <img src="/posters/Scott Fryxell @ Wednesday morning, March 25 - 1774463928389.svg" width="512" height="683" alt="" loading="lazy">
-      <figcaption>
-        <h1 itemprop="headline">HTML Is My State Machine</h1>
-        <time itemprop="datePublished" datetime="2022-05-18">May 18, 2022</time>
-        <a class="back-link" href="/" aria-label="Back to blog">x</a>
-      </figcaption>
-    </figure>
-    <section itemprop="articleBody"><p>Edge poses weird quandries when you start taking advantage of how close your
+    <title>HTML Is My State Machine — Scott Fryxell</title>
+    <meta name="description" content="Edge poses weird quandries when you start taking advantage of how close your code and data are. I have used HTML for some Pinia duties for years. the current st">
+    <link rel="canonical" href="https://scott-fryxell.github.io/blog/HTML-is-my-state-machine">
+    <meta property="og:site_name" content="Scott Fryxell">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="HTML Is My State Machine — Scott Fryxell">
+    <meta property="og:description" content="Edge poses weird quandries when you start taking advantage of how close your code and data are. I have used HTML for some Pinia duties for years. the current st">
+    <meta property="og:url" content="https://scott-fryxell.github.io/blog/HTML-is-my-state-machine">
+    <meta property="og:image" content="https://scott-fryxell.github.io/og/Scott%20Fryxell%20%40%20Wednesday%20morning%2C%20March%2025%20-%201774463928389.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="HTML Is My State Machine — Scott Fryxell">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="HTML Is My State Machine — Scott Fryxell">
+    <meta name="twitter:description" content="Edge poses weird quandries when you start taking advantage of how close your code and data are. I have used HTML for some Pinia duties for years. the current st">
+    <meta name="twitter:image" content="https://scott-fryxell.github.io/og/Scott%20Fryxell%20%40%20Wednesday%20morning%2C%20March%2025%20-%201774463928389.jpg">
+    <meta name="twitter:image:alt" content="HTML Is My State Machine — Scott Fryxell">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" type="image/svg+xml" href="/icons.svg">
+    <link rel="apple-touch-icon" href="/192.png">
+    <script type="module" src="/scripts/detect.js"></script>
+    <script type="module" src="/scripts/reveal.js"></script>
+    
+    <script type="module" src="/scripts/diagrams.js"></script>
+    
+  </head>
+  <body>
+  <main>
+    <template src="/partials/header.html"></template>
+    <article itemscope itemtype="http://schema.org/BlogPosting">
+      <figure style="--ratio: 0.7496">
+        <img src="/posters/Scott Fryxell @ Wednesday morning, March 25 - 1774463928389.svg" width="512" height="683" alt="" loading="lazy">
+        <figcaption>
+          <h1 itemprop="headline">HTML Is My State Machine</h1>
+          <time itemprop="datePublished" datetime="2022-05-18">May 18, 2022</time>
+          <a class="back-link" href="/" aria-label="Back to blog">x</a>
+        </figcaption>
+      </figure>
+      <section itemprop="articleBody"><p>Edge poses weird quandries when you start taking advantage of how close your
 code and data are.</p>
 <p>I have used HTML for some Pinia duties for years. the current state of any
 object is the html that is being rendered. If I need new state I load the object
@@ -63,8 +64,8 @@ changes. I have to pass events for everything to coordinate.</p>
 <a href="https://vueschool.io/articles/vuejs-tutorials/home-rolled-store-with-the-vue-js-composition-api/">module level reference</a><sup class="note-mark">1</sup>
 variables defined inside composable files eg <code>@/use/people</code>. State changes can
 be shared accross all modules instantly bringing feature parity with Pinia.</p><ol class="notes"><li>https://vueschool.io/articles/vuejs-tutorials/home-rolled-store-with-the-vue-js-composition-api/</li></ol></section>
-  </article>
-  <template src="/partials/footer.html"></template>
-</main>
-</body>
-</html>
+    </article>
+    <template src="/partials/footer.html"></template>
+  </main>
+  </body>
+  </html>
