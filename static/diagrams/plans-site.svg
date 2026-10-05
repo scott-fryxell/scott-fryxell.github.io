@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 240" width="720" height="240" role="img" aria-labelledby="pt pd">
+  <title id="pt">A session builds the plans site</title>
+  <desc id="pd">Three beats left to right. The plans folder goes in, a session reads it and builds, drawn in red, and out comes a site at a URL you can open. The same session that builds it can also serve it.</desc>
+  <style>
+    :root { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+    .box { fill: #c9cfd6; }
+    .subject { fill: #d0342c; fill-opacity: .18; stroke: #d0342c; stroke-width: 2; }
+    .name { fill: #1b1f24; font: 600 17px system-ui, sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .subject-name { fill: #d0342c; font: 700 19px system-ui, sans-serif; text-anchor: middle; dominant-baseline: central; letter-spacing: .02em; }
+    .meta { fill: #6b7480; font: 400 13px system-ui, sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .wire { fill: none; stroke: #6b7480; stroke-width: 1.5; }
+    .tip { fill: #6b7480; }
+    .capt { fill: #6b7480; font: 400 13px system-ui, sans-serif; text-anchor: middle; dominant-baseline: central; }
+    @media (prefers-color-scheme: dark) {
+      .box { fill: #4a525c; }
+      .name { fill: #e6eaee; }
+      .meta, .capt { fill: #9aa4b0; }
+      .wire { stroke: #9aa4b0; }
+      .tip { fill: #9aa4b0; }
+      .subject { fill: #e2554c; fill-opacity: .22; stroke: #e2554c; }
+      .subject-name { fill: #f0776e; }
+    }
+  </style>
+
+  <path class="wire" d="M194 120H261"/>
+  <path class="tip" d="M261 114l14 6-14 6z"/>
+  <path class="wire" d="M445 120H512"/>
+  <path class="tip" d="M512 114l14 6-14 6z"/>
+
+  <rect class="box" x="24" y="90" width="170" height="60" rx="6"/>
+  <text class="name" x="109" y="116">the plans</text>
+  <text class="meta" x="109" y="136">markdown files</text>
+
+  <rect class="subject" x="275" y="90" width="170" height="60" rx="6"/>
+  <text class="subject-name" x="360" y="116">a session</text>
+  <text class="meta" x="360" y="136">reads and builds</text>
+
+  <rect class="box" x="526" y="90" width="170" height="60" rx="6"/>
+  <text class="name" x="611" y="116">a site</text>
+  <text class="meta" x="611" y="136">a URL you can open</text>
+
+  <text class="capt" x="360" y="204">the first job to hand a session</text>
+</svg>

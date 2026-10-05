@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1072 300" width="1072" height="300" role="img" aria-labelledby="st sd">
+  <title id="st">Two kinds of sleep, and one way to be put away</title>
+  <desc id="sd">Three panels. Memory sleep keeps everything - programs keep running, files stay, your identity stays. Disk sleep keeps your files and your identity but programs stop. Put away keeps the files in a bucket and deletes the machine: programs stop, and you come back on a fresh machine with the same files.</desc>
+  <style>
+    :root { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+    .panel { fill: #c9cfd6; }
+    .panel-title { fill: #1b1f24; font: 700 19px system-ui, sans-serif; dominant-baseline: central; }
+    .row { fill: #1b1f24; font: 600 15px system-ui, sans-serif; dominant-baseline: central; }
+    .row-dim { fill: #6b7480; font: 400 15px system-ui, sans-serif; dominant-baseline: central; }
+    .dot-on { fill: #d0342c; }
+    .dot-off { fill: none; stroke: #6b7480; stroke-width: 1.5; }
+    .capt { fill: #6b7480; font: 400 13px system-ui, sans-serif; text-anchor: middle; dominant-baseline: central; }
+    @media (prefers-color-scheme: dark) {
+      .panel { fill: #4a525c; }
+      .panel-title { fill: #e6eaee; }
+      .row { fill: #e6eaee; }
+      .row-dim { fill: #9aa4b0; }
+      .dot-on { fill: #e2554c; }
+      .dot-off { stroke: #9aa4b0; }
+      .capt { fill: #9aa4b0; }
+    }
+  </style>
+
+  <rect class="panel" x="24" y="48" width="320" height="204" rx="6"/>
+  <text class="panel-title" x="48" y="84">memory sleep</text>
+  <circle class="dot-on" cx="60" cy="134" r="5"/>
+  <text class="row" x="80" y="134">programs keep running</text>
+  <circle class="dot-on" cx="60" cy="180" r="5"/>
+  <text class="row" x="80" y="180">files stay</text>
+  <circle class="dot-on" cx="60" cy="226" r="5"/>
+  <text class="row" x="80" y="226">your identity stays</text>
+
+  <rect class="panel" x="376" y="48" width="320" height="204" rx="6"/>
+  <text class="panel-title" x="400" y="84">disk sleep</text>
+  <circle class="dot-off" cx="412" cy="134" r="5"/>
+  <text class="row-dim" x="432" y="134">programs stop</text>
+  <circle class="dot-on" cx="412" cy="180" r="5"/>
+  <text class="row" x="432" y="180">files stay</text>
+  <circle class="dot-on" cx="412" cy="226" r="5"/>
+  <text class="row" x="432" y="226">your identity stays</text>
+
+  <rect class="panel" x="728" y="48" width="320" height="204" rx="6"/>
+  <text class="panel-title" x="752" y="84">put away</text>
+  <circle class="dot-off" cx="764" cy="134" r="5"/>
+  <text class="row-dim" x="784" y="134">programs stop</text>
+  <circle class="dot-on" cx="764" cy="180" r="5"/>
+  <text class="row" x="784" y="180">files go to a bucket</text>
+  <circle class="dot-off" cx="764" cy="226" r="5"/>
+  <text class="row-dim" x="784" y="226">the machine is deleted</text>
+
+  <text class="capt" x="536" y="282">the two sleeps bring the machine back; put away brings the files back, and nothing bills while you wait</text>
+</svg>
