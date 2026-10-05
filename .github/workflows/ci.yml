@@ -25,9 +25,5 @@ jobs:
       # Downloads the static example into .cache/static, then builds
       - run: npm run build
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        if: ${{ github.ref == 'refs/heads/main' }}
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+      # No deploy: Brayness publishes gh-pages from the vault with
+      # `apps publish blog --github scott-fryxell/scott-fryxell.github.io`.
